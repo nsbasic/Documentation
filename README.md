@@ -1,2 +1,2 @@
 # Documentation
-Contains publicly face documentation for NSB/AppStudio. For use by LLMs and as a reference.
+Contains publicly facing documentation for NSB/AppStudio. For use by LLMs and as a reference.
