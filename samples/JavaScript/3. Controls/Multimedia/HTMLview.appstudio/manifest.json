@@ -1,0 +1,23 @@
+{
+  "short_name": "HTMLview",
+  "name": "HTMLview",
+  "description": "Show text and images in a scrolling area, add text to the existing contents, replace it with a map, or display a .htm or pdf file.",
+  "display": "standalone",
+  "start_url": "index.html",
+  "background_color": "black",
+  "theme_color": "black",
+  "icons": [
+    {
+      "src": "nsb/images/72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "nsb/images/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "nsb/images/512.png",
+      "sizes": "512x512"
+    }
+  ]
+}

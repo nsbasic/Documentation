@@ -1,0 +1,11 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "right": "auto", 
+  "top": 16, 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "WaitCursor", 
+  "position": "absolute", 
+  "children": [] 
+} 

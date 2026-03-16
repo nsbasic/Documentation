@@ -1,0 +1,117 @@
+{ 
+"_type": "Input_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxinput.png", 
+"_wikipage": "jqxInput",
+"_shorthelp": "<a href='{_docurl}'>Input</a> field for searchable array. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+  	"{pathTo_jqWidgets}jqxdata.js",
+    "{pathTo_jqWidgets}jqxinput.js",
+    "{_nsbdir}toolbox/jqw/dist/jqxFunctions.js"
+    ],
+  
+"_displayname": "Input",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "value": {"desc": "The value of the input box."}
+	},
+    
+"height": 30, 
+"width": 150, 
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+	
+"searchMode": "startswithignorecase", 
+"_searchMode": { 
+    "desc": "Enable a Search Mode", 
+    "type": "enum", 
+    "keys": ["none", "contains", "containsignorecase", "equals", "equalsignorecase", "startswith", "startswithignorecase", "endswith", "endswithignorecase"], 
+    "values": ["none", "contains", "containsignorecase", "equals", "equalsignorecase", "startswith", "startswithignorecase", "endswith", "endswithignorecase"]
+    }, 
+    
+"source": "[\"one\",\"two\",\"three\"]",
+"_source": {
+	"desc": "List of choices, comma separated. Easier to set up array at runtime. Do not leave blank. Must be one line.",
+	"type": "css"
+	},
+	 
+"items": 8, 
+"_items": { 
+    "desc": "Set number of items to display in popup list", 
+    "type": "int"
+    },
+
+"minLength": 1, 
+"_minLength": { 
+    "desc": "Set minimum number of characters for autosuggestion", 
+    "type": "int"
+    },
+    
+"placeHolder": "placeHolder", 
+"_placeHolder": { 
+    "desc": "PlaceHolder text", 
+    "type": "str" 
+    },
+
+"popupZIndex": 20000, 
+"_popupZIndex": { 
+    "desc": "Sets or gets the auto-suggest popup's z-index.", 
+    "type": "int" 
+    },
+
+"validatorMessage": "", 
+"_validatorMessage": { 
+    "desc": "Message if rule does not work. One per line. Must be same number of lines as validatorRule property.", 
+    "type": "css"
+    }, 
+
+"validatorAction": "", 
+"_validatorAction": { 
+    "desc": "Events to test rules after", 
+    "type": "str"
+    }, 
+
+"validatorRule": "", 
+"_validatorRule": { 
+    "desc": "Rule: required, number, notNumber, ssn, email, phone, zipCode, maxlength=12, minLength=3, length=3,12. See jqWidgets docs for full info. One per line. Must be same number of lines as validatorMessage property.", 
+    "type": "css"
+    }, 
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "This event is triggered when the value is changed and the control's focus is lost.", 
+    "type": "js" 
+    }, 
+    
+"_htmltemplate": "  \"<input type='text' id='{id}' data-role='none' style='{hidden}{style!j}' class='{class}'>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+        "    disabled:{disabled},",
+        "    width:'{width}',",
+        "    height:'{height}',",
+        "    rtl:{rtl},",
+        "    theme:'{theme}',",
+		"    searchMode: '{searchMode}',",
+        "    source:eval({source}),",
+        "    items:{items},",
+		"    minLength: {minLength},",
+        "    placeHolder:'{placeHolder!j}',",
+        "    popupZIndex:{popupZIndex},",
+	 "  }}",
+    "  $('#{id}').jqxInput(NSB.jqxSettings['{id}']);",
+    "  NSB.jqxValidatorAddRules({id}, '{validatorMessage!j}', '{validatorAction}', '{validatorRule!j}');",
+    "  NSB.addProperties({id});"]
+}

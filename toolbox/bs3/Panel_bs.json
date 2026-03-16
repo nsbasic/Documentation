@@ -1,0 +1,50 @@
+{ 
+"_type": "Panel_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors", "children", "bsBadge", "bsHeaderValueFooter"], 
+"_palette": 9, 
+"_art": "images/panel.png",
+"_wikipage": "Panel (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Panel</a> displays an information panel. Use with caution - will be replaced in a future release. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Panel",
+"_longhelp": "longhelp",
+
+"_icon": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"header": "Panel",
+
+"appearance": " panel-default", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance", 
+    "type": "enum", 
+    "keys": ["default", "primary", "success", "info", "warning", "danger"], 
+    "values": [" panel-default", " panel-primary", " panel-success", " panel-info", " panel-warning", " panel-danger"]
+}, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "    \"<div id='{id}' class='panel {appearance}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "{if header<>''}      \"<div class='panel-heading'><h3 class='panel-title'>{header!j}{_bsBadge!i}</h3></div>\",{/if}",
+    "{if value<>''}      \"<div class='panel-body'>{value!j}\",{/if}",
+    "        \"<div id={id}_addChild>\",",
+    "{if _childhtml<>''}        \"<div class='panel-body'>\",{_childhtml}\"</div>\",{/if}",
+    "        \"</div>\",",
+    "{if value<>''}      \"</div>\",{/if}",
+    "{if footer<>''}      \"<div class='panel-footer'>{footer!j}</div>\",{/if}",
+    "    \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+		
+}

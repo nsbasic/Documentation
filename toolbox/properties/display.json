@@ -1,0 +1,12 @@
+{
+    "_type": "display",
+    "_base": "NSBObject",
+
+"display": "", 
+"_display": { 
+    "desc": "Specifies the display behavior.", 
+    "type": "enum", 
+    "keys": ["", "block", "none", "flex", "inline", "grid", "inline-grid"], 
+    "values": ["", "block", "none", "flex", "inline", "grid", "inline-grid"]
+    }
+}

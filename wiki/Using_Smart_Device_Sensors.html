@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Using_Smart_Device_Sensors by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Using Smart Device Sensors - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXUViJRtzhT70AvhvjX-ywAAAAc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_Smart_Device_Sensors","wgTitle":"Using Smart Device Sensors","wgCurRevisionId":6295,"wgRevisionId":6295,"wgArticleId":973,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_Smart_Device_Sensors","wgRelevantArticleId":973,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_Smart_Device_Sensors rootpage-Using_Smart_Device_Sensors skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Using Smart Device Sensors</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>Smart devices have many capabilities that desktop systems do not. It's easy to use them using AppStudio: This Tech Note will explain how.
+</p><p>The information in this Tech Note is based on devices running iOS7 (or later) or Android OS (4.0) or later. Older devices and some manufacturers may not support all features. See <a href="https://wiki.appstudio.dev/index.php?title=Caniuse.com&amp;action=edit&amp;redlink=1" class="new" title="Caniuse.com (page does not exist)">caniuse.com</a> for more info.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Accelerometer"><span class="tocnumber">1</span> <span class="toctext">Accelerometer</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Camera"><span class="tocnumber">2</span> <span class="toctext">Camera</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Compass"><span class="tocnumber">3</span> <span class="toctext">Compass</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Geolocation"><span class="tocnumber">4</span> <span class="toctext">Geolocation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Orientation"><span class="tocnumber">5</span> <span class="toctext">Orientation</span></a></li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Accelerometer">Accelerometer</h2></div>
+<figure class="mw-halign-left" typeof="mw:File/Frame"><a href="https://wiki.appstudio.dev/File:Accelerometer.jpg" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/2/2c/Accelerometer.jpg" decoding="async" width="320" height="460" class="mw-file-element" /></a><figcaption></figcaption></figure>
+<p>The Accelerometer is a sensor that returns information about the device's movement.
+</p>
+<ul><li>Results are returned in meters per second squared.</li>
+<li>Results can be with or without taking gravity into effect.</li>
+<li>Whenever motion is detected, the  window_ondevicemotion function is called.</li></ul>
+<p><br clear="all" />
+</p>
+<pre>Sub window_ondevicemotion(event)
+  ax = event.accelerationIncludingGravity.x;
+  ay = event.accelerationIncludingGravity.y;
+End Sub
+</pre>
+<ul><li>This code sets a couple of global variables: acceleration in the x direction (horizontal) and the y direction (vertical)</li>
+<li>We can use this data to move a ball around on the screen.</li>
+<li>We will sample the the movement 100 times per second.</li>
+<li>Based on how high the movement rate is, move the ball varying distances.</li></ul>
+<div class="page-break"></div>
+<pre>delay = 10
+SetInterval(moveBall, delay)
+</pre>
+<ul><li>SetInterval is an AppStudio function which calls a function repeatedly.</li>
+<li>moveBall is the name of the function to call.</li>
+<li>delay is the time, in milliseconds.</li></ul>
+<pre>Sub moveBall()
+  vy = vy + -(ay)
+  vx = vx + ax
+
+  y = parseInt(y + vy * vMultiplier)
+  x = parseInt(x + vx * vMultiplier)
+
+  'do bounds checking
+  If x&lt;0 Then
+    x = 0
+    vx = 0
+  End if
+  If y&lt;0 Then
+    y = 0
+    vy = 0
+  End if
+  If x&gt;document.documentElement.clientWidth-20 Then
+    x = document.documentElement.clientWidth-20
+    vx = 0
+  End if
+  If y&gt;document.documentElement.clientHeight-20 Then
+    y = document.documentElement.clientHeight-20
+    vy = 0
+  End if
+
+  ball.style.top = y + "px"
+  ball.style.left = x + "px"
+End Sub  
+</pre>
+<ul><li>The first 4 statements calculate the new position.</li>
+<li>The next section checks to make sure the ball does not roll off the screen.</li>
+<li>The last two statements do the actual movement.</li></ul>
+<p>The complete sample is called Accelerometer.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Camera">Camera</h2></div>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Camera.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/8/80/Camera.png" decoding="async" width="315" height="460" class="mw-file-element" /></a></span>
+</p><p>The camera is accessed using the <a href="Camera.html" title="Camera">Camera</a> control.
+</p><p>The Camera control lets you take pictures using your device's camera and display them in a PictureBox. The contents of that PictureBox can be saved in a database or sent to a server. All the settings needed to take a picture can be set at design time in AppStudio: no additional code needs to be written.
+</p><p>The default icon is a camera icon. You can change this to a different icon or text.
+</p><p>The Cameral control has the same properties as a Button, with one addition, the picturebox  property.
+</p><p>See the complete documentation <a href="Camera.html" title="Camera">here</a>.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Compass">Compass</h2></div>
+<figure class="mw-halign-right" typeof="mw:File/Frame"><a href="https://wiki.appstudio.dev/File:Compass.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/9/92/Compass.png" decoding="async" width="330" height="431" class="mw-file-element" /></a><figcaption></figcaption></figure>
+<ul><li>Certain devices have a built in compass sensor.</li></ul>
+<ul><li>If they do, they call the ondeviceorientation() function when the compass reading changes.</li></ul>
+<ul><li>An event object is passed to the function with the compass reading in evt.webkitCompassHeading.</li></ul>
+<p><br clear="all" />
+</p>
+<pre>function window_ondeviceorientation(evt)
+  TextBox1.value=evt.webkitCompassHeading
+End function
+</pre>
+<ul><li>The Compass sample uses this information to rotate an image of a compass.</li></ul>
+<ul><li>The webKitTransform function rotates an image efficiently.</li></ul>
+<pre>pos="0"
+
+function window_ondeviceorientation(e)
+  imgCompass.style.webkitTransform="rotate(" &amp; pos &amp; "deg)"
+  pos = e.webkitCompassHeading
+  imgCompass.style.webkitTransform="rotate(-" &amp; pos &amp; "deg)"
+End function
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Geolocation">Geolocation</h2></div>
+<figure class="mw-halign-left" typeof="mw:File/Frame"><a href="https://wiki.appstudio.dev/File:Geolocation.jpg" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/3/3e/Geolocation.jpg" decoding="async" width="320" height="460" class="mw-file-element" /></a><figcaption></figcaption></figure>
+<ul><li>Geolocation uses GPS sensors to return the current location of the device.</li></ul>
+<ul><li>The watchPosition() function sets the frequency of the Geolocation events.</li></ul>
+<ul><li>When a Geolocation event is triggered, the function named in the watchPosition function is called.</li></ul>
+<ul><li>The following data is passed to the event:</li></ul>
+<p><br clear="all" />
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<td>location.coords.longitude</td>
+<td>The current longitude of the device. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.latitude</td>
+<td>The current latitude of the device. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.altitude</td>
+<td>The height of the location. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.accuracy</td>
+<td>The accuracy of the location. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.altitudeAccuracy</td>
+<td>The accuracy of the altitude. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.heading</td>
+<td>Degrees clockwise from North. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.speed</td>
+<td>Speed, meter per second. GPS required.
+</td></tr>
+<tr>
+<td>location.coords.timestamp</td>
+<td>time and date of the observation. GPS required.
+</td></tr></tbody></table>
+<ul><li>Here's the code to start generating geolocation events:</li></ul>
+<pre>Dim gps
+function btnStart_onclick()
+  options={timeout: 5000, maximumAge: 5000, enableHighAccuracy: True}
+  gps=navigator.geolocation.watchPosition(onGeolocation, errorCallBack, options)
+End function
+</pre>
+<ul><li>This code will call onGeolocation every 5 seconds.</li>
+<li>If GPS data cannot be obtained, the errorCallBack function is called.</li>
+<li>Cancel it by executing:</li></ul>
+<pre>  navigator.geolocation.clearWatch(gps)
+</pre>
+<ul><li>Here's what the onGeolocation looks like. It gets called every 5 seconds.</li></ul>
+<pre>function onGeolocation(location)
+  Dim s
+  s = "Longitude: " + location.coords.longitude &amp; vbCRLF
+  s = s &amp; "Latitude: " + location.coords.latitude &amp; vbCRLF
+  s = s &amp; "Speed: " + location.coords.speed &amp; " " 
+  s = s &amp; "Altitude: " + location.coords.altitude &amp; vbCRLF
+  s = s &amp; "Accuracy: " + location.coords.accuracy &amp; " "
+  s = s &amp; "Accuracy(altitude): " + location.coords.altitudeAccuracy &amp; " " &amp; vbCRLF
+  'Convert timestamp if needed.
+  if IsNumeric(location.timestamp) Then
+    gpsDate=new Date(location.timestamp)
+  else
+    gpsDate=location.timestamp
+  End if
+  TextArea1.value = s &amp; "Timestamp: " + gpsDate
+  ShowMap(location.coords.latitude, location.coords.longitude)
+End function
+</pre>
+<ul><li>This function displays the GPS results in a TextArea.</li>
+<li>The code has to deal with the problem of different browsers returning timestamp in different formats.</li>
+<li>The ShowMap() function near the end displays a map from Google Maps.</li></ul>
+<pre>function ShowMap(latitude, longitude)
+  if SysInfo(10)-lastRefresh&lt;10000 Then Exit function
+  lastRefresh=SysInfo(10)
+  s = "'https://maps.google.com/maps/api/staticmap?center=" &amp; _
+  latitude &amp; "," &amp; longitude &amp; _
+  "&amp;zoom=14&amp;size=300x200&amp;maptype=roadmap&amp;sensor=true&amp;output=embed'"
+  Map.innerHTML="&lt;img width=300 height=200 src=" &amp; s  &amp; "&gt;&lt;/img&gt;"
+End function
+</pre>
+<ul><li>This function displays a Google map.</li>
+<li>The map is updated every 10 seconds</li>
+<li>More info on Google maps here: <a rel="nofollow" class="external free" href="http://code.google.com/apis/maps/documentation/staticmaps/">http://code.google.com/apis/maps/documentation/staticmaps/</a></li>
+<li>We pack the latitude and longitude into a URL query string.</li>
+<li>We display the results of the URL in an HTMLview.</li></ul>
+<div class="mw-heading mw-heading2"><h2 id="Orientation">Orientation</h2></div>
+<p>Here are some functions to help you determine your device's orientation:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<td><a href="SysInfo-2.html" title="SysInfo">SysInfo</a>(0)</td>
+<td>Width of screen - actual screen size in Portrait mode
+</td></tr>
+<tr>
+<td><a href="SysInfo-2.html" title="SysInfo">SysInfo</a>(1)</td>
+<td>Height of screen - actual screen size in Portrait mode
+</td></tr>
+<tr>
+<td><a href="SysInfo-2.html" title="SysInfo">SysInfo</a>(2)</td>
+<td>Width of screen in current orientation
+</td></tr>
+<tr>
+<td><a href="SysInfo-2.html" title="SysInfo">SysInfo</a>(3)</td>
+<td>Height of screen in current orientation
+</td></tr>
+<tr>
+<td><a href="Window.html" title="Window">window</a>.orientation</td>
+<td>Returns the current screen rotation (0,90,180,-90)
+</td></tr></tbody></table>
+<p>Here is more information on how to respond changes in <a href="Orientation.html" title="Orientation">Orientation</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124134300
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.030 seconds
+Real time usage: 0.041 seconds
+Preprocessor visited node count: 71/1000000
+Revision size: 7334/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2451/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:973:|#|:idhash:canonical and timestamp 20260124134300 and revision id 6295. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;oldid=6295">https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;oldid=6295</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Using+Smart+Device+Sensors" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Using+Smart+Device+Sensors" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Using_Smart_Device_Sensors.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Using_Smart_Device_Sensors&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Using_Smart_Device_Sensors.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Using_Smart_Device_Sensors" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Using_Smart_Device_Sensors" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;oldid=6295" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Smart_Device_Sensors&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 29 September 2014, at 13:13.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":663,"wgPageParseReport":{"limitreport":{"cputime":"0.030","walltime":"0.041","ppvisitednodes":{"value":71,"limit":1000000},"revisionsize":{"value":7334,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2451,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124134300","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124185505 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Using_Smart_Device_Sensors by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "btnStart", 
+  "left": 21, 
+  "right": "auto", 
+  "top": 411, 
+  "value": "Start", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

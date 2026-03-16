@@ -1,0 +1,11 @@
+{ 
+  "!type": "Button_bs4", 
+  "ChangeForm": "frmFiles", 
+  "appearance": " btn-secondary", 
+  "icon": "arrow-l", 
+  "id": "hdrView_btnLeft", 
+  "left": "0", 
+  "mAll": "4", 
+  "size": " btn-sm", 
+  "value": "Back" 
+} 

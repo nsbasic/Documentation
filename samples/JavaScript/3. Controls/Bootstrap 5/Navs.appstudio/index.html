@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<title>Navs</title>
+<meta name="generator" content="NSB/AppStudio 9.1.6.1b1$xnbg" />
+<meta name='date' content='2025-04-22 11:05:59.570202' />
+<meta name='Description' content='Bootstrap Navs provides tabs to choose from.' />
+<meta name='version' content='1.0.0' />
+<meta name='BuildCounter' content='1' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no viewport-fit=cover' />
+<meta name='theme-color' content='#000000' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='apple-mobile-web-app-title' content='' />
+<meta name='copyright' content='copyright 2025 ABC Company' />
+<link rel='apple-touch-icon' href='nsb/images/192.png' />
+<link rel='shortcut icon' href='nsb/images/192.png' />
+<link href='manifest.json' rel='manifest' />
+<link href="toolbox/as/dist/asStyle.css" rel="stylesheet">
+<script src="nsb/library/jquery3.js"></script>
+<link href="nsb/library/jquery.modal.min.css" rel="stylesheet">
+<script src="nsb/library/jquery.modal.min.js"></script>
+<script src="nsb/library/appstudioFunctions.js"></script>
+<link href="toolbox/bs5/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="toolbox/bs5/dist/icons/bootstrap-icons.css" rel="stylesheet">
+<script src="toolbox/bs5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="toolbox/bs5/dist/bsFunctions.min.js"></script>
+
+<script src="nsb/library/basicFunctions.js"></script>
+
+<style type="text/css">
+
+#Form1 {background:inherit;}
+#Header1 {position:absolute;}
+
+#Label1 {position:absolute; left:20px; top:76px;}
+#Navs1 {position:absolute; left:8px; top:97px;}
+#Label2 {position:absolute; left:20px; top:187px;}
+#Navs2 {position:absolute; left:7px; top:249px;}
+#Label3 {position:absolute; left:21px; top:352px;}
+#Navs3 {position:absolute; left:9px; top:394px;}
+</style>
+
+</head>
+<body style="margin:0px;-ms-touch-action:none;background:inherit;-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue'; background-color:inherit; ">
+<noscript><h1>JavaScript must be enabled!</h1></noscript>
+<div data-role="page" id="NSBPage" data-theme="a" style="position:absolute; width:100%; height:100%; background-color:inherit; ">
+<a name='/Form1' data-role=none></a>
+<div id="Form1"  class="nsb-form " style="display:none;  position:absolute;  height: 100vh; top:0px; left:0px; width:100%; ">
+<script>
+Form1.innerHTML=["",  "<div id='Header1' class='' data-nsb-type=Header style='cursor:default; text-align:center; text-shadow:none; top:0px; left:0px; width: 100%; font-size:16px;font-family:inherit;font-weight:bold;background-color:lightgray;  ' data-i18n='Navs'>","<div id=Header1_addChild>",,"</div>","Navs</div>",
+  "<div id='Label1' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:16px;font-family:inherit;font-weight:bold;'>Base Navs</div>",
+  "<div id='Navs1'>",
+  "<ul id='Navs1_list' class='nav ' style='font-family:inherit;' onclick=''>",
+  NSB.bs.navs.make('Navs1', '', 'PillStyle\u000A>Home\u000A*Item 3 (disabled)', '#Label3\u000Ahttp://appstudio.dev', ''),
+  "</ul>",
+  "</div>",
+  "<div id='Label2' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:16px;font-family:inherit;font-weight:bold;'>Tab Style</div>",
+  "<div id='Navs2'>",
+  "<ul id='Navs2_list' class='nav nav-tabs ' style='font-family:inherit;' onclick=''>",
+  NSB.bs.navs.make('Navs2', '', 'Item 1\u000A>Item 2\u000A*Item 3 (disabled)', '#labOne\u000Ahttp://appstudio.dev', ''),
+  "</ul>",
+  "</div>",
+  "<div id='Label3' class='' data-nsb-type=Label style='cursor:default; text-shadow:none; font-size:16px;font-family:inherit;font-weight:bold;'>Pill Style</div>",
+  "<div id='Navs3'>",
+  "<ul id='Navs3_list' class='nav nav-pills ' style='font-family:inherit;' onclick=''>",
+  NSB.bs.navs.make('Navs3', '', 'Item 1\u000A>Item 2\u000A*Item 3 (disabled)', '#labOne\u000Ahttp://appstudio.dev', ''),
+  "</ul>",
+  "</div>",
+  ].join('');
+</script>
+</div>
+</div>
+<script>
+if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');
+(function(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];})()
+var NSB = NSB || {};
+NSB.currentForm = Form1;
+NSB.stopOnError = true;
+NSB.enableBrowserArrows = false;
+NSB.enableAppScroll = false;
+NSB.id = 'Navs';
+NSB.initLanguage();
+NSB.voltAppId = '';
+NSB.voltDashboardAccess = False;
+NSB.voltDomain = '';
+NSB.PWA = true;
+if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;
+NSB.EULAtext='';
+
+// ***** Code for form: Form1 *****
+window.addEventListener('load', function() {
+  Form1.style.display = 'block';
+  NSB.addProperties(Form1);
+  Header1.style.lineHeight='40px';
+  NSB.addProperties.addChild(Header1);
+  NSB.addProperties(Header1);
+
+
+  NSB.addProperties(Label1);
+  NSB.bs.addProperties(Navs1, 'Navs_bs5');
+
+  NSB.addProperties(Label2);
+  NSB.bs.addProperties(Navs2, 'Navs_bs5');
+
+  NSB.addProperties(Label3);
+  NSB.bs.addProperties(Navs3, 'Navs_bs5');
+  Form1.style.display = 'none';
+}, false);
+
+
+window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
+window.addEventListener('load', function() {
+  if (typeof($().i18n) === 'function') $('[data-i18n]').i18n();
+  browserWarningMessage('Please use Google Chrome, Apple Safari or another supported browser.');
+  Form1.style.display = 'block';
+  if (typeof(cordova)==='undefined') NSB.preMain();
+}, false);
+document.addEventListener('deviceready', function() {
+  console.log('Cordova deviceready')
+  if (typeof(cordova)!=='undefined') NSB.preMain();
+}, false);
+</script>
+<script src="code.js"></script>
+
+</body>
+</html>

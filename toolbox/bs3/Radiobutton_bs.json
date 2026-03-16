@@ -1,0 +1,44 @@
+{ 
+"_type": "Radiobutton_bs", 
+"_base": ["bsAll", "margin", "padding", "fonts", "Input", "colors", "bsInput", "bsItems", "bsIcon", "bsPopover", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/radiobutton.png", 
+"_wikipage": "Radiobutton (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Radiobutton</a> displays one or more mutually exclusive radiobuttons. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "value": {"desc": "Gets or sets the choice."},
+    "length": {"desc": "Return the number of items."}
+},
+
+"_displayname": "Radiobutton",
+"_longhelp": "longhelp",
+"_placeholder": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"header": "Radiobutton",
+"items": "Item #1\n>Item #2\n*Item #3 (disabled)",
+
+"inline": "", 
+"_inline": { 
+    "acignore": true,
+    "desc": "Display options horizontally?", 
+    "type": "enum", 
+    "keys": ["", "inline"], 
+    "values": ["", "-inline"]
+    }, 
+                
+"_htmltemplate": [
+    "  \"{_bsInput_wrapper!i}{_bsInput_header!i}\",",
+    "    NSB.bs.radiobutton.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{disabled}', '{items!j}', '{inline}'),",
+    "    \"{_bsIconFeedback!i}{_bsinput_footer!i}\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

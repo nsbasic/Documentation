@@ -1,0 +1,525 @@
+{
+    "_type": "Page",
+    "_base": ["NSBPage", "obfuscator", "pwa", "electron", "voltbuilder"],
+    "_container": "Project",
+    "_palette": 2,
+    "_art": "images/project.png",
+    "_art_selected": "images/project-selected.png",
+    "_shorthelp":"Empty Page",
+    "_requiredfiles": [
+        "code.js",
+        "{_nsbdir}{icon}",
+        "{_nsbdir}",
+        "{_nsbdir}nsb/images/ajax-loader.gif",
+        "{_nsbdir}nsb/images/72.png",
+        "{_nsbdir}nsb/images/192.png",
+        "{_nsbdir}nsb/images/512.png",
+        "{if backgroundimage<>'' and backgroundimage[:16]<>'linear-gradient('}{backgroundimage}{/if}",
+        "{if EULA <> ''}{_nsbdir}nsb/library/iscroll.js{/if}",
+        "{_nsbdir}toolbox/as/dist/asStyle.css",
+        "{if _jqmInUse == False}{_nsbdir}nsb/library/jquery3.js{/if}",
+        "{if _jqmInUse == True}{_nsbdir}nsb/library/jquery2.js{/if}",
+        "{_nsbdir}nsb/library/jquery.modal.min.css",
+        "{if enableBrowserArrows=='true'}{_nsbdir}nsb/library/navigo.min.js{/if}",
+        "{_nsbdir}nsb/library/jquery.modal.min.js",
+        "{_nsbdir}nsb/library/appstudioFunctions.js",
+        "{if _basicInUse == True}{_nsbdir}nsb/library/basicFunctions.js{/if}"
+    ],
+    "_dbfiles": [],
+    "_displayname": "Page",
+    "_longhelp": "longhelp",
+
+    "contentSecurityPolicy": "",
+    "_contentSecurityPolicy": {
+        "desc": "If left blank, a loose and insecure policy is defined. You should supply one which is restricted to only what is needed. For more information, see <a href='https://developers.google.com/web/fundamentals/security/csp/' target='_top'>https://developers.google.com/web/fundamentals/security/csp/</a>. VoltBuilder and Cordova apps require a CSP.",
+        "type": "css",
+        "language": "Text"
+    },
+
+    "lang": "en",
+    "_lang": {
+        "acignore": true,
+        "display": "lang",
+        "desc": "Defines the language of the HTML page. See the <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang'>docs</a> for more info. ",
+        "type": "str"
+    },
+
+    "rtl": "",
+    "_rtl": {
+        "desc": "Use right to left language (rtl)?",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["", "rtl."]
+    },
+
+    "enableBrowserArrows": "false",
+    "_enableBrowserArrows": {
+        "desc": "Enable browser back and forward arrows?",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "enableNiceLinks": "false",
+    "_enableNiceLinks": {
+        "desc": "Don't use hash (#) in URL? Also needs to be set in Dashboard.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "enableAppScroll": "false",
+    "_enableAppScroll": {
+        "desc": "Allow app to scroll? Use for forms longer than the screen. Needs to be set to true for jQuery Mobile swipe as well.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "stopOnError": "true",
+    "_stopOnError": {
+        "desc": "Show a MsgBox if error encountered?",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "useStrict": "",
+    "_useStrict": {
+        "desc": "Do additional checking for uninitialized variables, future reserved words and more.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["", "'use strict';\n"]
+    },
+
+    "title": "",
+    "_title": {
+        "desc": "Page title",
+        "type": "str"
+    },
+
+    "homescreenTitle": "",
+    "_homescreenTitle": {
+        "desc": "App title when saved to Home Screen.",
+        "group": "Progressive Web App",
+        "type": "str"
+    },
+
+    "statusbar": "black-translucent",
+    "_statusbar": {
+        "desc": "iPhone Status Bar style",
+        "type": "enum",
+        "keys": ["default", "black", "black-translucent"],
+        "values": ["default", "black", "black-translucent"]
+    },
+
+    "viewportFit": "cover",
+    "_viewportFit": {
+        "desc": "iOS: How should the app cover the screen?<br><b>auto</b> currently same as <b>contain</b>.<br><b>cover</b> fills the entire screen.<br><b>contain</b> sticks within the safe area.<p><a href='http://blog.appstudio.dev/?p=3127&preview=true'>More info</a>",
+        "type": "enum",
+        "keys": ["auto", "contain", "cover"],
+        "values": ["", "contain", "cover"]
+    },
+
+    "background": "",
+    "_background": {
+        "acignore": true,
+        "display": "backgroundColor",
+        "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent. Set to 'inherit' to support dark mode.",
+        "type": "str"
+    },
+    
+    "backgroundimage": "",
+    "_backgroundimage": {
+        "display": "backgroundImage",
+        "desc": "Background image. Enter none for no image. Do not put your files into /nsb. Enter nsb/images/backgroundStripes.png for a vertical pinstripe pattern. Gradients are allowed - see Wiki.",
+        "type": "image"
+    },
+
+    "icon": "nsb/images/192.png",
+    "_icon": {
+        "display": "icon",
+        "null_value": "nsb/images/192.png",
+        "desc": "Main Icon for App. Must be a 192x192 png. Used for web apps and PWAs. Enter none for no image. Do not put file in /nsb. No spaces or special characters allowed.",
+        "type": "image"
+    },
+    
+    "firstform": "Form1",
+    "_firstform": {
+        "desc": "Form to load on startup",
+        "type": "str"
+    },
+
+    "EULA": "",
+    "_EULA": {
+        "desc": "End User License Agreement. Can be plain text or HTML. If supplied, a EULA must be agreed to on app startup. Check localStorage.getValue(NSB.id+\"_EULA\") to see if it was agreed to. <a href='https://wiki.appstudio.dev/EULA'>More info</a>",
+        "type": "css",
+        "language": "HTML",
+        "external": ["properties", "EULA.html"]
+    },
+
+    "manifest": "",
+    "_manifest": {
+    	  "display": "extraFiles",
+        "desc": "List of files and folders to be deployed with the project, one per line. If you have several files in a folder, just put the folder name in extraFiles.",
+        "type": "css",
+        "language": "Text",
+        "external": ["properties", "OfflineApp.appcache"]
+    },
+     
+    "extraheaders": "",
+    "_extraheaders": {
+        "desc": "Extra lines to include in &lt;head>",
+        "language": "Text",
+        "type": "css",
+        "language": "HTML",
+        "external": ["properties", "extraheaders.html"]
+    },
+
+    "styleheaders": "",
+    "_styleheaders": {
+        "display": "projectCSS",
+        "desc": "Extra lines to include in &lt;head> as a &lt;style> block. Good place for your css.",
+        "type": "css",
+        "language": "CSS",
+        "external": ["properties", "style.css"]
+    },
+
+    "hiddenheaders": "",
+    "_hiddenheaders": {
+        "type": "hidden"
+    },
+
+    "fontFamily": "system",
+    "_fontFamily": {
+        "i18n": true,
+        "acignore": true,
+        "desc": "Default font for app. Use system for system font.",
+        "type": "css"
+    },
+
+    "description": "",
+    "_description": {
+        "desc": "The description of the program.",
+        "language": "Text",
+        "type": "css"
+    },
+
+    "copyright": "copyright 2025 ABC Company",
+    "_copyright": {
+        "i18n": true,
+        "desc": "Developer copyright message. Must be single line.",
+        "language": "Text",
+        "type": "css"
+    },
+
+    "version": "1.0.0",
+    "_version": {
+        "desc": "Version number of app. Format is 1.0.0",
+        "type": "str"
+    },
+
+    "defaultformsize": "375x667",
+    "_defaultformsize": {
+        "desc": "Default Form Size",
+        "type": "enum",
+        "keys": ["iPhone SE, Nexus", "Responsive", "iPhone 5", "iPhone 6", "iPhone 6 Plus", "Fire, Nook, PlayBook", "Google Glass", "iPad", "XOOM, etc. 1080x800", "iPhone, iPod, Nexus", "iPhone 5", "iPhone 6", "Fire, Nook, PlayBook", "iPad", "XOOM, etc. 800x1080", "QVGA 240x320", "WQVGA 320x480", "HVGA 320x800", "WVGA 480x800", "FWVGA 480x854", "Xperia S 1280x720", "Xperia S 720x1280", "Nexus 7 800x1280", "Nexus 7 1280x800", "Galaxy 5 540x960", "Galaxy 5 960x540", "800x1200", "1200x800"],
+        "values": ["375x667","320x460xR",  "320x548", "375x647", "414x736", "600x1024", "427x240", "768x1004", "800x1080", "480x300", "568x300", "667x355", "1024x748", "1080x800", "800x1080", "240x320", "320x480 ", "320x800 ", "480x800", "480x854", "1280x720", "720x1280", "800x1280", "1280x800", "540x960", "960x540", "800x1200", "1200x800"]
+    },
+
+    "style": "",
+    "_style": {
+        "desc": "Styling rules for body. For example, text-shadow:none;",
+        "type": "css",
+        "language": "CSS"
+    },
+
+    "language": "BASIC",
+    "_language": {
+        "display": "language - scripting",
+        "desc": "Default project script language.",
+        "type": "enum",
+        "keys": ["BASIC", "JavaScript"],
+        "values": ["BASIC", "JavaScript"]
+    },
+
+    "onresize": "",
+    "_onresize": {
+        "acignore": true,
+        "desc": "Screen resized.",
+        "type": "js"
+    },
+
+    "onorientationchange": "",
+    "_onorientationchange": {
+        "acignore": true,
+        "desc": "Screen rotated.",
+        "type": "js"
+    },
+
+    "onvisibilitychange": "",
+    "_onvisibilitychange": {
+        "acignore": true,
+        "desc": "Screen hidden or shown. May work differently depending on device.",
+        "type": "js"
+    },
+
+    "ondeviceorientation": "",
+    "_ondeviceorientation": {
+        "acignore": true,
+        "desc": "Device orientation (compass) changed.",
+        "type": "js"
+    },
+
+    "browserwarnmsg": "Please use Google Chrome, Apple Safari or another supported browser.",
+    "_browserwarnmsg": {
+        "desc": "Message to display to the end user if the browser isn't compatible.  If left blank, the user will not be warned. Do not include any quote characters.",
+        "language": "Text",
+        "type": "css"
+    },
+    
+    "theme": "a",
+    "_theme": {
+        "display": "jQueryMobileTheme",
+        "desc": "Set the color theme for the project (including background color). Can be a-z. a is white, b is black, and others custom. jQuery Mobile only.",
+        "group": "Frameworks",
+        "type": "str"
+    },
+
+    "eslintRules": "",
+    "_eslintRules": {
+        "desc": "For syntax checking. A JSON configuration object that modifies the <a href='https://github.com/airbnb/javascript'>default style guide</a>. <p>See the <a href='https://eslint.org/docs/latest/rules/'>Eslint Rules Reference</a> for all the rules. <p>Sample value:<pre>{<br>  \"quotes\": [\"error\", \"single\"]<br>}</pre>",
+        "type": "css",
+        "external": ["properties", "eslintRules.json"]
+    },
+
+    "voltAppId": "",
+    "_voltAppId": {
+        "display": "AppId",
+        "group": "VoltServer",
+        "desc": "VoltServer App ID (automatically set)",
+        "type": "str"
+    },
+    
+    "voltDomain": "",
+    "_voltDomain": {
+        "display": "Domain",
+        "group": "VoltServer",
+        "desc": "VoltServer Domain (returned when you deploy to VoltServer). Do not change this unless you are deploying to VoltBuilder.",
+        "type": "str"
+    },
+    
+    "dashboardAccess": false,
+    "_dashboardAccess": {
+        "display": "Dashboard Access",
+        "group": "VoltServer",
+        "desc": "Does this app need to use the Dashboard API calls to manage apps? Allow the app access to user data on VoltServer, much like the Dashboard has.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+    
+    "BootstrapTheme": "bootstrap", 
+    "_BootstrapTheme": { 
+        "acignore": true,
+        "desc": "Appearance of the controls. Some of these will not work with BS3. See <a href='https://bootswatch.com/'>Bootswatch</a> for samples.", 
+        "group": "Frameworks",
+        "type": "enum", 
+        "keys": [
+                "bootstrap",
+                "cerulean",
+                "cosmo",
+                "cyborg",
+                "darkly",
+                "flatly",
+                "journal",
+                "litera",
+                "lumen",
+                "lux",
+                "materia",
+                "minty",
+                "morph",
+                "pulse",
+                "quartz",
+                "sandstone",
+                "simplex",
+                "sketchy",
+                "slate",
+                "solar",
+                "spacelab",
+                "superhero",
+                "united",
+                "vapor",
+                "yeti",
+                "zephyr"
+                ], 
+        "values": [
+                "bootstrap",
+                "cerulean",
+                "cosmo",
+                "cyborg",
+                "darkly",
+                "flatly",
+                "journal",
+                "litera",
+                "lumen",
+                "lux",
+                "materia",
+                "minty",
+                "morph",
+                "pulse",
+                "quartz",
+                "sandstone",
+                "simplex",
+                "sketchy",
+                "slate",
+                "solar",
+                "spacelab",
+                "superhero",
+                "united",
+                "vapor",
+                "yeti",
+                "zephyr"
+                ]
+    },
+
+    "pathTo_jqWidgets": "https://jqwidgets.com/public/jqwidgets/", 
+    "_pathTo_jqWidgets": { 
+        "display": "jqWidgetsPath",
+        "desc": "The path to the jqWidgets files. If to a local folder, should end in /. Must be single line.", 
+        "group": "Frameworks",
+        "language": "Text",
+        "type": "css" 
+        }, 
+        
+    "jqWidgetsLicence": "", 
+    "_jqWidgetsLicence": { 
+        "desc": "Your jqWidgets license. Get it from jqwidgets.com", 
+        "group": "Frameworks",
+        "language": "Text",
+        "type": "css" 
+        }, 
+
+    "pathTo_bootstrap": "", 
+    "_pathTo_bootstrap": { 
+        "display": "BootstrapPath",
+        "group": "Frameworks",
+        "desc": "The path to the Bootstrap. If to a local folder, should end in /. Must be single line.", 
+        "language": "Text",
+        "type": "css" 
+        }, 
+
+    "script": "",
+    "_script": {
+        "acignore": true,
+        "desc": "The code associated with this object.",
+        "type": "css",
+        "external": ["modules", "{if language=='BASIC'}globalcode.bas{/if}{if language=='JavaScript'}globalcode.js{/if}"]
+    },
+    "_cached_js": {
+        "acignore": true,
+        "type": null,
+        "external": ["cache", "globalcode.cache"]
+    },
+    "_cached_js_script_hash": {
+        "acignore": true,
+        "type": null,
+        "external": ["cache", "globalcode.hash"]
+    },
+    "_expanded_pmp": {
+        "acignore": true,
+        "type": "json",
+        "external": ["cache", "globalcode.pmp"]
+    },
+    
+    "_htmltemplate": [
+        "<!DOCTYPE HTML>",
+        "<html lang={lang}{if rtl<>''} dir=rtl{/if}>",
+        "<head>",
+        "<meta charset=\"utf-8\">",
+        "<title>{title}</title>",
+        "<meta name=\"generator\" content=\"{nsbx_build}\" />",
+        "<meta name='date' content='{nsbx_timestamp}' />",
+        "<meta name='Description' content='{if description<>''}{description}{/if}{if description==''}{title}{/if}' />",
+        "<meta name='version' content='{version}' />",
+        "<meta name='BuildCounter' content='{nsbx_buildcounter}' />",
+        "<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no viewport-fit={viewportFit}' />",
+        "<meta name='theme-color' content='#000000' />",
+        "<meta name='mobile-web-app-capable' content='yes' />",
+        "<meta name='apple-mobile-web-app-status-bar-style' content='{statusbar}' />",
+        "<meta name='apple-mobile-web-app-title' content='{homescreenTitle}' />",
+        "<meta name='copyright' content='{copyright}' />",
+        "{if contentSecurityPolicy<>''}<meta http-equiv='Content-Security-Policy' content=\"{contentSecurityPolicy}\" />{/if}",
+        "{if icon<>''}<link rel='apple-touch-icon' href='{_nsbdir}{icon}' />{/if}",
+        "{if icon<>''}<link rel='shortcut icon' href='{_nsbdir}{icon}' />{/if}",
+        "{if extraheaders.find('Electron')>=0}<script>window.$ = window.jQuery = require('./nsb/library/jquery3.js');</script>{/if}",
+        "{if disablePWA==''}<link href='manifest.json' rel='manifest' />{/if}",
+        "{_reqheaders}",
+        "{if hiddenheaders<>''}{hiddenheaders}{/if}",        
+        "{if extraheaders<>''}{extraheaders}{/if}",        
+        "{_css}",
+        "{if styleheaders<>''}<style>{/if}",
+        "{if styleheaders<>''}{styleheaders}{/if}",
+        "{if styleheaders<>''}</style>{/if}",
+        "{_headjs}",
+        "</head>",
+        "<body style=\"margin:0px;-ms-touch-action:none;background:inherit;{if fontFamily<>'system' and fontFamily<>''}font-family:{fontFamily};{/if}{if fontFamily=='system'}-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue';{/if}{if background<>''} background-color:{background}; {/if}{if background==''} background-color:inherit; {/if}{style!j}\">",
+        "<noscript><h1>JavaScript must be enabled!</h1></noscript>",
+        "<div data-role=\"page\" id=\"NSBPage\" data-theme=\"{theme}\" style=\"position:absolute; width:100%; height:100%; background-color:inherit; {if backgroundimage<>'' and backgroundimage[:16]=='linear-gradient('}background-image:{backgroundimage};{/if}{if backgroundimage<>'' and backgroundimage[:16]<>'linear-gradient('}background-image:url('{backgroundimage}');{/if}\">",
+        "{_childhtml}",
+        "</div>",
+        "{_js}",
+        "<script src=\"code.js\"></script>",
+        "{_dbheaders}",
+        "</body>",
+        "</html>"
+    ],
+
+    "_csstemplate": [
+        "<style type=\"text/css\">\n",
+        "\n{_childcss}",
+        "\n</style>"
+    ],
+
+    "_headjstemplate": "{_childheadjs}",
+
+    "_jstemplate": ["<script>",
+        "if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');",
+        "(function(){{var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];}})()",
+        "var NSB = NSB || {{}};",
+        "NSB.currentForm = {firstform};",
+        "NSB.stopOnError = {stopOnError};",
+        "NSB.enableBrowserArrows = {enableBrowserArrows};",
+        "NSB.enableAppScroll = {enableAppScroll};",
+        "NSB.id = '{id}';",
+        "NSB.initLanguage();",
+        "NSB.voltAppId = '{voltAppId}';",
+        "NSB.voltDashboardAccess = {dashboardAccess};",
+        "NSB.voltDomain = '{voltDomain}';",
+        "{if disablePWA==''}NSB.PWA = true;{/if}",
+        "{if disablePWA=='false'}NSB.PWA = false;{/if}",
+        "{if enableBrowserArrows == 'true'}var router = new Navigo(null, !{enableNiceLinks});{/if}",
+        "{if enableBrowserArrows == 'true'}router.on(function() {{ChangeFormAction({firstform});}});{/if}",
+        "if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;",
+        "NSB.EULAtext='{EULA!j}';",
+        "",
+        "{_childjs}",
+        "",
+        "window.addEventListener('orientationchange', function(){{window.scrollTo(0,0)}});",
+        "window.addEventListener('load', function() {{",
+        "  if (typeof($().i18n) === 'function') $('[data-i18n]').i18n();",
+        "{if voltAppId <> ''}  if (window.$volt) $volt.init('{if dashboardAccess <> 'true'}{voltAppId}{/if}{if dashboardAccess == 'true'}RpYCMN{/if}', NSB.voltDomain);{/if}",
+        "{if browserwarnmsg<>''}  browserWarningMessage('{browserwarnmsg}');{/if}",
+        "{if enableBrowserArrows == 'false'}  {firstform}.style.display = 'block';{/if}",
+        "{if enableBrowserArrows == 'true'}  router.resolve();{/if}",  
+        "{if jqWidgetsLicence<>''}  if ($.jqx) $.jqx.credits = '{jqWidgetsLicence}';{/if}",
+        "  if (typeof(cordova)==='undefined') NSB.preMain();",
+        "}}, false);",
+        "document.addEventListener('deviceready', function() {{",
+        "  console.log('Cordova deviceready')",
+        "  if (typeof(cordova)!=='undefined') NSB.preMain();",
+        "}}, false);",
+        "</script>"
+    ],
+    "_design_jstemplate": "<script>{_childdesignjs}</script>"
+}

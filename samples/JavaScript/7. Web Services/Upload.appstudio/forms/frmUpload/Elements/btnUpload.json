@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "btnUpload", 
+  "left": 197, 
+  "onclick": "btnUpload_onclick()", 
+  "right": "auto", 
+  "top": 407, 
+  "value": "Upload", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

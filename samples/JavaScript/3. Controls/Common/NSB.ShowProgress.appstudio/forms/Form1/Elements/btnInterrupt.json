@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "btnInterrupt", 
+  "left": 64, 
+  "onclick": "btnInterrupt_onclick()", 
+  "right": "auto", 
+  "top": 244, 
+  "value": "Interrupt after 2 seconds", 
+  "width": "auto", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

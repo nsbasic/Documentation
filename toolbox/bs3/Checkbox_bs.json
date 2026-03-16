@@ -1,0 +1,48 @@
+{ 
+"_type": "Checkbox_bs", 
+"_base": ["bsAll", "margin", "padding", "fonts", "Input", "colors", "bsInput", "bsItems", "bsIcon", "bsPopover", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/checkbox.png", 
+"_wikipage": "Checkbox (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Checkbox</a> lets you define one or more checkboxes. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "getValue(n)": {"desc": "Get the value of checkbox n."},
+    "footer": {"desc": "Change the footer of the control."},
+    "header": {"desc": "Change the header of the control."},
+    "length": {"desc": "Return the number of items."},
+    "setValue(n, value)": {"desc": "Set the value of checkbox n to True or False."}
+},
+
+"_displayname": "Checkbox",
+"_longhelp": "longhelp",
+"header": "Checkbox",
+"_placeholder": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"items": "Item #1\nItem #2\n*Item #3 (disabled)",
+
+"inline": "", 
+"_inline": { 
+    "acignore": true,
+    "desc": "Display options horizontally?", 
+    "type": "enum", 
+    "keys": ["", "inline"], 
+    "values": [false, true]
+    }, 
+                
+"_htmltemplate": [
+    "  \"{_bsInput_wrapper!i}{_bsInput_header!i}\",",
+    "    NSB.bs.checkbox.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{disabled}', '{items!j}', '{inline}', '{value}'),",
+    "    \"{_bsIconFeedback!i}{_bsinput_footer!i}\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

@@ -1,0 +1,169 @@
+{ 
+"_type": "Toast_bs5", 
+"_base": ["bs5All", "fonts", "margin", "padding"], 
+"_palette": 9, 
+"_art": "images/toast.png",
+"_wikipage": "Toast (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Toast</a> displays an information message. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Toast",
+"_longhelp": "longhelp",
+
+"header": "Card",
+"height": "auto",
+"width": "auto",
+
+"animation": "true", 
+"_animation": { 
+    "acignore": true,
+    "desc": "Should Toast hide and show with a fade animation", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    },
+
+"autohide": "true", 
+"_autohide": { 
+    "acignore": true,
+    "desc": "Should Toast hide itself after a delay?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    },
+
+"delay": "1000", 
+"_delay": { 
+    "acignore": true,
+    "desc": "How long should the Toast display (milliseconds)", 
+    "type": "str"
+    },
+
+"imageClass": "", 
+"_imageClass": {
+    "group": "Image",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"imageStyle": "", 
+"_imageStyle": {
+    "group": "Image",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"src": "nsb/images/192.png", 
+"_src": { 
+    "group": "Image",
+    "i18n": true,
+    "desc": "Image. Will be displayed as 16x16. Set to empty for none. Can be .png, gif, bmp or jpg.", 
+    "type": "image" 
+   },
+
+"titleClass": "", 
+"_titleClass": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"titleStyle": "", 
+"_titleStyle": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"titleValue": "Title", 
+"_titleValue": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"subtitleClass": "", 
+"_subtitleClass": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"subtitleStyle": "", 
+"_subtitleStyle": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"subtitleValue": "Subtitle", 
+"_subtitleValue": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"textClass": "", 
+"_textClass": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"textStyle": "", 
+"_textStyle": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"textValue": "This is the text of the Toast.", 
+"_textValue": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"zIndex": "1000", 
+"_zIndex": {
+    "acignore": true,
+    "desc": "What level to display this at? Higher puts it on top of other controls. Integer.", 
+    "type": "css" 
+    },
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "    \"<div id='{id}' class='toast fade hide {class}' style=' {_margincss!i}{_paddingcss!i}{_fontcss!i}{hidden}{style!j} z-index:{zIndex};' role='alert' aria-live='assertive' aria-atomic='true'>\",",
+    "      \"<div class='toast-header'>\",",
+    "{if src<>''}        \"<img id='{id}_image' height=16 width=16 class='rounded me-2 {imageClass}' style='{imageStyle}' src='{src}'>\",{/if}",
+    "{if titleValue<>''}        \"<strong id='{id}_title' class='me-auto {titleClass}' style='{titleStyle}' data-i18n='{titleValue!j}'>{titleValue!j}</strong>\",{/if}",
+    "{if subtitleValue<>''}        \"<small id='{id}_subtitle' class='{subtitleClass}' style='{subtitleStyle}' data-i18n='{subtitleValue!j}'>{subtitleValue!j}</small>\",{/if}",
+    "        \"<button type='button' class='ml-2 mb-1 btn-close' data-bs-dismiss='toast' aria-label='Close'>\",",
+    "          \"<span aria-hidden='true'></span>\",",
+    "        \"</button>\",",
+    "      \"</div>\",",
+    "      \"<div id='{id}_text' class='toast-body {textClass}' style='{textStyle}' data-i18n='{textValue!j}'>{textValue!j}</div>\",",    
+    "    \"</div>\","
+],
+
+"_jstemplate": [
+  "  $('#{id}').toast({{autohide:{autohide}, animation:{animation}, delay:{delay} }})"
+  ]
+		
+}
+

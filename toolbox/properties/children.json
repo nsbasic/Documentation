@@ -1,0 +1,17 @@
+{
+    "_type": "children",
+    "_base": "NSBObject",
+    "_description": "Allow a control to have children. Include this, along with {_childcss}, {_childhtml} and {_childjs} in the control.",
+
+"_is_container": true,
+
+"position": "static",
+"_position": {
+        "desc": "How will the children be positioned?<ul><li><b>Absolute</b>: Controls go where placed.<li><b>Fixed</b>: Position relative to browser window.<li><b>Inherit</b>: Same positioning as parent.<li><b>Initial</b>: Default values.<li><b>Relative</b>: Like static, but Left, right, top, bottom not ignored.<li><b>Static</b>: Position based on style and other controls. Left, right, top, bottom ignored.</li>",
+
+        "type": "enum",
+        "keys": ["absolute", "fixed", "inherit", "initial", "relative", "static"],
+        "values": ["absolute", "fixed", "inherit", "initial", "relative", "static"]
+    }
+   
+}

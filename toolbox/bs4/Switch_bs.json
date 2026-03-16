@@ -1,0 +1,89 @@
+{ 
+"_type": "Fliptoggle_bs4", 
+"_base": ["bs4All", "borders", "margin", "padding", "fonts"], 
+"_palette": 9, 
+"_art": "images/switch.png",
+"_wikipage": "Fliptoggle (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Switch</a>. Bootstrap.", 
+"_category": ["All", "Bootstrap 4"],
+"_requiredfiles": [
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/css/open-iconic-bootstrap.min.css",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/fonts/open-iconic.woff",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+    "{_nsbdir}toolbox/bs4/dist/bsFunctions.min.js"
+    ],
+
+"_displayname": "Switch",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "",
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "Element value changed", 
+    "type": "js" 
+    },
+
+"onblur": "", 
+"_onblur": { 
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }, 
+
+"textColor": "", 
+"_textColor": { 
+    "acignore": true,
+    "desc": "Color of the text", 
+    "type": "enum", 
+    "keys": ["", "primary", "secondary", "success", "info", "warning", "danger", "light", "dark", "muted", "white"], 
+    "values": ["", " text-primary", " text-secondary", " text-success", " text-info", " text-warning", " text-danger", " text-light", " text-dark", " text-muted", " text-white"]
+}, 
+
+"value": "true", 
+"_value": {
+    "desc": "Value of Switch.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"] 
+    }, 
+
+"text": "Switch", 
+"_text": {
+    "desc": "Text of Switch.", 
+    "type": "str"
+    }, 
+
+
+"_htmltemplate": [
+    "  \"<div id='{id}' data-role=none class='custom-control custom-switch {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "    \"<input id='{id}_value' type='checkbox' class='custom-control-input' {if value == 'true'} checked='checked'{/if}{disabled}>\",",
+    "    \"<label id='{id}_text' class='custom-control-label {textColor}' for='{id}_value' data-i18n='{text}'>{text}</span>\",",
+    "    \"</label>\",",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ],
+  
+"_design_jstemplate": [
+    "{id}.getDesignFrameRect = function() {{",
+    "  return {id}_text.getBoundingClientRect();",
+    "}}"
+    ]
+
+		
+}
+
+

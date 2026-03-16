@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "disabled": "ui-state-disabled", 
+  "height": "auto", 
+  "id": "StopButton", 
+  "left": "208", 
+  "onclick": "StopButton_onclick()", 
+  "right": "auto", 
+  "top": "6", 
+  "value": "Stop", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

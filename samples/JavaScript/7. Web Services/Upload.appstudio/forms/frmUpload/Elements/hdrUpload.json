@@ -1,0 +1,20 @@
+{ 
+  "bottom": "auto", 
+  "id": "hdrUpload", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Upload", 
+  "position": "absolute", 
+  "children": [ 
+    { 
+      "!type": "External", 
+      "file": [ 
+        "forms", 
+        "frmUpload", 
+        "Elements", 
+        "hdrUpload_btnRight.json" 
+      ] 
+    } 
+  ] 
+} 

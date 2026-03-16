@@ -1,0 +1,28 @@
+{
+    "_type": "bs4Badge",
+    "_base": "NSBObject",
+    "_description": "Badge option used by many Bootstrap controls.",
+    
+"badge": "", 
+"_badge": { 
+    "group": "Extras",
+    "i18n": true,
+    "desc": "Text to display in badge.", 
+    "type": "str" 
+   }, 
+
+"badgeAppearance": " badge-info", 
+"_badgeAppearance": { 
+    "group": "Extras",
+    "acignore": true,
+    "desc": "Appearance of the badge", 
+    "type": "enum", 
+    "keys": ["secondary", "primary", "success", "info", "warning", "danger", "link", "light", "dark"], 
+    "values": [" badge-secondary", " badge-primary", " badge-success", " badge-info", " badge-warning", " badge-danger", " badge-link", " badge-light", " badge-dark"]
+}, 
+
+"_bsBadge": "<span id={id}_badge class=\\\"badge{badgeAppearance}\\\" style=\\\"margin-left:1ch;\\\">{badge}</span>",
+
+"_bsBadgePadBelow": "<span id={id}_badge class='badge{badgeAppearance}' style=margin-bottom:4px;>{badge}</span>"
+
+}

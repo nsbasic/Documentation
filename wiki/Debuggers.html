@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Debuggers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Debuggers - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXUhHr-Vr_NGU1KIQzMKmQAAABE","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Debuggers","wgTitle":"Debuggers","wgCurRevisionId":11113,"wgRevisionId":11113,"wgArticleId":983,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Debuggers","wgRelevantArticleId":983,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Debuggers rootpage-Debuggers skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Debuggers</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Use_Cases"><span class="tocnumber">1</span> <span class="toctext">Use Cases</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Which_Debugger_should_I_use?"><span class="tocnumber">1.1</span> <span class="toctext">Which Debugger should I use?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Debuggers"><span class="tocnumber">2</span> <span class="toctext">Debuggers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Chrome_Debugger"><span class="tocnumber">2.1</span> <span class="toctext">Chrome Debugger</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Chrome_Remote_Debugger"><span class="tocnumber">2.2</span> <span class="toctext">Chrome Remote Debugger</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#AppStudio_Server_Debugger"><span class="tocnumber">2.3</span> <span class="toctext">AppStudio Server Debugger</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Safari_Debugger"><span class="tocnumber">2.4</span> <span class="toctext">Safari Debugger</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Safari_Remote_Debugger"><span class="tocnumber">2.5</span> <span class="toctext">Safari Remote Debugger</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Use_Cases">Use Cases</h2></div>
+<p>Due to all the different ways AppStudio apps can be run, there is no one debugger that will work in all situations. This chart is meant to help you pick which debugger to use. 
+</p><p>Pick the row based on what you use as your desktop development machine.
+</p><p>Pick the column based on where you are running the app. Then, look up more information below on using that debugger.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Which_Debugger_should_I_use?"><span id="Which_Debugger_should_I_use.3F"></span>Which Debugger should I use?</h3></div>
+<table class="wikitable">
+
+<tbody><tr>
+<th></th>
+<th>Desktop</th>
+<th>iOS<br />WebApp</th>
+<th>iOS<br />Native</th>
+<th>Android 4.4+<br />WebApp</th>
+<th>Android 4.4+<br />Native</th>
+<th>Android &lt; 4.4<br />WebApp</th>
+<th>Android &lt; 4.4<br />Native
+</th></tr>
+<tr>
+<td><b>Mac OS</b></td>
+<td>Chrome</td>
+<td>Safari Remote</td>
+<td>Safari</td>
+<td>Chrome Remote</td>
+<td>Chrome Remote</td>
+<td>AppStudio Server Debugger</td>
+<td>AppStudio Server Debugger
+</td></tr>
+<tr>
+<td><b>Windows</b></td>
+<td>Chrome</td>
+<td>Chrome Remote</td>
+<td>AppStudio Server Debugger</td>
+<td>Chrome Remote</td>
+<td>Chrome Remote</td>
+<td>AppStudio Server Debugger</td>
+<td>AppStudio Server Debugger
+</td></tr></tbody></table>
+<p>Desktop is an app which is run in a desktop browser. It can be either run locally or from a server.
+</p><p><br />
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Debuggers">Debuggers</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Chrome_Debugger">Chrome Debugger</h3></div>
+<p>The Chrome Debugger is the most commonly one used. It runs on Windows and Mac OS. It can debug apps running on the desktop, and has the most functions. To start it, use Chrome's Tool menu and choose JavaScript Console.
+</p><p>Information on using it is <a href="Using_the_Chrome_Debugger.html" title="Using the Chrome Debugger">here</a>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Chrome_Remote_Debugger">Chrome Remote Debugger</h3></div>
+<p>The Chrome Remote Debugger, once started, is very much like the Chrome Debugger. It lets you debug Android 4.4 and later devices. Both web apps and VoltBuilder apps can be debugged. You should also have the current version of Chrome on both your desktop and the device.
+</p><p>To start it, use Chrome on the desktop and go to <a rel="nofollow" class="external text" href="http://about:inspect/">about:inspect</a>
+</p><p>Information on using it is <a rel="nofollow" class="external text" href="https://developer.chrome.com/devtools/docs/remote-debugging">here</a>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="AppStudio_Server_Debugger">AppStudio Server Debugger</h3></div>
+<p>Use this debugger in cases where the Chrome Debugger does not work. It will be useful for apps running on iOS devices when you are in Windows, as well as Android devices running older versions of Android OS (4.3 or older). It works for both web apps and VoltBuilder apps. Web apps need to be deployed to the AppStudio Server.
+</p><p>This debugger does not have the ability to view code or set checkpoints, but otherwise looks like a subset of the Chrome Debugger. It is based in the <a rel="nofollow" class="external text" href="http://people.apache.org/~pmuellr/weinre-docs/latest/Home.html">Weinre</a> ("<b>WE</b>b <b>IN</b>spector <b>RE</b>mote") Debugger. 
+</p><p>Start it using the "AppStudio Server Debugger" in the Run menu. It will then recognize your app in these cases:
+</p><p>1. It is running in a desktop browser, after having been loaded from the AppStudio Server.
+</p><p>2. It is running on a device as a web app, after having been loaded from the AppStudio Server.
+</p><p>3. It is running on a device as a VoltBuilder App. The project property "Debugger" must be set to True.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Safari_Debugger">Safari Debugger</h3></div>
+<p>The Safari Debugger can be used to debug local apps on Mac OS machines. There is little need for it, since the Chrome Debugger will work in the same situations. The interface is a bit different than the one in Chrome. We recommend using Chrome since it is useful in more cases, and there is no need to learn a different debugger.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Safari_Remote_Debugger">Safari Remote Debugger</h3></div>
+<p>The Safari Remote Debugger is useful for debugging apps on devices if you are using a Mac. It works on both Web Apps and VoltBuilder apps. 
+</p><p>To use it, connect your iOS device to your Mac using a USB cable. In Safari on your Mac, go into the Advanced screen in Preferences. Turn on “Show Develop menu in menu bar”.
+</p><p>Then, from the Develop menu, choose your device and the app you want to debug.
+</p><p>More information is <a rel="nofollow" class="external text" href="https://developer.apple.com/library/mac/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html">here</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124175404
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.011 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 26/1000000
+Revision size: 4521/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:983:|#|:idhash:canonical and timestamp 20260124175404 and revision id 11113. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Debuggers&amp;oldid=11113">https://wiki.appstudio.dev/index.php?title=Debuggers&amp;oldid=11113</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Debuggers" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Debuggers" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Debuggers.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Debuggers&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Debuggers.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Debuggers&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Debuggers&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Debuggers" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Debuggers" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Debuggers&amp;oldid=11113" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Debuggers&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 13 November 2020, at 14:38.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":382,"wgPageParseReport":{"limitreport":{"cputime":"0.011","walltime":"0.016","ppvisitednodes":{"value":26,"limit":1000000},"revisionsize":{"value":4521,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124175404","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124194430 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Debuggers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

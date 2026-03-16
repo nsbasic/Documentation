@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 293, 
+  "hidden": "block", 
+  "id": "txtLog", 
+  "left": 19, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 87, 
+  "width": 272, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

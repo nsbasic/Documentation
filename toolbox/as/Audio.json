@@ -1,0 +1,51 @@
+{ 
+"_type": "Audio", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/audio.png", 
+"_shorthelp": "<a href='{_docurl}'>Audio</a> plays a sound clip. Works best if you have just one of these in your project.", 
+"_category": ["All", "Multimedia"],
+"_requiredfiles": ["{src}"],
+"_displayname": "Audio",
+"_longhelp": "longhelp",
+
+"width": 100, 
+"height": 20, 
+
+"src": "", 
+"_src": { 
+    "desc": "Filename of Sound. Can be local file or URL.", 
+    "type": "file" 
+    },
+    
+"autoplay": "", 
+"_autoplay": { 
+    "desc": "Start playing when ready?", 
+    "type": "enum",
+    "keys":   ["","autoplay"], 
+    "values": ["","autoplay"]
+     }, 
+     
+"controls": "", 
+"_controls": { 
+    "desc": "Show Player Controls?", 
+    "type": "enum",
+    "keys":   ["","controls"], 
+    "values": ["","controls"]
+     }, 
+     
+"loop": "", 
+"_loop": { 
+    "desc": "Play sound continuously?", 
+    "type": "enum",
+    "keys":   ["","loop"], 
+    "values": ["","loop"]
+     }, 
+
+ 
+     
+
+"_htmltemplate": "  \"<audio id='{id}' style='{hidden}{style!j}' class='{class}' src='{src}' {autoplay} {controls} {loop}></audio>\",",
+
+"_jstemplate":"  NSB.addProperties({id});"
+}

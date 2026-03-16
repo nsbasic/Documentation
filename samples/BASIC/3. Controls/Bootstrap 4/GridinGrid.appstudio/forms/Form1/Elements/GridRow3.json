@@ -1,0 +1,70 @@
+{
+  "!type": "GridRow_bs4", 
+  "backgroundColor": "", 
+  "borderColor": "#E0E0E0", 
+  "borderStyle": "solid", 
+  "borderWidth": "1", 
+  "bottom": "auto", 
+  "cached_js": "", 
+  "cached_js_script_hash": "d41d8cd98f00b204e9800998ecf8427e", 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "GridColumn3.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "GridColumn4.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "color": "", 
+  "display": "", 
+  "expanded_pmp": null, 
+  "fontFamily": "", 
+  "fontSize": "", 
+  "fontStyle": "", 
+  "fontWeight": "", 
+  "gutters": "", 
+  "height": "100", 
+  "hidden": "", 
+  "id": "GridRow3", 
+  "left": "initial", 
+  "mAll": "", 
+  "mBottom": "", 
+  "mLeft": "0", 
+  "mRight": "0", 
+  "mTop": "", 
+  "onclick": "", 
+  "onmousedown": "", 
+  "onmousemove": "", 
+  "onmouseout": "", 
+  "onmouseup": "", 
+  "onresize": "", 
+  "ontouchend": "", 
+  "ontouchmove": "", 
+  "ontouchstart": "", 
+  "pAll": "", 
+  "pBottom": "", 
+  "pLeft": "", 
+  "pRight": "", 
+  "pTop": "", 
+  "position": "relative", 
+  "right": "auto", 
+  "rowClass": "", 
+  "script": "", 
+  "style": "float:left;", 
+  "top": "initial", 
+  "verticalAlign": "", 
+  "width": "100%"
+}

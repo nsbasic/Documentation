@@ -1,0 +1,60 @@
+{ 
+"_type": "GridRow_bs5", 
+"_base": ["bs5All", "flexbox", "children", "margin", "padding", "fonts", "colors", "borders", "Widget"], 
+"_palette": 9, 
+"_art": "images/gridrow.png", 
+"_wikipage": "GridRow (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>GridRow</a> Sets up a row on your form which you can add GridColumns to. Bootstrap.",
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "GridRow",
+"_longhelp": "longhelp",
+
+"width": "100%",
+"height": "100",
+"borderColor": "#E0E0E0",
+"borderWidth": "1",
+
+"gutters": "",
+"_gutters": {
+    "acignore": true,
+    "desc": "Should there be space between columns?",
+    "type": "enum",
+    "keys": ["yes", "no"],
+    "values": ["", " no-gutters"]
+},
+
+"rowClass": "", 
+"_rowClass": {
+    "acignore": true,
+    "desc": "Classes to apply to each row", 
+    "type": "css" 
+    },
+
+"verticalAlign": "",
+"_verticalAlign": {
+    "acignore": true,
+    "desc": "How should the columns be aligned in the row?",
+    "type": "enum",
+    "keys": ["top", "center", "bottom"],
+    "values": ["", " align-items-center", " align-items-end"]
+},
+  
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+"  \"<div id='{id}' style='{_flexboxcss!i}{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'  class='{class}'>\",",
+"    \"<div id={id}_addChild class='row{gutters}{verticalAlign} {rowClass}'>\",",
+"{if _childhtml<>''}{_childhtml}{/if}{if _childhtml==''}\"{id}\"{/if},",
+"  \"</div>\",",
+"\"</div>\","
+],
+  
+"_jstemplate": [
+    "  NSB.addProperties({id});",
+    "{_childjs}"
+]
+}

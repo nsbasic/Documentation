@@ -1,0 +1,14 @@
+{
+    "_type": "bsNav",
+    "_base": "NSBObject",
+    "_description": "Text and Subtext properties.",
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }
+
+}

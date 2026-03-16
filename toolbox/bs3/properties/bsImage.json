@@ -1,0 +1,42 @@
+{
+    "_type": "bsImage",
+    "_base": "NSBObject",
+    "_description": "Properties for Images.",
+
+"src": "nsb/images/192.png", 
+"_src": { 
+    "i18n": true,
+    "desc": "Image. Set to empty for none. Can be .png, gif, bmp or jpg.", 
+    "type": "image" 
+   }, 
+
+"responsive": " img-responsive", 
+"_responsive": { 
+    "acignore": true,
+    "desc": "Should image resize to container?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": [""," img-responsive"]
+    }, 
+
+"center": "", 
+"_center": { 
+    "acignore": true,
+    "desc": "Should image be centered in container?", 
+    "type": "enum", 
+    "keys": ["", "True"], 
+    "values": [""," center-block"]
+    }, 
+
+"shape": "", 
+"_shape": { 
+    "acignore": true,
+    "desc": "thumbnail, rounded or circle?",
+    "type": "enum", 
+    "keys": ["thumbnail", "rounded", "circle"], 
+    "values": [""," img-rounded"," img-circle"]
+    },
+    
+"_bsImage": "<img id='{id}' src='{src}' class='{responsive}{center}{shape}>"
+
+}

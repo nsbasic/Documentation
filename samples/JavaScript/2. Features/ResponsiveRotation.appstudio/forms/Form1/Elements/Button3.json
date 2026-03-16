@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button3", 
+  "left": "initial", 
+  "right": "auto", 
+  "style": "float:left;", 
+  "top": "initial", 
+  "value": "Do Nothing Button", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

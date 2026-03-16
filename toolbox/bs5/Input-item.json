@@ -1,0 +1,120 @@
+{ 
+"_type": "Input-item_bs5", 
+"_base": ["bs5All", "bs5Input", "bs5Text"], 
+"_palette": 9, 
+"_art": "images/input-item.png",
+"_wikipage": "Input (Bootstrap 5)",
+"_shorthelp": "<a href='{_docurl}'>Input_(Bootstrap_5)</a> is a field on an Input-group control. Bootstrap5.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Input-item",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"borderStyle": "",
+"_backgroundColor": {"type": "hidden"},
+"_bottom": {"type": "hidden"},
+"_height": {"type": "hidden"},
+"_left": {"type": "hidden"},
+"_right": {"type": "hidden"},
+"_top": {"type": "hidden"},
+"_width": {"type": "hidden"},
+"_headerCols": {"type": "hidden"},
+"_valueCols": {"type": "hidden"},
+"_fontSize": {"type": "hidden"},
+"_fontStyle": {"type": "hidden"},
+"_fontWeight": {"type": "hidden"},
+
+"attributes": "",
+"_attributes": {
+    "acignore": true,
+    "desc": "HTML attributes. Example: disabled=true",
+    "type": "css"
+   },
+   
+"datalist": "",
+"_datalist": {
+    "acignore": true,
+    "desc": "List of possible predefined values, one per line.",
+    "type": "css"
+   },
+
+"inputType": "text", 
+"_inputType": { 
+    "acignore": true,
+    "desc": "Input field type", 
+    "type": "enum",
+    "keys":   ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"], 
+    "values": ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"]
+     }, 
+
+"itemType": "inputText", 
+"_itemType": { 
+    "acignore": true,
+    "desc": "input field type", 
+    "type": "enum",
+    "keys":   ["inputText","span","textarea","button","checkbox","radio"], 
+    "values": ["inputText","span","textarea","button","checkbox","radio"]
+     },
+     
+"passwordToggle": "", 
+"_passwordToggle": { 
+    "acignore": true,
+    "desc": "Option to toggle plaintext for Password fields.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["", "true"]
+}, 
+
+"step": "", 
+"_step": { 
+    "acignore": true,
+    "desc": "A value the input has to be a multiple of. Use 1 for integer only", 
+    "type": "str" 
+    },
+    
+"min": "", 
+"_min": { 
+    "acignore": true,
+    "desc": "For inputType Number, the minimum value. For date, the earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "acignore": true,
+    "desc": "For inputType Number, the maximum value. For date, the latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    },
+
+
+"_htmltemplate": [
+    "{if itemType[:5]=='input'}      \"<input id={id} class='form-control {class}' style='{style}' type={inputType} placeholder='{placeholder}' {if attributes<>''} {attributes!j}{/if}{if name<>''} name='{name}' {/if}{_bsTextatr!i}{if min<>''} min='{min}'{/if}{if max<>''} max='{max}' {/if}{if step<>''}step={step} {/if}{if inputmode<>''}inputmode={inputmode} {/if}{if value<>''}value='{value!b}' {/if}>\",{/if}",
+    "{if itemType[:5]=='input' and passwordToggle=='true'}      \"<span id={id}_icon style='{style}' class='input-group-text bi-eye-slash  {class}'></span>\",{/if}",
+    "{if itemType=='span'}      \"<span id={id} style='{style}' class='input-group-text  {class}' {if name<>''} name='{name}' {/if}>{value}</span>\",{/if}",
+    "{if itemType=='textarea'}      \"<textarea id={id} style='{style}' class='form-control {class}' placeholder='{placeholder}'{if attributes<>''} {attributes!j}{/if}{if name<>''} name='{name}' {/if}>{value}</textarea>\",{/if}",
+    "{if itemType=='button'}      \"<button id={id} style='{style}' class='btn btn-outline-secondary {class}' type='button'{if name<>''} name='{name}' {/if}>{value}</button>\",{/if}",
+    "{if itemType=='checkbox' or itemType=='radio'}      \"<div class='input-group-text {class} {if name<>''} name='{name}' {/if}'>\",{/if}",
+    "{if itemType=='checkbox'}      \"<input id={id} style='{style}' class='form-check-input mt-0 {class}' type='checkbox' value='' {if name<>''} name='{name}' {/if}>\",{/if}",
+    "{if itemType=='radio'}      \"<input id={id} style='{style}' class='form-check-input mt-0 {class}' type='radio' value='' {if name<>''} name='{name}' {/if}>\",{/if}",
+    "{if itemType=='checkbox' or itemType=='radio'}      \"</div>\",{/if}"
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "{if datalist<>''}  {id}.datalist='{datalist!j}';{/if}",
+  "{if passwordToggle=='true'}  {id}_icon.onclick = function() {{",
+  "{if passwordToggle=='true'}    if ($('#{id}').attr('type') === 'password') {{",
+  "{if passwordToggle=='true'}      $('#{id}').attr('type', 'text');",
+  "{if passwordToggle=='true'}      {id}_icon.classList.replace('bi-eye-slash', 'bi-eye');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = 'blue';",
+  "{if passwordToggle=='true'}    }} else {{",
+  "{if passwordToggle=='true'}      $('#{id}').attr('type', 'password');",
+  "{if passwordToggle=='true'}      {id}_icon.classList.replace('bi-eye', 'bi-eye-slash');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = '#495057';",
+  "{if passwordToggle=='true'}    }};",
+  "{if passwordToggle=='true'}  }};"
+]
+		
+}

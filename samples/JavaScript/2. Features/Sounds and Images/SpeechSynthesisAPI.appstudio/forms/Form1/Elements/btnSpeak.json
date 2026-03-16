@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "btnSpeak", 
+  "left": "71", 
+  "onclick": "btnSpeak_onclick()", 
+  "right": "auto", 
+  "top": 36, 
+  "value": "Speak!", 
+  "width": 172, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

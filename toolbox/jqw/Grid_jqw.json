@@ -1,0 +1,690 @@
+{ 
+"_type": "Grid_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxgrid.png", 
+"_wikipage": "jqxGrid",
+"_shorthelp": "<a href='{_docurl}'>Grid</a> displays data in a Grid. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+    "{pathTo_jqWidgets}jqxdata.js",
+    "{pathTo_jqWidgets}jqxbuttons.js",
+    "{pathTo_jqWidgets}jqxscrollbar.js",
+    "{pathTo_jqWidgets}jqxlistbox.js",
+    "{pathTo_jqWidgets}jqxcheckbox.js",
+    "{pathTo_jqWidgets}jqxdropdownlist.js",
+    "{pathTo_jqWidgets}jqxnumberinput.js",
+    "{pathTo_jqWidgets}jqxmenu.js",
+    "{pathTo_jqWidgets}jqxgrid.js",
+    "{pathTo_jqWidgets}jqxgrid.pager.js",
+    "{pathTo_jqWidgets}jqxgrid.selection.js",
+    "{pathTo_jqWidgets}jqxgrid.filter.js",
+    "{pathTo_jqWidgets}jqxgrid.grouping.js",
+    "{pathTo_jqWidgets}jqxgrid.columnsresize.js",
+    "{pathTo_jqWidgets}jqxgrid.sort.js",
+    "{pathTo_jqWidgets}jqxgrid.edit.js",
+    "{pathTo_jqWidgets}jqxgrid.aggregates.js",
+    "{pathTo_jqWidgets}jqxgrid.columnsreorder.js",
+    "{pathTo_jqWidgets}jqxgrid.storage.js",
+    "{pathTo_jqWidgets}jqxdata.export.js",
+    "{pathTo_jqWidgets}jqxgrid.export.js",
+    "{pathTo_jqWidgets}jqxpanel.js",
+    "{pathTo_jqWidgets}styles/images/filter.png",
+    "{pathTo_jqWidgets}styles/images/loader.gif",
+    "{pathTo_jqWidgets}styles/images/sortasc.png",
+    "{pathTo_jqWidgets}styles/images/sortdesc.png",
+    "{pathTo_jqWidgets}styles/images/sortremove.png",
+    "{pathTo_jqWidgets}styles/images/icon-up.png",
+    "{pathTo_jqWidgets}styles/images/icon-down.png",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png"],
+
+"_displayname": "Grid",
+"_longhelp": "longhelp",
+
+"height": 160, 
+"width": 375, 
+    
+"altrows": "false",
+"_altrows": {
+	"desc": "Enables or disables the alternating rows.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoheight": "false",
+"_autoheight": {
+	"desc": "Sets the height of the grid to be equal to the summary height of the grid rows. This option should be set when the Grid is in paging mode.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoloadstate": "false",
+"_autoloadstate": {
+	"desc": "Determines whether the Grid automatically loads its current state(if there's already saved one). The Grid's state is loaded when the page is refreshed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autosavestate": "false",
+"_autosavestate": {
+	"desc": "Determines whether the Grid automatically saves its current state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoshowcolumnsmenubutton": "true",
+"_autoshowcolumnsmenubutton": {
+	"desc": "Sets whether the columns menu button will be displayed only when the mouse cursor is over a columns header or will be always displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoshowfiltericon": "true",
+"_autoshowfiltericon": {
+	"desc": "Displays the filter icon only when the column is filtered. When the value of this property is set to false, all grid columns will display a filter icon when the filtering is enabled.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"closeablegroups": "false",
+"_closeablegroups": {
+	"desc": "When the value of this property is true, a close button is displayed in each grouping column.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"columnsmenu": "false",
+"_columnsmenu": {
+	"desc": "Enables or disables the columns dropdown menu.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"columnsreorder": "false",
+"_columnsreorder": {
+	"desc": "Enables or disables the columns reordering.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"columnsresize": "false",
+"_columnsresize": {
+	"desc": "Enables or disables the columns resizing.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"editable": "false",
+"_editable": {
+	"desc": "The editable property enables or disables the Grid editing feature.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableanimations": "true",
+"_enableanimations": {
+	"desc": "Enables or disables the grid animations.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enablebrowserselection": "false",
+"_enablebrowserselection": {
+	"desc": "Enables the text selection of the browser.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableellipsis": "true",
+"_enableellipsis": {
+	"desc": "Determines whether ellipsis will be displayed, if the cells or columns content overflows.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enablehover": "true",
+"_enablehover": {
+	"desc": "Enables or disables the grid rows hover state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enablerowdetailsindent": "true",
+"_enablerowdetailsindent": {
+	"desc": "When the enablerowdetailsindent is true, the content of a details row is displayed with left offset equal to the width of the row details column.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enabletooltips": "false",
+"_enabletooltips": {
+	"desc": "Enables or disables the grid tooltips.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"filterable": "false",
+"_filterable": {
+	"desc": "Enables or disables the Grid Filtering feature. When the value of this property is true, the Grid displays a filtering panel in the columns popup menus.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"groupable": "false",
+"_groupable": {
+	"desc": "This property enables or disables the grouping feature.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"groupsexpandedbydefault": "false",
+"_groupsexpandedbydefault": {
+	"desc": "Sets the default state of the grouped rows.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"keyboardnavigation": "true",
+"_keyboardnavigation": {
+	"desc": "Enables or disables the keyboard navigation.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"pageable": "false",
+"_pageable": {
+	"desc": "Enables or disables the Grid Paging feature. When the value of this property is true, the Grid displays a pager below the rows.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"rowdetails": "false",
+"_rowdetails": {
+	"desc": "Enables or disables the row details. When this option is enabled, the Grid can show additional information below each grid row.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showaggregates": "false",
+"_showaggregates": {
+	"desc": "Shows or hides the aggregates in the grid's statusbar.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showemptyrow": "true",
+"_showemptyrow": {
+	"desc": "Shows or hides the empty row label when the Grid has no records to display",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showfiltercolumnbackground": "true",
+"_showfiltercolumnbackground": {
+	"desc": "When this property is true, the Grid adds an additional visual style to the grid cells in the filter column(s)",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showfiltermenuitems": "true",
+"_showfiltermenuitems": {
+	"desc": "Determines whether to display the filtering items in the column's menu.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showfilterrow": "false",
+"_showfilterrow": {
+	"desc": "Shows or hides the filter row.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showgroupmenuitems": "true",
+"_showgroupmenuitems": {
+	"desc": "Determines whether to display the group menu items.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showgroupsheader": "true",
+"_showgroupsheader": {
+	"desc": "Shows or hides the groups header area.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showheader": "true",
+"_showheader": {
+	"desc": "Shows or hides the columns header.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showpinnedcolumnbackground": "true",
+"_showpinnedcolumnbackground": {
+	"desc": "When this property is true, the Grid adds an additional visual style to the grid cells in the pinned column(s).",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showrowdetailscolumn": "true",
+"_showrowdetailscolumn": {
+	"desc": "Shows an additional column with expand/collapse toggle buttons when the Row details feature is enabled.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showsortcolumnbackground": "true",
+"_showsortcolumnbackground": {
+	"desc": "When this property is true, the Grid adds an additional visual style to the grid cells in the sort column.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showsortmenuitems": "true",
+"_showsortmenuitems": {
+	"desc": "Determines whether to display the sort menu items.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showstatusbar": "false",
+"_showstatusbar": {
+	"desc": "Shows or hides the grid's statusbar.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showtoolbar": "false",
+"_showtoolbar": {
+	"desc": "Shows or hides the grid's toolbar.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"sortable": "false",
+"_sortable": {
+	"desc": "The sortable property enables or disables the sorting feature.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"virtualmode": "false",
+"_virtualmode": {
+	"desc": "Enables or disables the virtual data mode.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"altstart": 1,
+"_altstart": {
+	"desc": "This property specifies the first alternating row.",
+	"type": "int"
+	},
+
+"altstep": 1,
+"_altstep": {
+	"desc": "Initialize a Grid with the altstep property specified.",
+	"type": "int"
+	},
+
+"columnsheight": 25,
+"_columnsheight": {
+	"desc": "Sets the columns height.",
+	"type": "int"
+	},
+
+"columnsmenuwidth": 15,
+"_columnsmenuwidth": {
+	"desc": "Sets the columns menu width.",
+	"type": "int"
+	},
+
+"groupindentwidth": 20,
+"_groupindentwidth": {
+	"desc": "Sets the group indent size. This size is used when the grid is grouped. This is the size of the columns with expand/collapse toggle buttons.",
+	"type": "int"
+	},
+
+"horizontalscrollbarlargestep": 50,
+"_horizontalscrollbarlargestep": {
+	"desc": "Sets the scrollbar's large step. This property specifies the step with which the horizontal scrollbar's value is changed when the user clicks the area above or below the thumb.",
+	"type": "int"
+	},
+
+"horizontalscrollbarstep": 5,
+"_horizontalscrollbarstep": {
+	"desc": "Sets the scrollbar's step when the user clicks the scroll arrows.",
+	"type": "int"
+	},
+
+"pagesize": 10,
+"_pagesize": {
+	"desc": "Sets the number of visible rows per page when the Grid paging is enabled.",
+	"type": "int"
+	},
+
+"rowsheight": 25,
+"_rowsheight": {
+	"desc": "Sets the height of the grid rows.",
+	"type": "int"
+	},
+
+"scrollbarsize": 15,
+"_scrollbarsize": {
+	"desc": "Sets the scrollbars size.",
+	"type": "int"
+	},
+
+"selectedrowindex": -1,
+"_selectedrowindex": {
+	"desc": "Selects a row at a specified index.",
+	"type": "int"
+	},
+
+"statusbarheight": 34,
+"_statusbarheight": {
+	"desc": "Sets the statusbar's height.",
+	"type": "int"
+	},
+
+"toolbarheight": 34,
+"_toolbarheight": {
+	"desc": "Sets the toolbar's height.",
+	"type": "int"
+	},
+
+"updatedelay": 0,
+"_updatedelay": {
+	"desc": "Sets the rendering update delay. This could be used for deferred scrolling scenarios.",
+	"type": "int"
+	},
+
+"verticalscrollbarlargestep": 400,
+"_verticalscrollbarlargestep": {
+	"desc": "Sets the scrollbar's large step. This property specifies the step with which the vertical scrollbar's value is changed when the user clicks the area above or below the thumb.",
+	"type": "int"
+	},
+
+"verticalscrollbarstep": 5,
+"_verticalscrollbarstep": {
+	"desc": "Sets the scrollbar's step when the user clicks the scroll arrows.",
+	"type": "int"
+	},
+
+"columns": "[]",
+"_columns": {
+	"desc": "Sets the Grid columns.",
+	"type": "str"
+	},
+
+"editmode": "selectedcell",
+"_editmode": {
+	"desc": "The editmode property specifies the action that the end-user should make to open an editor. ",
+	"type": "enum",
+    "keys": ["click", "dblclick", "selectedcell", "programmatic"],
+    "values": ["click", "dblclick", "selectedcell", "programmatic"]
+},
+
+"groupcolumnrenderer": "",
+"_groupcolumnrenderer": {
+	"desc": "(text) Sets a custom renderer for the grouping columns displayed in the grouping header when the grouping feature is enabled.",
+	"type": "str"
+	},
+
+"groups": "[]",
+"_groups": {
+	"desc": "Sets the Grid groups when the Grouping feature is enabled.",
+	"type": "css",
+    "language": "JavaScript"
+	},
+
+"groupsheaderheight": "34",
+"_groupsheaderheight": {
+	"desc": "Sets the height of the Grid Groups Header.",
+	"type": "str"
+	},
+
+"groupsrenderer": "",
+"_groupsrenderer": {
+	"desc": "(text, group, expanded) Sets a custom renderer for the grouping columns displayed in the grouping header when the grouping feature is enabled.",
+	"type": "str"
+	},
+
+"handlekeyboardnavigation": "",
+"_handlekeyboardnavigation": {
+	"desc": "(event) The function is called when a key is pressed. If the result of the function is true, the default keyboard navigation will be overriden for the pressed key.",
+	"type": "str"
+	},
+
+"initrowdetails": "",
+"_initrowdetails": {
+	"desc": "(index) This function is called when the user expands the row details and the details are going to be rendered.",
+	"type": "str"
+	},
+
+"pagerheight": "28",
+"_pagerheight": {
+	"desc": "Sets the height of the Grid Pager",
+	"type": "str"
+	},
+
+"pagerrenderer": "",
+"_pagerrenderer": {
+	"desc": "() The function is called when the Grid Pager is rendered. This allows you to customize the default rendering of the pager.",
+	"type": "str"
+	},
+
+"pagesizeoptions": "[5,10,20]",
+"_,pagesizeoptions ": {
+	"desc": "Sets the available page size options.",
+	"type": "str"
+	},
+
+"ready": "",
+"_ready": {
+	"desc": "This function is called when the grid is initialized and the binding is complete. i.e gridReady()",
+	"type": "str"
+	},
+
+"rendered": "",
+"_rendered": {
+	"desc": "Callback function which is called when the jqxGrid's render function is called either internally or not.",
+	"type": "str"
+	},
+
+"rendergridrows": "",
+"_rendergridrows": {
+	"desc": "(params) This is a function called when the grid is used in virtual mode. The function should return an array of rows which will be rendered by the Grid.",
+	"type": "str"
+	},
+
+"renderstatusbar": "",
+"_renderstatusbar": {
+	"desc": "(statusbar) Callback function which allows you to customize the rendering of the Grid's statusbar.",
+	"type": "str"
+	},
+
+"rendertoolbar": "",
+"_rendertoolbar": {
+	"desc": "(toolbar) Callback function which allows you to customize the rendering of the Grid's toolbar.",
+	"type": "str"
+	},
+
+"rowdetailstemplate": "null",
+"_rowdetailstemplate": {
+	"desc": "Determines the template of the row details. The rowdetails field specifies the HTML used for details. The rowdetailsheight specifies the height of the details.",
+	"type": "str"
+	},
+
+"selectedrowindexes": "[]",
+"_selectedrowindexes": {
+	"desc": "Selects single or multiple rows.",
+	"type": "str"
+	},
+
+"selectionmode": "none",
+"_selectionmode": {
+	"desc": "Sets the selection mode.",
+	"type": "enum",
+    "keys": ["none", "singlerow", "multiplerows", "multiplerowsextended", "singlecell", "multiplecells", "multiplecellsextended"],
+    "values": ["none", "singlerow", "multiplerows", "multiplerowsextended", "singlecell", "multiplecells", "multiplecellsextended","multiplecellsadvanced"]
+},
+
+"sorttogglestates": "2",
+"_sorttogglestates": {
+	"desc": "Sets the sort toggle states. changes the sort state when the user clicks a column header. ",
+	"type": "enum",
+    "keys": ["disable toggling", "enable toggling", "remove sort option"],
+    "values": ["0","1","2"]
+	},
+
+"source": "null", 
+"_source": {
+	"desc": "Sets the initial contents. Easier to do at runtime.",
+	"type": "css",
+    "language": "JavaScript"
+	},
+
+"columns": "[{text:'Grid'},{text:'Two'},{text:'Three'}]", 
+"_columns": {
+	"desc": "Sets the initial column settings. Easier to do at runtime.",
+	"type": "css",
+    "language": "JavaScript"
+	},
+
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:relative; left:0px; top:0px; height:100%; width:100%}}"],
+
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='background-color:white; {hidden}{style!j}' class='{class}'><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "    altrows:{altrows},",
+  "    altstart:{altstart},",
+  "    altstep:{altstep},",
+  "    autoheight:{autoheight},",
+  "    autoloadstate:{autoloadstate},",
+  "    autosavestate:{autosavestate},",
+  "    autoshowcolumnsmenubutton:{autoshowcolumnsmenubutton},",
+  "    autoshowfiltericon:{autoshowfiltericon},",
+  "    closeablegroups:{closeablegroups},",
+  "    columnsheight:{columnsheight},",
+  "    columnsmenu:{columnsmenu},",
+  "    columnsmenuwidth:{columnsmenuwidth},",
+  "    columnsreorder:{columnsreorder},",
+  "    columnsresize:{columnsresize},",
+  "    disabled:{disabled},",
+  "    editable:{editable},",
+  "    editmode:'{editmode}',",
+  "    enableanimations:{enableanimations},",
+  "    enablebrowserselection:{enablebrowserselection},",
+  "    enableellipsis:{enableellipsis},",
+  "    enablehover:{enablehover},",
+  "    enablerowdetailsindent:{enablerowdetailsindent},",
+  "    enabletooltips:{enabletooltips},",
+  "    filterable:{filterable},",
+  "    groupable:{groupable},",
+  "{if groupcolumnrenderer <> ''}    groupcolumnrenderer:function(text){{{groupcolumnrenderer}}},{/if}",
+  "    groupindentwidth:{groupindentwidth},",
+  "    groupsexpandedbydefault:{groupsexpandedbydefault},",
+  "    groupsheaderheight:{groupsheaderheight},",
+  "{if groupsrenderer <> ''}    groupsrenderer:function(text,groups,expanded){{{groupsrenderer}}},{/if}",
+  "{if handlekeyboardnavigation <> ''}    handlekeyboardnavigation:function(event){{{handlekeyboardnavigation}}},{/if}",
+  "    height:'100%',",
+  "    horizontalscrollbarlargestep:{horizontalscrollbarlargestep},",
+  "    horizontalscrollbarstep:{horizontalscrollbarstep},",
+  "{if initrowdetails <> ''}    initrowdetails:function(index){{{initrowdetails}}},{/if}",
+  "    keyboardnavigation:{keyboardnavigation},",
+  "    pageable:{pageable},",
+  "    pagerheight:{pagerheight},",
+  "{if pagerrenderer <> ''}    pagerrenderer:function(){{{pagerrenderer}}},{/if}",
+  "    pagesize:{pagesize},",
+  "{if ready <> '' and ready <> 'null'}    ready:function(){{{ready}}},{/if}",
+  "{if ready == '' or ready == 'null'}    ready:function(){{}},{/if}",
+  "{if rendered <> ''}    rendered:function(){{{rendered}}},{/if}",
+  "{if rendergridrows <> ''}    rendergridrows:function(params){{{rendergridrows}}},{/if}",
+  "{if renderstatusbar <> ''}    renderstatusbar:function(statusbar){{{renderstatusbar}}},{/if}",
+  "{if rendertoolbar <> ''}    rendertoolbar:function(toolbar){{{rendertoolbar}}},{/if}",
+  "    rowdetails:{rowdetails},",
+  "    rowdetailstemplate:{rowdetailstemplate},",
+  "    rowsheight:{rowsheight},",
+  "    scrollbarsize:{scrollbarsize},",
+  "    selectedrowindex:{selectedrowindex},",
+  "    selectionmode:'{selectionmode}',",
+  "    showaggregates:{showaggregates},",
+  "    showemptyrow:{showemptyrow},",
+  "    showfiltercolumnbackground:{showfiltercolumnbackground},",
+  "    showfiltermenuitems:{showfiltermenuitems},",
+  "    showfilterrow:{showfilterrow},",
+  "    showgroupmenuitems:{showgroupmenuitems},",
+  "    showgroupsheader:{showgroupsheader},",
+  "    showheader:{showheader},",
+  "    showpinnedcolumnbackground:{showpinnedcolumnbackground},",
+  "    showrowdetailscolumn:{showrowdetailscolumn},",
+  "    showsortcolumnbackground:{showsortcolumnbackground},",
+  "    showsortmenuitems:{showsortmenuitems},",
+  "    showstatusbar:{showstatusbar},",
+  "    showtoolbar:{showtoolbar},",
+  "    sortable:{sortable},",
+  "    sorttogglestates:{sorttogglestates},",
+  "    statusbarheight:{statusbarheight},",
+  "    theme:'{theme}',",
+  "    toolbarheight:{toolbarheight},",
+  "    updatedelay:{updatedelay},",
+  "    verticalscrollbarlargestep:{verticalscrollbarlargestep},",
+  "    verticalscrollbarstep:{verticalscrollbarstep},",
+  "    virtualmode:{virtualmode},",
+  "    width:'100%',",
+  "{if columns <> ''}    columns:{columns},{/if}",
+  "  }};",
+  "  {id}.style.position='relative';",
+  "  $('#{id}').jqxGrid (jQuery.extend(true, {{}}, NSB.jqxSettings['{id}']));",
+  "  NSB.addProperties({id},{id}_wrapper);"]
+}

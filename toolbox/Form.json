@@ -1,0 +1,331 @@
+{
+    "_type": "Form",
+    "_base": ["borders","NSBForm"],
+    "_container": "Page",
+    "_palette": 3,
+    "_shorthelp": "<a href='{_docurl}'>Forms</a> are containers for controls.",
+    "_art": "images/form.png",
+    "_art_selected": "images/form-selected.png",
+    "_requiredfiles": [
+        "{if backgroundimage<>'' and backgroundimage[:16]<>'linear-gradient('}{backgroundimage}{/if}"
+    	],
+    "_displayname": "Form",
+    "_longhelp": "longhelp",
+    "_external": ["forms", "{id}", "{id}.json"],
+
+    "_actypes": [],
+    "_acprops": {},
+    "_AddChild": {
+        "acignore": true,
+        "type": null
+    },
+    "_AddWidget": {
+        "acignore": true,
+        "type": null
+    },
+    "_InvalidateCache": {
+        "acignore": true,
+        "type": null
+    },
+    "_LastId": {
+        "acignore": true,
+        "type": null
+    },
+    "_Load": {
+        "acignore": true,
+        "type": null
+    },
+    "_Save": {
+        "acignore": true,
+        "type": null
+    },
+    "_UniqueId": {
+        "acignore": true,
+        "type": null
+    },
+    "_accesskey": {
+        "acignore": true,
+        "type": null
+    },
+    "_cached_js": {
+        "acignore": true,
+        "type": null,
+        "external": ["cache", "{id}.cache"]
+    },
+    "_cached_js_script_hash": {
+        "acignore": true,
+        "type": null,
+        "external": ["cache", "{id}.hash"]
+    },
+    "_expanded_pmp": {
+        "acignore": true,
+        "type": "json",
+        "external": ["cache", "{id}.pmp"]
+    },
+    "_script": {
+        "acignore": true,
+        "group": "Xpert",
+        "desc": "The code associated with this object.",
+        "type": null,
+        "external": ["forms", "{id}", "{if language=='BASIC'}{id}.bas{/if}{if language=='JavaScript'}{id}.js{/if}"]
+    },
+
+    "_acprops": {
+        "Height": {
+            "desc": "Get or set the height of the form."
+        },
+        "Width": {
+            "desc": "Get or set the width of the form."
+        },
+        "Top": {
+            "desc": "Get or set the top of the form."
+        },
+        "Left": {
+            "desc": "Get or set the left of the form."
+        },
+        "hide()": {
+            "desc": "Hide the form."
+        },
+        "show()": {
+            "desc": "Show the form."
+        }
+    },
+
+	"id": "",
+    "_id": {
+        "desc": "Unique identifier of Form",
+        "type": "str"
+    },
+
+    "background": "",
+    "_background": {
+        "acignore": true,
+        "display": "backgroundColor",
+        "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.",
+        "type": "str"
+    },
+
+    "backgroundimage": "",
+    "_backgroundimage": {
+        "display": "backgroundImage",
+        "desc": "Background image. Enter none for no image. Do not put your files into /nsb. Enter nsb/images/backgroundStripes.png for a vertical pinstripe pattern.  Gradients are allowed - see Wiki.",
+        "type": "image"
+    },
+
+    "setFocusID": "",
+    "_setFocusID": {
+        "acignore": true,
+        "desc": "ID of control to set initial focus to.",
+        "type": "str"
+    },
+
+    "locked": false,
+    "_locked": {
+        "acignore": true,
+        "desc": "Lock the controls on the form.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": [false, true]
+    },
+
+    "openMode": "none",
+    "_openMode": {
+        "desc": "If True, this form will be shown at startup, along with the firstform.",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["none", "block"]
+    },
+
+    "fullScreen": "true",
+    "_fullScreen": {
+        "display": "screenMode",
+        "desc": "How will the form be displayed?<p><b>Full Screen</b> using full width and height.<br><b>Actual Size</b> of width, height, left and top. Use for Modal forms.<br><b>Center</b> in screen, using width and height.<br><b>Zoom</b> width and height to screen size and center horizontally. Max of 2.<br><b>noStyle</b> Only user styling applied to form.<p><a href='http://wiki.appstudio.dev/ScreenMode' target='_top'>More Info...</a>.",
+        "type": "enum",
+        "keys": ["Full Screen", "Actual Size", "Center", "Zoom", "noStyle"],
+        "values": ["true", "false", "center", "zoom", "nostyle"]
+    },
+
+    "modal": "false",
+    "_modal": {
+        "desc": "Does form float over other forms? Modal forms need screenMode set to 'actual'",
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "top": "0",
+    "_top": {
+        "acignore": true,
+        "group": "Bounds",
+        "desc": "Form top. Can be in pixels, percent or auto. Ignored unless screenMode is 'fullScreen'.",
+        "type": "str"
+    },
+
+    "left": "0",
+    "_left": {
+        "group": "Bounds",
+        "acignore": true,
+        "desc": "Form left. Can be in pixels, percent or auto. Ignored unless screenMode is 'fullScreen'.",
+        "type": "str"
+    },
+
+    "width": "320",
+    "_width": {
+        "group": "Bounds",
+        "acignore": true,
+        "desc": "Form width. Can be in pixels, percent or auto. Ignored unless screenMode is 'fullScreen'.",
+        "type": "str"
+    },
+
+    "height": "460",
+    "_height": {
+        "group": "Bounds",
+        "acignore": true,
+        "desc": "Form height. Can be in pixels, percent or auto. Ignored unless screenMode is 'fullScreen'.",
+        "type": "str"
+    },
+
+    "designWidth": 0,
+    "_designWidth": {
+        "group": "Bounds",
+        "acignore": true,
+        "desc": "The width of the screen the form will be displayed on at Design Time. If 0, same as form width. Not used at runtime.",
+        "type": "int"
+    },
+
+    "designHeight": 0,
+    "_designHeight": {
+        "group": "Bounds",
+        "acignore": true,
+        "desc": "The height of the screen the form will be displayed on at Design Time. If 0, same as form height. Not used at runtime.",
+        "type": "int"
+    },
+
+    "attributes": "",
+    "_attributes": {
+        "acignore": true,
+        "desc": "HTML attributes. Example: diasabled=true",
+        "type": "css"
+    },
+    
+    "class": "", 
+    "_class": { 
+        "desc": "Name(s) of styling classes", 
+        "type": "css" 
+    }, 
+
+    "style": "",
+    "_style": {
+        "actype": "Style",
+        "desc": "Styling rules for form",
+        "type": "css",
+        "language": "CSS"
+    },
+
+    "onkeypress": "",
+    "_onkeypress": {
+        "acignore": true,
+        "desc": "key tapped in field on form. Takes one argument, an event block.",
+        "type": "js"
+    },
+
+    "onhide": "",
+    "_onhide": {
+        "acignore": true,
+        "desc": "Called when ChangeForm function is used.",
+        "type": "js"
+    },
+
+    "onshow": "",
+    "_onshow": {
+        "acignore": true,
+        "desc": "Called when ChangeForm function is used.",
+        "type": "js"
+    },
+
+	"onresize": "", 
+	"_onresize": { 
+		"acignore": true,
+		"desc": "Control resized due to parent size changing.", 
+		"type": "js" 
+		}, 
+
+    "language": "BASIC",
+    "_language": {
+        "desc": "Form code language.",
+        "type": "enum",
+        "keys": ["BASIC", "JavaScript"],
+        "values": ["BASIC", "JavaScript"]
+    },
+
+    "position": "absolute",
+    "_position": {
+        "desc": "How is the form positioned?",
+        "type": "enum",
+        "keys": ["absolute", "fixed", "inherit", "initial", "relative", "static"],
+        "values": ["absolute", "fixed", "inherit", "initial", "relative", "static"]
+    },
+
+    "parentForm": "",
+    "_parentForm": {
+        "acignore": true,
+        "desc": "Parent for this form. Will be added to that form.",
+        "type": "str"
+    },
+    
+    "theme": "",
+    "_theme": {
+        "desc": "Set the jQuery Mobile color theme for the project (including background color). Can be a-z. a is white, b is black, and others custom. Leave empty to default to project theme. jQuery Mobile only.",
+        "type": "str"
+    },
+
+    "HTML": "",
+        "_HTML": { 
+        "group": "Xpert",
+        "acignore": true,
+        "i18n": true,
+        "desc": "HTML for Form. Placed before any controls.", 
+        "type": "css",
+        "language": "HTML",
+        "external": ["forms", "{id}", "{id}.html"]
+    },
+
+
+    "_htmltemplate": [
+		"<a name='/{id}' data-role=none></a>",
+        "<div id=\"{id}\" {if theme<>''}data-theme=\"{theme}\" {/if}{attributes} class=\"nsb-form{if modal=='true'} jqmodal{/if} {class}\" style=\"display:{openMode}; {if background<>''}background-color:{background}; {/if}{if backgroundimage<>'' and backgroundimage[:16]=='linear-gradient('}background-image:{backgroundimage};{/if}{if backgroundimage<>'' and backgroundimage[:16]<>'linear-gradient('}background-image:url('{backgroundimage}');{/if}{if borderWidth.isdigit()}border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor}; {/if}{if borderWidth<>''}box-sizing:border-box; {/if}{if fullScreen<>'nostyle'} position:{position};  height: {if fullScreen<>'true'}{height!p}; {/if}{if fullScreen=='true'}100vh; {/if}top:{top!p}; left:{left!p}; width:{if fullScreen<>'true'}{width!p}; {/if}{if fullScreen=='true'}100%; {/if}{/if}{style!j}\">",
+        "<script>",
+        "{id}.innerHTML=[\"{HTML!j}\",{_childhtml}",
+        "  ].join('');",
+        "</script>",
+        "</div>"
+    ],
+
+    "_csstemplate": [
+    	"#{id} {{background:inherit;}}",
+    	"\n{_childcss}"
+    	],
+    
+    "_jstemplate": [
+    	"// ***** Code for form: {id} *****",
+    	"{if fullScreen == 'zoom'}{id}.onresize = function() {{NSB.zoomScreen({id})}};{/if}",
+    	"{if fullScreen == 'center'}{id}.onresize = function() {{NSB.centerScreen({id})}};{/if}",
+        "window.addEventListener('load', function() {{",
+        "  {id}.style.display = 'block';",
+     	"{if theme<>''}  if ($('#{id}').page != undefined) $('#{id}').page({{theme: '{theme}'}});{/if}",
+     	"{if fullScreen == 'zoom' or fullScreen == 'center'}  {id}.onresize({id});{/if}", 
+        "  NSB.addProperties({id});",
+        "{_childjs}",         
+        "  {id}.style.display = '{openMode}';",
+        "{if modal == 'true'}  NSB.modalScreen({id});{/if}",
+        "{if setFocusID<>''}  {setFocusID}.setAttribute('autofocus', 'true');{/if}",
+        "{if parentForm<>''}  {parentForm}.appendChild({id});{/if}",
+        "{if parentForm<>''}  {id}.style.display='block';{/if}",
+        "{if _parent.enableBrowserArrows == 'true'}  router.on({{'{id}': function() {{ChangeFormAction({id})}}}});{/if}",
+        "}}, false);",
+        "{javascript}"
+    ],
+    "_design_jstemplate": [
+        "<script>{_childdesignjs}</script>"
+        ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget 
+xmlns = "http://www.w3.org/ns/widgets"
+id = "com.nsbasic.{id}"
+versionCode = "1"
+version = "{version}">
+
+<name>{title}</name>
+<description>{description}</description>
+
+<!-- Icons -->
+<icon src='{icon}' />
+
+<!-- Splash Screens -->
+<preference name='SplashScreenDelay' value='2000' />
+<preference name='AutoHideSplashScreen' value='true' />
+<preference name='AndroidWindowSplashScreenAnimatedIcon' value='www/{phoneGapSplash}' />
+<preference name='AndroidWindowSplashScreenBackground' value='{splashBackground}' />
+
+<plugin name='cordova-plugin-splashscreen' source='npm' />
+
+<plugin name="cordova-plugin-camera" source="npm" />
+<preference name="AndroidInsecureFileModeEnabled" value="true" />
+<platform name="ios">
+  <edit-config target="NSLocationAlwaysUsageDescription" file="*-Info.plist" mode="overwrite">
+    <string>Allow the app to know your location</string>
+  </edit-config>
+  <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="overwrite">
+    <string>Allow the app to know your location</string>
+  </edit-config>
+  <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="overwrite">
+    <string>App would like to access Camera to take picture of any document that you want to upload as attachment to your message</string>
+  </edit-config>
+  <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="overwrite">
+    <string>Allow the app to open Photo Library to take picture of any document that you want to upload as attachment to your message</string>
+  </edit-config>
+</platform>
+
+<preference name="permissions" value="none"/>
+<!-- sample preference specifications -->
+<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+<!-- <preference name="orientation" value="default" /> -->
+<!-- <preference name="fullscreen" value="true" /> -->
+
+<allow-navigation href="*" />
+<access origin="*" />
+</widget>

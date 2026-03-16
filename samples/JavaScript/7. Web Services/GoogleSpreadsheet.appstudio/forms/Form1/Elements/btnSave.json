@@ -1,0 +1,15 @@
+{ 
+  "borderStyle": "solid", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnSave", 
+  "left": "initial", 
+  "right": "auto", 
+  "style": "float:left;", 
+  "top": "initial", 
+  "value": "Save Spreadsheet", 
+  "width": "140", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

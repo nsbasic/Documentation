@@ -1,0 +1,183 @@
+{ 
+"_type": "Menu_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxmenu.png", 
+"_wikipage": "jqxMenu",
+"_shorthelp": "<a href='{_docurl}'>Menu</a> Display a Menu. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css", 
+    "{pathTo_jqWidgets}jqxbuttons.js",
+    "{pathTo_jqWidgets}jqxmenu.js",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-down-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-down.png"
+    ],
+
+"_displayname": "Menu",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"width": "auto", 
+    
+"autoCloseOnClick": "true",
+"_autoCloseOnClick": {
+	"desc": "Automatically closes the opened popups after a click.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoCloseOnMouseLeave": "true",
+"_autoCloseOnMouseLeave": {
+	"desc": "Automatically closes the opened popup after mouse leaves.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoOpen": "true",
+"_autoOpen": {
+	"desc": "Opens the top level menu items when the user hovers them.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoOpenPopup": "true",
+"_autoOpenPopup": {
+	"desc": "Opens the Context Menu when the right-mouse button is pressed. When this property is set to false, the Open and Close functions can be used to open and close the Context Menu.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"autoSizeMainItems": "true",
+"_autoSizeMainItems": {
+	"desc": "Auto-Sizes the jqxMenu's main items when the menu's mode is 'horizontal'.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"clickToOpen": "true",
+"_clickToOpen": {
+	"desc": "Opens an item after a click by the user.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableHover": "true",
+"_enableHover": {
+	"desc": "Enables or disables the hover state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableRoundedCorners": "true",
+"_enableRoundedCorners": {
+	"desc": "Enables or disables the rounded corners. This setting has effectin browsers that support the 'border-radius CSS setting.'",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showTopLevelArrows": "true",
+"_showTopLevelArrows": {
+	"desc": "Show an arrow where there is a submenu.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"animationShowDuration":350,
+"_animationShowDuration": {
+	"desc": "Gets or sets the duration of the show animation.",
+	"type": "int"
+	},
+
+"animationHideDuration":250,
+"_animationHideDuration": {
+	"desc": "Gets or sets the duration of the hide animation.",
+	"type": "int"
+	},
+
+"animationHideDelay":500,
+"_animationHideDelay": {
+	"desc": "Gets or sets the delay before the start of the hide animation.",
+	"type": "int"
+	},
+
+"animationShowDelay":200,
+"_animationShowDelay": {
+	"desc": "Gets or sets the delay before the start of the show animation.",
+	"type": "int"
+	},
+
+"autoCloseInterval":10000
+,"_autoCloseInterval": {
+	"desc": "Gets or sets the time interval after which all opened items will be closed. When you open a new sub menu, the interval is cleared. If you want to disable this automatic closing behavior of the jqxMenu, you need to set the autoCloseInterval property to 0.",
+	"type": "int"
+	},
+
+"mode": "horizontal", 
+"_mode": {
+	"desc": "Gets or sets the menu's display mode.",
+	"type": "enum",
+	"keys": ["horizontal","vertical","popup"],
+	"values": ["horizontal","vertical","popup"]
+	},
+
+"easing": "easeInOutSine", 
+"_easing": {
+	"desc": "Gets or sets the animation's easing to one of the JQuery's supported easings.",
+	"type": "str"
+	},
+    
+"source": "[{label:'Menu'},{label:'Two'},{label:'Three'}]", 
+"_source": {
+	"desc": "Sets the initial contents. Easier to do at runtime.",
+	"type": "css",
+    "language": "JavaScript"
+	},
+
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:relative; left:0px; top:0px; height:100%; width:100%}}"],
+
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='background-color:white; {hidden}{style!j}' class='{class}'><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+		"    height:'{height}',",
+  		"    width:'{width}',",
+        "    animationHideDelay:{animationHideDelay},",
+        "    animationHideDuration:{animationHideDuration},",
+        "    animationShowDelay:{animationShowDelay},",
+        "    animationShowDuration:{animationShowDuration},",
+        "    autoCloseInterval:{autoCloseInterval},",
+        "    autoCloseOnClick:{autoCloseOnClick},",
+        "    autoCloseOnMouseLeave:{autoCloseOnMouseLeave},",
+        "    autoOpen:{autoOpen},",
+        "    autoOpenPopup:{autoOpenPopup},",
+        "    autoSizeMainItems:{autoSizeMainItems},",
+        "    clickToOpen:{clickToOpen},",
+        "    disabled:{disabled},",
+        "    easing: '{easing}',",
+        "    enableHover:{enableHover},",
+        "    enableRoundedCorners:{enableRoundedCorners},",
+        "    mode: '{mode}',",
+        "    theme:'{theme}',",
+        "    source:eval({source}),",
+        "    showTopLevelArrows:{showTopLevelArrows}",
+    "  }}",
+    "  {id}.style.position='relative';",
+    "  $('#{id}').jqxMenu(NSB.jqxSettings['{id}'])",
+    "  NSB.addProperties({id},{id}_wrapper);"]
+}

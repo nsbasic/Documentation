@@ -1,0 +1,55 @@
+{
+"_type": "Textarea_bs4",
+"_base": ["bs4All", "margin", "padding", "fonts", "colors", "Input", "bs4Input", "bs4Text", "bs4Icon", "bs4Popover", "bs4Badge"],
+"_palette": 9,
+"_art": "images/textarea.png",
+"_wikipage": "Textarea (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>TextArea</a> is a multi line text input area. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+"_displayname": "Textarea",
+"_longhelp": "longhelp",
+"header": "Textarea",
+
+"width": "auto",
+"height": "auto", 
+"_height": {"type": "hidden"},
+
+"_acprops": {
+    "select()": {"desc": "Select entire text."},
+    "selectionDirection": {"desc": "The direction of the selection."},
+    "selectionEnd": {"desc": "Last character selected."},
+    "selectionStart": {"desc": "First character selected."},
+    "setSelectionRange(start,end)": {"desc": "Highlight from character start to character end."},
+    "readOnly": {"desc": "True/False"}
+},
+    
+"rows": "",
+"_rows": {
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Maximum number of rows to display. Use this to set the height.", 
+    "type": "str" 
+   }, 
+    
+"_htmltemplate": [
+    "  \"<div id={id} data-role='none' class='{class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}'>\",",
+    "  \"{_bsInput_wrapperNoPopover!i}{_bsInput_headerColsNoBadge!i}\",",
+    "{if header<>''}    \"<div style='height:100%' class='col-sm-{valueCols}'>\",{/if}",
+    "{if header==''}    \"<div style='height:100%' class='col-sm-12'>\",{/if}",
+    "      \"<div class='input-group' style='width:100%;height:100%;'>\",",
+    "        \"{_bsBadgePadBelow!i}\",",
+    "    \"<textarea id='{id}_contents' class='form-control' name='{name}' style='{_bsTextcss!i}{_fontcss!i}overflow-scrolling:touch; height:100%; {style!j}' {if rows<>''}rows={rows}; {/if}{_bsTextatr!i}>{value!j}{if inputmode<>''}inputmode={inputmode}; {/if}</textarea>\",", 
+    "{if icon<>''}        \"<span class='input-group-addon' {_bsPopover!i}>\",{/if}",
+    "{if icon<>''}          \"<a><span class='fa fa-{icon}'></span></a></span>\",{/if}",
+    "      \"</div>\",",
+    "      \"{_bsinput_footer!i}\",",
+    "  \"</div></div>\","
+],
+    
+"_jstemplate": [
+  "  {id}.ontouchmove=function(e){{e.stopPropagation()}};",
+  "{if header<>''}  {id}_contents.style.height = 'calc(100% - ' + getComputedStyle({id}_header).height + ')';{/if}",
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

@@ -1,0 +1,104 @@
+{ 
+"_type": "PhotoGallery_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxscrollview.png", 
+"_wikipage": "jqxPhotoGallery",
+"_shorthelp": "<a href='{_docurl}'>PhotoGallery</a> displays a slideshow of images. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+    "{pathTo_jqWidgets}jqxscrollview.js",
+	"{pathTo_jqWidgets}styles/images/icon-left.png",
+    "{_nsbdir}toolbox/jqw/dist/jqxFunctions.js"
+    ],
+
+"_displayname": "PhotoGallery",
+"_longhelp": "longhelp",
+  
+"photoclassname": "photo", 
+"_photoclassname": { 
+    "desc": "Classname for Photos", 
+    "type": "str" 
+    }, 
+	
+"photostyle": "width: 90%; height: 90%; background-color: #000; background-position: center; background-repeat: no-repeat;",
+"_photostyle": { 
+    "desc": "Sets the style settings for PhotosGallery", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+	
+"photos": "1.png,2.png,3.png,4.png,5.png,6.png" ,
+"_photos": {
+	"desc": "List of photos to display, separated by commas.", 
+    "type": "css" 
+    }, 
+	
+"height": 500, 
+"width": 500,
+
+"animationDuration": 30,
+"_animationDuration":{
+	"desc": "Sets or gets the animationDuration property. Specifies the duration of the animation which starts when the current page is changed.",
+    "type": "int" 
+	},  
+
+	
+"buttonsOffset": "[0,0]",
+"_buttonsOffset": { 
+    "desc": "Sets or gets the photoGallery buttonsOffset property. This property sets the offset from the default location of the navigation buttons.", 
+    "type": "str" 
+   },	
+	
+"showButtons": "true",
+"_showButtons":{
+	"desc": "Sets or gets whether the navigation buttons are visible.",
+	"type": "enum",
+	"keys": ["true","false"],
+	"values":["true", "false"]
+	},  
+	
+"slideShow": "false",
+"_slideShow":{
+	"desc": "Indicates whether the slideShow mode is enabled. In this mode, pages are changed automatically in a time interval.",
+	"type": "enum",
+	"keys": ["true","false"],
+	"values":["true", "false"]
+	},  
+
+	
+"slideDuration": 3000,
+"_slideDuration": {
+	"desc": "Sets or gets the duration in milliseconds of a time interval. The current page is changed when the time interval is elapsed.",
+	"type": "int"
+	},
+	
+	
+	
+"_csstemplate": [
+		"#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+		"\nphoto {{width: 100%; height: 100%; background-color: #000; background-position: center;background-repeat: no-repeat; }}"
+   ],
+   
+"_htmltemplate": "  NSB.PhotoGallery_jqx('{id}','{photos}', '{photoclassname}', '{photostyle}', '{hidden}{style!j}', '{class}'),",
+
+"_jstemplate": [
+ "  NSB.jqxSettings['{id}']={{",
+  "    animationDuration:{animationDuration},",
+  "    buttonsOffset:{buttonsOffset},", 
+  "    height:'{height}',",
+  "    showButtons:{showButtons},",
+  "    slideShow:{slideShow},",
+  "    slideDuration:{slideDuration},",
+  "    width:'{width}',",
+  "    theme:'{theme}'",
+  "  }}",
+  "  $('#{id}').jqxScrollView (NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id})"]
+			
+}
+

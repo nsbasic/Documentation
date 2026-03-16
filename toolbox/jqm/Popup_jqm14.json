@@ -1,0 +1,116 @@
+{ 
+"_type": "PopUp_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/popup.png", 
+"_shorthelp": "<a href='{_docurl}'>PopUp</a> A menu can be created by adding a listview inside a popup", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+	"{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+	],
+"_displayname": "PopUp",
+"_longhelp": "longhelp",
+
+"width": 160,
+"height": "auto",
+
+"_acprops": {
+    "close()": {"desc": "Dismiss the popup."}
+   },
+ 
+"dataTheme": "b",
+"_dataTheme": { 
+    "desc": "Theme for PopUp: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+   
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"style": "",
+"_style": {
+    "acignore": true,
+     "desc": "style settings for PopUp",
+     "type": "css",
+     "language": "CSS"
+     },
+   
+"dataTransition": "flow",
+"_dataTransition":{
+    "acignore": true,
+    "desc": "How should the popup be animated??", 
+    "type": "enum", 
+    "keys": ["none", "pop", "fade","flip","turn","flow","slide","slidefade","slideup","slidedown"], 
+    "values": ["none", "pop", "fade","flip","turn","flow","slide","slidefade","slideup","slidedown"]
+    },
+	
+"text": "Click Here...",
+"_text": {
+	"acignore": true,
+	"desc": "Text for Prompt",
+	"type": "str"
+	},
+	
+"popup": "Choose an action",
+"_popup": {
+	"acignore": true,
+	"desc": "Text for PopUp. If a list, the popup heading.",
+	"type": "str"
+	},
+	
+"items": "One,Two,Three,Four",
+"_items": { 
+    "acignore": true,
+    "desc": "PopupMenu items. Leave blank for simple popup.", 
+    "type": "css",
+    "language": "HTML" 
+    },
+
+"icon": "alert", 
+"_icon": { 
+    "acignore": true,
+    "desc": "Icon", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    }, 
+    
+"iconPos": "left",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["none","left","right","top","bottom","notext"], 
+    "values": ["none","left","right","top","bottom","notext"]
+    }, 
+    
+"mini": "ui-mini", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-mini"] 
+    }, 
+    
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", " ui-corner-all"] 
+    }, 
+
+"_htmltemplate": "  NSB.PopUp_jqm14('{id}', '{items!j}', '{text}', '{dataTransition}', '{theme}', '{dataTheme}', '{mini}', '{corners}', '{icon}', '{iconPos}', '{popup}', '{style!j}', '{class}'),", 
+
+"_jstemplate": [
+  "  NSB.PopUp_jqm_init({id},'{items!j}');",
+  "  NSB.addProperties({id});"
+  ]
+
+}

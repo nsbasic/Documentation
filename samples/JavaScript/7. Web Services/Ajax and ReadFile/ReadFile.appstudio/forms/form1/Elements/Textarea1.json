@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "backgroundColor": "white", 
+  "bottom": "auto", 
+  "color": "black", 
+  "height": 154, 
+  "id": "Textarea1", 
+  "left": 30, 
+  "right": "auto", 
+  "top": 133, 
+  "width": 270, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

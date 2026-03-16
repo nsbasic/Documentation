@@ -1,0 +1,232 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "gray", 
+  "borderStyle": "solid", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblCity.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblTemp.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblHumidity.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblPressure.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblWindSpeed.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblWindDir.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblCloudiness.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblPressureValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblTempValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblWindDirValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblHumidityValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblWindSpeedValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblCloudinessValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "lblCurrentLocation.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "txtCity.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "btnLoad.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "btnSave.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "flpCurrentLocation.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "hdrMain.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "btnCompass.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmMain", 
+        "Elements", 
+        "btnPhoto.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 667, 
+  "designWidth": 375, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": 667, 
+  "id": "frmMain", 
+  "language": "BASIC", 
+  "left": 0, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": 375
+}

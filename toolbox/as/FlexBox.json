@@ -1,0 +1,50 @@
+{
+"_type": "FlixBox",
+"_base": ["flexbox", "borders", "colors", "fonts", "margin", "padding", "children", "Widget"],
+"_palette": 4,
+"_art": "images/flexbox.png",
+"_shorthelp": "<a href='{_docurl}'>Flexboxes</a> can contain text, HTML or other controls and are easily laid out.",
+"_category": ["All", "Common"],
+"_displayname": "FlexBox",
+"_longhelp": "longhelp",
+
+"height": "auto",
+"width": "300",
+"borderColor": "#E0E0E0",
+"borderWidth": "1",
+"display": "flex",
+
+"HTMLTag": "div",
+"_HTMLTag": {
+    "acignore": true,
+    "desc": "HTML Tag",
+    "type": "str"
+   },
+
+"content": "FlexBox",
+"_content": { 
+   "acignore": true,
+    "desc": "Content of the control. Design time. At runtime, use .innerHTML.", 
+    "type": "css" 
+   }, 
+
+"attributes": "",
+"_attributes": {
+    "acignore": true,
+    "desc": "HTML attributes. Example: disabled=true",
+    "type": "css"
+   },
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": "  \"<{HTMLTag} id='{id}' class='{class}' {attributes!j} style='{_flexboxcss!i}{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{if content<>'' and '<' not in content} data-i18n='{content!j}'{/if}>\",{_childhtml},'{content!j}',\"</{HTMLTag}>\",",
+
+"_jstemplate": [
+    "  NSB.addProperties.addChild({id});",
+    "  NSB.addProperties({id});",
+    "{_childjs}"
+]
+}

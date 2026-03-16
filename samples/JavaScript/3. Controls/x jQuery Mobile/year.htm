@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Year</title>
+</head>
+<body style="font-family:helvetica">
+
+<H1>Year</h1>
+
+Year(<i>date</i>)
+
+<h3>Description</h3>
+
+<p>Year returns an integer, that represents the year of the given date. The required parameter, 
+<i>date</i>, can be any expression that represents a date.
+
+<h3>Example (Basic)</h3>
+<pre style="font-family:courier">
+Rem Year Example
+'Year returns year of a date as an integer
+
+Dim IndepYear, Birthyear
+IndepYear = Year("July 4, 1776")
+Print "YEAR of July 4, 1776:", IndepYear
+Birthyear = Year("12/27/70")
+Print "YEAR of 12/27/70:", Birthyear
+</pre>
+
+<h3>Example (JavaScript)</h3>
+<pre style="font-family:courier">
+// Year Example
+/* getFullYear returns year of a date as an integer */
+
+var IndepYear, Birthyear;
+IndepYear = new Date("July 4, 1776").getFullYear();
+NSB.Print("YEAR of July 4, 1776: " + IndepYear);
+Birthyear = new Date("12/27/70").getFullYear();
+NSB.Print("YEAR of 12/27/70: " + Birthyear );
+</pre>
+
+<h3>Output</h3>
+<pre style="font-family:courier">
+YEAR of July 4, 1776: 1776
+YEAR of 12/27/70: 1970
+</pre>
+</body>
+</html>

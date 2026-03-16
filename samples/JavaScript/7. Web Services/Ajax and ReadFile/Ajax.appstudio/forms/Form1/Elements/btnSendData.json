@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "btnSendData", 
+  "left": "99", 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 191, 
+  "value": "Reverse String", 
+  "width": 120, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

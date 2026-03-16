@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/TicTacToe by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>TicTacToe - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXU4IQgosgAEN9_1Xe4xcgAAAAc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"TicTacToe","wgTitle":"TicTacToe","wgCurRevisionId":8471,"wgRevisionId":8471,"wgArticleId":1163,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"TicTacToe","wgRelevantArticleId":1163,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-TicTacToe rootpage-TicTacToe skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">TicTacToe</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>In this tutorial, we walk you through making a Tic Tac Toe game from scratch. You will find this tutorial useful if you are new to programming and new to AppStudio. This tutorial uses JavaScript. You can download the source file for the completed app here <a href="https://wiki.appstudio.dev/File:TicTacToe.zip" title="File:TicTacToe.zip">File:TicTacToe.zip</a>
+</p><p>This tutorial can be used as a self study course or with a teacher.
+</p><p><br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installing_AppStudio"><span class="tocnumber">1</span> <span class="toctext">Installing AppStudio</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Creating_a_New_Project"><span class="tocnumber">2</span> <span class="toctext">Creating a New Project</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Designing_the_Start_Page"><span class="tocnumber">3</span> <span class="toctext">Designing the Start Page</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Designing_the_Game_Form"><span class="tocnumber">4</span> <span class="toctext">Designing the Game Form</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Programming_the_Controls"><span class="tocnumber">5</span> <span class="toctext">Programming the Controls</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Programming_the_buttons_on_the_Start_Page"><span class="tocnumber">5.1</span> <span class="toctext">Programming the buttons on the Start Page</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Programming_the_buttons_on_the_Play_form"><span class="tocnumber">5.2</span> <span class="toctext">Programming the buttons on the Play form</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Programming_the_Tic_Tac_Toe_board_buttons"><span class="tocnumber">5.3</span> <span class="toctext">Programming the Tic Tac Toe board buttons</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Global_and_Local_Variables"><span class="tocnumber">5.3.1</span> <span class="toctext">Global and Local Variables</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Resetting_the_Board_before_a_New_Game"><span class="tocnumber">5.3.2</span> <span class="toctext">Resetting the Board before a New Game</span></a>
+<ul>
+<li class="toclevel-4 tocsection-11"><a href="#Characters_and_Strings"><span class="tocnumber">5.3.2.1</span> <span class="toctext">Characters and Strings</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#The_function_init_board()"><span class="tocnumber">5.3.2.2</span> <span class="toctext">The function init_board()</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-13"><a href="#Keeping_track_of_moves_on_the_board"><span class="tocnumber">5.3.3</span> <span class="toctext">Keeping track of moves on the board</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#X&#39;s_and_O&#39;s"><span class="tocnumber">5.3.4</span> <span class="toctext">X's and O's</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Scopes"><span class="tocnumber">5.3.5</span> <span class="toctext">Scopes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-16"><a href="#Next_Player&#39;s_turn"><span class="tocnumber">5.4</span> <span class="toctext">Next Player's turn</span></a>
+<ul>
+<li class="toclevel-3 tocsection-17"><a href="#Addition"><span class="tocnumber">5.4.1</span> <span class="toctext">Addition</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Return_Values_of_Functions"><span class="tocnumber">5.4.2</span> <span class="toctext">Return Values of Functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Handling_invalid_moves"><span class="tocnumber">5.5</span> <span class="toctext">Handling invalid moves</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Has_anyone_won_the_game_yet?"><span class="tocnumber">5.6</span> <span class="toctext">Has anyone won the game yet?</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#What_if_it&#39;s_a_tie?"><span class="tocnumber">5.7</span> <span class="toctext">What if it's a tie?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href="#Debugging_Tips"><span class="tocnumber">6</span> <span class="toctext">Debugging Tips</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href="#Formatting_Your_Code"><span class="tocnumber">6.1</span> <span class="toctext">Formatting Your Code</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Debugging_Tools"><span class="tocnumber">6.2</span> <span class="toctext">Debugging Tools</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-25"><a href="#Test_your_app!"><span class="tocnumber">7</span> <span class="toctext">Test your app!</span></a></li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Installing_AppStudio">Installing AppStudio</h2></div>
+<p>If you haven't already installed AppStudio, download it from here <a rel="nofollow" class="external autonumber" href="https://www.nsbasic.com/app/downloads/">[1]</a> and follow the installation instructions here <a rel="nofollow" class="external autonumber" href="https://www.nsbasic.com/app/downloads/">[2]</a>. The free demo will do everything you need for this tutorial.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Creating_a_New_Project">Creating a New Project</h2></div>
+<p>Let's start!
+</p><p>Like most games, we want to have a welcome page or a main menu page that takes us to the game. To do that, we can have multiple forms. A form is a container for controls such as buttons and drop down menus. We can use one form for our start page. Read more about forms <a href="Form.html" title="Form">here</a>.
+</p><p>Start AppStudio. Go to the File menu then choose New Project. From now on, we will adopt the notation File&gt;New Project to denote choosing the option New Project from the File Menu. Choose the language (JavaScript), and choose the form size. We chose the 320x460 size, so it will fit on a phone. When done, click "Create". You'll see something like this:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TT01.01.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/1/1c/TT01.01.png" decoding="async" width="746" height="769" class="mw-file-element" /></a></span><br />
+</p><p>In the Design Screen (5), you will see an empty form, called Form1.  In the Project Explorer (6) on the right, you will find Form1 under "Project properties and Global Code". Click on Form1. Under the Properties Grid (7), you will find all the properties of the form listed. Note that the designHeight and designWidth properties are set to 460 and 320. Scroll down the properties list and find the "id" property under "Common". Change the form id to "frmStart". Note that the name of the form changed in the Project Explorer and the form tab.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Designing_the_Start_Page">Designing the Start Page</h2></div>
+<p>Now let's start adding controls to the Start form. From the Toolbox (4), drag and drop a Label in the middle of the Design Screen (5). In the Properties Grid (7), change the id property to lblStartMenu and set its TextContent to "Tic Tac Toe". Set the width, height and fontSize properties to suitable values.
+</p><p>Next, let us add a Play button. From the Toolbox (4), find Button under jQuery Mobile. Drag and drop the button to below the Tic Tac Toe label. Set its id property to btnPlay and its value to Play. Under the Project Explorer (6), you will find lblStartMenu and btnPlay under frmStart.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic00.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/c/c7/Pic00.png" decoding="async" width="1366" height="726" class="mw-file-element" /></a></span><br />
+</p><p>After setting up the Start form, we can now move to designing the Game form. Find the "Plus" sign next to the Start form tab. Click on it. This will create a new form, Form2. From the Properties Grid (7), change its id to frmPlay. In the Project Explorer (6), there are now two forms; frmStart and frmPlay.
+</p><p><br />
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Designing_the_Game_Form">Designing the Game Form</h2></div>
+<p>Let's now design the Tic Tac Toe board. From the toolbox, drag and drop another button. Set its id to btn11 to denote the button in the first row, first column. Set its height and width to 70 to make it a square. Erase its value to remove any text. Set its corners to "Round" instead of Square. Set the fontSize to 24.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic01.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/2/2d/Pic01.png" decoding="async" width="339" height="278" class="mw-file-element" /></a></span><br />
+</p><p>Now right-click on the button from the design menu, and choose Copy. Right-click on the form and click Paste. In the Project Explorer pane, you will find two buttons under the form frmPlay. One with the name btn11 and the other with the name btn11Copy. Change its name to btn12 and place it to the right of btn11. To use the arrow keys to move the controls on the form, press alt + arrowKey.
+</p><p>Make more copies of the button to form a 3x3 board like so:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic1.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/c/c7/Pic1.png" decoding="async" width="544" height="702" class="mw-file-element" /></a></span><br />
+</p><p>Remember to change the names of the buttons. When you are done, you should have something like this:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic2.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/5/57/Pic2.png" decoding="async" width="353" height="286" class="mw-file-element" /></a></span><br />
+</p><p>Optionally, you can put the buttons into groups to give them the shape you see in the image above. To do so, set the groupBegin property of buttons btn11, btn12, btn13 to "Start vertical". And set the groupEnd property of buttons btn31, btn32, btn33 to "Yes".
+</p><p>Next, let's add a label to indicate which player's turn it is. Add a label to the Play form. Change its name to lblTurn. Set its initial textContent to "Player 1's turn".
+</p><p>Next, let's add some control buttons. Drag and drop three jQuery Mobile buttons below the Tic Tac Toe board.
+We chose to make them square buttons and to use icons instead of text to denote their usage. To choose an Icon, click on the Icon property from the Properties Grid (7) and choose a suitable icon. If you don't want any text, set the IconPos property to "none".
+We used the leftmost button to get to the next turn. We use the middle button to reset the game to start from the beginning. And finally, the rightmost button to go back to the main menu. We set their ids to btnNext, btnReset and btnMenu, respectively. We choose the Icons as in the image below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic3.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/a/a7/Pic3.png" decoding="async" width="344" height="488" class="mw-file-element" /></a></span><br />
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Programming_the_Controls">Programming the Controls</h2></div>
+<p>With that, we are done designing our app. But we have yet to program the controls.
+</p><p>Go to Run&gt;Start in Desktop Browser to try out the app. Alternatively, you can click on the Run button shown below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic4.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/c/cd/Pic4.png" decoding="async" width="321" height="56" class="mw-file-element" /></a></span><br />
+</p><p>Your default web browser will open. You will see the Start Form. You can try clicking the Play button, but of course, clicking on the Play button won't take you to the game as we have not programmed any of the controls yet!
+</p><p><br />
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Programming_the_buttons_on_the_Start_Page">Programming the buttons on the Start Page</h3></div>
+<p>Go back to AppStudio. Right click on the Play button btnPlay and click on Go To Event&gt;onclick. This will take you to the Code Window of frmStart. You will also see the onclick function header. A function is a piece of code that executes when called or triggered. In this case, the event of clicking on a the Play button triggers this code. When clicking on this button, we want the app to take us to the Play form. We can simply write, ChangeForm(frmPlay). ChangeForm() is a function that AppStudio provides that allows us to switch from one form to another in Run time. You can tell that a code word is a function when it is followed by round brackets like in ChangeForm(). We use those brackets to pass in values that the function requires to execute. We call these values function parameters. For example, ChangeForm() requires the name of the form to change to. Thus, it takes in one parameter, a function name. In JavaScript, we follow the ChangeForm() line by a semicolon as shown in the picture below. A semicolon simply tells the computer "end of the command".
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic5.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/1/16/Pic5.png" decoding="async" width="443" height="221" class="mw-file-element" /></a></span><br />
+</p><p>Deploy the app again. Now try clicking on the Play button. You should see that the app changes to the Play form!
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Programming_the_buttons_on_the_Play_form">Programming the buttons on the Play form</h3></div>
+<p>Go back to AppStudio. Go to the Play form. Let us program the "Go to Main Menu" button. You should know how to do this!
+Simply, right-click on btnMenu, choose Go to Event&gt;onclick. In the function btnMenu.onclick write
+</p>
+<pre>ChangeForm(frmStart);</pre>
+<p>Deploy the app, test the Play and the Return to Main Menu buttons. You should be able to go back and forth between the two forms now.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Programming_the_Tic_Tac_Toe_board_buttons">Programming the Tic Tac Toe board buttons</h3></div>
+<div class="mw-heading mw-heading4"><h4 id="Global_and_Local_Variables">Global and Local Variables</h4></div>
+<p>We now want to program the buttons of the Tic Tac Toe board. Upon clicking any empty button, we want to write an X or an O on it, depending on whose turn is it to play. We need a way to keep track of players turns. 
+For that, we create a global variable. At the top of the Coding tab of frmPlay, write the following line:
+</p>
+<pre>var player;</pre>
+<p>Let's understand what that means. A variable is a place holder. Upon declaring a variable (example: the var statement declaring the variable "player" above), the computer reserves a space in memory and calls it "player". Every time you modify the value of the variable player, the computer accesses this place in memory, and modifies its value. For example, if you were to write:
+</p>
+<pre>player = 1;</pre>
+<p>the computer accesses the place it had reserved for player in memory, and writes a 1 there. This place in memory will always have the value 1 until you modify it or close your program.
+</p><p>As for the keyword "global", a variable is global if it is declared outside of any function with a var statement. JavaScript also considers a variable global if it is not declared at all. When a variable is global, it means that any function is able to use this variable. That is, any function in our code is able to access this place in memory. If you declare a variable inside a function, the variable is only "visible" to that function; only that function has access to this variable. Such variable would be called a local variable.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Resetting_the_Board_before_a_New_Game">Resetting the Board before a New Game</h4></div>
+<p>We can now use the player variable to keep track of whose turn it is to play. At the start of a new game, we want to reset our board and game variables. For example, we want to clear any moves that might be there from the last game and reset the player variable to 1.
+</p>
+<div class="mw-heading mw-heading5"><h5 id="Characters_and_Strings">Characters and Strings</h5></div>
+<p>But before we do that let's talk about characters and strings. A character is any symbol, such as a letter, a number, punctuation marks, or other characters on the ASCII chart (see the full chart here <a rel="nofollow" class="external autonumber" href="http://www.asciitable.com/">[3]</a>). A string is a sequence of characters. In code, we tell the computer that a certain sequence of characters is a string (as opposed to a variable name) by putting double quotation marks around it. For example the variable str has a string value "app":
+</p>
+<pre>var str = "app";</pre>
+<p>Go back to the Design Screen (5) on frmPlay by clicking on the Design Screen icon as shown below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic6.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/3/36/Pic6.png" decoding="async" width="326" height="274" class="mw-file-element" /></a></span>
+</p><p>Click on any of the Tic Tac Toe board's buttons, say btn11. Look at the properties window. You can see that the property Height has a numerical value: 70. Scroll down the properties list and find the Value property. The Height property is expecting a numerical value, but the Value property is expecting a string value. Set the Value property to the letter X. You see that the letter X appears on the button in your Design Screen.
+</p><p>But what if we only want the X to appear when the button is clicked? We can do that by editing the Value property of btn11 through code. Go back to the properties panel of btn11 and delete the letter X from the Value property field.
+</p><p><br />
+Right click on btn11 Go To Event&gt;onclick.
+Type the following line:
+</p>
+<pre>btn11.value = "app";</pre>
+<p>As you might have guessed, this line tells the computer to change the value of the Value property to the string "app". Generally, if we want to edit an object's properties through code, we must first tell the computer which object we want edit. Recall that we have set the buttons ids to btn11, btn12, ...., btn33. Here, we want to edit btn11's Value property, so we type btn11, followed by a ".". When you type a dot following an object's name, AppStudio understands that you are trying to edit one of the object's properties and it automatically shows a list of properties the object has. As you start typing the property name, only functions and properties that match what you've typed appear on the list. If you're not sure about the name of a property, you can simply go through that menu to find it. If you're not sure what a property or function does, you can refer to AppStudio's Wiki pages <a rel="nofollow" class="external autonumber" href="http://wiki.nsbasic.com/AppStudio_Documentation">[4]</a>.
+</p><p>After you've typed the line above, try running the app by clicking on the Run button. In your web browser, click on btn11. The word "app" should appear on the button when clicked.
+</p><p>Go back to the code, and remove the quotation marks around the word app:
+</p>
+<pre>btn11.value = app;</pre>
+<p>Try running the app again and clicking on btn11. You probably got an error message: Uncaught ReferenceError: app is not defined.
+This is because the computer no longer understands that the word app is a string. It thinks it is a variable name because there are no quotation marks around the word app. But we never gave a variable with the name app any value! So the computer doesn't know what to set btn11's Value property to.
+</p><p>Go back to the code, and now add the following line:
+</p>
+<pre>var app = "app";
+btn11.value = app;</pre>
+<p>What do you expect to happen? Now we have a variable with the name app. This variable has a string value "app". On the next line, we set btn11's Value property to the value of the variable app: that is "app". Try running the code. Upon clicking on btn11, the string app should appear on the button! Of course, we could have set the value of the variable app to any string we want!
+</p>
+<pre>var app = "hello, there! 1234";
+btn11.value = app;</pre>
+<p>Re-run the app to see the results.
+</p><p>If we want to change a property like the Height property, we won't use quotes since Height expects a numerical value. We can type:
+</p>
+<pre>btn11.Height = 100;
+</pre>
+<p>Equivalently we can type:
+</p>
+<pre>var heightvalue = 100;
+btn11.Height = heightvalue;
+</pre>
+<p>Write the lines above and test your code. You should see btn11's height increases from 70 to 100 when clicked.
+</p><p>When done testing, delete the code lines under the function btn11.onclick(). We only wrote these lines to understand strings and object properties!
+</p>
+<pre>btn11.onclick=function(){
+}
+</pre>
+<div class="mw-heading mw-heading5"><h5 id="The_function_init_board()"><span id="The_function_init_board.28.29"></span>The function init_board()</h5></div>
+<p>Now that we understand what strings are, let's go back to resetting the Tic Tac Toe board before the game starts.
+</p><p>Switch to the Design Screen (5). Right click on any empty space on the form and click on Go to Event&gt;onshow.
+As evident by its name, this function executes when frmPlay appears. For example, in our app, when we click on the Play button from frmStart, frmPlay appears and the function frmPlay.onshow() will be executed automatically. When the frmPlay appears, it is the start of a new game and we want it to be Player 1's turn. So we set the variable player to 1. We also want to make sure that the Tic Tac Toe board is completely empty. That is, if there are any X's and O's on the board, we want to replace them with empty strings. So we set each button's value property to an empty string like so:
+</p>
+<pre>function init_board() {
+    btn11.value = "";
+    btn12.value = "";
+    btn13.value = "";
+
+    btn21.value = "";
+    btn22.value = "";
+    btn23.value = "";
+
+    btn31.value = "";
+    btn32.value = "";
+    btn33.value = "";
+
+    player = 1;
+    moves_count = 0;
+    last_state = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+    ];
+    lblTurn.textContent = "Player " + player + "'s turn";
+}
+
+frmPlay.onshow = function() {
+    init_board();
+}
+</pre>
+<p>As you can see in the picture, the frmPlay.onshow function calls another function called init_board(). To understand the code in init_board(), first, note that the computer (or phone processor!) executes code sequentially. Meaning that it executes the first line in the function init_board() before moving on to the second line, then third, etc. In init board, we first set each of the buttons values to an empty text string.
+</p><p>Next, we set the global variable player to 1. Ignore the next three lines for now. We will get to them later. 
+</p><p>To test this piece of code, go to the Design Screen (5). Click on btn11 and change it's property Value to "xxx" through the Properties pane. Run the app, click on btnStart. You might be able to catch the value of btn11 changing from "xxx" to no text. You now know when the function frmPlay.onshow() executes and you know that it resets our board. Go back to the design screen, and delete the "xxx" from btn11's Value property.
+</p><p>Now that we have a way to know which player's turn it is, and we have reset our board, we now want to program the board's blocks.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Keeping_track_of_moves_on_the_board">Keeping track of moves on the board</h4></div>
+<p>Think about what we want to do when a player clicks on one of the buttons. When it is Player 1's turn, we want to allow him to choose where to make a move. He may click on a button to place an X there, change their mind and want to place it somewhere else before its Player 2's turn. Thus we want to allow the player change his mind, by re-clicking on the button he wishes to remove a move from. Of course, once the player clicks on the nextTurn button, he cannot change his mind! Neither can he change his mind on a move he's made on a previous turn!
+</p><p>For that reason, we want to create a set of variables that allow us to keep track of the state of the board, so we know which blocks already have moves, and which blocks are empty. At the top of the coding window, declare the variable, last_state. Unlike the player variable, we want last_state to hold the place of 9 variables, one for each block on the board.
+</p><p>In the function init_board, we initialize the variable last_state to an empty 3x3 array of variables like so:
+</p>
+<pre>last_state = [["","",""],["","",""],["","",""]];</pre>
+<p>This means that last state is a two dimensional array of variables: a 3x3 two-dimensional array. The line of code above places an empty string in each of the 9 positions, as initially, all the positions are empty. Each of the array variables can be addressed as shown in the image below. For example, the top left block is last_state[0][0]. The center block is last_state[1][1].
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic9.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/7/72/Pic9.png" decoding="async" width="268" height="250" class="mw-file-element" /></a></span>
+</p><p>Note that we could have created 9 individual variables instead of one 3x3 array of variables, but this would have been tedious! Now, lets start programming the board blocks.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="X's_and_O's"><span id="X.27s_and_O.27s"></span>X's and O's</h4></div>
+<p>Right-click on btn11. Click on Go To Event&gt; onclick. Write the following code, as shown in the picture below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic8.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/7/7e/Pic8.png" decoding="async" width="593" height="585" class="mw-file-element" /></a></span>
+</p><p>As you can see, the function btn11.onclick calls the function changeState(0,0,btn11). That is, it passes three parameters to it. If you look at the definition of the function changeState() you see that it takes three parameters: i, j, and btn. This means that when we call changeState from btn11.onclick, we set i = 0, j = 0, and btn = btn11.
+</p><p>Before we get to the code in changeState(), let's talk about if statements. If statements allow the computer/phone to make decision whether to execute a certain piece of code, given a condition. Each if statement comes with a condition. If the condition evalues to true, it executes the piece of code inside its brackets. If it is false, it executes the piece of code under else, if any exists. In the case of changeState()'s if statement, the condition is whether last_state[0][0] (that is the variable in the zero-th row, zero-th column in the 2d array last_state) is an empty string. Note the use of two equal signs, instead of one. In JavaScript, two equal signs are used to check equality, whereas one equal sign is used to change a variable's value. 
+</p><p>In changeState() we check the last_state array at position 0,0 to make sure that it didn't already contain a move, as players cannot place moves on top of ech others moves! If the position is empty, we want to allow the player to toggle between placing a move at that position or removing a move from it! Of course, we will only allow the player to make at most one move at a time. But until they decide, we want to allow them to change their mind! If the button had an empty string, we place an X or an O, depending on which player is currently playing. And if it had an X or an O, we set its value to an empty string.
+</p><p>Make sure to call the function changeState in each of the 9 onclick functions of each of the buttons. Make sure to call changeState with the suitable parameters for each button. Recall that arrays are 0-based, meaning that the block in the first row, in the first column is in position last_state[0][0]. The block to its right is at last_state[0][1], as shown in the picture below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic9.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/7/72/Pic9.png" decoding="async" width="268" height="250" class="mw-file-element" /></a></span>
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Scopes">Scopes</h4></div>
+<p>Now is a good time to discuss scopes. In JavaScript, scopes of functions, loops, and if statements are defined using curly brackets. Look at the function changeState() in the picture below. We see that after the function header, there's an open curly bracket '{' and at the end, there's a closed curly bracket '}'. This tells AppStudio that the code lines between the two curly brackets should be executed when the function changeState() is called. For readability, we indent the code inside the function. In the image below, the scope of the function is in blue. Note that the code under the if statement if(last_state[i][j] == "") is indented twice. This is to indicate that this code is within the scope of this if statement and will be executed if the if condition was found to be true. The scope of this if statement is in red. And so on.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic15.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/f/f0/Pic15.png" decoding="async" width="746" height="348" class="mw-file-element" /></a></span>
+</p><p>Note that we can have nested if statements. That is, we can have if statements inside each other. But in JavaScript, we can't have nested functions. That is, we can't have a function definition inside another! But of course, we can call one function from another. 
+</p><p>For more about indenting and code formatting, read the section Formatting Your Code.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Next_Player's_turn"><span id="Next_Player.27s_turn"></span>Next Player's turn</h3></div>
+<p>After a player is happy with the move they made, they click on btnNext. This button should first check if the move that the player made was valid. If it was, it gives the turn to the next player. If not, it restores the board to the last valid state and asks the player to try again.
+</p><p>A move is invalid if the player makes more than one move at once or doesn't make any moves at all!
+</p><p>Here's the code for and a flow chart for btnNext.onclick:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic14.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/f/f2/Pic14.png" decoding="async" width="1043" height="770" class="mw-file-element" /></a></span>
+</p><p>We will come back to this diagram later. But before we get into the details of programming btnNext, we first need to discuss two ideas; addition, and return values of functions.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Addition">Addition</h4></div>
+<p>Suppose that in the function btnNext.onclick we have the following statements:
+</p>
+<pre>var count = 1;
+var g = 2;
+</pre>
+<p>which declare two local variables, count and g and initializes them to 1 and 2, respectively. Then, supposose we write the following statement:
+</p>
+<pre>var add = count + g;
+</pre>
+<p>What value do you think will be stored in the variable add? That's right, 3!
+Let's another example:
+</p>
+<pre>count = count + 1;</pre>
+<p>In math, this statement would be meaningless, as you'd subtract count from both sides and be left with 0 = value!
+However, programming doesn't work like that. Equations in programming always go from right to left. That is, the expression on the right hand side is first evaluated and the result is stored in the variable on the left hand side. Thus, this statement simply adds one to the value that was previously stored in the variable count. In other words, we can rewrite the equation in pseudo code as follows:
+</p><p>new value of count = old value of count + 1
+</p><p>If count was initialized to 1, then the final value of count after executing this statement would be 2.
+</p><p>For that reason, as you might have already guessed, writing this statement as follows would be incorrect:
+</p>
+<pre>count + 1 = count;</pre>
+<div class="mw-heading mw-heading4"><h4 id="Return_Values_of_Functions">Return Values of Functions</h4></div>
+<p>Now that we understand how addition works, let's discuss the second concept: return values of functions.
+</p><p>As we have seen, functions are triggered by certain events or called by other functions. We already used code to call functions in frmPlay.show and in btnxx.onclick. Let's go into more detail about how that works.
+</p><p>Recall that computers (or phone processors) execute code sequentially. That means that upon executing a function, the computer executes the first line in that function first before executing the next line. So what happens when a function calls another function?
+</p><p>Suppose function A calls function B, that each of these functions contain 10 lines of code, and that function A calls function B on line 2. Then the computer will start executing line 1 of function A, then line 2. In line 2, function B is called, so the computer goes to function B and executes lines 1-10 of function B before it returns to function A. Upon returning, it executes lines 3-10 of function A. 
+</p><p>Sometimes functions have return values, which means that they return a value that they might have computed (or that they otherwise have access to) to the function that called them. In the above example, if function B has a return value, it returns it to function A. Function A can capture that value in a variable by calling function B as follows:
+</p>
+<pre>function A(){
+	//line 1
+	var result = B();
+	// lines 2-8....
+}
+</pre>
+<p>In JavaScript, you can give a function a return value by using the keyword "return". For example, function B can look something like this
+</p>
+<pre>function B(){
+	return 1;
+}
+</pre>
+<p>From this code, we know that after the execution of line 2 of function A, the variable result will have the value 1. Return values are useful, for example, when the called function calculates a value that the caller function wants to use. For example, consider the following piece of code:
+</p>
+<pre>function A(){
+	var value = 5;
+	var result;
+	result = isBig(5);
+	if(result == 1)
+		NSB.Print("the value is bigger than 100!");
+	else
+		NSB.Print("the value is smaller than 100!");
+}
+
+function isBig(number){
+	if(number &lt; 100)
+		return 0;
+	else
+		return 1;
+}
+</pre>
+<p>Now that we understand how return values of functions work, we can return to programming our "Next" button.
+</p><p>Right click on btnNext, click on Go To Event&gt; onclick. Upon clicking on that button, we first want to find where the player placed his move. We create a global variable, newMove to store the value of the new move. We create a function find_new_move(). The purpose of this funcion is to where the new move was placed and to count how many new moves were placed. To make sure that only one move was made.
+</p>
+<pre>var newMove;
+
+function check_move(i, j, btn) {
+    if (last_state[i][j]&#160;!= btn.value) {
+        newMove = btn.value;
+        last_move_i = i;
+        last_move_j = j;
+        return 1;
+    }
+    return 0;
+}
+
+function find_new_move() {
+    var count = 0;
+    newMove = "";
+    count += check_move(0, 0, btn11);
+    count += check_move(0, 1, btn12);
+    count += check_move(0, 2, btn13);
+    count += check_move(1, 0, btn21);
+    count += check_move(1, 1, btn22);
+    count += check_move(1, 2, btn23);
+    count += check_move(2, 0, btn31);
+    count += check_move(2, 1, btn32);
+    count += check_move(2, 2, btn33);
+    return count;
+}
+</pre>
+<p>In find_new_move(), we write the following code. Initially, we create a local variable called count, which we initialize to 0. We then call another function, check_move() 9 times, for each of the buttons, to check if a move was made in that block. The function check_move returns a 1 if a new move was made in that block, and a 0 otherwise. We add the return value from check_move() to count. Recall how equations are evaluated in programming: first the right hand side expression is evaluated, then the result is saved in the left hand side of the equation. In this case, the function check_move() is executed, and its return value is saved in the variable count on the left hand side of the equation. After all 9 calls are executed, count would have the total number of moves made in total. find_new_move() can now return the value of count to its caller function btnNext.onclick. For btnNext.onclick to capture the return value of find_new_move(), we create a variable count. It is okay to call that variable count as well since it is local to the function btnNext.onclick and the other variable named count is local to the function find_new_move().
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Handling_invalid_moves">Handling invalid moves</h3></div>
+<p>In this game, we allow Players to change their minds about the move they made before pressing the button "Next" for the next player's turn. A player can place an 'X' on an empty block, repress on that same block to undo the move, then press on another empty block to place a move there instead. When decided, the player presses "Next". However, this means that players might place more than one move during their turn. In this case, when they press "Next" we cannot accept it!
+</p><p>We have the number of new moves made on the board during the last turn stored in the variable count. Now we need to take action. If the player made more than one move, we cannot accept that! We must inform the player that he'd made too many moves and remove the moves he made in his last turn!
+</p><p>If the player made no moves, we must inform him that he should make a move before getting its the next player's turn. If he made exactly one move, we record that move in our last_state array, we check if the player has won, if not, we give the other player the turn. See the function btnNext.onclick below
+</p><p>Take a look at the diagram below. The numbers indicate the sequence of functions the code will execute in case of an invalid move.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic14.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/f/f2/Pic14.png" decoding="async" width="1043" height="770" class="mw-file-element" /></a></span>
+</p><p><br />
+Let's understand this code. After the line 137, the function find_new_moves() has executed and the variable count has the number of moves a player made in the last turn. Next, we use an if statement to check if the player has made more than one move! If he did, We inform him that he's made too many moves:
+</p>
+<pre>NSB.print("Too many moves! Resetting back");</pre>
+<p>Then we reset the board. We could have reset the board in this function here. But for clarity, we chose to create a separate function reset_board(). In reset_board, we simply want to reset the values of buttons to the last state they were in before the player made these invalid moves. Recall that we store these moves in the array last_state[3][3]! So we can simply do the following:
+</p>
+<pre>
+
+function reset_move(i, j, btn){
+    btn.value = last_state[i][j];
+}
+
+function reset_board(){
+  reset_move(0,0,btn11);
+  reset_move(0,1,btn12);
+  reset_move(0,2,btn13);
+  reset_move(1,0,btn21);
+  reset_move(1,1,btn22);
+  reset_move(1,2,btn23);
+  reset_move(2,0,btn31);
+  reset_move(2,1,btn32);
+  reset_move(2,2,btn33);
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Has_anyone_won_the_game_yet?"><span id="Has_anyone_won_the_game_yet.3F"></span>Has anyone won the game yet?</h3></div>
+<p>In player_won() we check if any player has won. That is, they placed three moves in the same row, column on diagonal. If so, we return true. If not, we return false.
+</p>
+<pre>function player_won() {
+    if ((last_state[0][0]&#160;!= "" &amp;&amp; last_state[0][0] == last_state[0][1] &amp;&amp; last_state[0][0] == last_state[0][2]) ||
+        (last_state[0][0]&#160;!= "" &amp;&amp; last_state[0][0] == last_state[1][1] &amp;&amp; last_state[0][0] == last_state[2][2]) ||
+        (last_state[0][0]&#160;!= "" &amp;&amp; last_state[0][0] == last_state[1][0] &amp;&amp; last_state[0][0] == last_state[2][0]) ||
+        (last_state[0][2]&#160;!= "" &amp;&amp; last_state[0][2] == last_state[1][1] &amp;&amp; last_state[0][2] == last_state[2][0]) ||
+        (last_state[0][1]&#160;!= "" &amp;&amp; last_state[0][1] == last_state[1][1] &amp;&amp; last_state[0][1] == last_state[2][1]) ||
+        (last_state[0][2]&#160;!= "" &amp;&amp; last_state[0][2] == last_state[1][2] &amp;&amp; last_state[0][2] == last_state[2][2]) ||
+        (last_state[1][0]&#160;!= "" &amp;&amp; last_state[1][0] == last_state[1][1] &amp;&amp; last_state[1][0] == last_state[1][2]) ||
+        (last_state[2][0]&#160;!= "" &amp;&amp; last_state[2][0] == last_state[2][1] &amp;&amp; last_state[2][0] == last_state[2][2]))
+        return true;
+    return false;
+}
+</pre>
+<p>Note the use of the "||" and "&amp;&amp;" operands. These are "OR" and "AND" operands used in if statements. For example, the first statement reads:
+</p><p>if last_state[0][0] (row 0, column 0) is not an empty string AND last_state[0][0] is equal to last_staet[0][1] (row 0, column 1) AND last_state[0][0] is equal to last_state[0][2], that means that the player has placed moves on all three blocks on the top row. In that case, the player wins, and we return 1 to indicate that the player has won. Because there are other ways to win, we list all of them, encapsulate each one by round brackets, and separate them by ORs.
+</p><p>Let's look at the if statement in btnNext.onclick. The if condition is evaluated by first evaluating each of the expressions on the right and left hand sides of the operand "==" then checking if the equality holds. In this case, play_won() is executed and the return value of the function is compared to "false". If the return value is false, the code under the if statement is executed. Starting with next_turn().
+</p><p>As you might expect, next_turn() just updates the variable player and the label that says whose turn it is.
+</p>
+<pre>function next_turn() {
+    if (player == 1)
+        player = 2;
+    else if (player == 2)
+        player = 1;
+    lblTurn.textContent = "Player " + player + "'s turn";
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="What_if_it's_a_tie?"><span id="What_if_it.27s_a_tie.3F"></span>What if it's a tie?</h3></div>
+<p>Take a look at the code of the btnNext.onclick function (code snapshot under Handing Invalid Moves). After the next_turn() function returns, we want to check if the all the boxes on the board are full. If all the boxes on the board are full at that point, we know it is a tie since we already know that nobody won so far! (How do we know? Hint: at this point in the code, did the if statement condition player_won()==false evaluate to true or false?)
+</p><p>To find out if there's a tie, we can count the number of full blocks, and if the number if 9, we let the players know that there's a tie. But can we find a faster way to do this? Instead of counting the number of full blocks every time a player makes a valid move, we can simply make a variable that will serve as a moves counter. Every time any of the players makes a valid move, we increment the counter. Then, we check if the counter value has reached 9, then we know it is a tie!
+</p><p>To do that we declare a global variable at the top of our file. We called it moves_count. In our init_board function, initialize moves_count to 0, since every time a new game starts, we want to reset moves counter to indicate that there are 0 full blocks on the board. In the function btnNext.onclick, if the player has not won (that is, if player_won() returns false), we add one to moves_count. Note that following lines of code are equivalent:
+</p>
+<pre>moves_count++;</pre>
+<pre>moves_count += 1;</pre>
+<pre>moves_count = moves_count + 1;</pre>
+<p>Finally we check if moves_count is 9. If so, and we know nobody has won, then it must be a tie! We inform the players that there's a tie, reset the board, and change to the Start form!
+</p><p>If however, player_won() returns true, the code under the if statement if(player_won() == false) will not execute, instead, the code under the else would execute: We inform the players which player won, we reset the board, and return to the start Form.
+</p><p>Return to btnMenu.onclick function, before we return to the Start form, we probably want to initialize the board, so we simply make a call to init_board() before the line ChangeForm(frmStart).
+</p><p>Now, we're just left with programming the middle button, btnReset. Right-click on btnReset Go to Event&gt; onclick. Simply add one line. A call to init_board().
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Debugging_Tips">Debugging Tips</h2></div>
+<p>Now you're done writing your code. But it is likely that you have a few bugs and mistakes in your code. Some bugs are easy to find and fix. Other bugs won't be as easy to find. So here are a few tips that can help you debug your code.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Formatting_Your_Code">Formatting Your Code</h3></div>
+<p>Indenting and using spaces consistently in your code can make your code a lot more readable, which in turn can make debugging a lot easier! Always indent code that exists within the scope of a bigger function or statement. Let's take the function changeState() as an example. All code under inside the function scope (blue) should be indented once so it is easy for a reader to see that this code belongs inside a function. The code in red is indented twice (or once with respect to the if statement above it) because it is inside the scope of the if statement if(last_state[i][j]==""). The code in green is inside the scope of the if statement if(btn.value=="") and the code in purple is inside the scope of the else.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Pic15.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/f/f0/Pic15.png" decoding="async" width="746" height="348" class="mw-file-element" /></a></span>
+</p><p>It is good practice to indent your code as you write it. But you can also make AppStudio format your code for you by going to <b>Edit &gt; Format Code</b>. If you're debugging, try formatting your code and checking if the code is indented the way you expect it to be indented. If it isn't, this can mean that you missed a bracket or other syntax errors that caused AppStudio to misinterpret your code. It is recommended that you format your code occasionally as you write it so you can catch such syntax errors as they come up.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Debugging_Tools">Debugging Tools</h3></div>
+<p>You can also use Chrome's debugging tool to find bugs in your program. Go to <b>Run &gt; How</b> To Use Debuggers to learn how to use Chrome's debugger.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Test_your_app!"><span id="Test_your_app.21"></span>Test your app!</h2></div>
+<p>You've now programmed, tested and debugged your app. It is time to deploy it and use it on your phone!
+</p><p>Click on Run &gt; Deploy.
+</p><p>AppStudio will give you a link. Open your phone browser and enter the link you were given. Use the app on your phone!
+</p><p>For future apps, you can read about app publishing options here <a rel="nofollow" class="external autonumber" href="http://wiki.nsbasic.com/Distributing_your_App%7Chere">[5]</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124150523
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.060 seconds
+Real time usage: 0.238 seconds
+Preprocessor visited node count: 233/1000000
+Revision size: 36639/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3768/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:1163:|#|:idhash:canonical and timestamp 20260124150523 and revision id 8471. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;oldid=8471">https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;oldid=8471</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=TicTacToe" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=TicTacToe" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="TicTacToe.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:TicTacToe&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="TicTacToe.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/TicTacToe" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/TicTacToe" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;oldid=8471" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=TicTacToe&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 8 June 2016, at 23:02.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":308,"wgPageParseReport":{"limitreport":{"cputime":"0.060","walltime":"0.238","ppvisitednodes":{"value":233,"limit":1000000},"revisionsize":{"value":36639,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3768,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124150523","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124212241 -->
+
+<!-- Mirrored from wiki.appstudio.dev/TicTacToe by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

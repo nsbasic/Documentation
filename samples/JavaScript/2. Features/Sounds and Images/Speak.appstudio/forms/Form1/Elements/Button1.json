@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 8, 
+  "right": "auto", 
+  "top": 176, 
+  "value": "Hello World (high pitch)", 
+  "width": 176, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

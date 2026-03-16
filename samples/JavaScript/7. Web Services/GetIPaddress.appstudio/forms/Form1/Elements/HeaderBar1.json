@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "left": 49, 
+  "right": "auto", 
+  "top": 15, 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Get IP Address", 
+  "position": "absolute", 
+  "children": [] 
+} 

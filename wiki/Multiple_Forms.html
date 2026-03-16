@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Multiple_Forms by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Multiple Forms - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXXwQTbRTeqWxPdb3DraegAAABQ","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Multiple_Forms","wgTitle":"Multiple Forms","wgCurRevisionId":10092,"wgRevisionId":10092,"wgArticleId":515,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Multiple_Forms","wgRelevantArticleId":515,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Multiple_Forms rootpage-Multiple_Forms skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Multiple Forms</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purpose"><span class="tocnumber">1</span> <span class="toctext">Purpose</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Description_of_the_Program"><span class="tocnumber">1.1</span> <span class="toctext">Description of the Program</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Program_Development"><span class="tocnumber">2</span> <span class="toctext">Program Development</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Startup"><span class="tocnumber">2.1</span> <span class="toctext">Startup</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Create_Objects_for_Form_1"><span class="tocnumber">2.2</span> <span class="toctext">Create Objects for Form 1</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Add_a_new_form"><span class="tocnumber">2.3</span> <span class="toctext">Add a new form</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Create_Objects_for_Form_2"><span class="tocnumber">2.4</span> <span class="toctext">Create Objects for Form 2</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Add_code_to_Form_1"><span class="tocnumber">2.5</span> <span class="toctext">Add code to Form 1</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Save_the_project"><span class="tocnumber">2.6</span> <span class="toctext">Save the project</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Run_the_program"><span class="tocnumber">2.7</span> <span class="toctext">Run the program</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Deploy_the_App"><span class="tocnumber">2.8</span> <span class="toctext">Deploy the App</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Purpose">Purpose</h2></div>
+<p>The purpose of this tutorial is to help learn a few more AppStudio programming techniques. You should complete Tutorial #1 before beginning this tutorial. In this tutorial, the techniques of using multiple forms and Select controls will be covered.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Description_of_the_Program">Description of the Program</h3></div>
+<p>The program to be developed has two forms. Form #1 allows the user to enter a birth date and name. Form #2 shows the values of the previously entered birth date and name plus it tells on what day of the week the birth date occurred. There is a Title Bar and a button on each form that will switch between forms.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Program_Development">Program Development</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Startup">Startup</h3></div>
+<ol><li>Start AppStudio from the Start menu.</li>
+<li>At the initial screen select New Project dialog box, with the following settings:</li>
+<li>Form factor should be iPhone/iPad/Nexus.</li>
+<li>Language is BASIC.</li></ol>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TT01.03.JPG" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/d/d7/TT01.03.JPG" decoding="async" width="830" height="679" class="mw-file-element" /></a></span><br />
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Create_Objects_for_Form_1">Create Objects for Form 1</h3></div>
+<ol><li>Add a Title Bar (HeaderBar located under Jquery Mobile) for form1. In the properties window, set the leftButtonPos to "none", the leftButtonName to blank and change rightButtonName to "Next". Change the title to "Page 1" and put Form2 in changeform.</li>
+<li>Drag a label to the desired location and make it wider.</li>
+<li>Set its textContent in the Properties window to "Please Enter Your Name".</li>
+<li>Add a TextBox. It should name itself TextBox1. In this tutorial, we rename it to Text1.</li>
+<li>Add 4 more labels with textContent of "Enter Your Birthday","Select Month","Select Day" and "Select Year". There are some prettier date pickers we could have used, but we would learn less...</li>
+<li>Add 3 Select controls, drag into position and resize.</li>
+<li>Finally add a Button to the form. Resize and change the value property to read "Show Day of The Week".</li></ol>
+<p>Form 1 should now look like this:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TT02.02.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/1/12/TT02.02.png" decoding="async" width="798" height="680" class="mw-file-element" /></a></span><br />
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Add_a_new_form">Add a new form</h3></div>
+<p>On the IDE menu select "Project" followed by "Add Form".
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Create_Objects_for_Form_2">Create Objects for Form 2</h3></div>
+<ol><li>Add a Title Bar (HeaderBar) for form2. In the Properties Window set the rightButtonIconPos to "none", the rightButtonName to blank and change leftButtonName to "Prev". Set the Title to Page 2. Set leftChangeForm to Form1.</li>
+<li>Add 3 labels, drag into position and resize.</li>
+<li>In the properties for each label change the Text property to "Welcome", "Your Birthday is" and "Your Birthday is on".</li>
+<li>Now add 3 Text boxes and drag into position.</li>
+<li>Lastly add a Button. Resize and change the value to read "Return to previous Page". Set changeform to Form1.</li></ol>
+<p>Form 2 should look like this:
+<span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TT02.03.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/3/38/TT02.03.png" decoding="async" width="798" height="680" class="mw-file-element" /></a></span><br />
+</p><p><br />
+We have completed the visual design of our program so now it's time to add code to make it do something.
+</p><p>We can actually run the program now. Choose Run...Start in Desktop Browser.
+It runs in your default browser: we recommend using Chrome or Safari, as these support the WebKit extensions which mobile devices use.
+We could even run this on a device, but let's do a bit more first...
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Add_code_to_Form_1">Add code to Form 1</h3></div>
+<p>Open the code window for Form1 from the Project Explorer window and enter the following code:
+</p>
+<pre>' Form1 Code 
+Dim birthday, dayofweek
+Dim a,b,c
+
+Sub Main()
+  Select1.clear()
+  For i=0 To 11
+    Select1.addItem(i+1)
+  Next
+  Select2.clear()
+  For i=0 To 30
+    Select2.addItem(i+1)
+  Next
+  Select3.clear()
+  For i=0 To 110
+    Select3.addItem(i+1900)
+  Next
+End Sub
+</pre>
+<p>The 3 Select control loops above set up the Months 1 to 12, the Days 1 to 31 and the Years 1900 to 2010.
+</p>
+<pre>' Check to see if Select has recieved an input
+' Select (combo box) for month 
+Function Select1_onchange()
+  a=Select1.selectedItem() 
+  'MsgBox "selectedIndex is " &amp; Select1.selectedIndex() &amp; " with value " &amp; a 
+End Function
+
+Function Select2_onchange()
+ ' Select (combo box) for day 
+  b=Select2.selectedItem()
+  'MsgBox "selectedIndex is " &amp; Select2.selectedIndex() &amp; " with value " &amp; b
+End Function
+
+Function Select3_onchange()
+  ' Select (combo box) for year 
+  c=Select3.selectedItem()
+  'MsgBox "selectedIndex is " &amp; Select3.selectedIndex() &amp; " with value " &amp; c 
+End Function
+
+</pre>
+<p>The three above functions assign the selections from the ComboBoxes to three variables a, b and c.
+</p>
+<pre>Function Button1_onclick()
+  birthday = a &amp; "/ " &amp; b &amp; "/ " &amp; c 
+  'MsgBox "Birthday = " &amp; birthday 
+  TextBox1.value = Text1.value
+  TextBox2.value = birthday
+  dayofweek = Weekday(birthday) 
+  'MsgBox "Day of Week = " &amp; dayofweek 
+  TextBox3.value = WeekdayName (dayofweek)
+  ChangeForm(Form2)
+End Function
+ </pre>
+<p>When Button1 is clicked, the following happens.
+</p>
+<ul><li>The values of a, b and c are concatenated together with "/ " to form MM/ DD/ YYYY which is assigned to birthday.</li>
+<li>The internal WeekDay function is called and the Weekday value is assigned to dayofweek.</li>
+<li>The internal WeekdayName function is called and the WeekDayName value is assisgned to Text4 which will appear on the form2.</li>
+<li>Form1 is hidden and Form2 appears.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Save_the_project">Save the project</h3></div>
+<p>From the IDE menu select "File" then "Save Project" or "Ctrl S" or the Save Icon from the Tool Bar.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Run_the_program">Run the program</h3></div>
+<p>We can run the program again. Choose Run...Start in Desktop Browser.
+If all goes well the forms should appear similar to those shown below.
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TT02.04.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/3/37/TT02.04.png" decoding="async" width="381" height="512" class="mw-file-element" /></a></span><br />
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Deploy_the_App">Deploy the App</h3></div>
+<p>Congratulations...
+The only thing left to do is deploy the program.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124134120
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.031 seconds
+Real time usage: 0.053 seconds
+Preprocessor visited node count: 51/1000000
+Revision size: 5270/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1200/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:515:|#|:idhash:canonical and timestamp 20260124134120 and revision id 10092. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;oldid=10092">https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;oldid=10092</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Multiple+Forms" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Multiple+Forms" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Multiple_Forms.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Multiple_Forms&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Multiple_Forms.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Multiple_Forms" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Multiple_Forms" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;oldid=10092" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Multiple_Forms&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 17 March 2019, at 21:03.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":667,"wgPageParseReport":{"limitreport":{"cputime":"0.031","walltime":"0.053","ppvisitednodes":{"value":51,"limit":1000000},"revisionsize":{"value":5270,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1200,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124134120","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260125102818 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Multiple_Forms by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

@@ -1,0 +1,35 @@
+{ 
+"_type": "Image_bs", 
+"_base": ["bsAll", "bsImage", "margin", "padding", "fonts", "colors", "Widget", "bsPopover"], 
+"_palette": 9, 
+"_art": "images/image.png", 
+"_wikipage": "Image (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Image</a> lets you display an image. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"{_nsbdir}toolbox/bs3/dist/fa/css/font-awesome.min.css",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.ttf",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff2",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js",
+  "{if src<>'' and src[:5]<>'data:'}{src}{/if}"
+  ],
+
+"_displayname": "Image",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+    
+"_htmltemplate": [
+"    \"<img id='{id}' src='{src}' class='{responsive}{center}{shape}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'{_bsPopover!i}>\",{/if}"
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

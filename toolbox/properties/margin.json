@@ -1,0 +1,52 @@
+{
+    "_type": "margin",
+    "_base": "NSBObject",
+        
+"mAll": "", 
+"_mAll": { 
+    "group": "Margins",
+    "display": "margin-all",
+    "acignore": true,
+    "desc": "Margin on all sides of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"mTop": "", 
+"_mTop": { 
+    "group": "Margins",
+    "display": "margin-top",
+    "acignore": true,
+    "desc": "Margin at top of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"mLeft": "", 
+"_mLeft": { 
+    "group": "Margins",
+    "display": "margin-left",
+    "acignore": true,
+    "desc": "Margin at left side of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"mRight": "", 
+"_mRight": { 
+    "group": "Margins",
+    "display": "margin-right",
+    "acignore": true,
+    "desc": "Margin at right of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"mBottom": "", 
+"_mBottom": { 
+    "group": "Margins",
+    "display": "margin-bottom",
+    "acignore": true,
+    "desc": "Margin at bottom of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    },
+    
+"_margincss": "{if mAll<>''}margin:{mAll!p}; {/if}{if mTop<>''}margin-top:{mTop!p}; {/if}{if mLeft<>''}margin-left:{mLeft!p}; {/if}{if mBottom<>''}margin-bottom:{mBottom!p}; {/if}{if mRight<>''}margin-right:{mRight!p}; {/if}"
+    
+}

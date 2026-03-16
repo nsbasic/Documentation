@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "class": "default", 
+  "id": "TitleBar1", 
+  "left": 28, 
+  "right": "auto", 
+  "top": 22, 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Phone-->Web Photo Capture", 
+  "position": "absolute", 
+  "children": [] 
+} 

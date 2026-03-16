@@ -1,0 +1,116 @@
+{ 
+"_type": "CheckBox_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxcheckbox.png", 
+"_wikipage": "jqxCheckBox",
+"_shorthelp": "<a href='{_docurl}'>CheckBox</a> allows the end-user to select a true, false or indeterminate condition. jqWidgets (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}styles/jqx.base.css",
+	"{pathTo_jqWidgets}styles/jqx.{theme}.css",
+	"{pathTo_jqWidgets}jqxcore.js",
+	"{pathTo_jqWidgets}jqxcheckbox.js", 
+	"{pathTo_jqWidgets}styles/images/check_black.png",
+	"{pathTo_jqWidgets}styles/images/bg_blueenergy.png"
+	],
+"_displayname": "CheckBox",
+"_longhelp": "longhelp",
+
+"height": 25, 
+"width": 120, 
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"title": "CheckBox", 
+"_title": { 
+    "acignore": true,
+    "desc": "Title of the checkbox", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"boxSize": "13px", 
+"_boxSize": { 
+    "acignore": true,
+    "desc": "Sets the checkbox's size.", 
+    "type": "str" 
+    },
+
+"checked": "false", 
+"_checked": { 
+    "acignore": true,
+    "desc": "Initial setting. Switchbutton only.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+
+"hasThreeStates": "false", 
+"_hasThreeStates": { 
+    "acignore": true,
+    "desc": "Sets whether the checkbox has 3 states - checked, unchecked and indeterminate.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+"enableContainerClick": "true", 
+"_enableContainerClick": { 
+    "acignore": true,
+    "desc": "Sets whether the clicks on the container are handled as clicks on the check box.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+
+"locked": "false", 
+"_locked": { 
+    "acignore": true,
+    "desc": "Sets whether the checkbox is locked. In this mode the user is not allowed to check/uncheck the checkbox.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+
+"groupName": "", 
+"_groupName": { 
+    "acignore": true,
+    "desc": "Sets the group name. When this property is set, the checkboxes in the same group behave as radio buttons.", 
+    "type": "str" 
+    },
+    
+"_onclick": {"type": "hidden"},
+   
+"onchecked": "", 
+"_onchecked": { 
+    "acignore": true,
+    "desc": "Item checked event", 
+    "type": "js" 
+    }, 
+
+"onunchecked": "", 
+"_onunchecked": { 
+    "acignore": true,
+    "desc": "Item unchecked event", 
+    "type": "js" 
+    }, 
+
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'>{title}</div>\",",
+
+"_jstemplate": "  $('#{id}').jqxCheckBox({{theme:'{theme}', width:'{width}', height:'{height}', disabled:{disabled}, rtl:{rtl}, boxSize:'{boxSize}', checked:{checked}, hasThreeStates:{hasThreeStates}, enableContainerClick:{enableContainerClick}, locked:{locked}, groupName:'{groupName}' }});NSB.addProperties({id})"
+
+}

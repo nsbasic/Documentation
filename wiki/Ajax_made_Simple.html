@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Ajax_made_Simple by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Ajax made Simple - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXWgqmPJn6bV1yPGvN5g9gAAAB4","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Ajax_made_Simple","wgTitle":"Ajax made Simple","wgCurRevisionId":11105,"wgRevisionId":11105,"wgArticleId":391,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using Tabber parser tag"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Ajax_made_Simple","wgRelevantArticleId":391,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","ext.tabberNeue.init.styles":"ready","ext.pygments":"ready","skins.vector.styles.legacy":"ready","jquery.makeCollapsible.styles":"ready"};RLPAGEMODULES=["ext.tabberNeue","ext.pygments.view","site","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=ext.pygments%7Cext.tabberNeue.init.styles%7Cjquery.makeCollapsible.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Ajax_made_Simple rootpage-Ajax_made_Simple skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Ajax made Simple</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>Most developers have heard of Ajax by now. Unless you've worked with it, you probably think it's another complicated form of alphabet soup. It actually turns out to be quite easy to use from AppStudio.
+</p><p>First, let's explain what it is (and isn't). It stands for <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Ajax_(programming)">Asynchronous JavaScript And XML</a>. The good news is that there's no need to be asynchronous or to use XML - and that AppStudio takes care of the JavaScript.
+</p><p><a href="Ajax.html" title="Ajax">Ajax</a> makes it easy to exchange data with your server. Think of it as a function you can call that is running on another system. You can pass it parameters and it can return values. Since it's running on your server, it can do things that you cannot do on your device. It can access files and databases on the server, or get data from other web sites without worrying about <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Same_origin_policy">Same Origin Policies</a>.
+</p><p>You will need to use a server with PHP enabled to run these samples. The AppStudio Server does not have PHP enabled.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#A_Simple_Exchange_of_Data_with_the_server"><span class="tocnumber">1</span> <span class="toctext">A Simple Exchange of Data with the server</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Example"><span class="tocnumber">2</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Using_POST_to_Send_more_Data_to_the_Server"><span class="tocnumber">2.1</span> <span class="toctext">Using POST to Send more Data to the Server</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Example_2"><span class="tocnumber">3</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Getting_Data_from_Another_Site"><span class="tocnumber">3.1</span> <span class="toctext">Getting Data from Another Site</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#How_fast_is_it?"><span class="tocnumber">3.2</span> <span class="toctext">How fast is it?</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Asynchronous_Calls"><span class="tocnumber">3.3</span> <span class="toctext">Asynchronous Calls</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Caching"><span class="tocnumber">3.4</span> <span class="toctext">Caching</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Where_to_put_your_PHP_files"><span class="tocnumber">3.5</span> <span class="toctext">Where to put your PHP files</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Cool_things_you_can_get_on_the_web"><span class="tocnumber">3.6</span> <span class="toctext">Cool things you can get on the web</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Zip_Code_Lookup"><span class="tocnumber">3.7</span> <span class="toctext">Zip Code Lookup</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Cross_Origin_Resource_Sharing"><span class="tocnumber">3.8</span> <span class="toctext">Cross Origin Resource Sharing</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Using_AJAX_to_send_an_email"><span class="tocnumber">3.9</span> <span class="toctext">Using AJAX to send an email</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Using_AJAX_to_get_info_from_a_database_on_your_server."><span class="tocnumber">3.10</span> <span class="toctext">Using AJAX to get info from a database on your server.</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Using_AJAX_to_get_save_a_picture_to_your_server"><span class="tocnumber">3.11</span> <span class="toctext">Using AJAX to get save a picture to your server</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Using_AJAX_to_get_all_kinds_of_stuff_on_the_web"><span class="tocnumber">3.12</span> <span class="toctext">Using AJAX to get all kinds of stuff on the web</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Using_Ajax_with_VoltBuilder"><span class="tocnumber">3.13</span> <span class="toctext">Using Ajax with VoltBuilder</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Using_Ajax_with_ASP.NET"><span class="tocnumber">3.14</span> <span class="toctext">Using Ajax with ASP.NET</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading3"><h3 id="A_Simple_Exchange_of_Data_with_the_server">A Simple Exchange of Data with the server</h3></div>
+<p>Let's look at some code. We will have our AppStudio app send the server a string, which the server will return reversed. Here is what the app looks like:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajax1.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/6/6f/Ajax1.png" decoding="async" width="329" height="468" class="mw-file-element" /></a></span><br />
+</p><p>The only code in this app is the "Reverse" button. The <a href="Ajax.html" title="Ajax">Ajax</a> function sends the contents of the top textarea to a PHP script that is running on the server. If it returns successfully, we display what came back. Otherwise, we show the error:
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Example">Example</h2></div>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript-label" href="#tabber-JavaScript" aria-controls="tabber-JavaScript">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC-label" href="#tabber-BASIC" aria-controls="tabber-BASIC">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript" aria-labelledby="tabber-JavaScript-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">req</span><span class="p">;</span>
+
+<span class="nx">btnSendData</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">req</span><span class="o">=</span><span class="nx">Ajax</span><span class="p">(</span><span class="s2">&quot;ajax.php/?myText=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">txtSend</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="nx">done</span><span class="p">);</span>
+<span class="p">};</span>
+
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">done</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//success</span>
+<span class="w">    </span><span class="nx">txtResponse</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//failure</span>
+<span class="w">    </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Error: Status = &quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nx">req</span><span class="p">.</span><span class="nx">status</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">TypeName</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">statusText</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="s2">&quot; &quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nx">req</span><span class="p">.</span><span class="nx">statusText</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">TypeName</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">err</span><span class="p">)</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="s2">&quot; &quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nx">req</span><span class="p">.</span><span class="nx">error</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">NSB</span><span class="p">.</span><span class="nx">MsgBox</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC" aria-labelledby="tabber-BASIC-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Dim</span><span class="w"> </span><span class="n">req</span>
+
+<span class="k">Function</span><span class="w"> </span><span class="nf">btnSendData_onclick</span><span class="p">()</span>
+<span class="w">  </span><span class="n">req</span><span class="o">=</span><span class="n">Ajax</span><span class="p">(</span><span class="s">&quot;https://www.nsbasic.com/i/Ajax/ajax.php/?myText=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">txtSend</span><span class="p">.</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">)</span><span class="w"> </span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span>
+
+<span class="k">Function</span><span class="w"> </span><span class="nf">done</span><span class="p">()</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="c">&#39;success</span>
+<span class="w">    </span><span class="n">txtResponse</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="n">req</span><span class="p">.</span><span class="n">responseText</span>
+<span class="w">  </span><span class="k">Else</span><span class="w"> </span><span class="c">&#39;failure</span>
+<span class="w">    </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Error: Status = &quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">status</span>
+<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">TypeName</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">statusText</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">statusText</span>
+<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">TypeName</span><span class="p">(</span><span class="n">req</span><span class="p">.</span><span class="n">err</span><span class="p">)</span><span class="o">=</span><span class="s">&quot;string&quot;</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">error</span>
+<span class="w">    </span><span class="n">MsgBox</span><span class="w"> </span><span class="n">msg</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<p>The PHP script is even easier. It gets the input that is named myText, reverses it, and uses the echo statement to send it back.
+</p>
+<pre>&lt;?php
+ // Get the data from the client. 
+ $myText = $_GET['myText'];
+ // Send back the text, reversed
+ echo "Data received from Device (reversed): " . strrev($myText); 
+?&gt;
+</pre>
+<p>Here is the result:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajax2.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/0/09/Ajax2.png" decoding="async" width="320" height="460" class="mw-file-element" /></a></span>
+</p><p>A few notes:
+</p>
+<ul><li>The php script needs to be on the same folder on the server as the AppStudio app.</li>
+<li><a href="Ajax.html" title="Ajax">Ajax</a> is based on XMLHttpPost.</li>
+<li>A handy way to return data from your PHP script is in <a rel="nofollow" class="external text" href="http://blog.nsbasic.com/?p=425">JSON</a> format. PHP even has a handy json_encode() function.</li>
+<li>PHP is not enabled on the AppStudio Server.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Using_POST_to_Send_more_Data_to_the_Server">Using POST to Send more Data to the Server</h3></div>
+<p>Let's extend what we are doing a bit and talk about using the POST method.
+</p><p>We discussed the simplest <a href="Ajax.html" title="Ajax">Ajax</a> call, which sends data to the server by adding it to the end of the URL, a method called, rather misleadingly, GET. But what if we want to send more data? GET has a limit, some say, of around 2000 characters. For more than that, we'll use the also badly named POST method. POST has an upload limit on most servers of 8 megabytes. If you need more, server settings can be adjusted.
+</p><p>Let's look at some code. You'll see it looks very much like our last post:
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Example_2">Example</h2></div>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript_2-label" href="#tabber-JavaScript_2" aria-controls="tabber-JavaScript_2">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC_2-label" href="#tabber-BASIC_2" aria-controls="tabber-BASIC_2">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript_2" aria-labelledby="tabber-JavaScript_2-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="nx">btnAjax</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">req</span><span class="o">=</span><span class="nx">Ajax</span><span class="p">(</span><span class="s2">&quot;ajaxPost.php&quot;</span><span class="w"> </span><span class="p">,</span><span class="s2">&quot;POST&quot;</span><span class="w"> </span><span class="p">,</span><span class="nx">txtSend</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//success</span>
+<span class="w">    </span><span class="nx">htmResponse</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//failure</span>
+<span class="w">    </span><span class="nx">htmResponse</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;Error: &quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nx">req</span><span class="p">.</span><span class="nx">err</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC_2" aria-labelledby="tabber-BASIC_2-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Function</span><span class="w"> </span><span class="nf">btnAjax_onclick</span><span class="p">()</span>
+<span class="w">  </span><span class="n">req</span><span class="o">=</span><span class="n">Ajax</span><span class="p">(</span><span class="s">&quot;ajaxPost.php&quot;</span><span class="p">,</span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="n">txtSend</span><span class="p">.</span><span class="n">value</span><span class="p">)</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="c">&#39;success</span>
+<span class="w">    </span><span class="n">htmResponse</span><span class="p">.</span><span class="n">innerHTML</span><span class="o">=</span><span class="n">req</span><span class="p">.</span><span class="n">responseText</span>
+<span class="w">  </span><span class="k">Else</span><span class="w"> </span><span class="c">&#39;failure</span>
+<span class="w">    </span><span class="n">htmResponse</span><span class="p">.</span><span class="n">innerHTML</span><span class="o">=</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">err</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<p>The difference is a couple of extra parameters. We add "POST" and the data we want to send as a separate parameter. Before we talk about what is going to happen at the server end, let's see what the app looks like:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajaxpost.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/4/4d/Ajaxpost.png" decoding="async" width="320" height="480" class="mw-file-element" /></a></span><br />
+</p><p>OK, here is the PHP code on the server which we are calling:
+</p>
+<pre>&lt;?php
+ // uncomment the next line to see runtime error messages from this script
+ // ini_set('display_errors','1');
+ 
+ // Get the data from the client.
+ $myText = file_get_contents('php://input');
+ // Send back the text, reversed
+ echo "Data received from Device (reversed):&lt;br&gt;" . strrev($myText); 
+ 
+ //write the data out to a file on the server
+ //make sure permissions are all OK!
+ $myFile = "AjaxPost/ajaxPost.txt";
+ echo "&lt;p&gt;Writing data to " . getcwd() . $myFile;
+ $f = fopen($myFile, 'w') or die("can't open file");
+ fwrite($f, $myText);
+ fclose($f);
+?&gt;
+</pre>
+<p>The file_get_contents('php://input') call gets the data, exactly as it was sent. We'll do two things with it: echo it back reversed and we will write it to a file on the server. The first part is easy: anything in an echo statement is sent back to our app:
+</p>
+<pre>echo "Data received from Device (reversed):" . strrev($myText); 
+</pre>
+<p>The second part involves a bit more PHP, but is straightforward. It writes the data was received to a file.
+</p>
+<pre> 
+$myFile = "AjaxPost/ajaxPost.txt";
+ echo "&lt;p&gt;Writing data to " . getcwd() . $myFile;
+ $f = fopen($myFile, 'w') or die("can't open file");
+ fwrite($f, $myText);
+ fclose($f);
+</pre>
+<p>What would you use this feature for?
+</p>
+<ul><li>Upload a JSON copy of your database.</li>
+<li>Upload some pictures in Base64 format.</li>
+<li>Create a .htm file which can be accessed as a web page.</li>
+<li>Lots more ideas!</li></ul>
+<p>A tip on debugging PHP scripts Since PHP scripts run on the server and not on your screen, you don't get to see the error messages. This can make debugging difficult. If you put this statement at the top of your PHP script, the error messages will be echoed to your app:
+</p>
+<pre>ini_set('display_errors','1');
+</pre>
+<p>The error messages come back as HTML formatted text. The best way to look at them is to assign them to the innerText property of an HTMLview control.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Getting_Data_from_Another_Site">Getting Data from Another Site</h3></div>
+<p>One of the basic security features of the modern web is the <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Same_origin_policy">Same Origin Policy</a>. It states that a web app cannot pull up just any data from another site. This becomes a problem if you need data on someone else's site.
+</p><p>First, check to see if the site you want to access has an API. If it does, it's the best solution. If not, you may need to create your own:
+</p><p>While a web app isn't allowed to access the files on another site, a PHP script is. We'll get our PHP script to do the dirty work for us and return the results to our app. The technique we will use is often called <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Web_scraping">scraping</a>.
+</p><p>Time to look at some code again. Here's the AppStudio part that calls the PHP script. It looks very much like the code in A Simple Exchange of Data with the server above. The main difference is that we're calling a different PHP script.
+</p>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript_3-label" href="#tabber-JavaScript_3" aria-controls="tabber-JavaScript_3">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC_3-label" href="#tabber-BASIC_3" aria-controls="tabber-BASIC_3">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript_3" aria-labelledby="tabber-JavaScript_3-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="nx">btnGetFile</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">req</span><span class="o">=</span><span class="nx">Ajax</span><span class="p">(</span><span class="s2">&quot;ajaxGetURL.php/?urlToGet=&quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">txtURL</span><span class="p">.</span><span class="nx">value</span><span class="p">));</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//success</span>
+<span class="w">    </span><span class="nx">htmResponse</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//failure</span>
+<span class="w">    </span><span class="nx">htmResponse</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">err</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">htmResponse</span><span class="p">.</span><span class="nx">refresh</span><span class="p">();</span>
+<span class="p">};</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC_3" aria-labelledby="tabber-BASIC_3-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Function</span><span class="w"> </span><span class="nf">btnGetFile_onclick</span><span class="p">()</span>
+<span class="w">  </span><span class="n">req</span><span class="o">=</span><span class="n">Ajax</span><span class="p">(</span><span class="s">&quot;ajaxGetURL.php/?urlToGet=&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">encodeURIComponent</span><span class="p">(</span><span class="n">txtURL</span><span class="p">.</span><span class="n">value</span><span class="p">))</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="c">&#39;success</span>
+<span class="w">    </span><span class="n">htmResponse</span><span class="p">.</span><span class="n">innerHTML</span><span class="o">=</span><span class="n">req</span><span class="p">.</span><span class="n">responseText</span>
+<span class="w">  </span><span class="k">Else</span><span class="w"> </span><span class="c">&#39;failure</span>
+<span class="w">    </span><span class="n">htmResponse</span><span class="p">.</span><span class="n">innerHTML</span><span class="o">=</span><span class="n">req</span><span class="p">.</span><span class="n">err</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+<span class="w">  </span><span class="n">htmResponse</span><span class="p">.</span><span class="n">refresh</span><span class="p">()</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<p>Before we talk about what is going to happen at the server end, let's see what the app looks like:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajaxgeturl.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/0/0b/Ajaxgeturl.png" decoding="async" width="320" height="480" class="mw-file-element" /></a></span><br />
+</p><p>And here is what the PHP script looks like:
+</p>
+<pre>&lt;?php
+$ch = curl_init($_GET['urlToGet']);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$data = curl_exec($ch);
+curl_close($ch);
+echo $data
+?&gt;
+</pre>
+<p>Let's take apart this one line:
+</p>
+<ul><li>$_GET('urlToGet') gets the parameter string that was attached to the URL in our AppStudio code.</li>
+<li>_file_get_contents get the contents of the file, in this case, the URL that was passed.</li>
+<li>echo sends the result back to our AppStudio program.</li></ul>
+<p>Pretty simple, isn't it?
+</p><p>(In this example, we're grabbing the robots.txt file from Microsoft's site, just to show we can get files from anywhere. Nearly all sites have a robots.txt file: it is used to guide search engines.)
+</p><p>There is a simpler way to do this, but it can run into security problems.
+</p>
+<pre>&lt;?php
+echo file_get_contents($_GET['urlToGet']); 
+?&gt;
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="How_fast_is_it?"><span id="How_fast_is_it.3F"></span>How fast is it?</h3></div>
+<p>If your app is going to communicate with your server while it is running, you've probably wondered how much your app will slow down when it has to wait for the server.
+</p><p>In this blog post, we're going to make a program to test this. We'll construct a little program which sends data to the server as many times as it can. The server will record the information in a log file. Here is what our app will do:
+</p>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript_4-label" href="#tabber-JavaScript_4" aria-controls="tabber-JavaScript_4">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC_4-label" href="#tabber-BASIC_4" aria-controls="tabber-BASIC_4">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript_4" aria-labelledby="tabber-JavaScript_4-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="w">  </span><span class="k">do</span><span class="p">{</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">SysInfo</span><span class="p">(</span><span class="mf">10</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">limit</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">req</span><span class="o">=</span><span class="nx">Ajax</span><span class="p">(</span><span class="s2">&quot;ajaxLog.php/?myText=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">DateAdd</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">())));</span>
+<span class="w">    </span><span class="nx">counter</span><span class="o">=</span><span class="nx">counter</span><span class="o">+</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">   </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="p">(</span><span class="mf">0</span><span class="o">&lt;</span><span class="mf">1</span><span class="p">);</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC_4" aria-labelledby="tabber-BASIC_4-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="w">  </span><span class="k">Do</span><span class="w"> </span><span class="n">Until</span><span class="w"> </span><span class="n">SysInfo</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">limit</span>
+<span class="w">    </span><span class="n">req</span><span class="o">=</span><span class="n">Ajax</span><span class="p">(</span><span class="s">&quot;ajaxLog.php/?myText=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">encodeURIComponent</span><span class="p">(</span><span class="n">Now</span><span class="p">))</span>
+<span class="w">    </span><span class="n">counter</span><span class="o">=</span><span class="n">counter</span><span class="o">+</span><span class="mi">1</span>
+<span class="w">  </span><span class="k">Loop</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<p>SysInfo(10) is the current time in milliseconds. Limit is the time we want run to. You can run this test for up to about 5 seconds: after that, the system will think you are in a endless loop and shut you down.
+</p><p>On the server side, we need a PHP script to get the messages and write them out to disk. Here's the code:
+</p>
+<pre>&lt;?php
+  // read and append to file
+  $myFile = "AjaxLog/log.txt";
+  $f = fopen($myFile, 'a') or die("can't open file");
+  fwrite($f, $_GET['myText'] . Chr(13) . Chr(10));
+  fclose($f);
+?&gt;
+</pre>
+<p>Now, let's run it on a few different devices and see how many accesses we can do per second:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<td>Desktop (Ethernet)</td>
+<td>2745.0
+</td></tr>
+<tr>
+<td>iPhone 4 (WiFi)</td>
+<td>10.5
+</td></tr>
+<tr>
+<td>iPhone (3G)</td>
+<td>2.5
+</td></tr>
+<tr>
+<td>Nexus S (WiFi)</td>
+<td>5.0
+</td></tr>
+<tr>
+<td>Kindle Fire (WiFi)</td>
+<td>9.0
+</td></tr></tbody></table>
+<p><br />
+It's obvious that the speed that really depends on what kind of connection you have to the web. A hard wire to your router gets the best time. WiFi is much slower, and 3G is slower again. No real surprise here.
+</p><p>The speeds shown here probably are not what you will see if you run the same test. There are a number of factors that will affect the speed:
+</p>
+<ul><li>Type of data connection</li>
+<li>Load on the network</li>
+<li>Number of hops the data has to make to get to the server</li>
+<li>Load on the server</li></ul>
+<p>(You can try this sample yourself - it is called AjaxLog in the Samples folder.)
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Asynchronous_Calls">Asynchronous Calls</h3></div>
+<p>In our last Ajax discussion, we discovered that it could take half a second for an <a href="Ajax.html" title="Ajax">Ajax</a> call to complete (actually, due to network latency, it could even be a lot more than that.) How do we do <a href="Ajax.html" title="Ajax">Ajax</a> calls and not make our app look slow?
+</p><p>Easy. We send the Ajax message off, then go do other stuff. When the response comes back, we respond to it. This is called Asynchronous operation.
+</p><p>We do this by adding the name of the function to be called on completion as the 4th parameter of our <a href="Ajax.html" title="Ajax">Ajax</a> call:
+</p>
+<pre>req=Ajax("ajax.php/?myText=" + encodeURIComponent(txtSend.value), "", "", done)
+</pre>
+<p>Our callback function is called 'done'. After we execute the Ajax call, the program goes on to the next statement in the program immediately. It doesn't wait for any response. We can update the screen, or wait for the user to do something else. When the reply comes back, our 'done' function will be called:
+</p>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript_5-label" href="#tabber-JavaScript_5" aria-controls="tabber-JavaScript_5">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC_5-label" href="#tabber-BASIC_5" aria-controls="tabber-BASIC_5">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript_5" aria-labelledby="tabber-JavaScript_5-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">done</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">readyState</span><span class="o">!=</span><span class="mf">4</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//ignore progress reports</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//success</span>
+<span class="w">    </span><span class="nx">txtResponse</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//failure</span>
+<span class="w">    </span><span class="nx">txtResponse</span><span class="p">.</span><span class="nx">value</span><span class="o">=</span><span class="s2">&quot;Error: &quot;</span><span class="w">  </span><span class="o">+</span><span class="w">  </span><span class="nx">req</span><span class="p">.</span><span class="nx">err</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC_5" aria-labelledby="tabber-BASIC_5-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Function</span><span class="w"> </span><span class="nf">done</span><span class="p">()</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">readyState</span><span class="o">&lt;&gt;</span><span class="mi">4</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="k">Exit</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="err">&#39;</span><span class="nf">ignore</span><span class="w"> </span><span class="n">progress</span><span class="w"> </span><span class="n">reports</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="c">&#39;success</span>
+<span class="w">    </span><span class="n">txtResponse</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="n">req</span><span class="p">.</span><span class="n">responseText</span>
+<span class="w">  </span><span class="k">Else</span><span class="w"> </span><span class="c">&#39;failure</span>
+<span class="w">    </span><span class="n">txtResponse</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="s">&quot;Error: &quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">err</span><span class="p">.</span><span class="n">message</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<p>'done' will actually be called several times with progress reports on the call. We only care if it completes, so we wait for req.readyState to be 4. The rest of our function works just like when we were not asynchronous.
+</p><p>One of the uses of this technique that we see every day is to return partial results on a search field (as in Google). Each time a character is entered, it is sent to the server for a list of possible matches. As the results come back, the window is updated. Entering characters in the field is unaffected by the server communications that are going on at the same time.
+</p><p>To abort a pending Ajax call (it took too long, the user wants to cancel, you no longer want the results, etc.):
+</p>
+<pre>req.abort()
+</pre>
+<p>Check out the AjaxAsync app in the Samples to see this in action.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Caching">Caching</h3></div>
+<p>Sometimes when you make the same request repeatedly, you'll get the same result, even through the data on the server has changed. The browser is "helping" you by delivering the same result from its cache instead of going out to the server again. To fix this, add a time stamp to the query string. This example puts the number of milliseconds into the string:
+</p>
+<pre>req=Ajax("ajax.php/?myText=" + "sdfsfd" + "&amp;time=" + SysInfo(10), "", "", done)
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Where_to_put_your_PHP_files">Where to put your PHP files</h3></div>
+<p>For development, put the PHP files for your project right in your project folder. You can then use any text editor that you have installed on your system to edit them.
+</p><p>Next, add the file names to the manifest in Project Properties. When you do a Full Deploy, they will be copied to the server with the rest of your project.
+</p><p>The result is that your PHP files will be placed on the server, in the same folder as your app. Your app can call a PHP script by just giving the file name - no path name will be needed.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Cool_things_you_can_get_on_the_web">Cool things you can get on the web</h3></div>
+<p>There are many web services that work in a similar fashion. One of the tip offs is if the calling string has an &amp;callback argument. If it does, it probably can be used with this method.
+</p><p>Some of these services are free or limited, while others require an API key that you must obtain from the service.
+</p><p>Some places to go for services:
+</p>
+<ul><li>The master list is here: <a rel="nofollow" class="external text" href="http://www.programmableweb.com/">Programmable Web</a></li>
+<li>Lots of stuff: <a rel="nofollow" class="external text" href="http://developer.yahoo.com/javascript/">Yahoo</a>!</li>
+<li>Weather: <a rel="nofollow" class="external text" href="http://www.wunderground.com/weather/api/d/docs">Wunderground</a></li>
+<li>Elevation: <a rel="nofollow" class="external text" href="http://www.geonames.org/export/JSON-webservices.html">Geonames</a></li>
+<li>Geographic Info: <a rel="nofollow" class="external text" href="http://www.geonames.org/export/JSON-webservices.html">Geonames</a></li></ul>
+<p>Got more? Let us know at support@nsbasic.com.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Zip_Code_Lookup">Zip Code Lookup</h3></div>
+<p>Ever realize, when getting a user's address, that knowing the zip code makes asking for the city and state unnecessary? Here's some simple code to look up the city and state from a zip code:
+</p>
+<pre>zip="90210"
+
+req=Ajax("http://zip.elevenbasetwo.com?zip=" &amp; zip)
+If req.status=200 Then 'success
+    MsgBox req.responseText
+  Else 'failure
+    MsgBox "Error: " &amp; req.err.message
+End If
+</pre>
+<p>The result is
+</p>
+<pre>{"country": "US", "state": "CA", "city": "BEVERLY HILLS"}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Cross_Origin_Resource_Sharing">Cross Origin Resource Sharing</h3></div>
+<p>A lot of the discussion in this Tech Note has been ways to get around Same Origin Policies. Can we get rid of this restriction? We can, but there's a catch.
+To allow a PHP script on your server to give its results to apps which were not loaded from your server, add this line as the first line of your script.
+</p>
+<pre>header('Access-Control-Allow-Origin: *');
+</pre>
+<p>The catch is that now anyone with an internet connection can run your PHP script.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Using_AJAX_to_send_an_email">Using AJAX to send an email</h3></div>
+<p><i>Contributed by Graham Barlow, New Zealand</i>
+</p><p>The AppStudio Code:
+</p>
+<pre>  EmailText = EmailText &amp; vbCRLF &amp; "Date: " &amp; FormatDateTime(Date,"dd/mm/yy")
+  Url = "/ajaxEmailRegister.php/?EmailTo=gotnomates@farmmates.com"
+  req=Ajax(Url,"POST",EmailText)
+  If req.status=200 Then 'success
+    MsgBox("Confirmation email sent.")
+  Else 'failure
+    MsgBox("Error sending email " &amp; req.err)
+  End If
+</pre>
+<p>...and the PHP script that gets called ("ajaxEmailRegister.php"):
+</p>
+<pre>&lt;?php
+  // Get the data from the client.
+  $myText = file_get_contents('php://input');
+  $to = $_GET['EmailTo'];
+  $subject = "New Mate registration confirmation";
+  $body = $myText;
+  $headers = "From: gotnomates@farmmates.com";
+  mail($to, $subject, $body, $headers);
+?&gt;
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Using_AJAX_to_get_info_from_a_database_on_your_server.">Using AJAX to get info from a database on your server.</h3></div>
+<p>Since AppStudio runs on your device, it cannot directly access files or databases on another computer, such as a server. It need to communicate with an app running on the server, which gets the information from the database and returns it.
+</p><p>PHP has built in support for MS SQL, MySQL, Oracle and SQLite. If you have a database on your server, it's easy to query it and return the result to your app. Here's a very simple example:
+</p>
+<pre>&lt;?php
+
+$host = 'localhost';
+$databasename = 'myDatabaseName';
+$username = 'myUsername';
+$password = 'myPassword';
+
+$con = mysql_connect($host, $username, $password) or die(mysql_error());
+mysql_select_db($databasename) or die(mysql_error());
+$query = file_get_contents('php://input'); 
+$results = mysql_query($query);
+
+if (mysql_errno()) { 
+  header('HTTP/1.1 500 Internal Server Error');
+  echo $query . "\n";
+  echo mysql_error(); 
+}
+else
+{
+  $rows = array();
+  while($r = mysql_fetch_assoc($results)) {
+    $rows[] = $r;
+  }
+  echo json_encode($rows);
+}
+?&gt;
+</pre>
+<p>Here is a link to an article showing how to do the same thing to Access:
+</p><p><a rel="nofollow" class="external free" href="http://phpmaster.com/using-an-access-database-with-php/">http://phpmaster.com/using-an-access-database-with-php/</a>
+</p><p>and Oracle
+</p><p><a rel="nofollow" class="external free" href="http://www.php.net/manual/en/book.oci8.php">http://www.php.net/manual/en/book.oci8.php</a>
+</p><p>and MS SQL
+</p><p><a rel="nofollow" class="external free" href="http://php.net/manual/en/function.mssql-connect.php">http://php.net/manual/en/function.mssql-connect.php</a>
+</p><p>"I use IHttpHandler with VB.net. Basically asp.net without the user interface. I find it is very fast and works extremely well with SQL Server. <i>You can write custom HTTP handlers to process specific, predefined types of HTTP requests in any Common Language Specification (CLS) compliant language. Executable code defined in the HttpHandler classes, rather than conventional ASP or ASP.NET Web pages, responds to these specific requests. HTTP handlers give you a means of interacting with the low-level request and response services of the IIS Web server and provide functionality much like ISAPI extensions but with a simpler programming model.</i> 
+<a rel="nofollow" class="external free" href="https://msdn.microsoft.com/en-us/library/system.web.ihttphandler(v=vs.100).aspx">https://msdn.microsoft.com/en-us/library/system.web.ihttphandler(v=vs.100).aspx</a> " - JamesF
+</p><p><b>Security</b>
+</p><p>There is no parsing of the incoming query string, so someone could conceivably put some malicious code in there ("<a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/SQL_injection">SQL Injection</a>") and you may want to determine that the person requesting the info is authorized to do so.
+</p><p>For a more detailed description, see this article: <a rel="nofollow" class="external free" href="http://www.raywenderlich.com/2941/how-to-write-a-simple-phpmysql-web-service-for-an-ios-app">http://www.raywenderlich.com/2941/how-to-write-a-simple-phpmysql-web-service-for-an-ios-app</a>.
+</p><p>Here's XKCD's comment on this:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Exploits_of_a_mom.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/6/65/Exploits_of_a_mom.png" decoding="async" width="666" height="205" class="mw-file-element" /></a></span>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Using_AJAX_to_get_save_a_picture_to_your_server">Using AJAX to get save a picture to your server</h3></div>
+<p>See the sample "CameraToServer", contributed by Mike Miller jdmdude2009@gmail.com
+</p><p>This sample lets you get a picture from the camera or the Photo Library
+and display it on your screen and:
+</p>
+<ul>
+<li>Push it to a web server in base64 or PNG format using an AJAX POST
+</li><li>Receive a response from the server and do something with it.
+</li></ul>
+<p>This is a mod of the original Camera Sample file.
+You must have the supplied PHP files in the same location
+as the AppStudio production files.
+</p><p>To control when a pic may be sent or that a pic is not sent
+multiple times by click happy users, btnSubmitImages is placed
+in different states of visiblility and/or usability by way of the 
+SentFlag.
+</p><p>Note: PictureBox1 is in the negative left of the form.
+This is a trick that developers use to hide controls
+from the users but still have availability to them.
+</p><p>Image1 is used for preview ONLY because viewing PictureBox1
+isn't very realistic for viewing because it exceeds the 
+mobile screen size. (You can size the PictureBox to any size
+a camera is capable of, but beware, size does matter! The lag
+to insert an image into a db gets longer as the pics get larger.
+I also noticed phpmyadmin is not very responsive to large images AND
+I have had timeouts when loading pages with lots of images. I suspect
+some sort of slide presentation tool that controls the load of
+the images will be in order to view large quantities of photos
+(lot's of opensource for slide views)
+</p>
+<div class="toccolours mw-collapsible mw-collapsed">
+<p>(the source code of the program)
+</p>
+<div class="mw-collapsible-content">
+<pre>Dim e
+Dim SentFlag
+
+reader = new FileReader()
+img=new Image()
+SentFlag=0
+
+Sub Main()
+  pb=PictureBox1.getContext("2d")
+  SetTimeout(window.scrollTo(0,window.innerHeight),100)
+  btnSubmitImage.value=""
+End Sub
+ 
+Function txtGetPicture_onchange()
+  'This gets called after the picture is chosen. 
+  'Next, let's read start reading it in.
+  'The _onload function will be called when that completes.
+  reader.readAsDataURL(txtGetPicture.files[0])
+  e=event
+End Function
+
+Function reader_onload(e)
+  'read of the file is complete.
+  'Now, let's load it into an image.
+  'The _onload function for the image will be called on completion.
+  img.src=e.target.result
+  Image1.firstChild.src=e.target.result 'Phone Viewing ONLY
+  SentFlag=0
+  btnSubmitImage.hidden=False
+  btnSubmitImage.value="Send Image to Web"
+  lblPicMsg.textContent="Now is the time"
+End Function
+
+Function img_onload()
+  'image is now loaded. Let's add it to the PictureBox2 and scale
+ 
+  'PictureBox1 is very large here and takes a while for the image
+  'to transfer to the web server (approx 1MB)
+  'still no solution it the iOS distortion.
+  pb.drawImage(img,0,0,PictureBox1.width,PictureBox1.Height)
+End Function
+
+Function PostToWebServer()
+  Dim devInfo
+  Dim postData
+  
+  SentFlag=1 'Don't allow multiple submissions because the button
+             'is pushed more than once.
+  
+  'Get divice information - not available 
+  devInfo="No device selected"
+
+  'Build POST  
+  postData = "filename=" &amp; txtGetPicture.files[0].name
+  postData = postData &amp; "&amp;deviceInfo=" &amp; devInfo 
+  postData = postData &amp; "&amp;imgBase64=" &amp; PictureBox1.toDataURL()
+  
+  'Send POST to server
+  req=Ajax("insertimage.php","POST",postData) 
+
+  If req.status=200 Then 'success
+    btnSubmitImage.hidden=True 'Picture was pushed to server so hide button
+    lblPicMsg.textContent =  "Success!!!"
+    htmResponse.innerHTML=req.responseText
+  Else 'failure
+    htmResponse.innerHTML="Error: " &amp; req.err
+    btnSubmitImage.hidden=False
+    lblPicMsg.textContent =  "Failure"
+    SentFlag=0
+  End If
+
+End Function
+
+Function btnSubmitImage_onclick()
+  If Len(PictureBox1.toDataURL())&gt;0 And SentFlag=0 Then
+      btnSubmitImage.value = "Sending"
+      lblPicMsg.textContent = "Please Wait"
+      
+    'Use the SetTimout function to call a procedure OUTSIDE
+    'this onclick event so that any events that need to 
+    'occur on submission are not held up by the size of the
+    'image or the speed of the internet connection.
+    '(i.e. the btn value change and the label caption change.  
+    SetTimeout(PostToWebServer,3000) 'POST TO WEB
+    
+  Else
+      lblPicMsg.textContent =  "Need to take a pic first"
+  End If
+End Function
+</pre>
+</div>
+</div>
+<div class="mw-heading mw-heading3"><h3 id="Using_AJAX_to_get_all_kinds_of_stuff_on_the_web">Using AJAX to get all kinds of stuff on the web</h3></div>
+<p>Many websites have information that can be retrieved using AJAX. The best list we have found is on <a rel="nofollow" class="external text" href="http://www.programmableweb.com/">Programmable Web</a>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Using_Ajax_with_VoltBuilder">Using Ajax with VoltBuilder</h3></div>
+<p>When running as a native app, your program is no longer tied to the server it was downloaded from. As a result, it doesn't know where to go on the web. You need to make two changes to any of the above samples to make them work as VoltBuilder apps.
+</p><p>1. Declare the website you want to access in the configxml property (in Project Properties), by adding this line:
+</p>
+<pre>  &lt;access origin="https://www.nsbasic.com" /&gt;
+</pre>
+<p>Substitute the URL to your site which has the script on it. To allow everything (not really a good idea), do this:
+</p>
+<pre>  &lt;access origin="*" /&gt;
+</pre>
+<p>2. Use the full path to the script in your Ajax call:
+</p>
+<pre>  req=Ajax("https://www.nsbasic.com/i/Ajax/ajax.php/?myText=" + encodeURIComponent(txtSend.value))
+</pre>
+<p>(Again, substitute the path to your script - don't use this one!)
+</p><p>3. Set jQuery's options to allow cross origin requests:
+</p>
+<pre>Sub Main()
+  'the next two statements should be added to your Sub Main()
+  $.support.cors = True
+  $.mobile.allowCrossDomainPages = True
+End Sub
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Using_Ajax_with_ASP.NET">Using Ajax with ASP.NET</h3></div>
+<p>Everything is pretty much the same on the AppStudio side. Here's how it looks on the server side. (Thanks to John Cody!)
+</p><p>1) Make sure this entry is in your asp.net webservice's web.config:
+</p>
+<pre>    &lt;webServices&gt;
+      &lt;protocols&gt;
+        &lt;add name="HttpPost"/&gt;
+      &lt;/protocols&gt;
+    &lt;/webServices&gt;
+</pre>
+<p>2) ASP.NET VB code (i.e Service.asmx file):
+</p>
+<pre> Imports System.Web.Services
+ Imports System.Web.Services.Protocols
+ Imports System.ComponentModel
+
+ &lt;System.Web.Services.WebService(Namespace:="http://tempuri.org/")&gt; _
+ &lt;System.Web.Services.WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)&gt; &lt;ToolboxItem(False)&gt; _
+ Public Class WebService
+     Inherits System.Web.Services.WebService
+     &lt;WebMethod()&gt; _
+     Public Function HelloWorld(Token as string) As String
+         'the var Token has the string that was send from the AppStudio app
+         Return "Hello World"
+     End Function
+ End Class
+</pre>
+<p>3) AppStudio code:
+</p>
+<pre> Dim req
+
+ Function cmdSend_onclick()
+    req = Ajax("<a rel="nofollow" class="external free" href="http://mywebsite.com/Service.asmx/HelloWorld">http://mywebsite.com/Service.asmx/HelloWorld</a>","POST","token=&amp;Test123", send_return)
+ End Function
+
+ Function send_return()
+    Dim Res
+    If req.readyState &lt;&gt; 4 Then Exit Function 'ignore progress reports
+    If req.status = 200 Then 'success
+       Res = req.responseText
+       'Res has "Hello World" in it, but it is in XML/UTF-8 format and needs to be decoded
+    Else
+       'some error
+       End If
+ End Function
+<pre></pre></pre>
+<!-- 
+NewPP limit report
+Cached time: 20260124151651
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.093 seconds
+Real time usage: 3.774 seconds
+Preprocessor visited node count: 252/1000000
+Revision size: 27157/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 10/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 35087/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:391:|#|:idhash:canonical and timestamp 20260124151651 and revision id 11105. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;oldid=11105">https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;oldid=11105</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.appstudio.dev/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.appstudio.dev/index.php?title=Category:Pages_using_Tabber_parser_tag&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages using Tabber parser tag (page does not exist)">Pages using Tabber parser tag</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Ajax+made+Simple" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Ajax+made+Simple" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Ajax_made_Simple.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Ajax_made_Simple&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Ajax_made_Simple.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Ajax_made_Simple" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Ajax_made_Simple" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;oldid=11105" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Ajax_made_Simple&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 13 November 2020, at 14:26.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":290,"wgPageParseReport":{"limitreport":{"cputime":"0.093","walltime":"3.774","ppvisitednodes":{"value":252,"limit":1000000},"revisionsize":{"value":27157,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":10,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":35087,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124151651","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260125044842 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Ajax_made_Simple by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

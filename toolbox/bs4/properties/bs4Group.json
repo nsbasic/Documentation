@@ -1,0 +1,51 @@
+{
+    "_type": "bs4Group",
+    "_base": "NSBObject",
+    "_description": "Group Properties for grouped buttons.",
+
+"size": "btn-md", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of the element", 
+    "type": "enum", 
+    "keys": ["large", "medium", "small", "xsmall"], 
+    "values": [" btn-lg", " btn-md", " btn-sm", " btn-xs"]
+}, 
+
+"blockLevel": "", 
+"_blockLevel": { 
+    "acignore": true,
+    "desc": "Block level is entire width of parent.", 
+    "type": "enum", 
+    "keys": ["", "block"], 
+    "values": ["", " btn-block"]
+}, 
+
+"appearance": "btn-default", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the button", 
+    "type": "enum", 
+    "keys": ["default", "primary", "success", "info", "warning", "danger", "link"], 
+    "values": ["btn-default", "btn-primary", "btn-success", "btn-info", "btn-warning", "btn-danger", "btn-link"]
+}, 
+
+"grouping": "",
+"_grouping": { 
+    "acignore": true,
+    "acignore": true,
+    "desc": "Is this the start or end of a group?", 
+    "type": "enum", 
+    "keys":   ["No","Start Horizontal","Start Vertical","End"], 
+    "values": ["","horizontal","vertical","end"]
+    }, 
+    
+"groupStyle": "",
+"_groupStyle": {
+    "acignore": true,
+	"acignore": true,
+    "desc": "Styling to apply to group.",
+    "type": "str"
+	}
+
+}

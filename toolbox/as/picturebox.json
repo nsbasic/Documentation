@@ -1,0 +1,62 @@
+{ 
+"_type": "PictureBox", 
+"_base": ["borders", "colors", "fonts", "margin", "Widget"], 
+"_palette": 4, 
+"_art": "images/picturebox.png", 
+"_shorthelp": "<a href='{_docurl}'>PictureBox</a> is used for images and drawing.", 
+"_category": ["All", "Common", "Multimedia"],
+"_requiredfiles": ["{_nsbdir}nsb/library/iscroll.js"],
+"_displayname": "PictureBox",
+"_longhelp": "longhelp",
+
+"height": 100, 
+"width": 100, 
+
+"_acprops": {
+    "refresh()": {"desc": "Refresh the control"},
+    "toDataURL()": {"desc": "Convert image to Base64 string"},
+    "getContext(\"2d\")": {"desc": "Refresh the control"}
+},
+            
+"scrolling": "false", 
+"_scrolling": {
+    "acignore": true,
+    "desc": "Allow scrolling?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    }, 
+    
+"scroll_options": "mouseWheel:true,  bounce:false, zoom:true", 
+"_scroll_options": { 
+    "acignore": true,
+    "desc": "iScroll Options. See iScroll docs at <a href='http://iscrolljs.com' target='_top'>http://iscrolljs.com</a>.", 
+    "type": "css" 
+    },
+    
+"_htmltemplate": "  \"{if scrolling == 'true'}<div id='{id}_scroller' class='{class}' style='{hidden}{style!j}'>{/if}<canvas id='{id}' height='{height}' width='{width}' name='{id}_img' style='{_margincss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'></canvas>{if scrolling == 'true'}</div>{/if}\",",
+
+"_csstemplate": [
+    "#{id}_scroller {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}overflow:hidden;{_cssbounds!i}}}",
+    "\n#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if} left:0px; top:0px;{if height<>''} height:{height!p};{/if}{if width<>''} width:{width!p};{/if}}}",
+    "{if scrolling == 'false'}#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>''}left:{left!p};{/if}{if top<>''} top:{top!p};{/if}}}{/if}"],
+    
+"_jstemplate": ["  if ({scrolling}) {{",
+              "    {id}_ref = new IScroll({id}_scroller,{{{scroll_options}}});",            
+              "    {id}.refresh=function(){{setTimeout({id}_ref.refresh(),100)}};",
+              "    {id}.ref = {id}_ref;",
+              "    {id}.scroller = {id}_scroller;",
+              "    NSB.addProperties({id},{id}_scroller)}}",
+              "  else NSB.addProperties({id});",
+              "  {if hidden <> ''}{id}.style.display='none';{/if}"
+              ],
+                
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "if({scrolling}){{var rect={id}_scroller.getBoundingClientRect();return {{height:rect.height,width:this.getBoundingClientRect().width,top:rect.top,left:rect.left}}}}",
+  "  return this.getBoundingClientRect();",
+  "}}"
+  ]
+
+
+}

@@ -1,0 +1,45 @@
+{ 
+"_type": "Project", 
+"_base": "NSBProject", 
+"_palette": 1, 
+"_shorthelp":"Standard Project", 
+"_requiredfiles": [],
+"libraries": [],
+"version": 0,
+
+"id": "",
+"_id": { 
+    "desc": "Project id", 
+    "type": "str" 
+    }, 
+
+"filename": "", 
+"_filename": { 
+    "desc": "Project storage filename", 
+    "type": "file" 
+    }, 
+
+"deploy_global": true,
+"deploy_server": "",
+"deploy_path": "",
+"deploy_userName": "",
+"deploy_password": "",
+"deploy_key": "",
+"deploy_localPath": "",
+"deploy_user": false,
+"deploy_local": false,
+"deploy_port": "21",
+"deploy_protocol": "ftp", 
+"phonegap_email": "",
+"phonegap_password": "",
+"phonegap_auth_token": "",
+
+"_expanded_pmp": {
+    "acignore": true,
+    "type": "json",
+    "external": ["cache", "globalproj.pmp"]
+},
+
+"_htmltemplate": "{_childhtml}", 
+"_csstemplate": "" 
+}

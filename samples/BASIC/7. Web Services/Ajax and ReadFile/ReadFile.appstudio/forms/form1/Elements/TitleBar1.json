@@ -1,0 +1,11 @@
+{ 
+  "bottom": "auto", 
+  "class": "default", 
+  "id": "TitleBar1", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Reading files", 
+  "position": "absolute", 
+  "children": [] 
+} 

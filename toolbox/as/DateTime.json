@@ -1,0 +1,95 @@
+{
+"_type": "DateTime", 
+"_base": ["fonts","borders","Input"], 
+"_palette": 4, 
+"_art": "images/datetime.png",
+"_shorthelp": "<a href='{_docurl}'>DateTime</a> Brings up a Date and Time picker.",
+"_category": ["All", "Date and Time"],
+"_requiredfiles": [],
+"_displayname": "DateTime",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "readOnly": {"desc": "True/False"}
+    },
+
+"height": "auto", 
+"width": "auto",
+"value": "2015-04-01T12:00",
+"fontSize": 13,
+"borderColor": "#ddd",
+"borderWidth": "1",
+    
+"readonly": "", 
+"_readonly": { 
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Prevent changes", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["readonly", ""]
+    }, 
+
+"color": "",
+"_color": { 
+   "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+   "acignore": true,
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"onblur": "", 
+"_onblur": { 
+   "acignore": true,
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+
+"min": "", 
+"_min": { 
+    "desc": "The earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "desc": "The latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+    
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", "ui-corner-all"] 
+    }, 
+     
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='{hidden}{style!j}'><input type='datetime-local' id='{id}' class='{corners} {class}' style='{if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}{if borderWidth.isdigit()}border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor}; {/if}{style!j}' name='{name}' {disabled!j}  {readonly!j} value='{value}'{if min<>''} min='{min}'{/if}{if max<>''} max='{max}'{/if} data-nsb-type='DateTime'></div>\",",
+
+"_csstemplate": ["#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+		 "\n#{id} {{{if height<>''} height:{height!p};{/if} width:auto;}}"],
+
+"_jstemplate": [
+  "  {id}.ontouchmove=function(e){{e.stopPropagation()}}; NSB.addProperties({id}, {id}_wrapper);",
+  "  $('#{id}_wrapper > div').css('height', $('#{id}').css('height'));",
+  "{if shadow<>'true'}  $('#{id}_wrapper > div').removeClass('ui-shadow-inset');{/if}",
+  "{if corners==''}  $('#{id}_wrapper > div').removeClass('ui-corner-all');{/if}",
+  "  {id}.parentElement.style.margin='0px';"
+  ]
+}

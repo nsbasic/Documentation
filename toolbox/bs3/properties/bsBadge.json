@@ -1,0 +1,18 @@
+{
+    "_type": "bsBadge",
+    "_base": "NSBObject",
+    "_description": "Badge option used by many Bootstrap controls.",
+    
+"badge": "", 
+"_badge": { 
+    "group": "Extras",
+    "i18n": true,
+    "desc": "Text to display in badge.", 
+    "type": "str" 
+   }, 
+
+"_bsBadge": "<span id={id}_badge class=badge style=margin-left:1ch;>{badge}</span>",
+
+"_bsBadgePadBelow": "<span id={id}_badge class=badge style=margin-bottom:4px;>{badge}</span>"
+
+}

@@ -1,0 +1,71 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundImage": "", 
+  "backgroundimage": "", 
+  "borderColor": "transparent", 
+  "borderStyle": "solid", 
+  "borderWidth": 0, 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Section1", 
+        "Elements", 
+        "Label1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Section1", 
+        "Elements", 
+        "RadialGauge1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Section1", 
+        "Elements", 
+        "Button1.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 0, 
+  "designWidth": 0, 
+  "expanded_pmp": null, 
+  "fullScreen": "false", 
+  "height": 250, 
+  "id": "Section1", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "method": "GET", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "Section1_onshow()", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": 200
+}

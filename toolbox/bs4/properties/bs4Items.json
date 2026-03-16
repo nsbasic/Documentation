@@ -1,0 +1,15 @@
+{
+    "_type": "bs4Items",
+    "_base": "NSBObject",
+    "_description": "List of items - used by a bunch of controls.",
+
+"items": "Item #1\nItem #2\n*Item #3 (disabled)\n!Item #4",
+"_items": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Items to show, one per line. Prefix * for disabled, > for selected, ! for heading (not all controls support headings).", 
+    "type": "css",
+    "language": "HTML" 
+    }
+
+}

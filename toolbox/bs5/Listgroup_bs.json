@@ -1,0 +1,73 @@
+{ 
+"_type": "Listgroup_bs5", 
+"_base": ["bs5All", "margin", "padding", "fonts", "colors", "bs5Items", "bs5Nav", "bs5Popover"], 
+"_palette": 9, 
+"_art": "images/listgroup.png", 
+"_wikipage": "Listgroup (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Listgroup</a> displays a choosable list. Bootstrap.",
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Listgroup",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "badge(n,s)": {"desc": "Set badge of line n to s."},
+    "clear()": {"desc": "Remove all items."},
+    "length": {"desc": "Return the number of items."},
+    "value": {"desc": "The value last selected."}
+},
+
+"width": "180px",
+"height": "auto",
+"items": "Listgroup Item 1\n>Item 2\n*Item 3 (disabled)\nItem 4",
+
+"itemBadges": "1\n2\n3\n4",
+"_itemBadges": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Badges to show, one per line.", 
+    "type": "css",
+    "language": "HTML" 
+    },
+    
+"appearances": "default\nsuccess\ninfo\ndanger",
+"_appearances": { 
+    "acignore": true,
+    "desc": "Appearance of each item, one per line. Can be action, success, info, warning, danger, primary, secondary, light or dark", 
+    "type": "css" 
+    }, 
+                
+"icons": "",
+"_icons": { 
+    "acignore": true,
+    "desc": "Icon for each item, one per line, from the free Open Iconic set. Examples: menu, trash, check. Optional. <a href='https://www.appstudio.dev/app/OpenIconic.html'>See the list of icons.</a>", 
+    "type": "css" 
+    }, 
+                
+"listStyle": "ul",
+"_listStyle": { 
+    "acignore": true,
+    "desc": "What is the style of the Listgroup?", 
+    "type": "enum",
+    "keys": ["unordered list", "button list"], 
+    "values": ["ul", "div"]
+    },
+    
+"numbered": "",
+"_numbered": { 
+    "acignore": true,
+    "desc": "Display a number to the left of each item?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", ""]
+    }, 
+                
+"_htmltemplate": [
+    "    NSB.bs.listgroup.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{class}', '{disabled}', '{items!j}', '{itemBadges!j}', '{appearances!j}', '{listStyle}', '{_bsPopover2!i}', '{icons!j}', '{numbered!j}'),"
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

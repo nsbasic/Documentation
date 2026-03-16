@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "Button2", 
+  "left": 174, 
+  "right": "auto", 
+  "top": 237, 
+  "value": "Stop", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-" 
+} 

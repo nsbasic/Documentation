@@ -1,0 +1,79 @@
+{ 
+"_type": "SwitchButton_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxbutton.png", 
+"_wikipage": "jqxSwitchButton",
+"_shorthelp": "<a href='{_docurl}'>SwitchButton</a> - slide between two values. jqWidgets (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}styles/jqx.base.css",
+	"{pathTo_jqWidgets}styles/jqx.{theme}.css",
+	"{pathTo_jqWidgets}jqxcore.js",
+	"{pathTo_jqWidgets}jqxswitchbutton.js", 
+	"{pathTo_jqWidgets}styles/images/bg_blueenergy.png"
+	],
+"_displayname": "SwitchButton",
+"_longhelp": "longhelp",
+
+"value": "Button", 
+"height": 32, 
+"width": 100, 
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+    
+"orientation": "horizontal", 
+"_orientation": { 
+    "desc": "Orientation of control. SwitchButton only.", 
+    "type": "enum", 
+    "keys": ["horizontal", "vertical"], 
+    "values": ["horizontal","vertical"]
+    }, 
+
+"onLabel": "On",
+"_onLabel": { 
+   "acignore": true,
+   "desc": "Label in On position. SwitchButton only.", 
+   "type": "str" 
+   }, 
+
+"offLabel": "Off",
+"_offLabel": { 
+   "acignore": true,
+   "desc": "Label in Off position. SwitchButton only.",
+   "type": "str" 
+   },
+   
+"thumbSize": 40,
+"_thumbSize": { 
+    "acignore": true,
+    "desc": "Percent of control size for slider. Switchbutton only.", 
+    "type": "int" 
+   }, 
+
+"checked": "true", 
+"_checked": { 
+    "desc": "Initial setting. Switchbutton only.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": "  $('#{id}').jqxSwitchButton({{theme:'{theme}', width:'{width}', height:'{height}', disabled:{disabled}, orientation:'{orientation}', onLabel:'{onLabel}', offLabel:'{offLabel}', thumbSize:'{thumbSize}%', checked:{checked} }});NSB.addProperties({id})" 
+
+}

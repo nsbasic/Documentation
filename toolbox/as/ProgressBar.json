@@ -1,0 +1,39 @@
+{ 
+"_type": "ProgressBar", 
+"_base": ["Widget"], 
+"_container": "Screen", 
+"_palette": 4, 
+"_resizable": true,
+"_draggable": true,
+"_singular": false,
+"_requiredfiles": [],
+"_category": ["All", "Common"],
+"_art": "images/progressbar.png", 
+"_shorthelp": "<a href='{_docurl}'>ProgressBar</a> shows progress in a bar. Android Chrome or iOS 7.", 
+"_displayname": "ProgressBar",
+"_longhelp": "longhelp",
+
+"max": 100, 
+"_max": { 
+    "desc": "Specifies how much work the task requires in total.", 
+    "type": "str" 
+    }, 
+
+"value": 40, 
+"_value": { 
+    "desc": "Specifies how much of the task has been completed.", 
+    "type": "str" 
+    }, 
+   
+"_htmltemplate": "  \"<progress id='{id}' class='{class}' max={max} value={value} style='{hidden}{style!j}'></progress>\",",
+
+"_csstemplate": "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}", 
+
+"_jstemplate": "NSB.addProperties({id});",
+
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "  return this.getBoundingClientRect();",
+  "}}"
+]
+}

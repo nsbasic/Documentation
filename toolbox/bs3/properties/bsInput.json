@@ -1,0 +1,48 @@
+{
+    "_type": "bsInput",
+    "_base": "NSBObject",
+    "_description": "Properties shared by all Bootstrap input controls.",
+
+"header": "header", 
+"_header": { 
+    "i18n": true,
+    "desc": "header for input field. Leave blank for none.", 
+    "type": "css" 
+   }, 
+    
+"footer": "", 
+"_footer": { 
+    "i18n": true,
+    "desc": "Optional text under input field. Often used for Help.", 
+    "type": "css" 
+   }, 
+   
+"value": "", 
+"_value": { 
+    "desc": "Value of input.", 
+    "type": "css" 
+    }, 
+
+"validation": "", 
+"_validation": { 
+    "acignore": true,
+    "desc": "Validation style - color highlight", 
+    "type": "enum", 
+    "keys": ["", "warning", "error", "success"], 
+    "values": ["", " has-warning", " has-error", " has-success"]
+},
+   
+"_bsInput_wrapper": "<div id={id} data-role='none' class='form-group{if icon<>''} has-feedback{/if}{validation} {class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}' {_bsPopover!i}>",
+
+"_bsInput_wrapperNoPopover": "<div class='form-group{if icon<>''} has-feedback{/if}{validation}'>",
+
+"_bsInput_header": "{if header<>''}<label id={id}_header class='control-label' for={id}_contents>{header}</label>{_bsBadge!i}{/if}",
+
+"_bsInput_headerCols": "{if header<>''}<label class='control-label col-sm-{headerCols}' for={id}_contents>{header}</label>{_bsBadge!i}{/if}",
+
+"_bsInput_headerColsNoBadge": "{if header<>''}<label class='control-label col-sm-{headerCols}' for={id}_contents>{header}</label>{/if}",
+
+"_bsInput_icon": "{if icon<>''}<span class='fa fa-{icon} form-control-feedback'></span>{/if}",
+
+"_bsinput_footer": "{if footer<>''}<span class='help-block'>{footer}</span>{/if}</div>"
+}

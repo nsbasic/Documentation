@@ -1,0 +1,100 @@
+{ 
+"_type": "Collapsible_jqm14", 
+"_base": ["fonts", "children", "Widget"], 
+"_palette": 9, 
+"_art": "images/collapsible.png", 
+"_shorthelp": "<a href='{_docurl}'>Collapsible</a> text or HTML.", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "Collapsible",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"width": 200,
+
+"heading": "Heading",
+"_heading": { 
+   "acignore": true,
+    "desc": "Heading which shows all the time", 
+    "type": "css" 
+   }, 
+    
+"content": "This is the text which appears when the control is not collapsed.",
+"_content": { 
+   "acignore": true,
+    "desc": "Content of the control", 
+    "type": "css" 
+   }, 
+    
+"headingTheme": "",
+"_headingTheme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom. False for no theme.", 
+    "type": "str" 
+   }, 
+
+"contentTheme": "",
+"_contentTheme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom. False for no theme.", 
+    "type": "str" 
+   }, 
+
+"mini": "", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"expanded": "false", 
+"_expanded": { 
+    "acignore": true,
+    "desc": "Show control initially expanded", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"] 
+    }, 
+    
+"iconPos": "left",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["left","right"], 
+    "values": [""," data-iconPos=right"]
+    }, 
+
+"color": "",
+"_color": { 
+   "acignore": true,
+   "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+   "acignore": true,
+   "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   },
+   
+"attributes": "",
+"_attributes": { 
+   "acignore": true,
+   "desc": "HTML attributes. Example: disabled=true", 
+    "type": "str" 
+   }, 
+
+"_htmltemplate": "  \"<div id='{id}' data-role='collapsible' class='{class}' {attributes!j}{if expanded=='true'}data-collapsed=false {/if}{if headingTheme<>''} data-theme='{headingTheme}'{/if}{if contentTheme<>''} data-content-theme='{contentTheme}'{/if}{mini} {iconPos} style='{if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}{hidden}{style!j}' ><h4>{heading!j}</h4><div id={id}_addChild>\",{_childhtml},\"</div><p>{content!j}</div>\",",
+
+"_jstemplate": [
+    "  NSB.addProperties.addChild({id});",
+    "  NSB.addProperties({id});",
+    "{_childjs}"
+]
+}

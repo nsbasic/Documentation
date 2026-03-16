@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "40", 
+  "id": "HeaderBar1", 
+  "left": 2, 
+  "right": "auto", 
+  "top": 27, 
+  "width": "auto", 
+  "!type": "Header", 
+  "text": "window.print()", 
+  "position": "absolute", 
+  "children": [] 
+} 

@@ -1,0 +1,61 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "action": "",
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "",
+  "borderColor": "transparent",
+  "borderStyle": "",
+  "borderWidth": 0,
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "Chart1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "Button1.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 1004,
+  "designWidth": 768,
+  "expanded_pmp": null,
+  "fullScreen": "false",
+  "height": 1004,
+  "id": "Form1",
+  "language": "JavaScript",
+  "left": 0,
+  "locked": false,
+  "method": "",
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "Form1_onshow()",
+  "onsubmit": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false",
+  "scrolling": "false",
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": 0,
+  "width": 768
+}

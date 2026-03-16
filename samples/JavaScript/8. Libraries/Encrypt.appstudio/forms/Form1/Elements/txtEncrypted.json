@@ -1,0 +1,16 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 113, 
+  "id": "txtEncrypted", 
+  "left": 45, 
+  "right": "auto", 
+  "top": 256, 
+  "width": 217, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

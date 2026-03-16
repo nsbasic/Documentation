@@ -1,0 +1,52 @@
+{ 
+"_type": "Header", 
+"_base": ["flexbox", "fonts", "borders", "colors", "Widget", "children"], 
+"_palette": 4, 
+"_art": "images/header.png", 
+"_shorthelp": "<a href='{_docurl}'>Header</a> A simple heading. Can have children.", 
+"_category": ["All", "Common"],
+"_requiredfiles": [],
+"_displayname": "Header",
+"_longhelp": "longhelp",
+
+"height": "40", 
+"fontSize": 16,
+"fontWeight": "bold", 
+
+"text": "Header", 
+"_text": { 
+    "i18n": true,
+    "desc": "Text to display in the Header. HTML format.", 
+    "type": "css",
+    "display": "textContent"
+    }, 
+
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "lightgray",
+"_backgroundColor": { 
+    "acignore": true,
+    "i18n": false,
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+   
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": "  \"<div id='{id}' class='{class}' data-nsb-type=Header style='{_flexboxcss!i}cursor:default; text-align:center; text-shadow:none; top:0px; left:0px; width: 100%; {_fontcss!i}{_colorscss!i}{_bordercss!i} {hidden}{style!j}' data-i18n='{text!j}'>\",\"<div id={id}_addChild>\",{_childhtml},\"</div>\",\"{text!j}</div>\",",
+
+"_jstemplate":[
+  "  {id}.style.lineHeight='{height!p}';",
+  "  NSB.addProperties.addChild({id});",
+  "  NSB.addProperties({id});",
+  "{_childjs}"
+  ]
+}

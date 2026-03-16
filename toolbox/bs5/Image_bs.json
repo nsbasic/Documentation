@@ -1,0 +1,30 @@
+{ 
+"_type": "Image_bs5", 
+"_base": ["bs5All", "bs5Image", "margin", "padding", "fonts", "colors", "Widget", "bs5Popover"], 
+"_palette": 9, 
+"_art": "images/image.png", 
+"_wikipage": "Image (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Image</a> lets you display an image. Bootstrap.",
+"_category": ["All", "Bootstrap 5"],
+"_requiredfiles": [
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}icons/bootstrap-icons.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}icons/fonts/bootstrap-icons.woff2",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+  "{_nsbdir}toolbox/bs5/dist/bsFunctions.min.js",
+  "{if src<>'' and src[:5]<>'data:'}{src}{/if}"],
+
+"_displayname": "Image",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+    
+"_htmltemplate": [
+"    \"<img id='{id}' src='{src}' class='{responsive}{center}{shape} {class}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'{_bsPopover!i}>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

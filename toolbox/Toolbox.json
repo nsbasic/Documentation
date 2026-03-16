@@ -1,0 +1,113 @@
+{
+    "categories": [
+        {
+            "name": "Common",
+            "tooltip": "Commonly used controls",
+            "defaultopen": true
+        },
+        {
+            "name": "Bootstrap 5",
+            "tooltip": "Bootstrap Framework controls.",
+            "defaultopen": true
+        },
+        {
+            "name": "Bootstrap 4",
+            "tooltip": "Bootstrap Framework controls.",
+            "defaultopen": true
+        },
+        {
+            "name": "jqWidgets",
+            "tooltip": "All controls.",
+            "defaultopen": false
+        },
+        {
+            "name": "Date and Time",
+            "tooltip": "Date and Time controls.",
+            "defaultopen": false
+        },
+        {
+            "name": "Multimedia",
+            "tooltip": "Multimedia controls.",
+            "defaultopen": false
+        },
+        {
+            "name": "Finance & Social Media",
+            "tooltip": "Finance and Social Media controls.",
+            "defaultopen": false
+        },
+        {
+            "name": "Settings",
+            "tooltip": "Additional Property Settings",
+            "defaultopen": false
+        },
+        {
+            "name": "Bootstrap 3 (obsolete)",
+            "tooltip": "Bootstrap Framework controls.",
+            "defaultopen": false
+        },
+                {
+            "name": "jQuery Mobile (obsolete)",
+            "tooltip": "jQuery Mobile Framework controls.",
+            "defaultopen": false
+        }
+    ],
+    "libraries": {
+        "Add to Home Screen Prompt": {
+            "tooltip": "Prompts user to add your app to Home Screen.",
+            "requiredfiles": [
+                "{_nsbdir}nsb/library/addtohomescreen.css", 
+                "{_nsbdir}nsb/library/addtohomescreen.min.js"
+                ],
+            "initscript": "if (/iPad|iPhone|iPod/.test(navigator.userAgent)) addToHomescreen();"
+        },
+        "i18n": {
+            "tooltip": "Internationalization - localize your app with multiple languages. <a href='https://github.com/wikimedia/jquery.i18n'>https://github.com/wikimedia/jquery.i18n</a>",
+            "requiredfiles": [
+                "{_nsbdir}nsb/library/i18n.bundled.js"
+                ]
+        },
+        "BASIC": {
+            "tooltip": "Additional BASIC functions for use with JavaScript.",
+            "requiredfiles": [
+                "{_nsbdir}nsb/library/basicFunctions.js"
+                ]
+        },
+        "Google Drive": {
+            "tooltip": "Google Drive API. Save and read Google Docs files.",
+            "requiredfiles": [
+                "{_nsbdir}nsb/library/GoogleDrive.js",
+                "https://apis.google.com/js/client.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"
+                ]
+        },
+        "Retina Display Support": {
+            "tooltip": "Displays Hi Res versions of images where supported. Need to add filename@2x.jpg for each image to your project.",
+            "requiredfiles": ["{_nsbdir}nsb/library/retina.min.js"]
+        },
+        "SQLite (WASM)": {
+            "tooltip": "Adds SQLite Libraries to your app. WASM when not VoltBuilder.",
+            "requiredfiles": [
+               "{_nsbdir}nsb/library/jswasm/sqlite3-opfs-async-proxy.js",
+               "{_nsbdir}nsb/library/jswasm/sqlite3-worker1-promiser.js",
+               "{_nsbdir}nsb/library/jswasm/sqlite3-worker1.js",
+               "{_nsbdir}nsb/library/jswasm/sqlite3.js",
+               "{_nsbdir}nsb/library/jswasm/sqlite3.wasm"
+            ]
+        },
+        "Stanford Crypto Library": {
+            "tooltip": "Provides encryption and decryption.",
+            "requiredfiles": ["{_nsbdir}nsb/library/StanfordCryptoLibrary.js"]
+        },
+        "Validation": {
+            "tooltip": "Validates BootStrap Input, Select and TextArea controls.",
+            "requiredfiles": [
+              "{_nsbdir}nsb/library/jquery-validation.js",
+              "{_nsbdir}nsb/library/validation.js"
+              ]
+        },
+        "xml2json": {
+            "tooltip": "Converts xml data to a data object. Requires jQuery Mobile or check jQuery first.",
+            "requiredfiles": ["{_nsbdir}nsb/library/jquery.xml2json.js"]
+        }
+    }
+}

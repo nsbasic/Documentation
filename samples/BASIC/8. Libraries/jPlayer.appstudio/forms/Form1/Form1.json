@@ -1,0 +1,77 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "attributes": "", 
+  "background": "", 
+  "backgroundImage": "", 
+  "backgroundimage": "", 
+  "borderColor": "gray", 
+  "borderStyle": "solid", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "jPlayerContainer.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "PlayButton.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "LoadButton.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "StopButton.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 0, 
+  "designWidth": 0, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": "1000", 
+  "id": "Form1", 
+  "language": "BASIC", 
+  "left": 0, 
+  "locked": false, 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "Form1_onshow()", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "true", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": "700"
+}

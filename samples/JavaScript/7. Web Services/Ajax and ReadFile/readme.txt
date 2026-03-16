@@ -1,0 +1,1 @@
+Use Ajax, ReadFile and getJSON to get data from a server.

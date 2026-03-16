@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "left": 4, 
+  "right": "auto", 
+  "top": 6, 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Dynamic Grid", 
+  "position": "absolute", 
+  "children": [] 
+} 

@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "ShowMapBasicButton2", 
+  "left": 191, 
+  "onclick": "ShowMapBasicButton2_onclick()", 
+  "right": "auto", 
+  "top": 9, 
+  "value": "Show Map [Basic]", 
+  "width": "161", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

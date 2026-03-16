@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "butEmail", 
+  "left": 243, 
+  "onclick": "butEmail_onclick()", 
+  "right": "auto", 
+  "top": 165, 
+  "value": "email", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

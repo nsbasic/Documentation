@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "TextBox1", 
+  "inputType": "text", 
+  "left": 78, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 324, 
+  "width": 164, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

@@ -1,0 +1,11 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "right": "auto", 
+  "width": "100%", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "EULA", 
+  "position": "absolute", 
+  "children": [] 
+} 

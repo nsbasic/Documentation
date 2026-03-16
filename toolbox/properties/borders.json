@@ -1,0 +1,33 @@
+{
+    "_type": "borders",
+    "_base": "NSBObject",
+
+"borderStyle": "", 
+"_borderStyle": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Border Style", 
+    "type": "enum", 
+    "keys": ["","dotted","dashed","solid","double","groove","ridge","inset","outset"],
+    "values": ["","dotted","dashed","solid","double","groove","ridge","inset","outset"] 
+    }, 
+    
+"borderWidth": "", 
+"_borderWidth": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Border width in pixels.", 
+    "type": "str"
+    }, 
+    
+"borderColor": "",
+"_borderColor": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Color of border. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   },
+   
+"_bordercss": "{if borderWidth.isdigit()}border-width:{borderWidth!p}; {/if}{if borderStyle<>'' and borderWidth.isdigit()}border-style:{borderStyle}; {/if}{if borderColor<>''}border-color:{borderColor}; {/if}"
+
+}

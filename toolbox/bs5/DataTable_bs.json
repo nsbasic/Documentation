@@ -1,0 +1,233 @@
+{ 
+"_type": "DataTable_bs5", 
+"_base": ["bs5All", "fonts"], 
+"_palette": 9, 
+"_art": "images/datatable.png",
+"_wikipage": "DataTable (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>DataTable</a> Display data as a table. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+"_requiredfiles": [
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+	"{_nsbdir}toolbox/bs5/dist/css/dt/dataTables.bootstrap5.min.css",
+	"{_nsbdir}toolbox/bs5/dist/js/dt/dataTables.min.js",
+	"{_nsbdir}toolbox/bs5/dist/js/dt/dataTables.bootstrap5.min.js",
+	"{_nsbdir}toolbox/bs5/dist/bsFunctions.min.js",
+	"{_nsbdir}toolbox/bs5/dist/fonts/glyphicons-halflings-regular.ttf",
+	"{_nsbdir}toolbox/bs5/dist/fonts/glyphicons-halflings-regular.woff",
+	"{_nsbdir}toolbox/bs5/dist/fonts/glyphicons-halflings-regular.woff2",
+	"{if Buttons=='true'}{_nsbdir}toolbox/bs5/dist/css/dt/buttons.bootstrap5.min.css{/if}",
+	"{if Buttons=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/dataTables.buttons.min.js{/if}",
+	"{if Buttons=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/buttons.bootstrap5.min.js{/if}",
+	"{if ButtonsHTML5=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/buttons.html5.min.js{/if}",
+	"{if ButtonsJSZip=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/jszip.min.js{/if}",
+	"{if ButtonsPDFMake=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/pdfmake.min.js{/if}",
+	"{if ButtonsPDFMake=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/vfs_fonts.js{/if}",
+	"{if ButtonsPrint=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/buttons.print.min.js{/if}",
+	"{if FixedHeader=='true'}{_nsbdir}toolbox/bs5/dist/css/dt/fixedHeader.bootstrap5.min.css{/if}",
+	"{if FixedHeader=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/datatables.fixedheader.min.js{/if}",
+	"{if Responsive=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/dataTables.responsive.min.js{/if}",
+	"{if Responsive=='true'}{_nsbdir}toolbox/bs5/dist/css/dt/responsive.bootstrap5.min.css{/if}",
+	"{if Responsive=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/responsive.bootstrap5.min.js{/if}",
+	"{if Scroller=='true'}{_nsbdir}toolbox/bs5/dist/css/dt/scroller.bootstrap5.min.css{/if}",
+	"{if Scroller=='true'}{_nsbdir}toolbox/bs5/dist/js/dt/datatables.scroller.min.js{/if}"
+],
+
+"_displayname": "DataTable",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"class": "table table-striped table-bordered",
+
+"_acprops": {
+	"clear()": {"desc": "Remove all items."}
+},
+
+"attributes": "",
+"_attributes": { 
+   "acignore": true,
+   "desc": "HTML attributes. Example: disabled=true", 
+    "type": "str" 
+   }, 
+
+"info": "true",
+"_info": {
+	"acignore": true,
+	"desc": "Feature control table information display field.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"initComplete": "",
+"_initComplete": {
+	"acignore": true,
+	"desc": "Function to call once loading of the DataTable is complete.",
+    "type": "str" 
+	},
+
+"lengthChange": "true",
+"_lengthChange": {
+	"acignore": true,
+	"desc": "Feature control the end user's ability to change the paging display length of the table.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"lengthMenu": "[5, 10, 25]",
+"_lengthMenu": {
+	"acignore": true,
+	"desc": "Specify the entries in the length drop down.",
+	"type": "str"
+	},
+
+"ordering": "true",
+"_ordering": {
+	"acignore": true,
+	"desc": "Feature control ordering (sorting) abilities in DataTables.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"paging": "true",
+"_paging": {
+	"acignore": true,
+	"desc": "Enable or disable table pagination.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"scrollY": "",
+"_scrollY": {
+	"acignore": true,
+	"desc": "Height of scrollable area. Leave empty for no scrolling.",
+    "type": "str" 
+	},
+
+"scrollCollapse": "true",
+"_scrollCollapse": {
+	"acignore": true,
+	"desc": "Force the height of the table to the given height.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"searching": "true",
+"_searching": {
+	"acignore": true,
+	"desc": "Feature control search (filtering) abilities.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"Buttons": "false",
+"_Buttons": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "A common framework for user interaction buttons.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"ButtonsHTML5": "false",
+"_ButtonsHTML5": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Copy to clipboard and create Excel, PDF and CSV files from the table's data.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"ButtonsPDFMake": "false",
+"_ButtonsPDFMake": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Required for the PDF HTML5 export button.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"ButtonsJSZip": "false",
+"_ButtonsJSZip": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Required for the Excel HTML5 export button.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"ButtonsPrint": "false",
+"_ButtonsPrint": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Button that will display a printable view of the table.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"Responsive": "false",
+"_Responsive": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Dynamically show and hide columns based on the browser size.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"FixedHeader": "false",
+"_FixedHeader": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Sticky header and / or footer for the table.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"Scroller": "false",
+"_Scroller": {
+	"acignore": true,
+	"group": "Extensions",
+	"desc": "Virtual rendering of a scrolling table for large data sets.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true","false"]
+	},
+
+"_htmltemplate": [
+  "  \"<table id='{id}' class='{class}' {attributes!j} style='{_fontcss!i}{hidden}{style!j}'>\",",
+  "  \"</table>\","
+],
+
+"_jstemplate": [
+  "  data = [['Tiger Nixon', 'System Architect', '$320,800'],['Garrett Winters', 'Accountant', '$170,750']];",
+  "  columns = [{{title:'Name'}}, {{title:'Position'}}, {{title:'Salary'}}]",
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {id}.settings={{",
+  "     data: data,",
+  "     info: {info},",
+  "{if initComplete<>''}     initComplete: {initComplete},{/if}",
+  "     lengthChange: {lengthChange},",
+  "{if lengthMenu<>''}     lengthMenu: {lengthMenu},{/if}",
+  "     ordering: {ordering},",
+  "     paging: {paging},",
+  "{if scrollY<>''}     scrollY: '{scrollY!p}',{/if}",
+  "{if scrollY<>''}     scrollCollapse: {scrollCollapse},{/if}",
+  "     searching: {searching},",
+  "     columns: columns",
+  "  }}",
+  "  setTimeout('{id}.build()',500);"
+]
+}

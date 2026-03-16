@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Using_Node_and_Electron_to_build_Desktop_Apps by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 19:57:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Using Node and Electron to build Desktop Apps - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXTM73esdtgxePx8C5My_AAAACo","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Using_Node_and_Electron_to_build_Desktop_Apps","wgTitle":"Using Node and Electron to build Desktop Apps","wgCurRevisionId":11623,"wgRevisionId":11623,"wgArticleId":1367,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using Tabber parser tag"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Using_Node_and_Electron_to_build_Desktop_Apps","wgRelevantArticleId":1367,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","mediawiki.page.gallery.styles":"ready","ext.tabberNeue.init.styles":"ready","ext.pygments":"ready","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["ext.tabberNeue","ext.pygments.view","site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=ext.pygments%7Cext.tabberNeue.init.styles%7Cmediawiki.page.gallery.styles%7Cskins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Using_Node_and_Electron_to_build_Desktop_Apps rootpage-Using_Node_and_Electron_to_build_Desktop_Apps skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Using Node and Electron to build Desktop Apps</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><ul class="gallery mw-gallery-traditional">
+		<li class="gallerybox" style="width: 155px">
+			<div class="thumb" style="width: 150px; height: 150px;"><span typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Nodejs-new-pantone-black.png" class="mw-file-description" title="Node.is"><img alt="Node.is" src="images/thumb/e/eb/Nodejs-new-pantone-black.png/120px-Nodejs-new-pantone-black.png" decoding="async" width="120" height="74" class="mw-file-element" srcset="/images/thumb/e/eb/Nodejs-new-pantone-black.png/180px-Nodejs-new-pantone-black.png 1.5x, /images/thumb/e/eb/Nodejs-new-pantone-black.png/240px-Nodejs-new-pantone-black.png 2x" /></a></span></div>
+			<div class="gallerytext">Node.is</div>
+		</li>
+		<li class="gallerybox" style="width: 155px">
+			<div class="thumb" style="width: 150px; height: 150px;"><span typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Npm.png" class="mw-file-description" title="Node Package Manager"><img alt="Node Package Manager" src="images/thumb/6/67/Npm.png/120px-Npm.png" decoding="async" width="120" height="47" class="mw-file-element" srcset="/images/thumb/6/67/Npm.png/180px-Npm.png 1.5x, /images/thumb/6/67/Npm.png/240px-Npm.png 2x" /></a></span></div>
+			<div class="gallerytext">Node Package Manager</div>
+		</li>
+		<li class="gallerybox" style="width: 155px">
+			<div class="thumb" style="width: 150px; height: 150px;"><span typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Electronjs.png" class="mw-file-description" title="Electron"><img alt="Electron" src="images/thumb/e/ed/Electronjs.png/111px-Electronjs.png" decoding="async" width="111" height="120" class="mw-file-element" srcset="/images/thumb/e/ed/Electronjs.png/166px-Electronjs.png 1.5x, /images/e/ed/Electronjs.png 2x" /></a></span></div>
+			<div class="gallerytext">Electron</div>
+		</li>
+</ul>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#How_is_this_compare_to_VoltBuilder?"><span class="tocnumber">1.1</span> <span class="toctext">How is this compare to VoltBuilder?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Tutorial:_Make_an_Electron_app"><span class="tocnumber">2</span> <span class="toctext">Tutorial: Make an Electron app</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Set_up_the_project"><span class="tocnumber">2.1</span> <span class="toctext">Set up the project</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Add_the_Weather_Code"><span class="tocnumber">2.2</span> <span class="toctext">Add the Weather Code</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Run_the_App"><span class="tocnumber">2.3</span> <span class="toctext">Run the App</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Distributing_the_App"><span class="tocnumber">2.4</span> <span class="toctext">Distributing the App</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Tips"><span class="tocnumber">2.5</span> <span class="toctext">Tips</span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Setting_Electron_Runtime_Options"><span class="tocnumber">2.5.1</span> <span class="toctext">Setting Electron Runtime Options</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#How_to_tell_if_you_are_running_Electron_at_runtime"><span class="tocnumber">2.5.2</span> <span class="toctext">How to tell if you are running Electron at runtime</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#How_to_tell_if_you_are_running_Windows_or_MacOS_at_runtime"><span class="tocnumber">2.5.3</span> <span class="toctext">How to tell if you are running Windows or MacOS at runtime</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Debugging"><span class="tocnumber">2.6</span> <span class="toctext">Debugging</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Make_sure_your_package.json_is_up_to_date"><span class="tocnumber">2.7</span> <span class="toctext">Make sure your package.json is up to date</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Troubleshooting"><span class="tocnumber">2.8</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-3 tocsection-15"><a href="#Reinstalling_Electron"><span class="tocnumber">2.8.1</span> <span class="toctext">Reinstalling Electron</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Turn_on_Developer_Mode_(Windows)"><span class="tocnumber">2.8.2</span> <span class="toctext">Turn on Developer Mode (Windows)</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Install_electron-builder-libraries"><span class="tocnumber">2.8.3</span> <span class="toctext">Install electron-builder-libraries</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Introduction">Introduction</h2></div>
+<p>AppStudio now supports the use of some of the most important new technologies in the web development world.
+</p><p><a rel="nofollow" class="external text" href="https://nodejs.org/en/">Node.js</a> is a runtime environment that executes JavaScript code outside the browser. That makes it suitable for writing server side software, which would normally be done in PHP or other languages. It works by having an executable stub which is able to call the V8 JavaScript engine, which powers Chrome.
+</p><p><a rel="nofollow" class="external text" href="https://www.npmjs.com/">npm</a> is a repository of code which can be used with Node.js. It's included when you download Node. There is a huge number of packages available - over 750,000 at last count. You can include these packages in your Node project to add functionality. It might be for convenience: there are a lot of libraries which are much easier to include in your project than to write yourself. It might be for functionality: the modules can implement features which would not be available in the browser.
+</p><p>An example of a convenient library would be <a rel="nofollow" class="external text" href="https://lodash.com/">Lodash</a> which adds hundreds of additional functions to JavaScript. A missing feature library would be <a rel="nofollow" class="external text" href="https://github.com/jprichardson/node-fs-extra">fs-extra</a> which allows full access to the file system.
+</p><p><a rel="nofollow" class="external text" href="https://electronjs.org/">Electron</a> is framework which allows for the development of desktop GUI applications. Since it's built on Node.js, it already has the ability to run JavaScript code. It also uses Chrome's browser engine to render the UI using regular HTML. Each Electron app includes the V8 Runtime as well as the Chrome browser. Slack, Github Desktop and WhatsApp are examples of apps built using Electron.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="How_is_this_compare_to_VoltBuilder?"><span id="How_is_this_compare_to_VoltBuilder.3F"></span>How is this compare to VoltBuilder?</h3></div>
+<p>VoltBuilder (Cordova) is used to package apps for iOS and Android. Electron is used to package apps for Windows, MacOS and Linux. It's quite reasonable to have one AppStudio project that you use with both VoltBuilder and Electron, letting you build for all 5 platforms.
+</p><p>Nodejs/npm modules are similar to VoltBuilder Plugins. Since they are operating system specific, Cordova Plugins will not work with Electron (and vice versa).
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Tutorial:_Make_an_Electron_app">Tutorial: Make an Electron app</h2></div>
+<p>AppStudio allows you to make normal AppStudio apps (programmed in Javascript or BASIC) into full blown Electron apps. You can distribute these apps as regular executables, able to run on Windows, MacOS and Linux.
+</p><p>In this tutorial, we're going to use a module from npm called <a rel="nofollow" class="external text" href="https://github.com/devfacet/weather">weather-js</a> to create an app which gets weather data from weather.service.msn.com. It's very convenient: we don't have to figure out the MSN API to use it.
+</p><p>We recommend using AppStudio 8 (or later) with this tutorial.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Set_up_the_project">Set up the project</h3></div>
+<p>1. Download and install Node. (This also installs npm.)
+</p><p><a rel="nofollow" class="external free" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>
+</p><p>2. Using AppStudio, create a new project called ElectronWeather and save it. (You can also use the ElectronWeather sample with comes with AppStudio by opening it and doing a "Save As" elsewhere, to create a fresh copy. If you do this, several steps below can be skipped - follow the instructions)
+</p><p>3. Enter "Weather App" into description in Project Properties.
+</p><p>4. In Project Properties, go to the Electron section and open package.json. Modify the "dependancies" line as follows: (Skip this step if you're using the sample).
+</p>
+<pre>  "dependencies": {{
+    "weather-js": "^2.0.0"
+  }},
+</pre>
+<p>This includes the <a rel="nofollow" class="external text" href="https://www.npmjs.com/package/weather-js">Weather-js</a> Node library from npm.
+</p><p>5. To add your own icon, follow these steps. (Skip this step if you're using the sample).
+</p>
+<ul><li>Put an png file at least 512x512 in your project directory.</li>
+<li>Set VoltBuilder icon(1024) to that icon in Project Properties.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Add_the_Weather_Code">Add the Weather Code</h3></div>
+<p>1. Add a button to Form1.
+</p><p>2. In the Code Window for Form1, paste the following code. You'll notice there is a new function called 'require' in the first line. This function is part of Node.js: it loads the module of that name.
+</p><p>Since this function is not part of JavaScript, the project will not run in the browser as a normal project would.
+</p>
+<div class="tabber tabber--init"><header class="tabber__header"><button class="tabber__header__prev" tabindex="-1" type="button" aria-hidden="true"></button><nav class="tabber__tabs" role="tablist"><a class="tabber__tab" role="tab" id="tabber-JavaScript-label" href="#tabber-JavaScript" aria-controls="tabber-JavaScript">JavaScript</a><a class="tabber__tab" role="tab" id="tabber-BASIC-label" href="#tabber-BASIC" aria-controls="tabber-BASIC">BASIC</a></nav><button class="tabber__header__next" tabindex="-1" type="button" aria-hidden="true"></button></header><section class="tabber__section"><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-JavaScript" aria-labelledby="tabber-JavaScript-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">weather</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;weather-js&quot;</span><span class="p">);</span>
+
+<span class="nx">Button1</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">weather</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="nx">search</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;San Francisco, CA&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">degreeType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;F&quot;</span><span class="p">},</span><span class="w"> </span><span class="nx">weatherFindCallback</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">weatherFindCallback</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="nx">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">NSB</span><span class="p">.</span><span class="nx">MsgBox</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">NSB</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div><p class="mw-empty-elt"></p></article><article class="tabber__panel" role="tabpanel" tabindex="0" id="tabber-BASIC" aria-labelledby="tabber-BASIC-label"><p class="mw-empty-elt"></p><div class="mw-highlight mw-highlight-lang-vb.net mw-content-ltr" dir="ltr"><pre><span></span><span class="n">weather</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="p">(</span><span class="s">&quot;weather-js&quot;</span><span class="p">)</span>
+<span class="w"> </span>
+<span class="k">function</span><span class="w"> </span><span class="nf">Button1_onclick</span><span class="p">()</span>
+<span class="w">  </span><span class="n">weather</span><span class="p">.</span><span class="n">find</span><span class="p">({</span><span class="n">search</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;San Francisco, CA&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">degreeType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">weatherFindCallback</span><span class="p">)</span>
+<span class="k">End</span><span class="w"> </span><span class="k">function</span>
+
+<span class="k">function</span><span class="w"> </span><span class="nf">weatherFindCallback</span><span class="p">(</span><span class="n">err</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">)</span>
+<span class="w">  </span><span class="k">If</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="k">Then</span>
+<span class="w">    </span><span class="n">MsgBox</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="n">Print</span><span class="w"> </span><span class="n">JSON</span><span class="p">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">  </span><span class="k">End</span><span class="w"> </span><span class="k">if</span>
+<span class="k">End</span><span class="w"> </span><span class="k">function</span>
+</pre></div><p class="mw-empty-elt"></p></article></section></div>
+<div class="mw-heading mw-heading3"><h3 id="Run_the_App">Run the App</h3></div>
+<p>Now we're ready to run the app. On the Run menu, choose "Run Desktop App using Electron"
+</p><p><b>Some notes</b>
+</p>
+<ul><li>The Chrome Dev Tools window opens by default. We'll need this if we are going to debug the app.</li>
+<li>To turn off the Chrome Dev Tools, set "Chrome Dev Tools" to false in Project Properties.</li>
+<li>The "Electron Security Warning" in the console can be ignored.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Distributing_the_App">Distributing the App</h3></div>
+<p>We now have a running app. The next step is to package it for distribution. We can make regular executables for distribution on MacOS, Windows and Linux. The packaging has to done on a computer running the OS we are targeting: the MacOS version needs to be build on a Mac, etc.
+</p><p>There is more documentation on packaging at <a rel="nofollow" class="external free" href="https://www.electron.build/">https://www.electron.build/</a>. You'll need to pay special attention to code signing requirements.
+</p><p>On the Run menu, choose "Make Desktop App for Distribution using Electron". If the build fails, look at the log in "About AppStudio" for more information.
+</p><p>When the build is complete, you will find the executable in your project folder, in
+</p><p>electron/ElectronWeather/dist/*
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Tips">Tips</h3></div>
+<div class="mw-heading mw-heading4"><h4 id="Setting_Electron_Runtime_Options">Setting Electron Runtime Options</h4></div>
+<p>The operation of Electron apps at runtime can be changed by modifying the electronMain.js module. It's in the Electron section of Project Properties.
+</p><p>You can learn more about the options in <a href="ElectronMain.html" title="ElectronMain.js">ElectronMain.js</a>.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="How_to_tell_if_you_are_running_Electron_at_runtime">How to tell if you are running Electron at runtime</h4></div>
+<pre>if (NSB.electron) {
+  // Code placed in here that would on be run if deployed via Electron
+}
+</pre>
+<div class="mw-heading mw-heading4"><h4 id="How_to_tell_if_you_are_running_Windows_or_MacOS_at_runtime">How to tell if you are running Windows or MacOS at runtime</h4></div>
+<pre>if (NSB.electron) {
+  if (process.platform === "win32") {
+    // Electron Windows
+  }
+  if (process.platform === "darwin") {
+    // Electron MacOS
+  }
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Debugging">Debugging</h3></div>
+<ol><li>Check the AppStudio Log in 'About AppStudio'. It will have more info.</li>
+<li>To reset the Electron environment, simply delete the electron folder in your project. It will be recreated next time you start your app.</li>
+<li>To start your Electron app in a console, open it in the electron folder of your project directory and enter:</li></ol>
+<pre>npm start
+</pre>
+<ol><li>To build your Electron distributable in a console, open it in the electron folder of your project directory and enter:</li></ol>
+<pre>npm run pack
+npm run dist
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Make_sure_your_package.json_is_up_to_date">Make sure your package.json is up to date</h3></div>
+<p>In Project Properties, under Electron, there is a package.json property. Make sure it is up to date.
+</p><p>The current settings are:
+</p>
+<pre>  "electron": "^31.2.0",
+  "electron-builder": "^24.13.3",
+  "npm": "^10.8.2"
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Troubleshooting">Troubleshooting</h3></div>
+<p>If your Electron apps are not running, you may have version mismatches in your electron folder. To resolve these, delete the folder (it's in your project directory). Next time you run, AppStudio will recreate it using the latest versions of everything.
+</p><p>You may need to recreate the package.json used by Electron. To do so, exit AppStudio. Open {projectname}.appstudio in your project folder. Delete the electronPackage line and restart AppStudio.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Reinstalling_Electron">Reinstalling Electron</h4></div>
+<p>If the above steps do not help, you may need to redo your installation of the toolchain. It can be thrown off by mismatches in version numbers. Here is how to do a complete reinstall:
+</p>
+<ol><li>uninstall node (Use the Windows Installed Apps uninstaller)</li>
+<li>uninstall AppStudio</li>
+<li>delete C:\Program Files\nodejs (if it is there)</li>
+<li>delete C:\Program Files\NSB AppStudio (if it is there)</li>
+<li>delete the electron folder in your project</li>
+<li>reboot</li>
+<li>install latest version of node</li>
+<li>install AppStudio</li>
+<li>delete electron folder from your app if present</li>
+<li>build again</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Turn_on_Developer_Mode_(Windows)"><span id="Turn_on_Developer_Mode_.28Windows.29"></span>Turn on Developer Mode (Windows)</h4></div>
+<p>Users report that changing this setting helps in cases where executables are not being created.
+</p><p>In Windows Settings, in “System &gt; For Developers”, set “Developer Mode - Install from any source, including loose files” to on. 
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Screenshot_2024-08-26_at_10.47.06_AM.png" class="mw-file-description"><img src="images/1/15/Screenshot_2024-08-26_at_10.47.06_AM.png" decoding="async" width="357" height="121" class="mw-file-element" /></a></span>
+</p>
+<div class="mw-heading mw-heading4"><h4 id="Install_electron-builder-libraries">Install electron-builder-libraries</h4></div>
+<p>Users report that changing this setting helps in cases where executables are not being created.
+</p><p>You can download the installer for this here:
+<a rel="nofollow" class="external free" href="https://github.com/electron-userland/electron-builder-binaries/releases">https://github.com/electron-userland/electron-builder-binaries/releases</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124134519
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.042 seconds
+Real time usage: 0.060 seconds
+Preprocessor visited node count: 103/1000000
+Revision size: 9196/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 3/100
+Expensive parser function count: 2/100
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 8123/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:1367:|#|:idhash:canonical and timestamp 20260124134519 and revision id 11623. Rendering was triggered because: page_view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;oldid=11623">https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;oldid=11623</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.appstudio.dev/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="https://wiki.appstudio.dev/index.php?title=Category:Pages_using_Tabber_parser_tag&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages using Tabber parser tag (page does not exist)">Pages using Tabber parser tag</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Using+Node+and+Electron+to+build+Desktop+Apps" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Using+Node+and+Electron+to+build+Desktop+Apps" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Using_Node_and_Electron_to_build_Desktop_Apps&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Using_Node_and_Electron_to_build_Desktop_Apps" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Using_Node_and_Electron_to_build_Desktop_Apps" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;oldid=11623" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Using_Node_and_Electron_to_build_Desktop_Apps&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 30 September 2024, at 21:22.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":311,"wgPageParseReport":{"limitreport":{"cputime":"0.042","walltime":"0.060","ppvisitednodes":{"value":103,"limit":1000000},"revisionsize":{"value":9196,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":3,"limit":100},"expensivefunctioncount":{"value":2,"limit":100},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":8123,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124134519","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124134519 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Using_Node_and_Electron_to_build_Desktop_Apps by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 19:57:51 GMT -->
+</html>

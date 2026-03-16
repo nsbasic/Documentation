@@ -1,0 +1,63 @@
+{ 
+"_type": "Spinner_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "bs5Colors"], 
+"_palette": 9, 
+"_art": "images/spinner.png",
+"_wikipage": "Spinner (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Spinner</a> Display a wait cursor. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Spinner",
+"_longhelp": "longhelp",
+"_color": {"type": "hidden"},
+"_backgroundColor": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"text": "Loading...",
+
+"growing": "border",
+"_growing": { 
+    "acignore": true,
+    "desc": "Growing spinner instead of rotating?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["border", "grow"]
+    }, 
+
+"size": "",
+"_size": { 
+    "acignore": true,
+    "desc": "Default or small spinner?", 
+    "type": "enum", 
+    "keys": ["", "small"], 
+    "values": ["", "sm"]
+    }, 
+
+"showText": "visually-hidden",
+"_showText": { 
+    "acignore": true,
+    "desc": "Show the text?", 
+    "type": "enum", 
+    "keys": ["", "yes"], 
+    "values": ["visually-hidden", ""]
+    }, 
+
+"text": "Loading...", 
+"_text": {
+    "acignore": true,
+    "desc": "Text to display - spins", 
+    "type": "css" 
+    },
+
+"_htmltemplate": [
+  "  \"<div id='{id}' class='spinner-{growing}{if size<>''} spinner-{growing}-{size}{/if} {textColor} {class}' role='status' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'>\",",
+  "  \"  <span class='{showText}'>{text}</span>\",",
+  "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+		
+}

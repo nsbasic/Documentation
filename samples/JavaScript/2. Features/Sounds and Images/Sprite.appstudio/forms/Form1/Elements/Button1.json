@@ -1,0 +1,14 @@
+{ 
+  "bottom": "50", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 100, 
+  "onclick": "Button1.onclick()", 
+  "right": "auto", 
+  "top": "auto", 
+  "value": "Start", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

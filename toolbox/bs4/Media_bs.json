@@ -1,0 +1,55 @@
+{ 
+"_type": "Media_bs4", 
+"_base": ["bs4All", "bs4HeaderValue", "bs4Image", "margin", "padding", "fonts", "colors", "Widget", "children", "bs4Badge"], 
+"_palette": 9, 
+"_art": "images/media.png", 
+"_wikipage": "Media (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Media</a> displays a left or right aligned image with text. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+"_requiredfiles": [
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/css/open-iconic-bootstrap.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/fonts/open-iconic.woff",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+  "{_nsbdir}toolbox/bs4/dist/bsFunctions.min.js",
+  "{src}"],
+
+"_displayname": "Media",
+"_longhelp": "longhelp",
+"image": "nsb/images/192.png", 
+
+"width": "auto",
+"height": "auto",
+"center": {"desc": false},
+"text": "Media",
+"subtext": "Information about the image.",
+"responsive": {"type": "hidden"},
+"color": "#737373",
+
+"imageWidth": "64", 
+"_imageWidth": { 
+    "acignore": true,
+    "desc": "Width of the image.", 
+    "type": "str"
+}, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+   
+"_htmltemplate": [
+"  \"<div id='{id}' class='media {class}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'>\",",
+"    \"<a href='#'><img src='{src}' class='{shape}' style='width:{imageWidth!p}; height:auto;'></a>\",",
+"    \"<div class='media-body'>\",",
+"      \"<h5 class='mt-0' data-i18n='{header!j}'>{header}</h5>\",",
+"      \"<span data-i18n='{value!j}'>{value!j}</span><div id={id}_addChild>{if _childhtml<>''}\",{_childhtml}\"{/if}</div>\",",
+"  \"</div></div>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+]
+
+}

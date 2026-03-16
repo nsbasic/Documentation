@@ -1,0 +1,58 @@
+{ 
+"_type": "Calculation", 
+"_base": ["fonts", "borders", "Widget"], 
+"_palette": 4, 
+"_art": "images/calculation.png", 
+"_shorthelp": "<a href='{_docurl}'>Calculator</a> displays a result based on formula. Remember to use Number() around values from TextBoxes.", 
+"_category": ["All", "Common"],
+"_requiredfiles": [],
+"_displayname": "Calculation",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"width": 70,
+"fontSize": 16,
+"fontWeight": "bold", 
+
+"align": "left", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["left", "right", "center"]
+    }, 
+                        
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "transparent",
+"_backgroundColor": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"formula": "2+2",
+"_formula": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Formula. Must be a valid JavaScript expression.", 
+    "type": "css" 
+   }, 
+
+"_htmltemplate": "  \"<output id='{id}' class='{class}' data-nsb-type=Label style='text-align:{align}; text-shadow:none; {if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}{if borderWidth.isdigit()}border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor}; {/if} {hidden}{style!j}'>&nbsp;</output>\",",
+
+"_jstemplate":[
+  "  NSB.addProperties({id});",
+  "  {id}.parentElement.oninput=function() {{",
+  "    try {{{id}.text=eval('{formula!j}')}} catch(err) {{{id}.value='empty'}}}};",
+  "  {id}.parentElement.oninput();"
+  ]
+}
+

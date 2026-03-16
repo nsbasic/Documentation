@@ -1,0 +1,44 @@
+{ 
+"_type": "Pagination_bs4", 
+"_base": ["bs4All", "fonts", "borders", "margin", "padding", "colors", "bs4Items", "bs4Nav", "bs4Popover"], 
+"_palette": 9, 
+"_art": "images/pagination.png",
+"_wikipage": "Pagination (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Pagination</a> displays a list of page numbers to navigate to. Bootstrap.", 
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Pagination",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "length": {"desc": "Return the number of items."},
+    "value": {"desc": "The value last selected."}
+},
+
+"width": "auto",
+"height": "auto",
+"items": "1\n>2\n3\n*4\n5",
+
+"sizing": "",
+"_sizing": { 
+    "acignore": true,
+    "desc": "What size should the characters be?", 
+    "type": "enum",
+    "keys": ["small", "medium", "large"], 
+    "values": [" pagination-sm", "", " pagination-lg"]
+    }, 
+
+"_htmltemplate": [
+    "  \"<nav id='{id}' class='{class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{disabled} onclick=''{_bsPopover!i}>\",",
+    "  \"<ul id='{id}_contents' class='pagination{sizing}'>\",",
+    "   NSB.bs.pagination.make('{id}', '{disabled}', '{items!j}', '{sizing}'),",
+    "  \"</ul></nav>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+		
+}

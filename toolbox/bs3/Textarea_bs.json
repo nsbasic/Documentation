@@ -1,0 +1,44 @@
+{
+"_type": "Textarea_bs",
+"_base": ["bsAll", "margin", "padding", "fonts", "colors", "Input", "bsInput", "bsText", "bsIcon", "bsPopover", "bsBadge"],
+"_palette": 9,
+"_art": "images/textarea.png",
+"_wikipage": "Textarea (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>TextArea</a> is a multi line text input area. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_displayname": "Textarea",
+"_longhelp": "longhelp",
+"header": "Textarea",
+
+"width": "auto",
+"height": "auto",
+
+"_acprops": {
+    "select()": {"desc": "Select entire text."},
+    "selectionDirection": {"desc": "The direction of the selection."},
+    "selectionEnd": {"desc": "Last character selected."},
+    "selectionStart": {"desc": "First character selected."},
+    "setSelectionRange(start,end)": {"desc": "Highlight from character start to character end."},
+    "readOnly": {"desc": "True/False"}
+},
+    
+"rows": "",
+"_rows": { 
+    "acignore": true,
+    "desc": "Maximum number of rows to display.", 
+    "type": "str" 
+   }, 
+    
+"_htmltemplate": [
+    "  \"{_bsInput_wrapper!i}{_bsInput_header!i}\",",
+    "    \"<textarea id='{id}_contents' class='form-control' name='{name}' style='{_bsTextcss!i}overflow-scrolling:touch; height:100%; {style!j}' {if rows<>''}rows={rows}; {/if}{_bsTextatr!i}>{value!j}</textarea>\",", 
+    "  \"{_bsIconFeedback!i}{_bsinput_footer!i}\","
+    ],
+    
+"_jstemplate": [
+  "  {id}.ontouchmove=function(e){{e.stopPropagation()}};",
+  "{if header<>''}  {id}_contents.style.height = 'calc(100% - ' + getComputedStyle({id}_header).height + ')';{/if}",
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

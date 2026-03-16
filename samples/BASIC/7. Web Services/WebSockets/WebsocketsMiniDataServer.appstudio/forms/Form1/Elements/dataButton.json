@@ -1,0 +1,17 @@
+{ 
+  "backgroundColor": "none", 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "color": "none", 
+  "height": "auto", 
+  "id": "dataButton", 
+  "left": 93, 
+  "onclick": "dataButton_onclick()", 
+  "right": "auto", 
+  "top": 335, 
+  "value": "Send Data", 
+  "width": 129, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

@@ -1,0 +1,36 @@
+{ 
+"_type": "Button_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors", "bsButton", "bsBadge", "bsPopover", "bsIcon"], 
+"_palette": 9, 
+"_art": "images/button.png",
+"_wikipage": "Button (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Button</a> Can be part of a group. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Button",
+"_longhelp": "longhelp",
+
+"value": "Button",
+"width": "auto",
+"height": "auto",
+
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when clicked.",
+    "type": "str"
+	},
+
+"_htmltemplate": [
+    "{if grouping<>'' and grouping<>'end'}  \"<div id='{id}_group' class='btn-group{if grouping=='vertical'}-vertical{/if}' role='group'{if groupStyle<>''} style='{groupStyle}{_fontcss!i}'{/if}>\",{/if}",
+    "    \"<button id='{id}' data-role='none' class='btn{appearance}{size}{blockLevel} {class}' style='{if grouping==''}{_margincss!i}{/if}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{disabled}{_bsPopover!i}>{_bsIcon!i}{value!j}{_bsBadge!i}</button>\",",
+    "{if grouping=='end'}  \"</div>\",{/if}"
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "{if blockLevel<>''}  {id}.style.width='inherit';{/if}",
+  "{if ChangeForm<>''}  {id}.onclick=function(){{ChangeForm({ChangeForm})}};{/if}"
+  ]
+		
+}

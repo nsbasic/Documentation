@@ -1,0 +1,102 @@
+{ 
+"_type": "Facebook", 
+"_base": ["Widget"], 
+"_palette": 4, 
+"_art": "images/facebook.png", 
+"_shorthelp": "<a href='{_docurl}'>Facebook</a> Like button.", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [],
+"_resizable": false,
+"_displayname": "Facebook",
+"_longhelp": "longhelp",
+
+"height": 28, 
+"width": "auto", 
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"_acprops": {
+    "hide()": {"desc": "Hide the control."},
+    "show()": {"desc": "Show the control."}
+},
+
+"top": 0, 
+"_top": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+    
+"bottom": "auto", 
+"_bottom": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+
+"left": 50, 
+"_left": { 
+    "acignore": true,
+    "desc": "Location of left of element", 
+    "type": "str" 
+    }, 
+    
+ 
+
+"href": "https://facebook.com/southpark", 
+"_href": { 
+    "desc": "The URL to like.", 
+    "type": "str" 
+    }, 
+
+"showFaces": "false", 
+"_showFaces": { 
+    "desc": "Specifies whether to display profile photos below the button (standard layout only)", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+    
+"caption": "like", 
+"_caption": { 
+    "desc": "Text to display on button", 
+    "type": "enum", 
+    "keys": ["Like", "Recommend"], 
+    "values": ["like", "recommend"]
+    }, 
+    
+"colorScheme": "light", 
+"_colorScheme": { 
+    "desc": "Text to display on button", 
+    "type": "enum", 
+    "keys": ["Light", "Dark"], 
+    "values": ["light", "dark"]
+    }, 
+    
+"layout": "standard", 
+"_layout": { 
+    "desc": "Layout of button.", 
+    "type": "enum", 
+    "keys": ["Standard", "Button Count", "Box  Count"], 
+    "values": ["standard", "button_count", "box_count"]
+    }, 
+            
+"_htmltemplate": "  \"<div id={id} style='{hidden}{style!j}' class='{class}'><iframe id={id}_content scrolling='no' frameborder='0' style='border:none; overflow:hidden; {if height<>''} height:{height!p};{/if};' allowTransparency='true'></iframe></div>\",",
+
+"_jstemplate": [
+  "  if (navigator.onLine==true)", 
+  "    {{window.frames['{id}_content'].src=",
+  "    'https://www.facebook.com/plugins/like.php?href={href}&amp;send=false&amp;layout={layout}&amp;width={width}&amp;show_faces={showFaces}&amp;action={caption}&amp;colorscheme={colorScheme}&amp;height={height}'}};",
+  "  NSB.addProperties({id});"
+  ]
+
+}

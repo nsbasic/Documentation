@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "butSMS", 
+  "left": 243, 
+  "onclick": "butSMS_onclick()", 
+  "right": "auto", 
+  "top": 208, 
+  "value": "SMS", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

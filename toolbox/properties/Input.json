@@ -1,0 +1,114 @@
+{ 
+"_type": "Input", 
+"_base": "Widget", 
+"_palette": 0, 
+"_requiredfiles": [],
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+
+"_value": "", 
+"_value": { 
+    "desc": "Value of input", 
+    "type": "css" 
+    }, 
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }, 
+
+"required": "", 
+"_required": { 
+    "acignore": true,
+    "desc": "Is input required? (used by some validity checking libraries)",  
+    "type": "enum", 
+    "keys": ["", "True"], 
+    "values": [""," required"]
+    }, 
+    
+"_accesskey": "", 
+"_accesskey": { 
+    "acignore": true,
+    "desc": "Shortcut key", 
+    "type": "str" 
+    }, 
+
+"_tabindex": 0, 
+"_tabindex": { 
+    "acignore": true,
+    "desc": "Position in tabbing order", 
+    "type": "int" 
+    }, 
+
+"_onblur": "", 
+"_onblur": { 
+    "acignore": true,
+    "desc": "Element lost focus", 
+    "type": "js" 
+    }, 
+
+"onfocusin": "", 
+"_onfocusin": { 
+    "acignore": true,
+    "desc": "Element gains focus", 
+    "type": "js" 
+    }, 
+
+"onfocusout": "", 
+"_onfocusout": { 
+    "acignore": true,
+    "desc": "Element lost focus", 
+    "type": "js" 
+    }, 
+
+"_onselect": "", 
+"_onselect": { 
+     "acignore": true,
+   "desc": "Element text selected", 
+    "type": "js" 
+    }, 
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "Element value changed. After each character change.", 
+    "type": "js" 
+    }, 
+
+"oninput": "", 
+"_oninput": { 
+    "acignore": true,
+    "desc": "Element value changed. After tab to new field.", 
+    "type": "js" 
+    }, 
+
+"oncopy": "", 
+"_oncopy": { 
+    "acignore": true,
+    "desc": "Element value copied", 
+    "type": "js" 
+    }, 
+
+"oncut": "", 
+"_oncut": { 
+    "acignore": true,
+    "desc": "Element value cut", 
+    "type": "js" 
+    }, 
+
+"onpaste": "", 
+"_onpaste": { 
+    "acignore": true,
+    "desc": "Element value pasted", 
+    "type": "js" 
+    }, 
+
+"_htmltemplate": "Input element" 
+}

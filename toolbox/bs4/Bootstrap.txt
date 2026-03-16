@@ -1,0 +1,82 @@
+Principles:
+1. Optimize for responsive use.
+2. Respect Bootstrap - don't try to fit it into VB context.
+3. Keep it simple - leave features out if unsure of need.
+
+Phase 1: Bootstrap Components
+
+Bu Button - done.
+  -blockLevel does not appear to do anything
+Button Group - done.
+Dd Dropdown - done.
+In Input - done.
+Ta TextArea - done.
+Cb Checkbox - additional functions.
+Rb Radio - additional functions.
+Sl Select - additional functions.
+Lb Label
+Hd Heading
+Jt JumboTron - done.
+Ph Page header - done.
+Al Alert - done.
+Pb Progress Bar - done.
+Pn Panel - done.
+Th Thumbnail - done.
+Im - Image - done.
+Me Media Object - done.
+Modal - Done.
+Bc Breadcrumbs - done.
+Lg List Group 
+-  add icons
+Tb Tabs/Pills - done.
+Pn Pagination - done.
+Nb Navbar - looks messy. makeChild?
+
+Carousel - Not too bad to do, but leave for now.
+Form Groups
+
+Navigation controls: use ChangeForm.
+Should all properties be passable as JSON? #1599
+Should all controls be pure code?
+Responsive defaults. {float:left; clear:left; margin: 6px;}
+
+addProperties()
+ √ addChild
+ √ $("#container").collapse("toggle")
+ √ .value for all inputs, Button and Label
+ √ hide/show
+ √ .disabled = Get/Set
+ √ image.src
+ √ .hidden or visible Get/Set?
+ √ .fade, slide
+ √ .badge
+ √ input controls: .placeholder, .label, .footer
+ √ input: change help to footer.
+ √ bsHeaderValue - label, value
+ √ appearance: button, alert, label, panel, progressbar
+ √ modal, panel: label, value, footer
+ √ readonly'
+ √ .addItem and .clear functions for multi item controls
+ √ klass in bsFunctions
+ 
+Helper functions
+scrolling
+Massive test.
+Review acprops
+Events
+Input controls - extra properties?
+Documentation.
+√Cannot coexist with jQM. jQW is fine.
+    var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+
+Phase 2: Grids
+
+Phase 3: Advanced features
+
+Some things I use frequently (just general classes):
+
+http://getbootstrap.com/css/#responsive-utilities
+http://getbootstrap.com/css/#helper-classes
+
+Well - Only works on Container. well [well-lg || well-sm]

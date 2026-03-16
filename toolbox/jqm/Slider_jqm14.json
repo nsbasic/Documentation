@@ -1,0 +1,143 @@
+{
+"_type": "Slider_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/slider.png",
+"_shorthelp": "<a href='{_docurl}'>Slider</a> inputs a range of values. Width must be greater than 222. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "Slider",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "value":      {"desc": "Get the current value of the slider."},
+    "setValue(n)": {"desc": "Set the value of slider to n."},
+    "readOnly": {"desc": "True/False"}
+},
+
+"height": "auto", 
+"width": 250,
+"value": "50",
+
+"readonly": "", 
+"_readonly": { 
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Prevent changes", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["readonly='readonly'", ""]
+    }, 
+   
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none;",""]
+    },
+
+"color": "color",
+"_color": { 
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"onblur": "", 
+"_onblur": { 
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+
+"min": 0, 
+"_min": { 
+    "desc": "Minimum Value", 
+    "type": "int" 
+    }, 
+    
+"max": 100, 
+"_max": { 
+    "desc": "Maximum Value", 
+    "type": "int" 
+    }, 
+    
+"step": 1, 
+"_step": { 
+    "desc": "Increments range is divided into", 
+    "type": "int" 
+    }, 
+
+"ThemeSlider": "a",
+"_ThemeSlider": { 
+    "desc": "Slider Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+   
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+    
+"mini": "", 
+"_mini": { 
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"highlight": "", 
+"_highlight": { 
+    "desc": "Highlight the selected area.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-highlight=true"] 
+    }, 
+
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+
+"_htmltemplate": "  \"<div  id='{id}' style='{hidden}'><input type='range' id='{id}_inner' {mini} {highlight} style='color:{color}; background-color:{backgroundColor}; {style!j}' name='{name}' {disabled!j} {readonly!j} value='{value}' min='{min}' max='{max}' step='{step}'{if theme<>''} data-theme='{theme}'{/if}{if ThemeSlider<>''} data-track-theme='{ThemeSlider}'{/if} class='{disabled} {class}'></div>\",",
+
+"_jstemplate": [
+    "  $('#{id} .ui-slider').css('margin','0px');",
+    "  {id}.__defineGetter__('value', function(){{return {id}_inner.value}});",
+    "  {id}.__defineSetter__('value', function(n){{ {id}_inner.value=n}});",
+    "  {id}.__defineGetter__('min', function(){{return {id}_inner.min}});",
+    "  {id}.__defineSetter__('min', function(n){{ {id}_inner.min=n}});",
+    "  {id}.__defineGetter__('max', function(){{return {id}_inner.max}});",
+    "  {id}.__defineSetter__('max', function(n){{ {id}_inner.max=n}});",
+    "  {id}.__defineGetter__('step', function(){{return {id}_inner.step}});",
+    "  {id}.__defineSetter__('step', function(n){{ {id}_inner.step=n}});",
+    "  {id}.setValue=function(n){{$('#{id}_inner').val(n).slider('refresh')}};",   
+    "  NSB.addProperties({id});",
+  "{if shadow<>'true'}  $('#{id} .ui-slider-track').removeClass('ui-shadow-inset');{/if}",
+  "{if shadow<>'true'}  $('#{id} .ui-slider-handle').removeClass('ui-shadow');{/if}",
+  "{if shadow<>'true'}  $('#{id}_inner').removeClass('ui-shadow-inset');{/if}"
+    ]
+}

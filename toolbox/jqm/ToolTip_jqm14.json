@@ -1,0 +1,76 @@
+{ 
+"_type": "Tooltip_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/tooltip.png", 
+"_shorthelp": "<a href='{_docurl}'>ToolTip</a> control. ", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+	"{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+	],
+"_displayname": "ToolTip",
+"_longhelp": "longhelp",
+
+
+"data-transition": "slide",
+"_data-transition":{
+    "acignore": true,
+    "desc": "Animation on opening and closing.", 
+    "type": "enum", 
+    "keys": ["none", "pop", "fade","flip","turn","flow","slide","slidefade","slideup","slidedown"], 
+    "values": ["none", "pop", "fade","flip","turn","flow","slide","slidefade","slideup","slidedown"]
+    },
+	
+
+"popupmsg": "<p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p>",
+"_popupmsg": {
+	"acignore": true,
+	"desc": "Popup content message",
+	"type": "css",
+    "language": "HTML"
+	},
+	
+"theme": "b",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+   
+"message": "Learn more!",
+"_message": { 
+    "desc": "This message will be shown on mouseover.", 
+    "type": "str" 
+   }, 
+
+"tipWidth": "200px", 
+"_tipWidth": {
+    "acignore": true,
+    "desc": "Width of tip: format is 150px or 50%.", 
+    "type": "str" 
+    }, 
+
+"style": "",
+"_style": { 
+    "desc": "Style rules for ToolTip", 
+    "type": "str" 
+   },
+
+"icon": "info", 
+"_icon": { 
+    "acignore": true,
+    "desc": "Button Icon", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    }, 
+    
+"height": 24, 
+"width": 24,
+ 
+"_htmltemplate": "  NSB.ToolTip_jqm('{id}','{popupmsg!j}','{data-transition}', '{theme}','{message}','max-width:{tipWidth};{style!j}','{icon}', '{class}'),", 
+
+"_jstemplate": ["  NSB.addProperties({id});"]
+
+}

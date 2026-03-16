@@ -1,0 +1,104 @@
+{
+    "_type": "bsText",
+    "_base": "NSBObject",
+    "_description": "Properties shared by Input and Textarea controls",
+
+"align": "", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["", "text-align:right; ", "text-align:center; "]
+    }, 
+
+"autocapitalize": "", 
+"_autocapitalize": { 
+    "acignore": true,
+    "desc": "Capitalize first letter as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["", "off"]
+    }, 
+    
+"autocorrect": "", 
+"_autocorrect": { 
+    "acignore": true,
+    "desc": "Correct spelling as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["", "off"]
+    }, 
+    
+"autocomplete": "", 
+"_autocomplete": { 
+    "acignore": true,
+    "desc": "Complete words as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["", "off"]
+    },
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }, 
+    
+"spellcheck": "true", 
+"_spellcheck": { 
+    "acignore": true,
+    "desc": "Check spelling and grammer?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    }, 
+    
+"maxlength": "", 
+"_maxlength": { 
+    "acignore": true,
+    "desc": "Maximum number of characters for text input. Not used for inputType number.", 
+    "type": "str" 
+    }, 
+
+"minlength": "", 
+"_minlength": { 
+    "acignore": true,
+    "desc": "Minimum number of characters for text input. Not used for inputType number.", 
+    "type": "str" 
+    }, 
+
+"placeholder": "Enter text here", 
+"_placeholder": { 
+    "i18n": true,
+    "desc": "placeholder text", 
+    "type": "str" 
+   }, 
+
+"readonly": "", 
+"_readonly": {  
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Prevent changes", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["readonly",""]
+    }, 
+
+"onkeypress": "", 
+"_onkeypress": { 
+    "desc": "On Keyboard pressed", 
+    "type": "js" 
+    },
+
+"onkeyup": "", 
+"_onkeyup": { 
+    "desc": "On Key released", 
+    "type": "js" 
+    }, 
+   
+"_bsTextcss": "{if align<>''}{align}; {/if}",
+"_bsTextatr": "{if autocapitalize==''}autocapitalize=on {/if}{if autocorrect==''}autocorrect=on {/if}{if autocomplete==''}autocomplete=on {/if}{if autocapitalize<>''}autocapitalize={autocapitalize} {/if}{if autocorrect<>''}autocorrect={autocorrect} {/if}{if autocomplete<>''}autocomplete={autocomplete} {/if}spellcheck={spellcheck} {if maxlength<>''}maxlength={maxlength} {/if}{if minlength<>''}minlength={minlength} {/if}{if placeholder<>''}placeholder='{placeholder!b}' {/if}{if readonly<>''}readonly {/if}{if disabled<>''}disabled {/if}{if required<>''}required {/if}"
+}

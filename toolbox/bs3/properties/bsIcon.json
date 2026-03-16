@@ -1,0 +1,18 @@
+{
+    "_type": "bsIcon",
+    "_base": "NSBObject",
+    "_description": "Add a pop to the control",
+
+"icon": "", 
+"_icon": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Icon to put at right of control from the Font Awesome set. Examples: trash, check. Optional. <a href='http://fontawesome.io/icons/'>See the list of icons.</a>", 
+    "type": "str" 
+   }, 
+
+"_bsIcon": "{if icon<>''}<span id='{id}_icon' class='fa fa-{icon}'></span>{/if}{if icon==''}<span id='{id}_icon' class=''></span>{/if}",
+
+"_bsIconFeedback": "{if icon<>''}<span class='fa fa-{icon} form-control-feedback'></span>{/if}"
+   
+}

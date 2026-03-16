@@ -1,0 +1,39 @@
+{ 
+"_type": "Breadcrumbs_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "colors", "bs5Nav", "bs5Popover"], 
+"_palette": 9, 
+"_art": "images/breadcrumbs.png",
+"_wikipage": "Breadcrumbs (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Breadcrumbs</a> shows the navigation to the current page. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Breadcrumbs",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "length": {"desc": "Return the number of items."},
+    "setValue(array)": {"desc": "Sets the list of items."}
+},
+
+"width": "auto",
+"height": "auto",
+"borderStyle": "",
+"_backgroundColor": {"type": "hidden"},
+
+"items": "['Breadcrumb','Customer','Order']",
+"_items": { 
+    "acignore": true,
+    "desc": "Initial value of breadcrumb array. Updated at runtime.", 
+    "type": "css"
+    }, 
+
+"_htmltemplate": [
+    "  \"<ol id='{id}' class='breadcrumb {class}' style='{_margincss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{disabled} onclick=''{_bsPopover!i}></ol>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {id}.setValue({items})"
+]
+		
+}

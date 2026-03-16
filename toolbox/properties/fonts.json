@@ -1,0 +1,49 @@
+{
+    "_type": "fonts",
+    "_base": "NSBObject",
+
+"fontSize": "",
+"_fontSize": { 
+    "group": "Fonts",
+    "acignore": true,
+    "desc": "Font size in pixels.", 
+    "type": "str" 
+   }, 
+    
+"fontFamily": "",
+"_fontFamily": { 
+    "group": "Fonts",
+	"i18n": true,
+    "acignore": true,
+    "desc": "Font name. Inherit uses the same font as parent, usually set in Project Properties.", 
+    "type": "css" 
+   }, 
+
+"fontStyle": "", 
+"_fontStyle": { 
+    "group": "Fonts",
+    "acignore": true,
+    "desc": "Font appearance", 
+    "type": "enum", 
+    "keys": ["normal", "italic", "oblique"], 
+    "values": ["", "italic", "oblique"]
+    }, 
+   
+"fontWeight": "", 
+"_fontWeight": { 
+    "group": "Fonts",
+    "acignore": true,
+    "desc": "Font letter thickness: higher value is darker.", 
+    "type": "enum", 
+    "keys": ["100","200","300","normal","400","500","600","bold","800","900"], 
+    "values": ["100","200","300","","400","500","600","bold","800","900"]
+    },
+    
+"_fontcss": [
+    "{if fontSize<>''}font-size:{fontSize!p};{/if}",
+    "{if fontFamily<>''}font-family:{fontFamily};{/if}",
+    "{if fontFamily==''}font-family:inherit;{/if}",
+    "{if fontStyle<>''}font-style:{fontStyle};{/if}",
+    "{if fontWeight<>''}font-weight:{fontWeight};{/if}"
+  ]
+}

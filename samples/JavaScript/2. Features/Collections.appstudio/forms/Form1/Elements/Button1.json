@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 37, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 92, 
+  "value": "Run Collection Demo", 
+  "width": 210, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

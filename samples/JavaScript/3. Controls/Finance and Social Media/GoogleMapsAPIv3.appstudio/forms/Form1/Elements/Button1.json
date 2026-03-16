@@ -1,0 +1,16 @@
+{ 
+  "bottom": "auto", 
+  "fontFamily": "inherit", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": "initial", 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "style": "float:left; margin:10px;", 
+  "top": "initial", 
+  "value": "Show Traffic", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

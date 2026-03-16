@@ -1,0 +1,37 @@
+{
+    "_type": "bs5Colors",
+    "_base": "NSBObject",
+    "_description": "Text and background colors.",
+        
+"textColor": "", 
+"_textColor": { 
+    "acignore": true,
+    "desc": "Color of the text", 
+    "type": "enum", 
+    "keys": ["", "primary", "secondary", "success", "info", "warning", "danger", "light", "dark", "muted", "white"], 
+    "values": ["", " text-primary", " text-secondary", " text-success", " text-info", " text-warning", " text-danger", " text-light", " text-dark", " text-muted", " text-white"]
+}, 
+
+"bgColor": "", 
+"_bgColor": { 
+    "acignore": true,
+    "desc": "Color of the background", 
+    "type": "enum", 
+    "keys": ["", "primary", "secondary", "success", "info", "warning", "danger", "light", "dark", "white"], 
+    "values": [
+      "",
+      "p-3 mb-2 bg-primary text-white",
+      "p-3 mb-2 bg-secondary text-white",
+      "p-3 mb-2 bg-success text-white",
+      "p-3 mb-2 bg-info text-white",
+      "p-3 mb-2 bg-warning text-dark",
+      "p-3 mb-2 bg-danger text-white",
+      "p-3 mb-2 bg-light text-dark",
+      "p-3 mb-2 bg-dark text-white",
+      "p-3 mb-2 bg-white text-dark"
+    ]
+}, 
+
+"_bsColor": " {bgColor}{if bgColor==''} {textColor}{/if}"
+
+}

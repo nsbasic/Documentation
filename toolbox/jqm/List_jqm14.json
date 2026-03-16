@@ -1,0 +1,195 @@
+{ 
+"_type": "List_jqm14", 
+"_base": ["Input"], 
+"_palette": 9, 
+"_art": "images/list.png",
+"_shorthelp": "<a href='{_docurl}'>List</a> Menu. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jqmFunctions.js", 
+	"{_nsbdir}nsb/library/iscroll.js", 
+	"{_nsbdir}nsb/library/fastclick.js", 
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+	"{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+	],
+"_displayname": "List",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "refresh()": {"desc": "Refresh the control"},
+    "getItem(i)": {"desc": "Return the text of item i."},
+    "getItemCount()": {"desc": "Return the number of items."},
+    "deleteItem(i)": {"desc": "Delete item i."},
+    "addItem(txt,img,n)": {"desc": "Add new item."},
+    "replaceItem(n,txt,img)": {"desc": "Replace an item."},
+    "readOnly": {"desc": "True/False"}
+},
+
+"showNumbers": "ul", 
+"_showNumbers": { 
+    "acignore": true,
+    "desc": "Display a number for each item.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["ul","ol"]
+    }, 
+  
+"imageStyle": "none", 
+"_imageStyle": { 
+    "acignore": true,
+    "desc": "Image size: 16x16 or 80x80. If 16x16, icon must be smaller than 16x16.", 
+    "type": "enum", 
+    "keys": ["none", "16x16 icons", "80x80 thumbnails"], 
+    "values": ["", "ui-li-icon", "ui-li-thumb"]
+    }, 
+  
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"dividerTheme": "b", 
+"_dividerTheme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str"
+}, 
+  
+"items": "Choose One, Apples, Oranges",
+"_items": { 
+    "acignore": true,
+    "desc": "List of item names, comma separated. Since commas act as separators, use &amp#44; instead of a comma in the middle of your text. Items can be plain text or HTML. Hard returns are ignored.", 
+    "type": "css",
+    "language": "HTML"
+    }, 
+
+"images": "",
+"_images": { 
+    "acignore": true,
+    "desc": "Image names, comma separated.", 
+    "type": "css" 
+    }, 
+
+"dividers": "Y,N,N",
+"_dividers": { 
+    "acignore": true,
+    "desc": "Is item a divider? Y/N, comma separated.", 
+    "type": "css" 
+    }, 
+    
+"scrolling": "false", 
+"_scrolling": { 
+    "acignore": true,
+    "desc": "Allow scrolling?", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["true", "false"]
+    }, 
+    
+"scroll_options": "mouseWheel:true,  bounce:true, zoom:false",
+"_scroll_options": { 
+    "acignore": true,
+    "desc": "iScroll Options. See iScroll docs at <a href='http://iscrolljs.com' target='_top'>http://iscrolljs.com</a>.", 
+    "type": "css" 
+    },
+
+"readonly": "false", 
+"_readonly": {  
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Make list read only? (nothing can be selected)", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["true", "false"]
+    }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"corners": "false", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["false", "true"]
+    },
+     
+"filter": "false", 
+"_filter": { 
+    "desc": "Show a filter box above the list?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"]
+    },
+     
+"autoDividers": "false", 
+"_autoDividers": { 
+    "desc": "Put dividers between different first letters?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"]
+    },
+     
+"filterReveal": "false", 
+"_filterReveal": { 
+    "desc": "Used if filter=true. Only display items with autocomplete.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"]
+    },
+
+"filterPlaceholder": "",
+"_filterPlaceholder": { 
+    "acignore": true,
+    "desc": "Prompt to display in filter box.", 
+    "type": "str" 
+    }, 
+     
+"icon": "arrow-r", 
+"_icon": { 
+    "acignore": true,
+    "desc": "Icon", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    }, 
+
+"height": "auto", 
+"width": "100%", 
+
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of each form to change to when buttons clicked, comma separated.",
+    "type": "css"
+},
+
+"_htmltemplate": "  NSB.List_jqm14('{id}', '{showNumbers}', '{imageStyle}', '{theme}', '{dividerTheme}', '{items!j}', '{images}', '{dividers}', '{style!j}', 'class=\"{disabled} {class}\"', '{width}', {scrolling}, {readonly}, '{corners}', '{icon}', '{filter}', '{filterPlaceholder}', '{filterReveal}', '{autoDividers}', '{hidden}'),",
+
+"_csstemplate": [
+    "#{id}_scroller {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}overflow:hidden; {if width<>''}width:{width!p}; {/if}height:{if scrolling=='false'}{height!p}{/if}{if scrolling=='true'}{if height=='auto'}100px{/if}{if height<>'auto'}{height!p}{/if}{/if}; {if left<>''}left:{left!p}; {/if}{if top<>''}top:{top!p};{/if}}}",
+    "{if scrolling == 'true'}#{id} {{position:absolute; left:0px; top:0px; width:100%; height:auto }}{/if}",
+    "{if scrolling == 'false'}#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>''}left:{left!p};{/if}{if top<>''} top:{top!p};{/if}}}{/if}"],
+
+"_jstemplate": [
+  "  if (NSB.fastclick !== true) {{window.addEventListener('load', function() {{new FastClick.attach(document.body)}}, false); NSB.fastclick=true;}};",
+  "  NSB.List_jqm_init14('{id}','{items!j}',{scrolling},'{width}',{readonly},{filterReveal});",
+  "{if scrolling=='true'}  {id}_ref = new IScroll({id}_scroller,{{ {if scroll_options<>''}{scroll_options}{/if}}});{/if}",
+  "  {id}.refresh=function(){{if (typeof {id}_ref!='undefined') setTimeout(NSB.refresh,100,{id}_ref)}};",
+  "{if scrolling=='true'}  NSB.addProperties({id}, {id}_scroller);{/if}",
+  "{if scrolling=='false'}  NSB.addProperties({id});{/if}",
+  "  (function(){{var d,i,s='{ChangeForm}'.split(',');for(i=0;i<s.length;i++){{if(s[i].trim()!=''){{d=document.getElementById('{id}_'+i);(function(i){{d.onclick=function(){{ChangeForm(document.getElementById(s[i].trim()))}}}})(i)}}}}}})()"],
+                
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "if({scrolling}){{var rect={id}_scroller.getBoundingClientRect();return {{height:rect.height,width:this.getBoundingClientRect().width,top:rect.top,left:rect.left}}}}",
+  "  return this.getBoundingClientRect();",
+  "}}"
+  ]
+}

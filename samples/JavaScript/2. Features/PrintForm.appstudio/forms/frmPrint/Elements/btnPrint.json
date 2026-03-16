@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": 29, 
+  "icon": "calendar", 
+  "id": "btnPrint", 
+  "left": 39, 
+  "onclick": "btnPrint_onclick()", 
+  "right": "auto", 
+  "top": 39, 
+  "value": "", 
+  "width": "24", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

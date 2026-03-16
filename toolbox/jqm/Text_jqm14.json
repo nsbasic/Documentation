@@ -1,0 +1,231 @@
+{ 
+"_type": "TextBox_jqm14", 
+"_base": ["fonts","Input"], 
+"_palette": 9, 
+"_art": "images/text.png", 
+"_shorthelp": "<a href='{_docurl}'>TextBox</a> is an input field for text, numbers and other data types. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+	"{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+],
+"_displayname": "TextBox",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"width": 120,
+"value": "",
+
+"_acprops": {
+    "text": {"desc": "text. Save as value."},
+    "valueAsDate": {"desc": "If a date or time, the value of the field as a Date."},
+    "valueAsNumber": {"desc": "If a date or time, the value of the field as a Number."},
+    "readOnly": {"desc": "True/False"}
+},
+
+"inputType": "text", 
+"_inputType": { 
+    "acignore": true,
+    "desc": "Input field type", 
+    "type": "enum",
+    "keys":   ["date","color","email","file","hidden","number","password","search","submit","tel","text","time","url"], 
+    "values": ["date","color","email","file","hidden","number","password","search","submit","tel","text","time","url"]
+     }, 
+     
+"step": "any", 
+"_step": { 
+    "desc": "Use 1 for integer only, any for any number, or a value the input has to be a multiple of", 
+    "type": "str" 
+    },
+
+"mini": "ui-mini", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-mini"] 
+    }, 
+
+"clearButton": "", 
+"_clearButton": { 
+    "acignore": true,
+    "desc": "Show a clear button in the control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-clear-btn='true'"] 
+    }, 
+
+"maxlength": "", 
+"_maxlength": { 
+    "acignore": true,
+    "desc": "Maximum number of characters for text input. Not used for inputType number.", 
+    "type": "str" 
+    }, 
+    
+"min": "", 
+"_min": { 
+    "desc": "For inputType Number, the minimum value. For date, the earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "desc": "For inputType Number, the maximum value. For date, the latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"readonly": "", 
+"_readonly": {  
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Prevent changes", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["readonly", ""]
+    }, 
+
+"required": "", 
+"_required": { 
+    "acignore": true,
+    "desc": "Is input required? (used by some validity checking libraries)", 
+    "type": "enum", 
+    "keys": ["", "True"], 
+    "values": [""," required"]
+    }, 
+
+"align": "left", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["left", "right", "center"]
+    }, 
+    
+"autocapitalize": "on", 
+"_autocapitalize": { 
+    "desc": "Capitalize first letter as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+    
+"autocorrect": "on", 
+"_autocorrect": { 
+    "desc": "Correct spelling as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+    
+"autocomplete": "on", 
+"_autocomplete": { 
+    "desc": "Complete words as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+
+"placeholder": "Enter text here", 
+"_placeholder": { 
+    "i18n": true,
+    "desc": "placeholder text", 
+    "type": "str" 
+   }, 
+   
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none;",""]
+    },
+
+"onblur": "", 
+"_onblur": { 
+    "acignore": true,
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+    
+"onkeypress": "", 
+"_onkeypress": { 
+    "acignore": true,
+    "desc": "On Keyboard pressed", 
+    "type": "js" 
+    },
+
+"onkeyup": "", 
+"_onkeyup": { 
+    "desc": "On Key released", 
+    "type": "js" 
+    },
+
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+    
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", "ui-corner-all"] 
+    }, 
+ 
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   },  
+
+"backgroundColor": "",
+"_backgroundColor": { 
+    "acignore": true,
+    "desc": "Color of background. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+ 
+"_csstemplate": [
+    "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}", 
+    "#{id}_wrapper {{margin:0px; box-sizing:border-box;{hidden}{style}}}"],
+                
+"_htmltemplate": 
+    "  \"<input id='{id}' type='{inputType}' name='{name}' autocorrect='{autocorrect}' autocomplete='{autocomplete}' autocapitalize='{autocapitalize}'{if maxlength<>''} maxlength={maxlength}{/if}{if min<>''} min='{min}'{/if}{if max<>''} max='{max}'{/if} step={step} value='{value!j}' placeholder='{placeholder!b}' data-nsb-type='TextBox_jqm' {clearButton} {readonly!j}{required} style='{if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}{if align<>'left'}text-align:{align}; {/if}text-shadow:none;' class='{if theme<>''}ui-body-{theme}{/if} {mini} {disabled!j} {class}'>\",",
+  
+"_jstemplate": [
+    "{if inputType<>'hidden'}  {id}.parentElement.id = '{id}_wrapper';{/if}",
+    "{if inputType<>'hidden'}  {id}_wrapper.setAttribute('data-nsb-type', 'TextBox_jqm');{/if}",
+    "  {id}.addEventListener('touchmove', function(e) {{e.stopPropagation();}}, false);",
+    "{if inputType<>'hidden'}  NSB.addProperties({id}, {id}_wrapper);{/if}",
+    "{if inputType=='hidden'}  NSB.addProperties({id});{/if}",
+    "{if shadow<>'true' and inputType<>'hidden'}  $('#{id}_wrapper').removeClass('ui-shadow-inset');{/if}",
+    "{if corners=='' and inputType<>'hidden'}  $('#{id}_wrapper').removeClass('ui-corner-all');{/if}",
+    "{if theme<>''}  $('#{id}_wrapper').removeClass('ui-body-inherit').addClass('ui-body-{theme}');{/if}",
+    "  {id}.style.height = ({id}.clientHeight + 2) + 'px';",
+    "  NSB.addDisableProperty({id});"
+]
+
+}

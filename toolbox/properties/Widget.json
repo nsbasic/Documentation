@@ -1,0 +1,210 @@
+{ 
+"_type": "Widget", 
+"_base": ["display","NSBWidget"], 
+"_container": "Screen", 
+"_palette": 0, 
+"_resizable": true,
+"_draggable": true,
+"_singular": false,
+"_requiredfiles": [],
+"_external": ["forms", "{_form.id}", "Elements", "{id}.json"],
+
+"_actypes": ["Element"],
+"_acprops": {},
+"_AddChild": {"acignore": true, "type": null},
+"_InvalidateCache": {"acignore": true, "type": null},
+"_LastId": {"acignore": true, "type": null},
+"_Load": {"acignore": true, "type": null},
+"_Save": {"acignore": true, "type": null},
+"_UniqueId": {"acignore": true, "type": null},
+"_accessKey": {"acignore": true, "type": null},
+"_expanded_pmp": {"acignore": true, "type": "json", "external": ["cache", "{id}.pmp"]},
+"_script": {"acignore": true, "type": null},
+
+"display": "",
+
+"id": "", 
+"_id": { 
+    "desc": "Unique identifier for control.", 
+    "type": "str" 
+    },
+	
+"top": 0, 
+"_top": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Location of top of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"bottom": "auto", 
+"_bottom": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Location of bottom of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"left": 0, 
+"_left": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Location of left side of element. Can be integer, percent, auto or initial.", 
+    "type": "str"
+    }, 
+
+"right": "auto", 
+"_right": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Location of right side of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"height": 0, 
+"_height": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Vertical height of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"width": 0, 
+"_width": { 
+    "group": "Bounds",
+    "acignore": true,
+    "desc": "Horizontal width of element. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"class": "", 
+"_class": { 
+    "desc": "Name(s) of styling classes", 
+    "type": "css" 
+    }, 
+
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none; ",""]
+    },
+
+"_title": "", 
+"_title": { 
+    "desc": "Element title", 
+    "type": "str" 
+    }, 
+
+"_language": "en", 
+"_language": { 
+   "acignore": true,
+   "desc": "Language of element's attribute values and content", 
+    "type": "str" 
+    }, 
+
+"_direction": "ltr", 
+"_direction": { 
+    "acignore": true,
+    "desc": "Directionality of element text", 
+    "type": "enum", 
+    "keys": ["Left-to-right", "Right-to-left"], 
+    "values": ["ltr", "rtl"]
+    }, 
+
+"onclick": "", 
+"_onclick": { 
+    "acignore": true,
+    "desc": "Element tapped event", 
+    "type": "js" 
+    }, 
+
+"onmousedown": "", 
+"_onmousedown": { 
+   "acignore": true,
+   "desc": "Element pressed event", 
+    "type": "js" 
+    }, 
+
+"onmouseup": "", 
+"_onmouseup": { 
+    "acignore": true,
+    "desc": "Element released event", 
+    "type": "js" 
+    }, 
+
+"onmousemove": "", 
+"_onmousemove": { 
+    "acignore": true,
+    "desc": "Element motion over event", 
+    "type": "js" 
+    }, 
+
+"onmouseout": "", 
+"_onmouseout": { 
+    "acignore": true,
+    "desc": "Element motion exit event", 
+    "type": "js" 
+    }, 
+
+"ontouchstart": "", 
+"_ontouchstart": { 
+    "acignore": true,
+    "desc": "Object touched", 
+    "type": "js" 
+    }, 
+
+"ontouchmove": "", 
+"_ontouchmove": { 
+    "acignore": true,
+    "desc": "Object touch moved", 
+    "type": "js" 
+    }, 
+
+"ontouchend": "", 
+"_ontouchend": { 
+    "acignore": true,
+    "desc": "Object touch ended", 
+    "type": "js" 
+    }, 
+
+"onresize": "", 
+"_onresize": { 
+    "acignore": true,
+    "desc": "Control resized due to parent size changing.", 
+    "type": "js" 
+    }, 
+
+"_htmltemplate": "Base form of Widget", 
+
+"_csstemplate": [
+  "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}",
+  "{if display<>''} display:{display};{/if}",
+  "{if left<>'' and left<>'auto'} left:{left!p};{/if}",
+  "{if right<>'' and right<>'auto'} right:{right!p};{/if}",
+  "{if top<>'' and top<>'auto'} top:{top!p};{/if}",
+  "{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}",
+  "{if height<>'' and height<>'auto'} height:{height!p};{/if}",
+  "{if width<>'' and width<>'auto'} width:{width!p};{/if}}}"
+  ], 
+
+"_jstemplate": "",
+
+"_design_jstemplate": [
+  "document.getElementById('{id}').getDesignFrameRect = function() {{",
+  "  return this.getBoundingClientRect();",
+  "}}"
+],
+
+"_cssbounds": "{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}"
+
+}

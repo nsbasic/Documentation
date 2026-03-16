@@ -1,0 +1,110 @@
+{ 
+"_type": "MaskedInput_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxmaskedinput.png", 
+"_wikipage": "jqxMaskedInput",
+"_shorthelp": "<a href='{_docurl}'>MaskedInput</a> field with validation mask. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [ 
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+    "{pathTo_jqWidgets}jqxmaskedinput.js",
+    "{_nsbdir}toolbox/jqw/dist/jqxFunctions.js"
+    ],
+  
+"_displayname": "MaskedInput",
+"_longhelp": "longhelp",
+
+"_acprops": {
+	},
+
+"height": 25, 
+"width": 150, 
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"readOnly": "false", 
+"_readOnly": { 
+    "desc": "Sets or gets the readOnly state of the input.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+	
+"textAlign": "left", 
+"_textAlign": { 
+    "desc": "Sets or gets the text alignment.", 
+    "type": "enum", 
+    "keys": ["left", "right"], 
+    "values": ["left", "right"]
+    },
+    
+"value": "", 
+"_value": { 
+    "desc": "Sets or gets the masked input's value.", 
+    "type": "str" 
+    },
+
+"mask": "#####", 
+"_mask": { 
+    "desc": "Sets or gets the masked input's mask. See jqWidgets docs for complete options.", 
+    "type": "str" 
+    },
+    
+"promptChar": "_", 
+"_promptChar": { 
+    "desc": "Sets or gets the prompt char displayed when an editable char is empty.", 
+    "type": "str" 
+    },
+
+"validatorMessage": "", 
+"_validatorMessage": { 
+    "desc": "Message if rule does not work. One per line. Must be same number of lines as validatorRule property.", 
+    "type": "css"
+    }, 
+
+"validatorAction": "", 
+"_validatorAction": { 
+    "desc": "Events to test rules after", 
+    "type": "str"
+    }, 
+
+"validatorRule": "", 
+"_validatorRule": { 
+    "desc": "Rule: required, number, notNumber, ssn, email, phone, zipCode, maxlength=12, minLength=3, length=3,12. See jqWidgets docs for full info. One per line. Must be same number of lines as validatorMessage property.", 
+    "type": "css"
+    }, 
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "This event is triggered when the value is changed and the control's focus is lost.", 
+    "type": "js" 
+    },
+    
+"_htmltemplate": "  \"<input type='text' id='{id}' data-role='none' style='{hidden}{style!j}' class='{class}'>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+        "    disabled:{disabled},",
+        "    width:'{width}',",
+        "    height:'{height}',",
+        "    rtl:{rtl},",
+        "    theme:'{theme}',",
+		"    readOnly: {readOnly},",
+		"    textAlign: '{textAlign}',",
+        "    value: '{value}',",
+        "    mask: '{mask}',",
+        "    promptChar: '{promptChar}',",
+	 "  }}",
+    "  $('#{id}').jqxMaskedInput(NSB.jqxSettings['{id}']);",
+    "  NSB.jqxValidatorAddRules({id}, '{validatorMessage!j}', '{validatorAction}', '{validatorRule!j}');",
+    "  NSB.addProperties({id});"]
+}

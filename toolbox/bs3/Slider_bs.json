@@ -1,0 +1,120 @@
+{ 
+"_type": "Slider_bs", 
+"_base": ["bsAll", "borders", "margin", "colors"], 
+"_palette": 9, 
+"_art": "images/slider.png",
+"_wikipage": "Slider (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Slider</a>. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"https://use.fontawesome.com/530b34dcfd.js",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js",
+  "{_nsbdir}toolbox/bs3/dist/js/bootstrap-slider.min.js",
+  "{_nsbdir}toolbox/bs3/dist/css/bootstrap-slider.min.css"
+],
+
+"_displayname": "Slider",
+"_longhelp": "longhelp",
+
+"width": "250",
+"height": "",
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "Element value changed", 
+    "type": "js" 
+    },
+
+"_onclick": {"type": "hidden"},
+
+"min": 0, 
+"_min": { 
+    "desc": "Minimum Value", 
+    "type": "int" 
+    }, 
+    
+"value": "50", 
+"_value": { 
+    "desc": "Initial Value", 
+    "type": "str" 
+    }, 
+    
+"max": 100, 
+"_max": { 
+    "desc": "Maximum Value", 
+    "type": "int" 
+    }, 
+    
+"step": 1, 
+"_step": { 
+    "desc": "Increments range is divided into", 
+    "type": "int" 
+    }, 
+
+"handle": "round", 
+"_handle": { 
+    "acignore": true,
+    "desc": "Appearance of handle. Default is round.", 
+    "type": "enum", 
+    "keys": ["round", "square", "triangle"], 
+    "values": ["round", "square", "triangle"]
+    }, 
+
+"orientation": "", 
+"_orientation": { 
+    "acignore": true,
+    "desc": "Display vertically or horizontally", 
+    "type": "enum", 
+    "keys": ["Vertical", "Horizontal"], 
+    "values": ["vertical", ""]
+    }, 
+
+"colorOfHandle": "blue",
+"_colorOfHandle": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Color of slider handle. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"colorOfSelection": "lightgray",
+"_colorOfSelection": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Color of selected area. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"colorOfTrackHigh": "lightgray",
+"_colorOfTrackHigh": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Color of unselected area. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}{if orientation<>''} width:20px;{/if}}}",
+    "#{id} {{{_colorscss!i}{_margincss!i}{hidden}{style!j}}}",
+    "#{id} .slider-handle {{background:{colorOfHandle};}}",
+    "#{id} .slider-selection {{background:{colorOfSelection};}}",
+    "#{id} .slider-track-high {{background:{colorOfTrackHigh};}}"
+],
+
+"_htmltemplate": [
+    "    \"<input id='{id}_input' data-role=none data-slider-id={id} type=text data-slider-min={min} data-slider-max={max} data-slider-step={step} data-slider-value={value} data-slider-handle='{handle}' data-slider-orientation='{orientation}' class='{class}'></input>\","
+],
+
+"_jstemplate": [
+  "  {id} = new Slider('#{id}_input', {{}});",
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ]
+		
+}
+
+

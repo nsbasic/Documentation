@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "ShowMapJavascriptButton1", 
+  "left": 16, 
+  "onclick": "ShowMapJavascriptButton1_onclick()", 
+  "right": "auto", 
+  "top": 8, 
+  "value": "Show Map [Javascript]", 
+  "width": 161, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

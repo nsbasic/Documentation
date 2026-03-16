@@ -1,0 +1,91 @@
+{ 
+"_type": "Button_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxbutton.png", 
+"_wikipage": "jqxButton",
+"_shorthelp": "<a href='{_docurl}'>Button</a> A nicely styled button. <a href='http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxbutton/index.htm' target='_top'>jqWidgets</a> (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}styles/jqx.base.css",
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",
+    "{pathTo_jqWidgets}jqxcore.js",
+    "{pathTo_jqWidgets}jqxbuttons.js",
+    "{pathTo_jqWidgets}styles/images/bg_blueenergy.png",
+    "{pathTo_jqWidgets}styles/images/bg_darkblue.png",
+    "{pathTo_jqWidgets}styles/images/bg_black.png"
+    ],
+"_displayname": "Button",
+"_longhelp": "longhelp",
+
+"height": 32, 
+"width": 100, 
+   
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"value": "Button", 
+"_value": { 
+    "desc": "The caption of the button", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"roundedCorners": "",
+"_roundedCorners": { 
+    "desc": "Which corners should be rounded?", 
+    "type": "enum", 
+    "keys": ["None","All","Top","Bottom","Left","Right","Top-Right","Top-Left","Bottom-Right",
+    "Bottom-Left"], 
+    "values": ["","all","top","bottom","left","right","top-right","top-left","bottom-right",
+    "bottom-left"]
+    }, 
+
+"buttonType": "Button",
+"_buttonType": { 
+    "desc": "Type of jqWidgets button", 
+    "type": "enum", 
+    "keys": ["Button","RepeatButton","LinkButton","ToggleButton"], 
+    "values": ["Button","RepeatButton","LinkButton","ToggleButton"]
+    }, 
+
+"delay": 50,
+"_delay": { 
+    "acignore": true,
+    "desc": "Time between two click events.", 
+    "type": "int" 
+   }, 
+
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when clicked.",
+    "type": "str"
+	},
+
+"_htmltemplate": "  \"<input type='button' id='{id}' style='{hidden}{style!j}' class='{class}' name='{name}' value='{value}' data-role='none'>\",",
+
+"_jstemplate": [  "  var s='{roundedCorners}'; if (s.substring(0,7)=='jqx-rc-') s=s.substring(7);",
+	"  $('#{id}').jqx{buttonType}({{",
+	"    theme:'{theme}',",
+	"    width:'{width}',",
+	"    height:'{height}',",
+	"{if buttonType<>'ToggleButton' and buttonType<>'LinkButton' and roundedCorners<>''}    roundedCorners:s,{/if}",
+	"{if buttonType=='repeatbutton'}    delay:{delay},{/if}",
+	"    disabled:{disabled} }});",
+	"  NSB.addProperties({id});",
+    "{if ChangeForm<>''}  {id}.onclick=function(){{ChangeForm({ChangeForm})}};{/if}"
+	]
+
+}

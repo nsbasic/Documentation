@@ -1,0 +1,49 @@
+{ 
+"_type": "Video", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/video.png", 
+"_shorthelp": "<a href='{_docurl}'>Video</a> displays video clips. Format should be H.264+AAC+MP4.", 
+"_category": ["All", "Multimedia"],
+"_requiredfiles": ["{src}"],
+"_displayname": "Video",
+"_longhelp": "longhelp",
+
+"width": 100, 
+"height": 66, 
+
+"src": "", 
+"_src": { 
+    "desc": "Filename of Video. Can be local file or URL.", 
+    "type": "file" 
+    },
+    
+"autoplay": "", 
+"_autoplay": { 
+    "desc": "Start playing when ready?", 
+    "type": "enum",
+    "keys":   ["","autoplay"], 
+    "values": ["","autoplay"]
+     }, 
+     
+"controls": "", 
+"_controls": { 
+    "desc": "Show Player Controls?", 
+    "type": "enum",
+    "keys":   ["","controls"], 
+    "values": ["","controls"]
+     }, 
+     
+"loop": "", 
+"_loop": { 
+    "desc": "Play sound continuously?", 
+    "type": "enum",
+    "keys":   ["","loop"], 
+    "values": ["","loop"]
+     }, 
+
+
+"_htmltemplate": "  \"<video id='{id}' style='{hidden}{style!j}' class='{class}' src='{src}'  {autoplay} {controls} {loop}></video>\",",
+
+"_jstemplate": "  NSB.addProperties({id});"
+}

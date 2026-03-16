@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Communicating_with_a_Server by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Communicating with a Server - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXVkhbtyfqHuHoVfLcnjIAAAAAM","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Communicating_with_a_Server","wgTitle":"Communicating with a Server","wgCurRevisionId":7574,"wgRevisionId":7574,"wgArticleId":518,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Communicating_with_a_Server","wgRelevantArticleId":518,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Communicating_with_a_Server rootpage-Communicating_with_a_Server skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Communicating with a Server</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Purpose"><span class="tocnumber">1</span> <span class="toctext">Purpose</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Description_of_the_Program"><span class="tocnumber">1.1</span> <span class="toctext">Description of the Program</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Program_Development"><span class="tocnumber">2</span> <span class="toctext">Program Development</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Start_by_creating_a_new_project"><span class="tocnumber">2.1</span> <span class="toctext">Start by creating a new project</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#The_Send_Button"><span class="tocnumber">2.2</span> <span class="toctext">The Send Button</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#The_Server_Side"><span class="tocnumber">2.3</span> <span class="toctext">The Server Side</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Back_to_our_App"><span class="tocnumber">2.4</span> <span class="toctext">Back to our App</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Purpose">Purpose</h2></div>
+<p>The purpose of this tutorial is to demonstrate sending data to a server, and then receiving information in return. This is useful for a variety of functions: verifying an username and password, updating information in a database on the server or requesting information from the server.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Description_of_the_Program">Description of the Program</h3></div>
+<p>The program to be developed will display a textarea. When the Send Data button is clicked, the information in the textarea is sent to the server. The server then replies and the program puts the information in the reply into the results area.
+</p><p>This tutorial assumes the user has already worked through the earlier tutorials and is familiar with how to use the IDE, create controls and deploy complete apps. It also assumes the user has access to a server which can execute PHP scripts. (The AppStudio Server does not support PHP.)
+</p><p>The technique used is Ajax. For much more information on Ajax, read <a href="Ajax_made_Simple.html" title="Ajax made Simple">Ajax made Simple</a>.
+</p><p>The program this tutorial produces is available in Samples Folder 7/Ajax and ReadFile, which comes with App Studio. It is called Ajax.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Program_Development">Program Development</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="Start_by_creating_a_new_project">Start by creating a new project</h3></div>
+<p>Start App Studio from the Start menu.
+At the initial screen select New Project dialog box, with the following settings:
+</p>
+<ul><li>Form factor should be iPhone/iPad/Nexus</li>
+<li>Name is Ajax.nsx</li>
+<li>Language is BASIC</li>
+<li>Create a form that looks like this:</li></ul>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajax1.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/6/6f/Ajax1.png" decoding="async" width="329" height="468" class="mw-file-element" /></a></span>
+</p><p>The two TextAreas have their id set to txtSend and txtResponse. The Send Data button should have the id of btnSendData.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="The_Send_Button">The Send Button</h3></div>
+<p>Open the code window and add this code:
+</p>
+<pre>Dim req
+
+Function btnSendData_onclick()
+  req=Ajax("https://www.nsbasic.com/i/Ajax/ajax.php/?myText=" + txtSend.value, done) 
+End Function 
+
+Function done()
+  If req.status = 200 Then 'success
+    txtResponse.value=req.responseText
+  Else 'failure
+    msg = "Error: Status = " &amp; req.status
+    If TypeName(req.statusText)="string" Then msg = msg &amp; " " &amp; req.statusText
+    If TypeName(req.err)="string" Then msg = msg &amp; " " &amp; req.error
+    MsgBox msg
+  End If
+End Function
+</pre>
+<p>The Ajax() function sends the text to ajax.php, a program running on the server. When the Ajax call completes, the function 'done' is called.
+</p><p>The text following the question mark in the Ajax function is called a Query String. The maximum size is quite high - people have tested sending as many as 80,000 characters.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="The_Server_Side">The Server Side</h3></div>
+<p>On the server side, ajax.php waits for messages from client apps. There are a number of other programming languages and techniques for doing this. Others include ASP and CGI.
+</p><p>Let's create our own small PHP script. Use a text editor to create a small file in your project folder called ajax.php, with the following contents:
+</p>
+<pre>&lt;?php
+ // Get the data from the client. 
+ $myText = $_GET['myText'];
+ // Send back the text, reversed
+ echo "Data received from Device (reversed): " . strrev($myText); 
+?&gt;
+</pre>
+<p>From the Finder, drag the file into the Project Explorer. It should look like this:
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajax1a.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/9/95/Ajax1a.png" decoding="async" width="776" height="373" class="mw-file-element" /></a></span><br />
+</p><p>The first line of code in this script reads a value from the query string. We named the value of txtSend 'myText' in the query string, so that value is put into a variable.
+</p><p>The second line echoes the contents of myText back to our app, but reversed. It will be put into the req object which we DIMmed.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Back_to_our_App">Back to our App</h3></div>
+<p>The final line of the server side script sends the results back to our app and calls the done() function. The results are in req.responseText.
+</p><p>That's it. We can now test it. Note that we have to test using a deployed version of the app. For security reasons, only PHP scripts which are on the same server as your app can be called. (The AppStudio Server does not support PHP, so you will need to test this on your own server.)
+</p><p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Ajax2.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/0/09/Ajax2.png" decoding="async" width="320" height="460" class="mw-file-element" /></a></span>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124163609
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.025 seconds
+Real time usage: 0.041 seconds
+Preprocessor visited node count: 34/1000000
+Revision size: 3857/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 675/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:518:|#|:idhash:canonical and timestamp 20260124163609 and revision id 7574. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;oldid=7574">https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;oldid=7574</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Communicating+with+a+Server" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Communicating+with+a+Server" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Communicating_with_a_Server.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Communicating_with_a_Server&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Communicating_with_a_Server.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Communicating_with_a_Server" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Communicating_with_a_Server" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;oldid=7574" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Communicating_with_a_Server&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 27 August 2015, at 08:51.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":256,"wgPageParseReport":{"limitreport":{"cputime":"0.025","walltime":"0.041","ppvisitednodes":{"value":34,"limit":1000000},"revisionsize":{"value":3857,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":675,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124163609","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260125003205 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Communicating_with_a_Server by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

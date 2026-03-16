@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 25, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 344, 
+  "value": "Convert dot to a Base64 image string", 
+  "width": 273, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

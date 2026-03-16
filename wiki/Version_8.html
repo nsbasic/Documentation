@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Version_8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:05:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Version 8 - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXWHZj6-nrJlbNOZ6YvKegAAAAc","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Version_8","wgTitle":"Version 8","wgCurRevisionId":11379,"wgRevisionId":11379,"wgArticleId":1392,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Version_8","wgRelevantArticleId":1392,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Version_8 rootpage-Version_8 skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Version 8</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Major_New_Features"><span class="tocnumber">1</span> <span class="toctext">Major New Features</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Upgrading"><span class="tocnumber">2</span> <span class="toctext">Upgrading</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Version_8.5.8.2"><span class="tocnumber">3</span> <span class="toctext">Version 8.5.8.2</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Version_8.5.8.0"><span class="tocnumber">4</span> <span class="toctext">Version 8.5.8.0</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Version_8.5.7.0"><span class="tocnumber">5</span> <span class="toctext">Version 8.5.7.0</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Version_8.5.6.0"><span class="tocnumber">6</span> <span class="toctext">Version 8.5.6.0</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Version_8.5.5.0"><span class="tocnumber">7</span> <span class="toctext">Version 8.5.5.0</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Version_8.5.4.0"><span class="tocnumber">8</span> <span class="toctext">Version 8.5.4.0</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Version_8.5.3.0"><span class="tocnumber">9</span> <span class="toctext">Version 8.5.3.0</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Version_8.5.2.0"><span class="tocnumber">10</span> <span class="toctext">Version 8.5.2.0</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Version_8.5.1.0"><span class="tocnumber">11</span> <span class="toctext">Version 8.5.1.0</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Version_8.5.0.0"><span class="tocnumber">12</span> <span class="toctext">Version 8.5.0.0</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Version_8.4.2.0"><span class="tocnumber">13</span> <span class="toctext">Version 8.4.2.0</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Version_8.4.1.5"><span class="tocnumber">14</span> <span class="toctext">Version 8.4.1.5</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Version_8.4.1.0"><span class="tocnumber">15</span> <span class="toctext">Version 8.4.1.0</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Version_8.4.0.0"><span class="tocnumber">16</span> <span class="toctext">Version 8.4.0.0</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Version_8.3.0.1"><span class="tocnumber">17</span> <span class="toctext">Version 8.3.0.1</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#Version_8.3.0.0"><span class="tocnumber">18</span> <span class="toctext">Version 8.3.0.0</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Version_8.2.2.0"><span class="tocnumber">19</span> <span class="toctext">Version 8.2.2.0</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Version_8.2.1.0"><span class="tocnumber">20</span> <span class="toctext">Version 8.2.1.0</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Version_8.2.0.0"><span class="tocnumber">21</span> <span class="toctext">Version 8.2.0.0</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#Version_8.1.0.6"><span class="tocnumber">22</span> <span class="toctext">Version 8.1.0.6</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Version_8.1.0.5"><span class="tocnumber">23</span> <span class="toctext">Version 8.1.0.5</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#Version_8.1.0.4"><span class="tocnumber">24</span> <span class="toctext">Version 8.1.0.4</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Version_8.1.0.3"><span class="tocnumber">25</span> <span class="toctext">Version 8.1.0.3</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#Version_8.1.0.2"><span class="tocnumber">26</span> <span class="toctext">Version 8.1.0.2</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#Version_8.1.0.1"><span class="tocnumber">27</span> <span class="toctext">Version 8.1.0.1</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#Version_8.1.0"><span class="tocnumber">28</span> <span class="toctext">Version 8.1.0</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#Version_8.0.6"><span class="tocnumber">29</span> <span class="toctext">Version 8.0.6</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#Version_8.0.5"><span class="tocnumber">30</span> <span class="toctext">Version 8.0.5</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#Version_8.0.4"><span class="tocnumber">31</span> <span class="toctext">Version 8.0.4</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#Version_8.0.3"><span class="tocnumber">32</span> <span class="toctext">Version 8.0.3</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#Version_8.0.2"><span class="tocnumber">33</span> <span class="toctext">Version 8.0.2</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#Version_8.0.1"><span class="tocnumber">34</span> <span class="toctext">Version 8.0.1</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#Version_8.0.0"><span class="tocnumber">35</span> <span class="toctext">Version 8.0.0</span></a>
+<ul>
+<li class="toclevel-2 tocsection-36"><a href="#IDE"><span class="tocnumber">35.1</span> <span class="toctext">IDE</span></a>
+<ul>
+<li class="toclevel-3 tocsection-37"><a href="#General"><span class="tocnumber">35.1.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Code_Window"><span class="tocnumber">35.1.2</span> <span class="toctext">Code Window</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Design_Screen"><span class="tocnumber">35.1.3</span> <span class="toctext">Design Screen</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Preferences"><span class="tocnumber">35.1.4</span> <span class="toctext">Preferences</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Project_Explorer"><span class="tocnumber">35.1.5</span> <span class="toctext">Project Explorer</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#Project_Properties"><span class="tocnumber">35.1.6</span> <span class="toctext">Project Properties</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Status_Bar"><span class="tocnumber">35.1.7</span> <span class="toctext">Status Bar</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-44"><a href="#Runtime"><span class="tocnumber">35.2</span> <span class="toctext">Runtime</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="#Deploy_Methods"><span class="tocnumber">35.3</span> <span class="toctext">Deploy Methods</span></a>
+<ul>
+<li class="toclevel-3 tocsection-46"><a href="#Electron"><span class="tocnumber">35.3.1</span> <span class="toctext">Electron</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#PhoneGap"><span class="tocnumber">35.3.2</span> <span class="toctext">PhoneGap</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#PWA"><span class="tocnumber">35.3.3</span> <span class="toctext">PWA</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-49"><a href="#Frameworks"><span class="tocnumber">35.4</span> <span class="toctext">Frameworks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-50"><a href="#AppStudio"><span class="tocnumber">35.4.1</span> <span class="toctext">AppStudio</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Bootstrap_4"><span class="tocnumber">35.4.2</span> <span class="toctext">Bootstrap 4</span></a></li>
+<li class="toclevel-3 tocsection-52"><a href="#Bootstrap_3_(Obsolete)"><span class="tocnumber">35.4.3</span> <span class="toctext">Bootstrap 3 (Obsolete)</span></a></li>
+<li class="toclevel-3 tocsection-53"><a href="#Common"><span class="tocnumber">35.4.4</span> <span class="toctext">Common</span></a></li>
+<li class="toclevel-3 tocsection-54"><a href="#jQuery_Mobile_(Obsolete)"><span class="tocnumber">35.4.5</span> <span class="toctext">jQuery Mobile (Obsolete)</span></a></li>
+<li class="toclevel-3 tocsection-55"><a href="#jqWidgets"><span class="tocnumber">35.4.6</span> <span class="toctext">jqWidgets</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-56"><a href="#BASIC"><span class="tocnumber">35.5</span> <span class="toctext">BASIC</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="#Samples"><span class="tocnumber">35.6</span> <span class="toctext">Samples</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="#Documentation"><span class="tocnumber">35.7</span> <span class="toctext">Documentation</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="#Internals"><span class="tocnumber">35.8</span> <span class="toctext">Internals</span></a></li>
+<li class="toclevel-2 tocsection-60"><a href="#Breaking_Changes"><span class="tocnumber">35.9</span> <span class="toctext">Breaking Changes</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Major_New_Features">Major New Features</h2></div>
+<ol><li>PhoneGap: Auto Generate images, streamlined operation</li>
+<li>Electron: Streamlined operation - much easier to use!</li>
+<li>Hot Reload: Restarting in browser doesn't create new tab</li>
+<li>Python 3: AppStudio used to be in Python 2. Now we're up to date.</li>
+<li>wxPython 4: The UI AppStudio uses is now also up to to date.</li>
+<li>Windows 64 is now required. (MacOS already required 64 bit)</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Upgrading">Upgrading</h2></div>
+<p>If you have AppStudio 7 or older and don't have a subscription, you will need to get the upgrade to use these new features. You can <a rel="nofollow" class="external text" href="https://www.nsbasic.com/i/Subscription/">order it here</a>.
+</p><p>If you like would to try it first, download from the 'Check for Updates' screen in the Help menu. You'll get a demo copy.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.8.2">Version 8.5.8.2</h2></div>
+<ol><li>VoltBuilder: Use altools to upload App Store Connect (iOS)</li>
+<li>VoltBuilder: Do not upload App Store Connect info for Debug jobs</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.8.0">Version 8.5.8.0</h2></div>
+<ol><li>Bootstrap 4: Fix padding on Label</li>
+<li>Bootstrap 4: Modals - fix bug with 2 modals</li>
+<li>Design Screen: Improve selecting controls on newer versions of MacOS.</li>
+<li>Design Screen: Improve stability by fixing internal error</li>
+<li>Licensing: Use new ALS licensing system</li>
+<li>Samples: Fix how video source works</li>
+<li>Samples: Remove whitelist plugin</li>
+<li>Samples: Update Camera Sample permissions for VoltBuilder</li>
+<li>SQLImport: Fix initialization of SQL on VoltBuilder jobs</li>
+<li>SQLImport: Fix timing issue when importing</li>
+<li>VoltBuilder: Add flag to build for Xcode 13</li>
+<li>VoltBuilder: Add support for Android 12</li>
+<li>VoltBuilder: Add verbose property</li>
+<li>Copyright updated to 2023</li>
+<li>Libraries: Many updates to dependent libraries.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.7.0">Version 8.5.7.0</h2></div>
+<ol><li>Bootstrap: update <a href="Slider_(Bootstrap).html" title="Slider (Bootstrap)">Slider</a> to 11.0.2</li>
+<li>Electron: Fix Slider</li>
+<li><a href="Obfuscation.html" title="Obfuscation">Obfuscation</a>: fix missing parameter and improve docs</li>
+<li>Translater: fix bug in <a href="Fix.html" title="Fix">Fix</a>()</li>
+<li>EULA: Fix agreed <a href="EULA.html" title="EULA">EULA</a> not being recognized</li>
+<li>Samples: Fix Delete in IndexedDB sample.</li>
+<li>Samples: Overhaul IndexedDB sample.</li>
+<li>Installer: fix problem in Windows signing</li>
+<li>Installer: Update Windows certificate</li>
+<li>IDE: Change copyright to 2022</li>
+<li>Libraries: Many updates to dependent libraries.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.6.0">Version 8.5.6.0</h2></div>
+<ol><li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: Fix problems caused by updated libraries</li>
+<li><a href="EULA.html" title="EULA">EULA</a>: Encode newlines properly</li>
+<li><a href="QRCode.html" title="QRCode">QRCode</a>: Update library to 1.5.0</li>
+<li>QRCode: add new options argument to setValue</li>
+<li>QRCode: add new options property in Design Screen</li>
+<li>Libraries: Update to current versions</li>
+<li>Windows 11: Now fully supported</li>
+<li>SQLite: Fix bug in empty tables test (Windows only)</li>
+<li>Bootstrap: Update to 4.6.1</li>
+<li>Libraries: Update to current versions</li>
+<li>VoltBuilder: fix 'Cannot find googlePlayKey' message</li>
+<li>Electron: Fix 'isElectron not defined' by adding contextIsolation: false, enableRemoteModule: true to webPreferences.</li>
+<li>Electron: Update electron-build to 22.13.1</li>
+<li>Node: Update to 16.13.1</li>
+<li>IDE: Fix drag and crash when moving Help panel.</li>
+<li>IDE: Fix link to VoltSigner on Run menu.</li>
+<li>Navs: Navs.value returns the correct value.</li>
+<li>Code Window: Lint button fixed.</li>
+<li>Update copyright to 2022.</li>
+<li>Eslint: Update to use latest version and API</li>
+<li>MacOS Installer: simplify notarization.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.5.0">Version 8.5.5.0</h2></div>
+<ol><li><a href="Properties_Window.html#Project_Properties" title="Properties Window">Project Properties</a>: New androidPackageType to build .aab files</li>
+<li>BS4: Fix problem with icons and i18n.</li>
+<li>Installer: PyInstaller updated to 4.5</li>
+<li>Libraries: lots of updates!</li>
+<li>Runtime: Don't output anything if no fontfamily on body.</li>
+<li>Runtime: Javascript ValueOf was calling a BASIC function.</li>
+<li>Runtime: remove redundant line in asStyle.css</li>
+<li>Runtime: remove some unneeded debugging</li>
+<li>Samples: update Barcode sample.(Thanks, LotsOfCows!)</li>
+<li><a href="Sqlimport.html" class="mw-redirect" title="Sqlimport">SQLImport</a>: fix NSB.overwriteNever when using SQLite plugin.</li>
+<li>SQLite: fix error in error trapping function.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.4.0">Version 8.5.4.0</h2></div>
+<ol><li><a href="Input_(Bootstrap).html" title="Input (Bootstrap)">BS4 Input</a>: Add new Datetime-local input type.</li>
+<li><a href="Code_Window.html" title="Code Window">Code Window</a>: fix 'async function' in function list</li>
+<li>Code Window: fix error in building function list</li>
+<li><a href="Cordova.html" title="Cordova">Cordova</a>: Improve some descriptions.</li>
+<li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: Start app issue on Mac OS fixed.</li>
+<li><a href="Deploy_Bar.html" title="Deploy Bar">Local Deploy</a>: Skip the confirm message.</li>
+<li>MacOS: Notarization now works - New installs should be much more smooth.</li>
+<li>Node: Updated to 14.16.1</li>
+<li><a href="Preferences.html" title="Preferences">Preferences - VoltServer</a>: Default email to registered email.</li>
+<li>Preferences - VoltServer: Disable unusable buttons.</li>
+<li>Preferences: Create new VoltServer account goes to correct page</li>
+<li>Preferences: Put VoltBuilder and VoltServer tabs in order.</li>
+<li>Runtime: Import large SQLite databases fixed on iOS web apps.</li>
+<li>Samples: Fix TwoForms sample</li>
+<li><a href="Volt_for_appstudio.html" title="Volt for appstudio">VoltServer</a> - clear voltID and voltDomain when loading samples.</li>
+<li>VoltServer - Dashboard: Update to Bootstrap 4.</li>
+<li>VoltServer: Default email to registered email if not set up in Prefs.</li>
+<li>VoltServer: Erase account information when license is deactivated.</li>
+<li>VoltServer: Give a better message if account not set up properly.</li>
+<li>VoltServer: Pass email address to Forgot Password dialog.</li>
+<li>Windows: Window 10 is now required. (Windows 7 is EOL by Microsoft)</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.3.0">Version 8.5.3.0</h2></div>
+<ol><li>IDE: Python updated to 3.9</li>
+<li>IDE: Translation files updated.</li>
+<li>IDE: Add a ctrl+p shortcut to open older projects.</li>
+<li>IDE: Change "Volt Server" to "VoltServer"</li>
+<li>Design Screen: fix jqWidgets controls not appearing, caused by IE11 ECMAScript incompatibilities. (Windows)</li>
+<li>Design Screen: Drag handles disappeared sometimes (MacOS only)</li>
+<li>Installer: Sign some additional libraries (MacOS), update for Python 9</li>
+<li>Runtime: Body should inherit color and background-color (Dark mode)</li>
+<li>Translation: Clean up some text strings for better translation.</li>
+<li>Node: Update to 14.16.0.</li></ol>
+<p><b>Breaking change</b>: Windows 7 is no longer supported. Microsoft dropped support for Windows 7 a while ago. Now, the libraries we use to build AppStudio are dropping support for Windows 7.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.2.0">Version 8.5.2.0</h2></div>
+<ol><li>SQLite: Does not execute <a href="SqlImport-2.html" title="SqlImport">SqlImport</a> until initialization is complete.</li>
+<li>SQLite: If a Cordova SQLite plugin is specified in config.xml, it will override the native WebSQL. (possible breaking change!)</li>
+<li>VoltServer: Deploy without an account disabled in demo.</li>
+<li>VoltServer: Volt and Volt server are now called VoltServer</li>
+<li>Demo: Period shortened to 10 days due to abuse.</li>
+<li>IDE: Node updated to version 14.16.</li></ol>
+<p><b>Breaking change</b>: Native apps now use the SQLite plugin if specified in config.xml. If you used the native WebSQL (built into the browser) and switch to using the SQLite plugin, you'll need to plan to export your SQLite data from the native WebSQL and import it to the new plugin - the data will not carry over automatically. The <a href="SqlExport-2.html" title="SqlExport">SQLExport</a> and <a href="SqlImport-2.html" title="SqlImport">SqlImport</a> functions may help you.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.1.0">Version 8.5.1.0</h2></div>
+<ol><li>Browser Arrows: Navigo changed to 7.1.3. Seems to clear up issues.</li>
+<li>Installer: Workaround for bug in underlying strptime module which broke About.</li>
+<li>Sample: Get rid of more PhoneGap references.</li>
+<li>VoltBuilder: fix a problem when using Demo interface (8.5.1.1)</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.5.0.0">Version 8.5.0.0</h2></div>
+<ol><li>IDE: wxPython updated to 4.1.1. Uses wxWidgets 3.1. Tons of fixes and minor improvements, and it just looks better.</li>
+<li>BS4: <a rel="nofollow" class="external text" href="https://blog.getbootstrap.com/">Updated to 4.6</a></li>
+<li>BS4: <a rel="nofollow" class="external text" href="https://bootswatch.com/">Bootswatch</a> themes updated to 4.6</li>
+<li>BS4: <a href="Input_(Bootstrap).html" title="Input (Bootstrap)">Input</a> password now has option to toggle plain text on or off.</li>
+<li>BS4: <a href="Navs_(Bootstrap).html" title="Navs (Bootstrap)">Navs</a> - fix .clear() and .addItem() functions</li>
+<li>BS4: <a href="Slider_(Bootstrap).html" title="Slider (Bootstrap)">Slider</a> - Add .hide() and .show() functions</li>
+<li>Code Window: Improve function list to catch more JavaScript function formats.</li>
+<li>Code Window: Improved function name find.</li>
+<li>IDE: MacOS: control keys for copy and paste work in dialog windows.</li>
+<li>Demo: Do not allow Cordova Build.</li>
+<li>Deploy: Allow wasm files to be deployed.</li>
+<li>Deploy: Some redundant code eliminated - may be quicker</li>
+<li>Design Screen: Change "Add Component" to "Add Control".</li>
+<li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: Spaces are not allowed in Title</li>
+<li>Electron: Updated to 9.4.0. (electron-builder and npm also updated)</li>
+<li>IDE: Copyright is now 2021</li>
+<li>IDE: MacOS: control keys for copy and paste work in dialog windows.</li>
+<li>Installer: Windows signing certificate renewed.</li>
+<li>Navigo: Updated to 8.4.3. Used by BrowserArrows (see sample)</li>
+<li><a href="Properties_and_Methods.html" title="Properties and Methods">Project Properties</a>: Remove androidDname - replaced by <a rel="nofollow" class="external text" href="https://volt.build/certificate/">VoltSigner</a></li>
+<li><a href="Properties_and_Methods.html" title="Properties and Methods">Project Properties</a>: Signing filenames default to <a rel="nofollow" class="external text" href="https://volt.build/certificate/">VoltSigner's</a> values.</li>
+<li>Run Menu: Add "Get Signing Certificate with VoltSigner" .</li>
+<li>Run Menu: Change "Volt" to "Volt Server".</li>
+<li>Samples: Change PhoneGap references to VoltBuilder.</li>
+<li>Samples: Volt Services is now called VoltServer.</li>
+<li>Samples: SQLSample1 updated.</li>
+<li>Samples: Some samples would not open due to a PWA_manifest problem.</li>
+<li>SQLite: <a href="SqlOpenDatabase-2.html" title="SqlOpenDatabase">SqlOpenDatabase</a> now takes only 1 argument.</li>
+<li>SQLite: When running as a native app, the Cordova library is used instead of the browser's.</li>
+<li>VoltBuilder: Default key names to be same as <a rel="nofollow" class="external text" href="https://volt.build/certificate/">VoltSigner</a> defaults.</li>
+<li>VoltBuilder: Remove reference to xmlns:gap in default config.xml</li>
+<li>VoltBuilder/Cordova: Main() is now called on <a rel="nofollow" class="external text" href="https://cordova.apache.org/docs/en/9.x/cordova/events/events.html#deviceready">deviceready event</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://volt.build/certificate/">VoltSigner</a>: added to Run menu.</li></ol>
+<p><b>Breaking change</b>: When running as a native app, the Cordova SQLite library is used instead of the browser's. That means the database data will be saved in the file system and not in the browser's sandbox. Please check where your app is saving the data: you may have to consider a migration strategy if you are affected. Please contact support@appstudio.dev if you need help. The need for this changed comes from Safari changing support for WebSQL. This does NOT affect web apps.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.4.2.0">Version 8.4.2.0</h2></div>
+<ol><li><a rel="nofollow" class="external text" href="https://volt.build/certificate/">Certificate Wizard</a>: Make Android and iOS certificates easily.</li>
+<li><a href="Input_(Bootstrap).html" title="Input (Bootstrap)">BootStrap Input</a>: minlength added as a property.</li>
+<li><a href="Grid.html" title="Grid">Common Grid</a>: addCols() wasn't setting cell ids properly.</li>
+<li>Installer: Updated to the latest pyInstaller</li>
+<li><a href="Obfuscation.html" title="Obfuscation">Obfuscator</a>: Updated to the latest version. stringArrayEncoding is now an array.</li>
+<li>Samples: Update button on JavaScript NorthWind sample fixed.</li>
+<li>Windows Installer: Fixed a problem with the certificate</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.4.1.5">Version 8.4.1.5</h2></div>
+<ol><li>Cordova: Now outputs resources properly.</li>
+<li>Deploy: Improve the deploy confirmation message.</li>
+<li>Deploy: Content Security Policy is now output for all deploys except desktop</li>
+<li><a href="NSB-6.html" title="NSB.MsgBox">MsgBox</a>: new option to put data url in custom button.</li>
+<li>Sample: MsgBox sample fixed - icon was not displaying properly.</li>
+<li>VoltBuilder: Account errors (like expired) are reported properly.</li>
+<li>Wiki: extensive updates, especially moving from PhoneGap to VoltBuilder</li>
+<li>Wiki: offline copy updated.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.4.1.0">Version 8.4.1.0</h2></div>
+<ol><li>VoltBuilder: Only generate images for platform being built.</li>
+<li>VoltBuilder: Add properties for <a rel="nofollow" class="external text" href="https://volt.build/docs/google_play/">upload to Google Play Store</a>.</li>
+<li>VoltBuilder: Add properties for <a rel="nofollow" class="external text" href="https://volt.build/docs/itunes/">upload to iTunes App Store</a>.</li>
+<li>VoltBuilder: Add prompt before submitting build.</li>
+<li>Deploy: Add confirm prompt to FTP/SFTP Deploy.</li>
+<li>Runtime: Defer execution of SQLImport until after load completes.</li>
+<li>Deploy: Content Security Policy is now output for all jobs.</li>
+<li>Project Properties: Content Security Policy moved from VoltBuilder to General.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.4.0.0">Version 8.4.0.0</h2></div>
+<ol><li>VoltBuilder now uploads to the Apple Store after building.</li>
+<li>Build using VoltBuilder now hooked into VoltBuilder billing.</li>
+<li>Preferences: VoltBuilder panel now accepts API Credentials.</li>
+<li>Preferences: Links changed to buttons to fix MacOS issue.</li>
+<li>About: New Deregister button removes serial number from copy.</li>
+<li>References to PhoneGap removed.</li>
+<li>BS4, BS3: Text alignment now works properly.</li>
+<li>Bootstrap: Updated to 4.5.3.</li>
+<li>DataTables: Updated to latest version (different modules).</li>
+<li>Libraries: Upgraded to Python 3.8.</li>
+<li>DropDMG: Updated to 3.6</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.3.0.1">Version 8.3.0.1</h2></div>
+<ol><li>VoltBuilder: token expiry extended to 1 hour.</li>
+<li>VoltBuilder Status: Now updates every 10 seconds.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.3.0.0">Version 8.3.0.0</h2></div>
+<ol><li>PhoneGap Build: All references removed. PhoneGap has been discontinued by Adobe.</li>
+<li>VoltBuilder has replaced PhoneGap Build in AppStudio.</li>
+<li>VoltBuilder: work files removed after upload</li>
+<li>VoltBuilder: name of downloaded file uses project name.</li>
+<li>VoltBuilder Status: Now works like PhoneGap Status used to.</li>
+<li>VoltBuilder: Proper token now sent on submit.</li>
+<li>VoltBuilder: Use VoltBuilder API when submitting jobs.</li>
+<li>VoltBuilder: recover gracefully from bad data in config.xml.</li>
+<li>jqWidgets: Set theme properly on jqxPhotoGallery.</li>
+<li>Samples: All PhoneGap samples now reference Cordova and have been renamed.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.2.2.0">Version 8.2.2.0</h2></div>
+<ol><li>Bootstrap: Updated to 4.5.2</li>
+<li>Bootstrap: add 'auto' option to Bootstrap position</li>
+<li>VoltBuilder: Timing out too quickly in some cases.</li>
+<li>VoltBuilder: improve error messages and logging</li>
+<li>VoltBuilder: make log downloadable after successful build.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.2.1.0">Version 8.2.1.0</h2></div>
+<ol><li>VoltBuilder: pass through email address</li>
+<li>VoltBuilder: Don't open VoltBuilder Status if already open.</li>
+<li>Bootstrap: Updated to 4.5.1</li>
+<li>Bootstrap Themes: Updates to 4.5.1</li>
+<li>DataTables: Updated all libraries to latest version.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.2.0.0">Version 8.2.0.0</h2></div>
+<ol><li>VoltBuilder: Improve interface - better information and reporting.</li>
+<li>PhoneGap: Move it down the menu (will be removed soon)</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.6">Version 8.1.0.6</h2></div>
+<ol><li>VoltBuilder: Fixed a problem with dates when uploading</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.5">Version 8.1.0.5</h2></div>
+<ol><li>VoltBuilder: Update interface - server interface was changed.</li>
+<li>Samples: Improve Adsense sample</li>
+<li>VoltBuilder: Improve message on build exception</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.4">Version 8.1.0.4</h2></div>
+<ol><li>VoltBuilder: display download info in a new window.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.3">Version 8.1.0.3</h2></div>
+<ol><li>VoltBuilder: clean up HTML on return</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.2">Version 8.1.0.2</h2></div>
+<ol><li>VoltBuilder: Android Alias had wrong edit type.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0.1">Version 8.1.0.1</h2></div>
+<ol><li>VoltBuilder: Fixed problem with androidDname</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.1.0">Version 8.1.0</h2></div>
+<ol><li>NEW: <a href="VoltBuilder.html" title="VoltBuilder">VoltBuilder</a> replacement for PhoneGap Build</li>
+<li>NEW: Automatic creation of Android keystores.</li>
+<li>BS4: Fix Navs.addItem()</li>
+<li>Icons and Splash Screen: generator updated.</li>
+<li>Internal: Updated to jQuery 3.5.1</li>
+<li>Internal: Updated to Node 12.16.3</li>
+<li>Internal: Updated to Python 3.8.2</li>
+<li>jqxValidator: Allow the id to be other than Validator1.</li>
+<li>Resources: Fix config.xml paths due to change in cordova-build</li>
+<li>Samples: Clean up PlaySound sample.</li>
+<li>Samples: VoltBuilder, Cordova and Electron will ask you to save to a working folder.</li>
+<li>Stripe: Don't throw an error if Stripe is offline.</li>
+<li>VoltBuilder: new Certificates folder in all projects.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.6">Version 8.0.6</h2></div>
+<ol><li><a href="PhoneGap_CLI.html" title="PhoneGap CLI">PhoneGap CLI</a> renamed <a href="Cordova.html" title="Cordova">Cordova</a></li>
+<li>Cordova: Completely renovated, simpler and easier to use.</li>
+<li>Cordova: Uses wxWebView (required by Apple)</li>
+<li>PhoneGap config.xml: Now uses wkWebView, as required by Apple.</li>
+<li>Project Properties: New Cordova Command property.</li>
+<li>Project Properties: PhoneGap section now named "PhoneGap and Cordova"</li>
+<li><a href="Modal_(Bootstrap).html" title="Modal (Bootstrap)">BS4 Modal</a>: Add ids to title, header, body and footer.</li>
+<li><a href="Label.html" title="Label">Common Controls: Label</a> - alignVertical with height=auto fixed.</li>
+<li>Controls: Add onfocusin event to list of events for all Input controls.</li>
+<li>Controls: Add oninput event to list of events for all Input controls.</li>
+<li><a href="Cordova.html" title="Cordova">Cordova</a>: Build using XCode 11 (required by Apple)</li>
+<li>Design Screen: Problem with rotation fixed.</li>
+<li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: ElectronMain now passes eslint.</li>
+<li>Electron: Give error message if icon not found.</li>
+<li>Electron: was getting default icon from wrong folder.</li>
+<li>Electron: New electronIcon property.</li>
+<li><a href="Form.html" title="Form">Forms</a>: Bounds properties now properly note how fullscreen is handled.</li>
+<li>Installer: Properties for AppStudio.exe now shows the version.</li>
+<li><a href="Progressive_Web_Apps.html" title="Progressive Web Apps">PWA</a>: Don't cache php files.</li>
+<li>PWA: Use default scope instead of explicit. Clears a Chrome warning message.</li>
+<li>Samples: Improved BS4 Modal sample. (Thanks, Gary!)</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.5">Version 8.0.5</h2></div>
+<ol><li><a href="Frameworks.html" title="Frameworks">BS3</a>: Change icon color to red, so it looks more obsolete.</li>
+<li><a href="Frameworks.html" title="Frameworks">BS4</a>: Update Sketchy theme.</li>
+<li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: Don't include PWA files.</li>
+<li>Electron: Fix formatting error in electronMain.js.</li>
+<li>Electron: Use main icon, not PhoneGap icon.</li>
+<li>Offline Help: fixed on Windows (was OK on MacOS)</li>
+<li><a href="Progressive_Web_Apps.html" title="Progressive Web Apps">PWA</a>: Allow multiple apps on the same server by checking id when clearing cache.</li>
+<li>Samples: Fix problems with Camera samples. (Thanks, bsommer!)</li>
+<li>Samples: Update all PhoneGap config.xml properties</li></ol>
+<p>To install on MacOS Catalina, you may need to right click on the .dmg file. Apple has just increased the security requirements for apps, and one of the libraries we (and millions of others) use has not been updated to this standard yet.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.4">Version 8.0.4</h2></div>
+<ol><li>BS4 Checkbox: Do not allow multiline strings for value property.</li>
+<li>BS4: Remove references to Bootstrap-theme.min.css</li>
+<li>BS4: Themes all updated.</li>
+<li>Design Screen: Do not allow designHeight/Width to be strings.</li>
+<li>Electron: Error on deploy fixed.</li>
+<li>Project Explorer: Do not append "copy" if not needed when cut/pasting controls.</li>
+<li>Project: manifest.json and package.json are pure JSON now.</li>
+<li>Samples: Camera sample is now in JavasScript.</li>
+<li>Samples: PhoneGap samples were trying to load unneeded files.</li>
+<li>Samples: Problem with PhoneGapCamera fixed. (Thanks, BSommer!)</li>
+<li>SQLite: Problem with deploying databases with app fixed.</li>
+<li>Translation: "Replace" on Find screen now appears in the proper language.</li>
+<li>Translation: Deutsch was adding an extra space to file names.</li>
+<li>Translation: German translations improved.</li>
+<li>Windows: Round icons now appear everywhere.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.3">Version 8.0.3</h2></div>
+<ol><li><a href="Progressive_Web_Apps.html" title="Progressive Web Apps">PWA</a>: 'disablePWA' is now called 'Make PWA?'</li>
+<li>PWA: Test new variable NSB.PWA if see if running as a PWA.</li>
+<li>PWA: If not running as a PWA, don't initialize PWA.</li>
+<li><a rel="nofollow" class="external text" href="https://blog.appstudio.dev/2018/10/as7-syntax-checking-for-javascript/">esLint</a>: Handles Windows line ending properly.</li>
+<li>Design Screen: Problem with deleting controls which have been cut and pasted fixed.</li>
+<li>Samples: Fix JavaScript version of Camera sample.</li>
+<li><a rel="nofollow" class="external text" href="https://bootswatch.com/">BS4 themes</a>: Fix spelling of Lumen.</li>
+<li>BS4 themes: Paper and Readable shouldn't have been listed.</li>
+<li>BS4 themes: Litera and Sketchy added.</li>
+<li>Libraries: Updates to Python, Node, obfuscater, eslint and more.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.2">Version 8.0.2</h2></div>
+<ol><li>Bootstrap 4: bootstrap-enhanced.css removed - obsolete.</li>
+<li>Controls: Emoji in text fields now display properly.</li>
+<li>Deploy: obsolete code for nsbapp.com removed.</li>
+<li>Images: Do not delete image file when control referencing it is deleted.</li>
+<li>Properties Grid: Duplicate ID numbers checked.</li>
+<li>Samples: Dark Mode sample improved.</li>
+<li>Windows: File Version fixed in Windows' Properties.</li>
+<li>Windows: Signing certificate updated.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.1">Version 8.0.1</h2></div>
+<ol><li><a href="About_Screen.html" title="About Screen">About</a>: Display serial number</li>
+<li><a href="Introduction_to_Bootstrap.html" title="Introduction to Bootstrap">Bootstrap</a>: Make themes easier to see and preview.</li>
+<li><a href="Using_Node_and_Electron_to_build_Desktop_Apps.html" title="Using Node and Electron to build Desktop Apps">Electron</a>: IScroll now loads properly.</li>
+<li><a href="Code_Window.html" title="Code Window">Code Window</a>: Remembers position when switching forms.</li>
+<li>IDE: Copyright dates changed to 2020.</li>
+<li>IDE: Fix error on startup - deploy_deploymode not initialized</li>
+<li>MacOS: Builds are notarized, so they should work with Catalina's security.</li>
+<li>MacOS: Minimum version is now 10.13 (High Sierra).</li>
+<li><a href="Progressive_Web_Apps.html" title="Progressive Web Apps">PWA</a>: Duplicate filenames are handled properly.</li>
+<li>PWA: Filenames with spaces work properly.</li>
+<li>PWA: Fix missing function in PWA.js</li>
+<li>PWA: new onPWAReload() event gets called when new version detected. Can be used to override default behaviour.</li>
+<li>Translations: Add full Chinese Traditional</li>
+<li>Updates: URLs are no longer hard coded.</li>
+<li><a href="Validation.html" title="Validation">Validation</a>: Library updated to 1.19.1.</li>
+<li>Wiki: Offline edition's Search feature fixed.</li></ol>
+<div class="mw-heading mw-heading2"><h2 id="Version_8.0.0">Version 8.0.0</h2></div>
+<p>Here's a list of what is new.
+</p><p>If you own a previous version of AppStudio and do not have a subscription, you need to buy the upgrade to use Version 8. You can do this from within the app or from our order form.
+</p><p>Until you have bought the upgrade, you can use AppStudio 8 in Demo mode for up to 30 days. Once you buy, your copy will convert automatically to the full version.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="IDE">IDE</h3></div>
+<div class="mw-heading mw-heading4"><h4 id="General">General</h4></div>
+<ol><li>AppStudio icon updated to a more modern circle style.</li>
+<li>Dark Mode Support: AppStudio can now make Dark Mode apps. AppStudio does not support Dark Mode fully itself: there are still parts of the underlying wxWidgets library that its developer's need to work on.</li>
+<li>Filename checking improved. Properly supports spaces, underbars, dashes and periods.</li>
+<li>Opens to HelloWorld the first time AppStudio is started.</li>
+<li>Check for updates on startup.</li>
+<li><a href="Menu_Options.html#Tools" title="Menu Options">Tools Menu</a>: New option to open project in GitHub website.</li>
+<li>Tools Menu: New option to open project in GitHub Desktop app.</li>
+<li>New version check on startup.</li>
+<li>Landscape enabled in the Layout option of the browser's Print dialog.</li>
+<li><a href="Menu_Options.html#Run" title="Menu Options">Run menu</a>: If Local Path is not defined, Deploy Local can now start the app after Deploy.</li>
+<li>Run menu: Deploy option now uses the deploy method selected in the picker.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Code_Window">Code Window</h4></div>
+<ol><li>More keyboard shortcuts now work on MacOS</li>
+<li><a href="Code_Window.html" title="Code Window">eslint</a> messages now show just the first 10,000 characters (fixes an error)</li>
+<li>Pasted code with smart quotes no longer crashes Code Window.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Design_Screen">Design Screen</h4></div>
+<ol><li>Hang which could be caused by adding and deleting a jQM control fixed.</li>
+<li>Right clicking on a control will refer to the control, not its parent.</li>
+<li>Changes to Project CSS are updated in the Design Screen right away.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Preferences">Preferences</h4></div>
+<ol><li>A download directory has been added to PhoneGap Preferences.</li>
+<li>Option to specify deploy location removed from Deploy Preferences.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Project_Explorer">Project Explorer</h4></div>
+<ol><li>Filenames with spaces can be dragged and dropped.</li>
+<li>Filenames now display their actual names.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Project_Properties">Project Properties</h4></div>
+<ol><li>Background: Set this to inherit to enable dark mode.</li>
+<li>PWA: New 'disable PWA' property turns off creation of PWA.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Status_Bar">Status Bar</h4></div>
+<ol><li>Updates more frequently</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Runtime">Runtime</h3></div>
+<ol><li>Async/Await support added.</li>
+<li>"apple-mobile-web-app-capable" no longer included in head.</li>
+<li>"jquery 3.3.1 SNYK-JS-JQUERY-174006 assets/www/nsb/library/jquery3.js" message from Google fixed.</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Deploy_Methods">Deploy Methods</h3></div>
+<div class="mw-heading mw-heading4"><h4 id="Electron">Electron</h4></div>
+<ol><li>'Make Desktop App using Electron' added to Run menu</li>
+<li>'Make Desktop App for Distribution' added to Run menu</li>
+<li>Electron build now uses <a rel="nofollow" class="external text" href="https://www.electron.build/">Electron-build</a> library.</li>
+<li>ElectronWeather sample updated to use electron-build.</li>
+<li>Electron Wiki article updated to show how to use electron-build manually.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="PhoneGap">PhoneGap</h4></div>
+<ol><li>New PhoneGap icon property added. Should be 1024x1024 png.</li>
+<li>New PhoneGap splash property added. Should be 2732x2732 png.</li>
+<li>If icon or splash are the wrong size or missing, a 'Missing source image' message is shown.</li>
+<li>All required icons are now automatically generated.</li>
+<li>All required splash screens are now automatically generated.</li>
+<li>Config.xml is automatically updated with the correct paths for icons and splashes.</li>
+<li>'Generate Icons for PhoneGap' removed from Tools menu.</li>
+<li>Errors in config.xml now throw an appropriate message.</li>
+<li>Build counter property added. Increments on each build and updates config.xml.</li>
+<li>CSP is now required for all PhoneGap apps (Google requirement).</li>
+<li>PhoneGap samples now give a warning when not run with PhoneGap.</li>
+<li>PhoneGap Preferences: Download directory added.</li>
+<li>Get Native Build Status: After PhoneGap app is generated, it is automatically downloaded.</li>
+<li>A reasonable filename is now generated for download PhoneGap apps.</li>
+<li>PWA code is no longer included in PhoneGap apps.</li>
+<li>QR Code is no longer displayed if no PhoneGap account.</li>
+<li>PhoneGap Status exits if new project loaded.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="PWA">PWA</h4></div>
+<ol><li>Errors in manifest.json now throw an appropriate message.</li>
+<li>Add project property to turn off PWA code.</li>
+<li>Better message given when starting PWA with file://. Must be started from a server.</li>
+<li>'scope' line added to manifest.json for iOS.</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Frameworks">Frameworks</h3></div>
+<p>Another year has passed without updates to jQuery Mobile. That's 5 years now. While the controls still work, for the most part, they throw error messages in Chrome for using insecure libraries. We recommend <a href="Converting_jQuery_Mobile_to_Bootstrap_4.html" title="Converting jQuery Mobile to Bootstrap 4">converting to Bootstrap 4</a>.
+</p><p>Bootstrap 3 has been replaced by Bootstrap 4. We recommend switching to the new version.
+</p>
+<div class="mw-heading mw-heading4"><h4 id="AppStudio">AppStudio</h4></div>
+<div class="mw-heading mw-heading4"><h4 id="Bootstrap_4">Bootstrap 4</h4></div>
+<ol><li>Listgroup: Using button style with appearances now works properly.</li>
+<li>Textarea: Use rows property, not height, to set size of control.</li>
+<li>Updated to Bootstrap 4.4.1</li>
+<li>Datatables controls updated to current version.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Bootstrap_3_(Obsolete)"><span id="Bootstrap_3_.28Obsolete.29"></span>Bootstrap 3 (Obsolete)</h4></div>
+<ol><li>Now marked as Obsolete in the Toolbox and Samples.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="Common">Common</h4></div>
+<ol><li>Forms: iScroll no longer used - use native scrolling instead.</li>
+<li>QRCode: setValue added to autocomplete in Code Window</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="jQuery_Mobile_(Obsolete)"><span id="jQuery_Mobile_.28Obsolete.29"></span>jQuery Mobile (Obsolete)</h4></div>
+<ol><li>Now marked as Obsolete in the Toolbox and Samples.</li></ol>
+<div class="mw-heading mw-heading4"><h4 id="jqWidgets">jqWidgets</h4></div>
+<div class="mw-heading mw-heading3"><h3 id="BASIC">BASIC</h3></div>
+<ol><li>Async and Await are translated properly.</li>
+<li>False syntax error on Catch fixed.</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Samples">Samples</h3></div>
+<ol><li>All: All samples now use Bootstrap 4 controls.</li>
+<li>New Async sample shows how to use Async/Await.</li>
+<li>New DarkMode samples shows how to initiate dark mode.</li>
+<li>PhoneGap samples now give a warning when not run with PhoneGap.</li>
+<li>GoogleMaps sample now tells user an API key is needed.</li>
+<li>jqxComboBox sample fixed.</li>
+<li>StockQuote sample dropped.</li>
+<li>Samples automatically have BASIC library included, in case they use those functions.</li>
+<li>jQuery Mobile removed from all samples.</li>
+<li>ScrollingForm sample now uses native scrolling, not iScroll.</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Documentation">Documentation</h3></div>
+<div class="mw-heading mw-heading3"><h3 id="Internals">Internals</h3></div>
+<ol><li>Python updated from 2.7 to 3.7.</li>
+<li>wxPython updated to Version 4 ("Phoenix")</li>
+<li>All references to hfunc.js removed (obsolete)</li>
+<li>jQuery updated to 3.4.1</li>
+<li>Customer and level set in .env (affects dev environment only)</li>
+<li>Code quality improved by linting</li>
+<li>Windows installer: now built by InnoSetup 6.0.3</li>
+<li>Windows installer: appearance updated</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Breaking_Changes">Breaking Changes</h3></div>
+<ol><li><a rel="nofollow" class="external text" href="https://support.microsoft.com/en-us/help/15056/windows-32-64-bit-faq">64-bit Windows</a> is required. 32-bit Windows will not work any more: some of the underlying libraries AppStudio uses are not available in 32 bit.</li>
+<li>AppStudio now installs to c:/Program Files, not c:/Program Files (x86). You may need to <a href="Solutions_to_Common_Problems.html#How_can_I_do_a_complete_uninstall.3F" title="Solutions to Common Problems">do a complete uninstall</a> for this to happen.</li>
+<li>MacOS 10.13 or later is required.</li>
+<li>The PhoneGap config.xml property needs to be updated. Fill in values for PhoneGap Icon (1024) and Splash (2732), then delete these lines from config.xml. AppStudio now generates this content automatically:<br />* Sections with &lt;icon lines<br />* Sections with &lt;splash lines<br />* &lt;gap:splash src='{splashscreen}'/&gt;<br />Or, start fresh by copying the config.xml sample in shown <a href="Submitting_to_the_iOS_App_Store.html#Config.xml" title="Submitting to the iOS App Store">here</a> and adding any other changes you have made. Don't forget to delete all the old icons and splashscreens which are no longer needed.</li></ol>
+<!-- 
+NewPP limit report
+Cached time: 20260124135446
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.046 seconds
+Real time usage: 0.100 seconds
+Preprocessor visited node count: 233/1000000
+Revision size: 27019/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:1392:|#|:idhash:canonical and timestamp 20260124135446 and revision id 11379. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Version_8&amp;oldid=11379">https://wiki.appstudio.dev/index.php?title=Version_8&amp;oldid=11379</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Version+8" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Version+8" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Version_8.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Version_8&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Version_8.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Version_8&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Version_8&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Version_8" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Version_8" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Version_8&amp;oldid=11379" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Version_8&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 5 July 2023, at 14:27.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":660,"wgPageParseReport":{"limitreport":{"cputime":"0.046","walltime":"0.100","ppvisitednodes":{"value":233,"limit":1000000},"revisionsize":{"value":27019,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124135446","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260125030055 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Version_8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:05:31 GMT -->
+</html>

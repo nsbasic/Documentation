@@ -1,0 +1,52 @@
+{ 
+"_type": "OffCanvas_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "bs5Badge", "bs5HeaderValueFooter", "children"], 
+"_palette": 9, 
+"_art": "images/offcanvas.png",
+"_wikipage": "OffCanvas (Bootstrap 5)",
+"_shorthelp": "<a href='{_docurl}'>OffCanvas</a> Brings up a side panel with information. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "OffCanvas",
+"_longhelp": "longhelp",
+
+"_icon": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"header": "OffCanvas",
+
+"position": "offcanvas-start", 
+"_position": { 
+    "acignore": true,
+    "desc": "Where should the OffCanvas be positioned?", 
+    "type": "enum", 
+    "keys": ["left", "right", "top", "bottom"], 
+    "values": ["offcanvas-start", "offcanvas-end", "offcanvas-top", "offcanvas-bottom"]
+}, 
+
+"_csstemplate": [
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "    \"<div id='{id}' class='offcanvas {position}' tabindex='-1' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "      \"<div id='{id}_header' class='offcanvas-header'>\",",
+    "{if header<>''}        \"<h4 id='{id}_title' class='offcanvas-title' data-i18n='{header!j}'>{header!j}{_bsBadge!i}</h4>\",{/if}",
+    "        \"<button type='button' class='btn-close' data-bs-dismiss='offcanvas'></button>\",",
+    "       \"</div>\",",
+    "{if value<>''}      \"<div id='{id}_body' class='offcanvas-body' data-i18n='{value!j}'><div>{value!j}</div>\",{/if}",
+    "         \"<div id={id}_addChild></div>\",",
+    "{if value<>''}      \"</div>\",{/if}",
+    "{if footer<>'' or _childhtml<>''}      \"<div id='{id}_footer' class='offcanvas-footer' data-i18n='{footer!j}'>{footer!j}\",{/if}",
+    "{if _childhtml<>''}        {_childhtml}{/if}",
+    "{if footer<>'' or _childhtml<>''}      \"</div>\",{/if}",
+    "   \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+		
+}

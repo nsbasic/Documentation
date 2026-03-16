@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/PictureBox by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:03:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>PictureBox - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXTycbvQUbH0_v1BpVz4zwAAADE","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"PictureBox","wgTitle":"PictureBox","wgCurRevisionId":10689,"wgRevisionId":10689,"wgArticleId":297,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Language Reference","Controls","General","Common"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"PictureBox","wgRelevantArticleId":297,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-PictureBox rootpage-PictureBox skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">PictureBox</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Resizing_at_Runtime"><span class="tocnumber">2</span> <span class="toctext">Resizing at Runtime</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Properties"><span class="tocnumber">3</span> <span class="toctext">Properties</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Runtime_Properties_and_Methods"><span class="tocnumber">4</span> <span class="toctext">Runtime Properties  and Methods</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Runtime_Context_Properties_and_Methods"><span class="tocnumber">5</span> <span class="toctext">Runtime Context Properties and Methods</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Events"><span class="tocnumber">6</span> <span class="toctext">Events</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Example_1:_Display_an_image,_drawing_and_text"><span class="tocnumber">7</span> <span class="toctext">Example 1: Display an image, drawing and text</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Output"><span class="tocnumber">8</span> <span class="toctext">Output</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Example_2:_Resize_an_image"><span class="tocnumber">9</span> <span class="toctext">Example 2: Resize an image</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Example_3:_Process_some_image_data"><span class="tocnumber">10</span> <span class="toctext">Example 3: Process some image data</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Example_4:_Draw_a_red_box"><span class="tocnumber">11</span> <span class="toctext">Example 4: Draw a red box</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Example_5:_Draw_an_image_using_drawImage_(addImage_is_easier!)"><span class="tocnumber">12</span> <span class="toctext">Example 5: Draw an image using drawImage (addImage is easier!)</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Other_Examples"><span class="tocnumber">13</span> <span class="toctext">Other Examples</span></a></li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading2"><h2 id="Description">Description</h2></div>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:PictureBoxOutput.jpg" class="mw-file-description"><img src="images/3/36/PictureBoxOutput.jpg" decoding="async" width="140" height="142" class="mw-file-element" /></a></span>
+</p><p>The PictureBox control allows the placement of text, images and drawings on the screen. It is a very powerful control, based on HTML5’s Canvas element. 
+</p><p>To add a PictureBox to your app, choose the PictureBox icon in the Toolbar, then position it on the Design Screen. Use the Property Editor to set the properties you need, then add functions to your code to respond to the events that come from the button.
+</p><p>Images should be in your project folder or a subfolder. Add the name of the file or folder to the manifest in Project Properties.
+</p><p>The PictureBox acts as a container for a runtime context which contains the actual images and drawing. Use getContext("2d") to get the context. Once you have the context, you can manipulate its contents using the Runtime Context Properties and Methods shown below.
+</p><p>If you change the content of a scrolling PictureBox, do Picturebox1.refresh() to reset the scrolling.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Resizing_at_Runtime">Resizing at Runtime</h2></div>
+<p>PictureBoxes do not work well when sized by percentages. 
+</p><p>PictureBoxes (which are based on the HTML5 Canvas element) are a bit 
+trickier than most other controls.  The main thing to keep in mind is 
+that a canvas has both dimensions (specified by CSS - that is, 
+PB.style.height), and a canvas size, specified by attributes on the 
+actual tag (that is PB.height - NOT PB.Height).
+</p><p>Keeping that in mind, the next thing to be aware of is that AppStudio 
+tries to do the right thing in most cases - so, when you set PB.Height, 
+it not only sets the dimensions of the canvas, but also sets the canvas 
+size as well.  So, setting PB.Height actually does two things:
+</p>
+<ol><li>Sets PB.style.height</li>
+<li>Sets PB.height</li></ol>
+<p>Now, problems start to happen when you use percentages.  If you read the 
+HTML5 spec, you'll see that the canvas size CANNOT be specified with 
+anything other than integers.  If you specify the canvas size as 66%, 
+for instance, the result is fairly implementation dependent, but most 
+browsers seem to interpret this as 66px.  So, when you set PB.Height = 
+"66%", what happens is that PB.style.height is set to 66%, but PB.height 
+is set to 66.  This is obviously a problem.
+</p><p>The solution is to set the dimensions and canvas size discretely.  
+Probably the easiest way to do this would be to size the PictureBox 
+using percentages in the IDE.  Then, on form load, run the following 
+code before drawing:
+</p>
+<pre>Dim actualHeight = PB.getBoundingClientRect().height
+Dim actualWidth = PB.getBoundingClientRect().width
+PB["height"] = actualHeight
+PB["width"] = actualWidth
+</pre>
+<p>You may notice that AppStudio was tricked by typing PB["height"] as 
+opposed to PB.height.  The syntax is actually equivalent, but since 
+we're trying to explicity set only the canvas size, we trick the IDE - 
+otherwise, it would think we were trying to use PB.Height and set both 
+dimensions.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Properties">Properties</h2></div>
+<p>Standard <a href="Properties_and_methods-2.html" class="mw-redirect" title="Properties and methods">properties</a> are supported. To change the height at runtime, change the value of height.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<td>refresh()</td>
+<td>Recalculates the size of the scrolling area after additions or deletions.
+</td></tr>
+<tr>
+<td>scroll_options</td>
+<td>This control makes use of iScroll. It has a number of options, including:
+<p>bounce: true/false. When the end of the scroll area is reached, should the image bounce?
+</p><p>zoom: true/false. Allow two finger zoom in gesture?
+</p><p>The full list of options is documented here: <a rel="nofollow" class="external free" href="https://github.com/cubiq/iscroll">https://github.com/cubiq/iscroll</a>
+</p>
+</td></tr>
+<tr>
+<td>scrolling</td>
+<td>Allow choices in the menu to scroll? On or off. (design time)
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Runtime_Properties_and_Methods">Runtime Properties  and Methods</h2></div>
+<table class="wikitable">
+
+<tbody><tr>
+<td>getContext("2d")</td>
+<td>Gets the drawing context. Returns the object that the PictureBox Context functions use. "2d" is currently the only valid argument.
+</td></tr>
+<tr>
+<td>refresh()</td>
+<td>Redraws the entire PictureBox. Required after resizing the box or scrolling.
+</td></tr>
+<tr>
+<td>toDataURL(type)</td>
+<td>Returns the current picturebox in a Base64 string image. If type is not specified, it is in PNG format. Type can also be "image/jpeg" or "image/gif".
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Runtime_Context_Properties_and_Methods">Runtime Context Properties and Methods</h2></div>
+<p>The following functions can be performed on the result of a getContext("2d") call.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<td>addColorStop(stop,color)</td>
+<td>Specifies the positions (0-1) and colors in a gradient object.
+</td></tr>
+<tr>
+<td>addImage(filename[,x,y])</td>
+<td>Draw an image and position x,y. Filename can also be a Base64 string containing an image.
+</td></tr>
+<tr>
+<td>addImage(filename,x,y,width,height)</td>
+<td>Position the image on the canvas, and specify width and height of the image.
+</td></tr>
+<tr>
+<td>addImage(filename,sx,sy,swidth,sheight,x,y,width,height)</td>
+<td>Clip the image and position the clipped part on the canvas
+</td></tr>
+<tr>
+<td>arc(x, y, radius, startAngle, endAngle, counterclockwise)</td>
+<td>Adds an arc to the current path using a radius and specified angles(in radians).
+</td></tr>
+<tr>
+<td>arcTo(x1, y1, x2, y2, radius)</td>
+<td>Adds an arc of a circle to the current sub path by using a radius and tangent points.
+</td></tr>
+<tr>
+<td>beginPath()</td>
+<td>Creates a new path in the canvas and sets the starting point to the coordinate (0,0).
+</td></tr>
+<tr>
+<td>bezierCurveTo(cpx1, cpy1, cpx2, cpy2, x, y)</td>
+<td>Adds a cubic Bezier's curve to the current sub path using two control points.
+</td></tr>
+<tr>
+<td>clearRect(x, y, width, height)</td>
+<td>Clears the specified rectangle region and makes it transparent.
+</td></tr>
+<tr>
+<td>clip()</td>
+<td>Clips the current rectangle of any shape and size from the original canvas.
+</td></tr>
+<tr>
+<td>closePath()</td>
+<td>Closes an open path and attempts to draw a straight line from the current point to starting point of the path. The use of closePath() is optional.
+</td></tr>
+<tr>
+<td>createImageData(width, height)</td>
+<td>Creates a new, blank ImageData object.
+</td></tr>
+<tr>
+<td>createLinearGradient(x1, y1, x2, y2)</td>
+<td>The createLinearGradient(x1, y1, x2, y2) method takes four arguments that represent the start point (x1, y1) and end point (x2, y2) of the gradient.
+</td></tr>
+<tr>
+<td>createPattern(image, repetitionStyle)</td>
+<td>Creates a pattern by repeating an image. repetitionStyle can be repeat, repeat-x, repeat-y, no-repeat.
+</td></tr>
+<tr>
+<td>createRadialGradient(x1, y1, radius1, x2, y2, radius2)</td>
+<td>Radially interprets colors between two circles.
+</td></tr>
+<tr>
+<td>drawImage(img,x,y)</td>
+<td>Draw an image and position x,y. Img must be an <a href="Image.html" title="Image">Image</a> object.
+</td></tr>
+<tr>
+<td>drawImage(img,x,y,width,height)</td>
+<td>Position the image on the canvas, and specify width and height of the image.
+</td></tr>
+<tr>
+<td>drawImage(img,sx,sy,swidth,sheight,x,y,width,height)</td>
+<td>Clip the image and position the clipped part on the canvas
+</td></tr>
+<tr>
+<td>fill()</td>
+<td>Closes the current path and paints the area within it.
+</td></tr>
+<tr>
+<td>fillRect(x, y, width, height)</td>
+<td>Draws a filled rectangle.
+</td></tr>
+<tr>
+<td>fillStyle</td>
+<td>gradient|pattern
+</td></tr>
+<tr>
+<td>fillText(text, x, y)</td>
+<td>Writes text using current settings of font, textAlign and textBaseline.
+</td></tr>
+<tr>
+<td>font</td>
+<td>The font to use for text. It is a string with three parts: "<i>style</i> <i>size</i> <i>fontname</i>". <i>style</i> can be normal, italic or bold. Example: "italic 40px Calibri"
+</td></tr>
+<tr>
+<td>getImageData(x,y,height,width)</td>
+<td>Return the image data for a portion of the image. Includes width, height, data array [rgba].
+</td></tr>
+<tr>
+<td>globalAlpha</td>
+<td>The transparency value. Must be a number between 0.0 (fully transparent) and 1.0 (no transparancy).
+</td></tr>
+<tr>
+<td>globalCompositeOperation(source-over, source-atop, source-in, source-out, destination-over, destination-atop, destination-in, destination-out, lighter, copy, xor )</td>
+<td>Sets or returns how a source (new) images are drawn onto a destination (existing) image.
+</td></tr>
+<tr>
+<td>isPointInPath(x,y)</td>
+<td>Returns true if the specified point is in the current path, otherwise false.
+</td></tr>
+<tr>
+<td>lineCap</td>
+<td>Sets style of end caps for a line. "butt", "round" or "square".
+</td></tr>
+<tr>
+<td>lineJoin</td>
+<td>Set style where two lines meet. "bevel", "round" or "mitre".
+</td></tr>
+<tr>
+<td>lineWidth</td>
+<td>The current line width, in pixels.
+</td></tr>
+<tr>
+<td>lineTo(x, y)</td>
+<td>Adds a line segment from the current point to the specified coordinate. The appearance of the line can be set by the following properties: <br />
+<p>fillStyle, strokeStyle, globalAlpha, lineWidth, lineCap, lineJoin, miterLimit, shadowOffsetX, shadowOffsetY, shadowBlur, shadowColor
+</p>
+</td></tr>
+<tr>
+<td>measureText(text)</td>
+<td>Returns a rectangle object with text's size.
+</td></tr>
+<tr>
+<td>miterLimit</td>
+<td>The miterLimit property sets or returns the maximum miter length for line ends.
+</td></tr>
+<tr>
+<td>moveTo(x, y)</td>
+<td>Moves the starting point to a new coordinate specified by x,y values.
+</td></tr>
+<tr>
+<td>putImageData(imgData, x, y, dirtyX, dirtyY, dirtyWidth, dirtyHeight)</td>
+<td>Puts the image data (from a specified ImageData object) back onto the canvas.
+</td></tr>
+<tr>
+<td>quadraticCurveTo(x, y, x1, y1)</td>
+<td>Adds a quadratic Bezier's curve to the current sub path.
+</td></tr>
+<tr>
+<td>rect(x, y, width, height)</td>
+<td>Adds a rectangle.
+</td></tr>
+<tr>
+<td>restore()</td>
+<td>Restores the state of the saved context space.
+</td></tr>
+<tr>
+<td>rotate(angle)</td>
+<td>Rotate the entire context on specified angle(in radians).
+</td></tr>
+<tr>
+<td>save()</td>
+<td>Save the state of the original context space so that you can restore later.
+</td></tr>
+<tr>
+<td>scale(x, y)</td>
+<td>Add the scaling transformation described by the arguments to the transformation matrix. The x argument represents the scale factor in the horizontal direction and the y argument represents the scale factor in the vertical direction. The factors are multiples.
+</td></tr>
+<tr>
+<td>setTransform(a,b,c,d,e,f)</td>
+<td>Transforms drawing. Scale horizontal, skew horizontal, skew vertical, scale vertical, move horizontal, move vertical.
+</td></tr>
+<tr>
+<td>stroke()</td>
+<td>Actually draws the path you have defined
+</td></tr>
+<tr>
+<td>strokeRect(x, y, width, height)</td>
+<td>Draws a rectangular outline.
+</td></tr>
+<tr>
+<td>strokeStyle</td>
+<td>color or gradient or pattern
+</td></tr>
+<tr>
+<td>strokeText(text, x, y, maxWidth)</td>
+<td>Draws text (with no fill) on the canvas.
+</td></tr>
+<tr>
+<td>textAlign</td>
+<td>Controls text alignment. Possible values are <code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> and <code>center</code>.
+</td></tr>
+<tr>
+<td>textBaseline</td>
+<td>Controls where the text is drawn relative to the starting point. Possible values are <code>top</code>, <code>hanging</code>, <code>middle</code>, <code>alphabetic</code>, <code>ideographic</code> and <code>bottom</code>.
+</td></tr>
+<tr>
+<td>style(x, y, width, height)</td>
+<td>Any valid style string.
+</td></tr>
+<tr>
+<td>translate(x, y)</td>
+<td>Translate the origin of the context space to the specified of the canvas.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Events">Events</h2></div>
+<p>Standard <a href="Events.html" title="Events">events</a> are supported.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Example_1:_Display_an_image,_drawing_and_text"><span id="Example_1:_Display_an_image.2C_drawing_and_text"></span>Example 1: Display an image, drawing and text</h2></div>
+<pre>dim pb
+ 
+Sub Main() 
+  pb = PictureBox1.getContext("2d")
+ 
+  'Draw a red oval with black border
+  pb.strokeStyle = vbBlack
+  pb.fillStyle = vbRed
+  pb.beginPath()
+  pb.arc(100,100,50,0,Math.PI*2,true)
+  pb.closePath()
+  pb.stroke()
+  pb.fill()
+ 
+  'do some text as well
+  pb.textBaseline = "top"
+  pb.font="16px sans-serif"
+  pb.fillText("This is a picturebox",0,0)
+  
+  'Draw an image (AppStudio 4)
+  pb.addImage("mario.jpg")
+End Sub
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Output">Output</h2></div>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:PictureBoxOutput.jpg" class="mw-file-description"><img src="images/3/36/PictureBoxOutput.jpg" decoding="async" width="140" height="142" class="mw-file-element" /></a></span>
+</p><p>Sample code to just display an image. 
+</p>
+<pre>pb = PictureBox1.getContext("2d")
+pb.addImage("Testimage.png") 
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Example_2:_Resize_an_image">Example 2: Resize an image</h2></div>
+<pre>resize = PictureBox1.style
+resize.width = "200px"
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Example_3:_Process_some_image_data">Example 3: Process some image data</h2></div>
+<pre>Sub Main
+  Image1.src="image001.jpg"
+  Image2.src="image002.jpg"
+End Sub
+
+Function Button1_onclick()
+  ImageMatch=True
+  Pix1 = pb1.getImageData(0,0,199,199)
+  Pix2 = pb2.getImageData(0,0,199,199)
+  For i=0 To 199*199*4 Step 4
+    r = Pix1.data[i] &lt;&gt; Pix2.data[i]
+    g = Pix1.data[i+1] &lt;&gt; Pix2.data[i+1]
+    b = Pix1.data[i+2] &lt;&gt; Pix2.data[i+2]
+    If r | g | b Then
+      ImageMatch=False
+      Pix1.data[i] = 255 - Pix1.data[i]
+      Pix1.data[i+1] = 255 - Pix1.data[i+1]
+      Pix1.data[i+2] = 255 - Pix1.data[i+2]
+    End If
+  Next i
+  pb1.putImageData(Pix1,0,0)
+  If !ImageMatch Then MsgBox "These cards are MARKED&#160;!"
+End Function
+ </pre>
+<div class="mw-heading mw-heading2"><h2 id="Example_4:_Draw_a_red_box">Example 4: Draw a red box</h2></div>
+<pre>  'Do some drawing: start by setting our colors.
+  pb.strokeStyle = vbBlack
+  pb.fillStyle = vbRed
+  'Now, we define the lines we want to draw in a path.
+  pb.beginPath()
+  pb.moveTo(10,10)
+  pb.lineTo(10,50)
+  pb.lineTo(50,50)
+  pb.lineTo(50,10)
+  pb.lineTo(10,10)
+  pb.closePath()
+  'Path is complete: draw it
+  pb.stroke()
+  'and paint the area inside the path
+  pb.fill()
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Example_5:_Draw_an_image_using_drawImage_(addImage_is_easier!)"><span id="Example_5:_Draw_an_image_using_drawImage_.28addImage_is_easier.21.29"></span>Example 5: Draw an image using drawImage (addImage is easier!)</h2></div>
+<pre>Dim pb
+var img = new Image()
+img.src = "mario.jpg"
+pb = PictureBox1.getContext("2d")
+
+Function img_onload()
+  pb.drawImage(img,0,0)
+End Function
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Other_Examples">Other Examples</h2></div>
+<p>Make a PictureBox not selectable:
+</p>
+<pre>Function PictureBox1_onselectstart()
+  return False
+End Function
+</pre>
+<p>JavaScript version
+</p>
+<pre>PictureBox1.onselectstart = function () { return false; }
+</pre>
+<!-- 
+NewPP limit report
+Cached time: 20260124133623
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.040 seconds
+Real time usage: 0.069 seconds
+Preprocessor visited node count: 84/1000000
+Revision size: 12473/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2115/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:297:|#|:idhash:canonical and timestamp 20260124133623 and revision id 10689. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=PictureBox&amp;oldid=10689">https://wiki.appstudio.dev/index.php?title=PictureBox&amp;oldid=10689</a>"</div></div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://wiki.appstudio.dev/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="Category_Language_Reference.html" title="Category:Language Reference">Language Reference</a></li><li><a href="Category_Controls.html" title="Category:Controls">Controls</a></li><li><a href="Category_General.html" title="Category:General">General</a></li><li><a href="Category_Common.html" title="Category:Common">Common</a></li></ul></div></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=PictureBox" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=PictureBox" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="PictureBox.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:PictureBox&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="PictureBox.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=PictureBox&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=PictureBox&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/PictureBox" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/PictureBox" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=PictureBox&amp;oldid=10689" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=PictureBox&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 16 November 2019, at 15:35.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":2808,"wgPageParseReport":{"limitreport":{"cputime":"0.040","walltime":"0.069","ppvisitednodes":{"value":84,"limit":1000000},"revisionsize":{"value":12473,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2115,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124133623","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124162524 -->
+
+<!-- Mirrored from wiki.appstudio.dev/PictureBox by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:03:17 GMT -->
+</html>

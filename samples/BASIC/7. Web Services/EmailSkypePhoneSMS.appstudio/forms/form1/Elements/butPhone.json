@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "butPhone", 
+  "left": 243, 
+  "onclick": "butPhone_onclick()", 
+  "right": "auto", 
+  "top": 254, 
+  "value": "Phone", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

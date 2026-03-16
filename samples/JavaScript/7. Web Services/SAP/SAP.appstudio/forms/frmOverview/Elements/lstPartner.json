@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": 300, 
+  "icon": "arrow-r", 
+  "id": "lstPartner", 
+  "readonly": "false", 
+  "right": "auto", 
+  "top": 65, 
+  "width": 375, 
+  "!type": "Listgroup_bs4", 
+  "appearances": "", 
+  "items": "Getting data from SAP...", 
+  "itemBadges": "", 
+  "icons": "arrow-circle-right\n" 
+} 

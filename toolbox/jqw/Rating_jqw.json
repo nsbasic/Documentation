@@ -1,0 +1,61 @@
+{ 
+"_type": "Rating_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxrating.png", 
+"_wikipage": "jqxRating",
+"_shorthelp": "<a href='{_docurl}'>jqxRating</a> represents a jQuery UI widget that allows you to choose a rating.",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+    "{pathTo_jqWidgets}jqxrating.js",
+	"{pathTo_jqWidgets}styles/images/icon-left.png"],
+
+"_displayname": "Rating",
+"_longhelp": "longhelp",
+ 	
+"height": 35, 
+"width": 200,
+
+"count": 5, 
+"_count": { 
+    "desc": "Sets or gets images count", 
+    "type": "int" 
+    }, 	
+"value": 0, 
+"_value": { 
+    "desc": "Sets or gets current value rating", 
+    "type": "int" 
+    }, 	
+	
+"itemHeight": 25, 
+"_itemHeight": { 
+    "desc": "Sets or gets rating items height", 
+    "type": "int" 
+    }, 
+ "itemWidth": 25, 
+"_itemWidth": { 
+    "desc": "Sets or gets rating items Width", 
+    "type": "int" 
+    },  
+  
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "    count:{count},",
+  "    disabled:{disabled},",
+  "    height:'{height}',",
+  "    itemHeight:{itemHeight},",
+  "    itemWidth:{itemWidth},",
+  "    precision:1,",
+  "    value:{value},",
+  "    width:'{width}'",
+  "  }}",
+  "  $('#{id}').jqxRating(NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id})"]	
+}
+

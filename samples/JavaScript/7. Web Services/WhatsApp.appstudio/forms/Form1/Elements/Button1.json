@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 23, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 74, 
+  "value": "Open WhatsApp", 
+  "width": 274, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

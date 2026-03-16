@@ -1,0 +1,52 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "gray", 
+  "borderStyle": "solid", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "game.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 320, 
+  "designWidth": 480, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": 320, 
+  "id": "Form1", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "image-rendering: optimizeSpeed; \nimage-rendering: -moz-crisp-edges;\nimage-rendering: -webkit-optimize-contrast;\nimage-rendering: optimize-contrast; \n-ms-interpolation-mode: nearest-neighbor; ", 
+  "theme": "", 
+  "top": 0, 
+  "width": 460
+}

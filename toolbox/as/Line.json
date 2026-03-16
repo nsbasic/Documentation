@@ -1,0 +1,38 @@
+{ 
+"_type": "Line", 
+"_base": ["colors","borders","Widget"], 
+"_container": "Screen", 
+"_palette": 4, 
+"_resizable": true,
+"_draggable": true,
+"_singular": false,
+"_requiredfiles": [],
+"_category": ["All", "Common"],
+"_art": "images/line.png", 
+"_shorthelp": "<a href='{_docurl}'>Line</a> displays a simple line.", 
+"_displayname": "Line",
+"_longhelp": "longhelp",
+
+"borderWidth": "1",
+"borderColor": "gray",
+           
+"align": "", 
+"_align": { 
+    "desc": "Align control", 
+    "type": "enum", 
+    "keys": ["left", "center", "right"], 
+    "values": ["margin-left:0;","","margin-right:0"]
+    }, 
+    
+"_htmltemplate": "  \"<hr id='{id}' class='{class}' style='{_colorscss!i}{_bordercss!i} {align}{hidden}{style!j}'>\",",
+
+"_csstemplate": "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}margin:0px;{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}", 
+
+"_jstemplate": "  NSB.addProperties({id});",
+
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "  return this.getBoundingClientRect();",
+  "}}"
+]
+}

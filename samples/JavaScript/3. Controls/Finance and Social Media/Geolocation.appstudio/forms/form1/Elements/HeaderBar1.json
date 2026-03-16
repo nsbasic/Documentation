@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "right": "auto", 
+  "top": "0", 
+  "width": "100%", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Geolocation", 
+  "position": "absolute", 
+  "children": [] 
+} 

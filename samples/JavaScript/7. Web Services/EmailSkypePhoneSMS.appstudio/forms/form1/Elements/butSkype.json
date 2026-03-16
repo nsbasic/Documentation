@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "butSkype", 
+  "left": 242, 
+  "right": "auto", 
+  "top": 298, 
+  "value": "Skype", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

@@ -1,0 +1,104 @@
+{
+  "!type": "CSSGrid", 
+  "HTMLTag": "div", 
+  "alignContent": "normal", 
+  "attributes": "", 
+  "backgroundColor": "#2196F3", 
+  "borderColor": "#E0E0E0", 
+  "borderStyle": "", 
+  "borderWidth": "1", 
+  "bottom": "auto", 
+  "cached_js": "", 
+  "cached_js_script_hash": "d41d8cd98f00b204e9800998ecf8427e", 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "CSSGridItem1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "CSSGridItem2.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "CSSGridItem3.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "CSSGridItem4.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "CSSGridItem5.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "color": "", 
+  "content": "", 
+  "display": "grid", 
+  "expanded_pmp": null, 
+  "fontFamily": "", 
+  "fontSize": "", 
+  "fontStyle": "", 
+  "fontWeight": "", 
+  "gridColumnGap": "10px", 
+  "gridRowGap": "10px", 
+  "gridTemplateAreas": "'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer'", 
+  "gridTemplateColumns": "", 
+  "gridTemplateRows": "", 
+  "height": "auto", 
+  "hidden": "", 
+  "id": "CSSGrid1", 
+  "justifyContent": "normal", 
+  "left": "10%", 
+  "mAll": "", 
+  "mBottom": "", 
+  "mLeft": "", 
+  "mRight": "", 
+  "mTop": "", 
+  "onclick": "", 
+  "onmousedown": "", 
+  "onmousemove": "", 
+  "onmouseout": "", 
+  "onmouseup": "", 
+  "onresize": "", 
+  "ontouchend": "", 
+  "ontouchmove": "", 
+  "ontouchstart": "", 
+  "pAll": "10px", 
+  "pBottom": "", 
+  "pLeft": "", 
+  "pRight": "", 
+  "pTop": "", 
+  "position": "static", 
+  "right": "auto", 
+  "script": "", 
+  "style": "", 
+  "top": 104, 
+  "width": "80%"
+}

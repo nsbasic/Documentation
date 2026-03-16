@@ -1,0 +1,214 @@
+{ 
+"_type": "Card_bs4", 
+"_base": ["bs4All", "fonts", "borders", "margin", "padding", "colors", "children", "bs4Colors"], 
+"_palette": 9, 
+"_art": "images/card.png",
+"_wikipage": "Card (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Card</a> displays an information card. Bootstrap.", 
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Card",
+"_longhelp": "longhelp",
+
+"width": "200px",
+"height": "300px",
+"header": "Card",
+"_color": {"type": "hidden"},
+"_backgroundColor": {"type": "hidden"},
+
+"align": "", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["", " text-right ", " text-center "]
+    },
+
+"footerClass": "text-muted", 
+"_footerClass": {
+    "group": "Footer",
+    "acignore": true,
+    "desc": "Classes to apply, separated by spaces. Some possibilties: text-primary, text-secondary,  text-success, text-info, text-warning, text-danger, text-light, text-dark, text-muted,  text-white, text-black-50, text-white-50", 
+    "type": "css" 
+    },
+
+"footerStyle": "", 
+"_footerStyle": {
+    "group": "Footer",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"footerValue": "Footer", 
+"_footerValue": {
+    "group": "Footer",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"headerClass": "", 
+"_headerClass": {
+    "group": "Header",
+    "acignore": true,
+    "desc": "Classes to apply, separated by spaces. Some possibilties: text-primary, text-secondary,  text-success, text-info, text-warning, text-danger, text-light, text-dark, text-muted,  text-white, text-black-50, text-white-50", 
+    "type": "css" 
+    },
+
+"headerStyle": "", 
+"_headerStyle": {
+    "group": "Header",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"headerValue": "Header", 
+"_headerValue": {
+    "group": "Header",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"imageClass": "", 
+"_imageClass": {
+    "group": "Image",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"imageStyle": "", 
+"_imageStyle": {
+    "group": "Image",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"imageHeight": 60, 
+"_imageHeight": { 
+    "group": "Image",
+    "acignore": true,
+    "desc": "Vertical height of element. Can be blank, integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"imageWidth": 60, 
+"_imageWidth": { 
+    "group": "Image",
+    "acignore": true,
+    "desc": "Horizontal height of element. Can be blank, integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"src": "nsb/images/192.png", 
+"_src": { 
+    "group": "Image",
+    "i18n": true,
+    "desc": "Image. Set to empty for none. Can be .png, gif, bmp or jpg.", 
+    "type": "image" 
+   },
+
+"titleClass": "", 
+"_titleClass": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Classes to apply", 
+    "type": "css" 
+    },
+
+"titleStyle": "", 
+"_titleStyle": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Classes to apply, separated by spaces. Some possibilties: text-primary, text-secondary,  text-success, text-info, text-warning, text-danger, text-light, text-dark, text-muted,  text-white, text-black-50, text-white-50", 
+    "type": "css" 
+    },
+
+"titleValue": "Title", 
+"_titleValue": {
+    "group": "Title",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"subtitleClass": "", 
+"_subtitleClass": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Classes to apply, separated by spaces. Some possibilties: text-primary, text-secondary,  text-success, text-info, text-warning, text-danger, text-light, text-dark, text-muted,  text-white, text-black-50, text-white-50", 
+    "type": "css" 
+    },
+
+"subtitleStyle": "", 
+"_subtitleStyle": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"subtitleValue": "Subtitle", 
+"_subtitleValue": {
+    "group": "Subtitle",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"textClass": "", 
+"_textClass": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Classes to apply, separated by spaces. Some possibilties: text-primary, text-secondary,  text-success, text-info, text-warning, text-danger, text-light, text-dark, text-muted,  text-white, text-black-50, text-white-50", 
+    "type": "css" 
+    },
+
+"textStyle": "", 
+"_textStyle": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Styles to apply", 
+    "type": "css" 
+    },
+
+"textValue": "This is the text of the Card.", 
+"_textValue": {
+    "group": "Text",
+    "acignore": true,
+    "desc": "Value to display", 
+    "type": "css" 
+    },
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "    \"<div id='{id}' class='card{_bsColor!i}{align} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "{if headerValue<>''}      \"<div id='{id}_header' class='card-header {headerClass}' style='{headerStyle}' data-i18n='{headerValue!j}'>{headerValue!j}</div>\",{/if}",
+    "{if src<>''}      \"<img id='{id}_image' class='card-img-top {imageClass}' style='height:{imageHeight!p}; width:{imageWidth!p}; {imageStyle}' src='{src}'>\",{/if}",
+    "      \"<div id='{id}_body' class='card-body'>\",",
+    "{if titleValue<>''}        \"<h5 id='{id}_title' class='card-title {titleClass}' style='{titleStyle}' data-i18n='{titleValue!j}'>{titleValue!j}</h5>\",{/if}",
+    "{if subtitleValue<>''}        \"<h6 id='{id}_subtitle' class='card-subtitle mb-2 text-muted {subtitleClass}' style='{subtitleStyle}' data-i18n='{subtitleValue!j}'>{subtitleValue!j}</h6>\",{/if}",
+    "{if textValue<>''}        \"<div id='{id}_text' class='card-text {textClass}' style='{textStyle}' data-i18n='{textValue!j}'>{textValue!j}</div>\",{/if}",    
+    "        \"<div id={id}_addChild>\",",
+    "{if _childhtml<>''}        \"<div>\",{_childhtml}\"</div>\",{/if}",
+    "        \"</div>\",",
+    "      \"</div>\",",
+    "{if footerValue<>''}      \"<div id='{id}_footer' class='card-footer {footerClass}' style='{footerStyle}' data-i18n='{footerValue!j}'>{footerValue!j}</div>\",{/if}",
+    "    \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+		
+}

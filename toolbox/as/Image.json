@@ -1,0 +1,28 @@
+{ 
+"_type": "Image", 
+"_base": ["borders", "margin", "Widget"], 
+"_palette": 4, 
+"_art": "images/image.png", 
+"_shorthelp": "<a href='{_docurl}'>Image</a> Simple display of an Image. For images which change at run time, the PictureBox is better.", 
+"_category": ["All", "Common", "Multimedia"],
+"_requiredfiles": ["{if src<>'' and src[:5]<>'data:'}{src}{/if}"],
+"_displayname": "Image",
+"_longhelp": "longhelp",
+
+"height": 44, 
+"width": 44,
+
+"_acprops": {
+    "firstChild.src": {"desc": "To set the image."}
+},
+
+"src": "", 
+"_src": { 
+    "desc": "Location of image. Do not add files to /nsb. Cannot be a URL. Can be a base64 data URI (e.g., data:image/png;base64,...).", 
+    "type": "image" 
+    }, 
+
+"_htmltemplate": "  \"<div id='{id}' data-nsb-type=image style='overflow:hidden;{_margincss!i}{_bordercss!i}{hidden}{style!j}' class='{class}'><img src='{src}' height=100% width=100% id='{id}_img'  usemap='{id}_map'></div>\",",
+
+"_jstemplate":"  NSB.addProperties({id});"
+}

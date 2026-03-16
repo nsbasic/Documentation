@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/SQLite_Reference by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>SQLite Reference - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXTQg3esdtgxePx8C5MzNwAAACo","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SQLite_Reference","wgTitle":"SQLite Reference","wgCurRevisionId":10098,"wgRevisionId":10098,"wgArticleId":510,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SQLite_Reference","wgRelevantArticleId":510,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SQLite_Reference rootpage-SQLite_Reference skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">SQLite Reference</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>The information in the document is for the most part copied from the official <a rel="nofollow" class="external text" href="http://www.sqlite.org/lang.html">SQLite documentation</a>.
+</p><p>In general, these commands are called using the <code>Sql</code> function. See the <a href="Using_SQLite.html" title="Using SQLite">Tech Note on SQLite</a> for more information on using SQLite with AppStudio.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#ALTER_TABLE"><span class="tocnumber">1</span> <span class="toctext">ALTER TABLE</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#ANALYZE"><span class="tocnumber">2</span> <span class="toctext">ANALYZE</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#ATTACH_DATABASE"><span class="tocnumber">3</span> <span class="toctext">ATTACH DATABASE</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#BEGIN_TRANSACTION"><span class="tocnumber">4</span> <span class="toctext">BEGIN TRANSACTION</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#comment"><span class="tocnumber">5</span> <span class="toctext">comment</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#COPY"><span class="tocnumber">6</span> <span class="toctext">COPY</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#CREATE_INDEX"><span class="tocnumber">7</span> <span class="toctext">CREATE INDEX</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#CREATE_TABLE"><span class="tocnumber">8</span> <span class="toctext">CREATE TABLE</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#CREATE_TRIGGER"><span class="tocnumber">9</span> <span class="toctext">CREATE TRIGGER</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#CREATE_VIEW"><span class="tocnumber">10</span> <span class="toctext">CREATE VIEW</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#DELETE"><span class="tocnumber">11</span> <span class="toctext">DELETE</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#DETACH_DATABASE"><span class="tocnumber">12</span> <span class="toctext">DETACH DATABASE</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#DROP_INDEX"><span class="tocnumber">13</span> <span class="toctext">DROP INDEX</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#DROP_TABLE"><span class="tocnumber">14</span> <span class="toctext">DROP TABLE</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#DROP_TRIGGER"><span class="tocnumber">15</span> <span class="toctext">DROP TRIGGER</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#DROP_VIEW"><span class="tocnumber">16</span> <span class="toctext">DROP VIEW</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#EXPLAIN"><span class="tocnumber">17</span> <span class="toctext">EXPLAIN</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#expression"><span class="tocnumber">18</span> <span class="toctext">expression</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#INSERT"><span class="tocnumber">19</span> <span class="toctext">INSERT</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#keywords"><span class="tocnumber">20</span> <span class="toctext">keywords</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#Special_names"><span class="tocnumber">21</span> <span class="toctext">Special names</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#ON_CONFLICT_clause"><span class="tocnumber">22</span> <span class="toctext">ON CONFLICT clause</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#PRAGMA"><span class="tocnumber">23</span> <span class="toctext">PRAGMA</span></a>
+<ul>
+<li class="toclevel-2 tocsection-24"><a href="#PRAGMA_command_syntax"><span class="tocnumber">23.1</span> <span class="toctext">PRAGMA command syntax</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Pragmas_to_modify_library_operation"><span class="tocnumber">23.2</span> <span class="toctext">Pragmas to modify library operation</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Pragmas_to_query_the_database_schema"><span class="tocnumber">23.3</span> <span class="toctext">Pragmas to query the database schema</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Pragmas_to_query/modify_version_values"><span class="tocnumber">23.4</span> <span class="toctext">Pragmas to query/modify version values</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Pragmas_to_debug_the_library"><span class="tocnumber">23.5</span> <span class="toctext">Pragmas to debug the library</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-29"><a href="#REINDEX"><span class="tocnumber">24</span> <span class="toctext">REINDEX</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#REPLACE"><span class="tocnumber">25</span> <span class="toctext">REPLACE</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#SELECT"><span class="tocnumber">26</span> <span class="toctext">SELECT</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#UPDATE"><span class="tocnumber">27</span> <span class="toctext">UPDATE</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#VACUUM"><span class="tocnumber">28</span> <span class="toctext">VACUUM</span></a></li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading3"><h3 id="ALTER_TABLE">ALTER TABLE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ALTER TABLE </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">alteration</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">alteration</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">RENAME TO </font></b><i><font color="#ff3434">new-table-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">alteration</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ADD </font></b>[<b><font color="#2c2cf0">COLUMN</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">column-def</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>SQLite's version of the ALTER TABLE command allows the user to rename or add a new column to an existing table. It is not possible to remove a column from a table.
+</p><p>The RENAME TO syntax is used to rename the table identified by <i>[database-name.]table-name</i> to <i>new-table-name</i>. This command cannot be used to move a table between attached databases, only to rename a table within the same database.
+</p><p>If the table being renamed has triggers or indices, then these remain attached to the table after it has been renamed. However, if there are any view definitions, or statements executed by triggers that refer to the table being renamed, these are not automatically modified to use the new table name. If this is required, the triggers or view definitions must be dropped and recreated to use the new table name by hand.
+</p><p>The ADD [COLUMN] syntax is used to add a new column to an existing table. The new column is always appended to the end of the list of existing columns. <i>Column-def</i> may take any of the forms permissable in a CREATE TABLE statement, with the following restrictions:
+</p>
+<ul><li>The column may not have a PRIMARY KEY or UNIQUE constraint.</li>
+<li>The column may not have a default value of CURRENT_TIME, CURRENT_DATE or CURRENT_TIMESTAMP.</li>
+<li>If a NOT NULL constraint is specified, then the column must have a default value other than NULL.</li></ul>
+<p>The execution time of the ALTER TABLE command is independent of the amount of data in the table. The ALTER TABLE command runs as quickly on a table with 10 million rows as it does on a table with 1 row.
+</p><p>After ADD COLUMN has been run on a database, that database will not be readable by SQLite version 3.1.3 and earlier until the database is [#lang_vacuum VACUUM]ed.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="ANALYZE">ANALYZE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ANALYZE</font></b>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ANALYZE </font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ANALYZE </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The ANALYZE command gathers statistics about indices and stores them in a special tables in the database where the query optimizer can use them to help make better index choices. If no arguments are given, all indices in all attached databases are analyzed. If a database name is given as the argument, all indices in that one database are analyzed. If the argument is a table name, then only indices associated with that one table are analyzed.
+</p><p>The initial implementation stores all statistics in a single table named <b>sqlite_stat1</b>. Future enhancements may create additional tables with the same name pattern except with the "1" changed to a different digit. The <b>sqlite_stat1</b> table cannot be [#lang_droptable DROP]ped, but it all the content can be [#lang_delete DELETE]d which has the same effect.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="ATTACH_DATABASE">ATTACH DATABASE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ATTACH </font></b>[<b><font color="#2c2cf0">DATABASE</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">database-filename</font></i><b><font color="#2c2cf0"> AS </font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The ATTACH DATABASE statement adds a preexisting database file to the current database connection. If the filename contains punctuation characters it must be quoted. The names 'main' and 'temp' refer to the main database and the database used for temporary tables. These cannot be detached. Attached databases are removed using the [#lang_detach DETACH DATABASE] statement.
+</p><p>In SQLite 2.8, schema changes to attached databases are not allowed.
+</p><p>You cannot create a new table with the same name as a table in an attached database, but you can attach a database which contains tables whose names are duplicates of tables in the main database. It is also permissible to attach the same database file multiple times.
+</p><p>Tables in an attached database can be referred to using the syntax <i>database-name.table-name</i>. If an attached table doesn't have a duplicate table name in the main database, it doesn't require a database name prefix. When a database is attached, all of its tables which don't have duplicate names become the 'default' table of that name. Any tables of that name attached afterwards require the table prefix. If the 'default' table of a given name is detached, then the last table of that name attached becomes the new default.
+</p><p>Transactions involving multiple attached databases are atomic, assuming that the main database is not ":memory:". If the main database is ":memory:" then transactions continue to be atomic within each individual database file. But if the host computer crashes in the middle of a COMMIT where two or more database files are updated, some of those files might get the changes where others might not. Atomic commit of attached databases is a new feature of SQLite version 3.0. In SQLite version 2.8, all commits to attached databases behave as if the main database were ":memory:".
+</p><p>There is a compile-time limit of 10 attached database files.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="BEGIN_TRANSACTION">BEGIN TRANSACTION</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">BEGIN </font></b>[<b><font color="#2c2cf0"> DEFERRED </font></b><big>|</big><b><font color="#2c2cf0"> IMMEDIATE </font></b><big>|</big><b><font color="#2c2cf0"> EXCLUSIVE </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">TRANSACTION </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">END </font></b>[<b><font color="#2c2cf0">TRANSACTION </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">COMMIT </font></b>[<b><font color="#2c2cf0">TRANSACTION </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ROLLBACK </font></b>[<b><font color="#2c2cf0">TRANSACTION </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The optional transaction name is ignored. SQLite currently does not allow nested transactions.
+</p><p>No changes can be made to the database except within a transaction. Any command that changes the database (basically, any SQL command other than SELECT) will automatically start a transaction if one is not already in effect. Automatically started transactions are committed at the conclusion of the command.
+</p><p>Transactions can be started manually using the BEGIN command. Such transactions usually persist until the next COMMIT or ROLLBACK command. But a transaction will also ROLLBACK if the database is closed or if an error occurs and the ROLLBACK conflict resolution algorithm is specified. See the documentation on the [#lang_conflict ON CONFLICT] clause for additional information about the ROLLBACK conflict resolution algorithm.
+</p><p>For SQLite version 2.8 and earlier, all transactions are exclusive. An exclusive transaction causes EXCLUSIVE locks to be acquired on all databases. After a BEGIN EXCLUSIVE, you are guaranteed that no other thread or process will be able to read or write the database until the transaction is complete.
+</p><p>The COMMIT command does not actually perform a commit until all pending SQL commands finish. Thus if two or more SELECT statements are in the middle of processing and a COMMIT is executed, the commit will not actually occur until all SELECT statements finish.
+</p><p>An attempt to execute COMMIT might result in an SQLITE_BUSY return code. This indicates that another thread or process had a read lock on the database that prevented the database from being updated. When COMMIT fails in this way, the transaction remains active and the COMMIT can be retried later after the reader has had a chance to clear.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="comment">comment</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">comment</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">SQL-comment</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">C-comment</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">SQL-comment</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">-- </font></b><i><font color="#ff3434">single-line</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">C-comment</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">/<big>*</big> </font></b><i><font color="#ff3434">multiple-lines</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>*</big>/</font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>Comments aren't SQL commands, but can occur in SQL queries. They are treated as whitespace by the parser. They can begin anywhere whitespace can be found, including inside expressions that span multiple lines.
+</p><p>SQL comments only extend to the end of the current line.
+</p><p>C comments can span any number of lines. If there is no terminating delimiter, they extend to the end of the input. This is not treated as an error. A new SQL statement can begin on a line after a multiline comment ends. C comments can be embedded anywhere whitespace can occur, including inside expressions, and in the middle of other SQL statements. C comments do not nest. SQL comments inside a C comment will be ignored.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="COPY">COPY</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">COPY </font></b>[<b><font color="#2c2cf0"> OR </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> FROM </font></b><i><font color="#ff3434">filename</font></i><b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0"> USING DELIMITERS </font></b><i><font color="#ff3434">delim</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The COPY command is an extension used to load large amounts of data into a table. It is modeled after a similar command found in PostgreSQL. In fact, the SQLite COPY command is specifically designed to be able to read the output of the PostgreSQL dump utility <b>pg_dump</b> so that data can be easily transferred from PostgreSQL into SQLite.
+</p><p>The table-name is the name of an existing table which is to be filled with data. The filename is a string or identifier that names a file from which data will be read. The filename can be the <b>STDIN</b> to read data from standard input.
+</p><p>Each line of the input file is converted into a single record in the table. Columns are separated by tabs. If a tab occurs as data within a column, then that tab is preceded by a baskslash "\" character. A baskslash in the data appears as two backslashes in a row. The optional USING DELIMITERS clause can specify a delimiter other than tab.
+</p><p>If a column consists of the character "\N", that column is filled with the value NULL.
+</p><p>The optional conflict-clause allows the specification of an alternative constraint conflict resolution algorithm to use for this one command. See the section titled [#lang_conflict ON CONFLICT] for additional information.
+</p><p>When the input data source is STDIN, the input can be terminated by a line that contains only a baskslash and a dot: "<font color="#2c2cf0"><big>\.</big></font>".
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="CREATE_INDEX">CREATE INDEX</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">UNIQUE</font></b>]<b><font color="#2c2cf0"> INDEX </font></b>[<b><font color="#2c2cf0">IF NOT EXISTS</font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">index-name</font></i><b><font color="#2c2cf0"><br /> ON </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> <big>(</big> </font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"> <big>)</big></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">column-name</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> COLLATE </font></b><i><font color="#ff3434">collation-name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> ASC </font></b><big>|</big><b><font color="#2c2cf0"> DESC </font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The CREATE INDEX command consists of the keywords "CREATE INDEX" followed by the name of the new index, the keyword "ON", the name of a previously created table that is to be indexed, and a parenthesized list of names of columns in the table that are used for the index key. Each column name can be followed by one of the "ASC" or "DESC" keywords to indicate sort order, but the sort order is ignored in the current implementation. Sorting is always done in ascending order.
+</p><p>The COLLATE clause following each column name defines a collating sequence used for text entires in that column. The default collating sequence is the collating sequence defined for that column in the CREATE TABLE statement. Or if no collating sequence is otherwise defined, the built-in BINARY collating sequence is used.
+</p><p>There are no arbitrary limits on the number of indices that can be attached to a single table, nor on the number of columns in an index.
+</p><p>If the UNIQUE keyword appears between CREATE and INDEX then duplicate index entries are not allowed. Any attempt to insert a duplicate entry will result in an error.
+</p><p>The exact text of each CREATE INDEX statement is stored in the <b>sqlite_master</b> or <b>sqlite_temp_master</b> table, depending on whether the table being indexed is temporary. Every time the database is opened, all CREATE INDEX statements are read from the <b>sqlite_master</b> table and used to regenerate SQLite's internal representation of the index layout.
+</p><p>If the optional IF NOT EXISTS clause is present and another index with the same name aleady exists, then this command becomes a no-op.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="CREATE_TABLE">CREATE TABLE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">TEMP </font></b><big>|</big><b><font color="#2c2cf0"> TEMPORARY</font></b>]<b><font color="#2c2cf0"> TABLE </font></b>[<b><font color="#2c2cf0">IF NOT EXISTS</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> <big>(</big><br />  &#160; &#160; &#160; &#160;</font></b><i><font color="#ff3434">column-def</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">column-def</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"><br />  &#160; &#160; &#160; &#160;</font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">constraint</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"><br /><big>)</big></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">TEMP </font></b><big>|</big><b><font color="#2c2cf0"> TEMPORARY</font></b>]<b><font color="#2c2cf0"> TABLE </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"><big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> AS </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">column-def</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">type</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b>[<b><font color="#2c2cf0">CONSTRAINT </font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">column-constraint</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">type</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">typename</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">typename</font></i><b><font color="#2c2cf0"> <big>(</big> </font></b><i><font color="#ff3434">number</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">typename</font></i><b><font color="#2c2cf0"> <big>(</big> </font></b><i><font color="#ff3434">number</font></i><b><font color="#2c2cf0"> <big>,</big> </font></b><i><font color="#ff3434">number</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">column-constraint</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">NOT NULL </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">conflict-clause</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> PRIMARY KEY </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">sort-order</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">conflict-clause</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">AUTOINCREMENT</font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> UNIQUE </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">conflict-clause</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> CHECK <big>(</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> DEFAULT </font></b><i><font color="#ff3434">value</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> COLLATE </font></b><i><font color="#ff3434">collation-name</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">constraint</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">PRIMARY KEY <big>(</big> </font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">conflict-clause</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> UNIQUE <big>(</big> </font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">conflict-clause</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> CHECK <big>(</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">conflict-clause</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ON CONFLICT </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>A CREATE TABLE statement is basically the keywords "CREATE TABLE" followed by the name of a new table and a parenthesized list of column definitions and constraints. The table name can be either an identifier or a string. Tables names that begin with "<b>sqlite_</b>" are reserved for use by the engine.
+</p><p>Each column definition is the name of the column followed by the datatype for that column, then one or more optional column constraints. The datatype for the column does not restrict what data may be put in that column. See <a rel="nofollow" class="external text" href="http://www.sqlite.org/datatype3.html">Datatypes In SQLite Version 3</a> for additional information. The UNIQUE constraint causes an index to be created on the specified columns. This index must contain unique keys. The COLLATE clause specifies what text [datatype3.html#collation  collating function] to use when comparing text entries for the column. The built-in BINARY collating function is used by default.
+</p><p>The DEFAULT constraint specifies a default value to use when doing an INSERT. The value may be NULL, a string constant or a number. If the value is NULL, a string constant or number, it is literally inserted into the column whenever an INSERT statement that does not specify a value for the column is executed. If the value is CURRENT_TIME, CURRENT_DATE or CURRENT_TIMESTAMP, then the current UTC date and/or time is inserted into the columns. For CURRENT_TIME, the format is HH:MM:SS. For CURRENT_DATE, YYYY-MM-DD. The format for CURRENT_TIMESTAMP is "YYYY-MM-DD HH:MM:SS".
+</p><p>Specifying a PRIMARY KEY normally just creates a UNIQUE index on the corresponding columns. However, if primary key is on a single column that has datatype INTEGER, then that column is used internally as the actual key of the B-Tree for the table. This means that the column may only hold unique integer values. (Except for this one case, SQLite ignores the datatype specification of columns and allows any kind of data to be put in a column regardless of its declared datatype.) If a table does not have an INTEGER PRIMARY KEY column, then the B-Tree key will be a automatically generated integer. The B-Tree key for a row can always be accessed using one of the special names "<b>ROWID</b>", "<b>OID</b>", or "<b>_ROWID_</b>". This is true regardless of whether or not there is an INTEGER PRIMARY KEY. An INTEGER PRIMARY KEY column man also include the keyword AUTOINCREMENT. The AUTOINCREMENT keyword modified the way that B-Tree keys are automatically generated. Additional detail on automatic B-Tree key generation is available <a rel="nofollow" class="external text" href="http://www.sqlite.org/autoinc.html">separately</a>.
+</p><p>If the "TEMP" or "TEMPORARY" keyword occurs in between "CREATE" and "TABLE" then the table that is created is only visible within that same database connection and is automatically deleted when the database connection is closed. Any indices created on a temporary table are also temporary. Temporary tables and indices are stored in a separate file distinct from the main database file.
+</p><p>If a &lt;database-name&gt; is specified, then the table is created in the named database. It is an error to specify both a &lt;database-name&gt; and the TEMP keyword, unless the &lt;database-name&gt; is "temp". If no database name is specified, and the TEMP keyword is not present, the table is created in the main database.
+</p><p>The optional conflict-clause following each constraint allows the specification of an alternative default constraint conflict resolution algorithm for that constraint. The default is abort ABORT. Different constraints within the same table may have different default conflict resolution algorithms. If an COPY, INSERT, or UPDATE command specifies a different conflict resolution algorithm, then that algorithm is used in place of the default algorithm specified in the CREATE TABLE statement. See the section titled [#lang_conflict ON CONFLICT] for additional information.
+</p><p>CHECK constraints are supported as of version 3.3.0. Prior to version 3.3.0, CHECK constraints were parsed but not enforced.
+</p><p>There are no arbitrary limits on the number of columns or on the number of constraints in a table. The total amount of data in a single row is limited to about 1 megabytes in version 2.8.
+</p><p>The CREATE TABLE AS form defines the table to be the result set of a query. The names of the table columns are the names of the columns in the result.
+</p><p>The exact text of each CREATE TABLE statement is stored in the <b>sqlite_master</b> table. Every time the database is opened, all CREATE TABLE statements are read from the <b>sqlite_master</b> table and used to regenerate SQLite's internal representation of the table layout. If the original command was a CREATE TABLE AS then then an equivalent CREATE TABLE statement is synthesized and store in <b>sqlite_master</b> in place of the original command. The text of CREATE TEMPORARY TABLE statements are stored in the <b>sqlite_temp_master</b> table.
+</p><p>If the optional IF NOT EXISTS clause is present and another table with the same name aleady exists, then this command becomes a no-op.
+</p><p>Tables are removed using the [#lang_droptable DROP TABLE] statement.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="CREATE_TRIGGER">CREATE TRIGGER</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">TEMP </font></b><big>|</big><b><font color="#2c2cf0"> TEMPORARY</font></b>]<b><font color="#2c2cf0"> TRIGGER </font></b><i><font color="#ff3434">trigger-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> BEFORE </font></b><big>|</big><b><font color="#2c2cf0"> AFTER </font></b>]<b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">database-event</font></i><b><font color="#2c2cf0"> ON </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">trigger-action</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">TEMP </font></b><big>|</big><b><font color="#2c2cf0"> TEMPORARY</font></b>]<b><font color="#2c2cf0"> TRIGGER </font></b><i><font color="#ff3434">trigger-name</font></i><b><font color="#2c2cf0"> INSTEAD OF<br /></font></b><i><font color="#ff3434">database-event</font></i><b><font color="#2c2cf0"> ON </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">view-name</font></i><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">trigger-action</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">database-event</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">DELETE </font></b><big>|</big><b><font color="#2c2cf0"><br /> INSERT </font></b><big>|</big><b><font color="#2c2cf0"><br /> UPDATE </font></b><big>|</big><b><font color="#2c2cf0"><br /> UPDATE OF </font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">trigger-action</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b>[<b><font color="#2c2cf0"> FOR EACH ROW </font></b><big>|</big><b><font color="#2c2cf0"> FOR EACH STATEMENT </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> WHEN </font></b><i><font color="#ff3434">expression</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"><br /> BEGIN <br />  &#160; &#160; &#160; &#160;</font></b><i><font color="#ff3434">trigger-step</font></i><b><font color="#2c2cf0">&#160;; </font></b>[<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">trigger-step</font></i><b><font color="#2c2cf0">&#160;; </font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"><br /> END</font></b>
+</p>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">trigger-step</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">update-statement</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">insert-statement</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">delete-statement</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The CREATE TRIGGER statement is used to add triggers to the database schema. Triggers are database operations (the <i>trigger-action</i>) that are automatically performed when a specified database event (the <i>database-event</i>) occurs.
+</p><p>A trigger may be specified to fire whenever a DELETE, INSERT or UPDATE of a particular database table occurs, or whenever an UPDATE of one or more specified columns of a table are updated.
+</p><p>At this time SQLite supports only FOR EACH ROW triggers, not FOR EACH STATEMENT triggers. Hence explicitly specifying FOR EACH ROW is optional. FOR EACH ROW implies that the SQL statements specified as <i>trigger-steps</i> may be executed (depending on the WHEN clause) for each database row being inserted, updated or deleted by the statement causing the trigger to fire.
+</p><p>Both the WHEN clause and the <i>trigger-steps</i> may access elements of the row being inserted, deleted or updated using references of the form "NEW.<i>column-name</i>" and "OLD.<i>column-name</i>", where <i>column-name</i> is the name of a column from the table that the trigger is associated with. OLD and NEW references may only be used in triggers on <i>trigger-event</i>s for which they are relevant, as follows:
+</p>
+<table cellpadding="10">
+<tbody><tr>
+<td width="120" align="right" valign="top"><i>INSERT</i>
+</td>
+<td valign="top">NEW references are valid
+</td></tr>
+<tr>
+<td width="120" align="right" valign="top"><i>UPDATE</i>
+</td>
+<td valign="top">NEW and OLD references are valid
+</td></tr>
+<tr>
+<td width="120" align="right" valign="top"><i>DELETE</i>
+</td>
+<td valign="top">OLD references are valid
+</td></tr></tbody></table>
+<p>If a WHEN clause is supplied, the SQL statements specified as <i>trigger-steps</i> are only executed for rows for which the WHEN clause is true. If no WHEN clause is supplied, the SQL statements are executed for all rows.
+</p><p>The specified <i>trigger-time</i> determines when the <i>trigger-steps</i> will be executed relative to the insertion, modification or removal of the associated row.
+</p><p>An ON CONFLICT clause may be specified as part of an UPDATE or INSERT <i>trigger-step</i>. However if an ON CONFLICT clause is specified as part of the statement causing the trigger to fire, then this conflict handling policy is used instead.
+</p><p>Triggers are automatically dropped when the table that they are associated with is dropped.
+</p><p>Triggers may be created on views, as well as ordinary tables, by specifying INSTEAD OF in the CREATE TRIGGER statement. If one or more ON INSERT, ON DELETE or ON UPDATE triggers are defined on a view, then it is not an error to execute an INSERT, DELETE or UPDATE statement on the view, respectively. Thereafter, executing an INSERT, DELETE or UPDATE on the view causes the associated triggers to fire. The real tables underlying the view are not modified (except possibly explicitly, by a trigger program).
+</p><p><b>Example:</b>
+</p><p>Assuming that customer records are stored in the "customers" table, and that order records are stored in the "orders" table, the following trigger ensures that all associated orders are redirected when a customer changes his or her address:
+</p>
+<blockquote>
+<p><br /> 
+ CREATE TRIGGER update_customer_address UPDATE OF address ON customers
+   BEGIN
+     UPDATE orders SET address = new.address WHERE customer_name = old.name;
+   END;
+</p>
+</blockquote>
+<p>With this trigger installed, executing the statement:
+</p>
+<blockquote>
+<p><br /> 
+ UPDATE customers SET address = '1 Main St.' WHERE name = 'Jack Jones';
+</p>
+</blockquote>
+<p>causes the following to be automatically executed:
+</p>
+<blockquote>
+<p><br /> 
+ UPDATE orders SET address = '1 Main St.' WHERE customer_name = 'Jack Jones';
+</p>
+</blockquote>
+<p>Note that currently, triggers may behave oddly when created on tables with INTEGER PRIMARY KEY fields. If a BEFORE trigger program modifies the INTEGER PRIMARY KEY field of a row that will be subsequently updated by the statement that causes the trigger to fire, then the update may not occur. The workaround is to declare the table with a PRIMARY KEY column instead of an INTEGER PRIMARY KEY column.
+</p><p>A special SQL function RAISE() may be used within a trigger-program, with the following syntax
+</p>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">raise-function</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">RAISE <big>(</big> ABORT<big>,</big> </font></b><i><font color="#ff3434">error-message</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> RAISE <big>(</big> FAIL<big>,</big> </font></b><i><font color="#ff3434">error-message</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> RAISE <big>(</big> ROLLBACK<big>,</big> </font></b><i><font color="#ff3434">error-message</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> RAISE <big>(</big> IGNORE <big>)</big></font></b>
+</p>
+</td></tr></tbody></table>
+<p>When one of the first three forms is called during trigger-program execution, the specified ON CONFLICT processing is performed (either ABORT, FAIL or ROLLBACK) and the current query terminates. An error code of SQLITE_CONSTRAINT is returned to the user, along with the specified error message.
+</p><p>When RAISE(IGNORE) is called, the remainder of the current trigger program, the statement that caused the trigger program to execute and any subsequent trigger programs that would of been executed are abandoned. No database changes are rolled back. If the statement that caused the trigger program to execute is itself part of a trigger program, then that trigger program resumes execution at the beginning of the next step.
+</p><p>Triggers are removed using the [#lang_droptrigger DROP TRIGGER] statement.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="CREATE_VIEW">CREATE VIEW</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">CREATE </font></b>[<b><font color="#2c2cf0">TEMP </font></b><big>|</big><b><font color="#2c2cf0"> TEMPORARY</font></b>]<b><font color="#2c2cf0"> VIEW </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"><big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">view-name</font></i><b><font color="#2c2cf0"> AS </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The CREATE VIEW command assigns a name to a pre-packaged [#lang_select SELECT] ement. Once the view is created, it can be used in the FROM clause of another SELECT in place of a table name.
+</p><p>If the "TEMP" or "TEMPORARY" keyword occurs in between "CREATE" and "VIEW" then the view that is created is only visible to the process that opened the database and is automatically deleted when the database is closed.
+</p><p>If a &lt;database-name&gt; is specified, then the view is created in the named database. It is an error to specify both a &lt;database-name&gt; and the TEMP keyword, unless the &lt;database-name&gt; is "temp". If no database name is specified, and the TEMP keyword is not present, the table is created in the main database.
+</p><p>You cannot COPY, DELETE, INSERT or UPDATE a view. Views are read-only in SQLite. However, in many cases you can use a [#lang_createtrigger  TRIGGER] on the view to accomplish the same thing. Views are removed with the [#lang_dropview DROP VIEW] command.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DELETE">DELETE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DELETE FROM </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">WHERE </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The DELETE command is used to remove records from a table. The command consists of the "DELETE FROM" keywords followed by the name of the table from which records are to be removed.
+</p><p>Without a WHERE clause, all rows of the table are removed. If a WHERE clause is supplied, then only those rows that match the expression are removed.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DETACH_DATABASE">DETACH DATABASE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DETACH </font></b>[<b><font color="#2c2cf0">DATABASE</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>This statement detaches an additional database connection previously attached using the [#lang_attach ATTACH DATABASE] statement. It is possible to have the same database file attached multiple times using different names, and detaching one connection to a file will leave the others intact.
+</p><p>This statement will fail if SQLite is in the middle of a transaction.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DROP_INDEX">DROP INDEX</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DROP INDEX </font></b>[<b><font color="#2c2cf0">IF EXISTS</font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">index-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The DROP INDEX statement removes an index added with the [#lang_createindex  CREATE INDEX] statement. The index named is completely removed from the disk. The only way to recover the index is to reenter the appropriate CREATE INDEX command.
+</p><p>The DROP INDEX statement does not reduce the size of the database file in the default mode. Empty space in the database is retained for later INSERTs. To remove free space in the database, use the [#lang_vacuum VACUUM] command. If AUTOVACUUM mode is enabled for a database then space will be freed automatically by DROP INDEX.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DROP_TABLE">DROP TABLE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DROP TABLE </font></b>[<b><font color="#2c2cf0">IF EXISTS</font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"><big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The DROP TABLE statement removes a table added with the [#createtable CREATE TABLE] statement. The name specified is the table name. It is completely removed from the database schema and the disk file. The table can not be recovered. All indices associated with the table are also deleted.
+</p><p>The DROP TABLE statement does not reduce the size of the database file in the default mode. Empty space in the database is retained for later INSERTs. To remove free space in the database, use the [#lang_vacuum VACUUM] command. If AUTOVACUUM mode is enabled for a database then space will be freed automatically by DROP TABLE.
+</p><p>The optional IF EXISTS clause suppresses the error that would normally result if the table does not exist.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DROP_TRIGGER">DROP TRIGGER</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DROP TRIGGER </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">trigger-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The DROP TRIGGER statement removes a trigger created by the [#lang_createtrigger CREATE TRIGGER] statement. The trigger is deleted from the database schema. Note that triggers are automatically dropped when the associated table is dropped.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="DROP_VIEW">DROP VIEW</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-command</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">DROP VIEW </font></b><i><font color="#ff3434">view-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The DROP VIEW statement removes a view created by the [#createview CREATE VIEW] statement. The name specified is the view name. It is removed from the database schema, but no actual data in the underlying base tables is modified.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="EXPLAIN">EXPLAIN</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">EXPLAIN </font></b><i><font color="#ff3434">sql-statement</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The EXPLAIN command modifier is a non-standard extension. The idea comes from a similar command found in PostgreSQL, but the operation is completely different.
+</p><p>If the EXPLAIN keyword appears before any other SQLite SQL command then instead of actually executing the command, the SQLite library will report back the sequence of virtual machine instructions it would have used to execute the command had the EXPLAIN keyword not been present. For additional information about virtual machine instructions see the <a rel="nofollow" class="external text" href="http://www.sqlite.org/arch.html">architecture description</a> or the documentation on <a rel="nofollow" class="external text" href="http://www.sqlite.org/opcode.html">available opcodes</a> for the virtual machine.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="expression">expression</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">expr</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">binary-op</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NOT</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">like-op</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">ESCAPE </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">unary-op</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /><big>(</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> <big>.</big> </font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> <big>.</big> </font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">literal-value</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">parameter</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">function-name</font></i><b><font color="#2c2cf0"> <big>(</big> </font></b><i><font color="#ff3434">expr-list</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"> <big>*</big> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> ISNULL </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> NOTNULL </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NOT</font></b>]<b><font color="#2c2cf0"> BETWEEN </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> AND </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NOT</font></b>]<b><font color="#2c2cf0"> IN <big>(</big> </font></b><i><font color="#ff3434">value-list</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NOT</font></b>]<b><font color="#2c2cf0"> IN <big>(</big> </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NOT</font></b>]<b><font color="#2c2cf0"> IN </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">EXISTS</font></b>]<b><font color="#2c2cf0"> <big>(</big> </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> CASE </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>(<b><font color="#2c2cf0"> WHEN </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> THEN </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>) <b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">ELSE </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> END </font></b><big>|</big><b><font color="#2c2cf0"><br /> CAST <big>(</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> AS </font></b><i><font color="#ff3434">type</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">like-op</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">LIKE </font></b><big>|</big><b><font color="#2c2cf0"> GLOB </font></b><big>|</big><b><font color="#2c2cf0"> REGEXP</font></b>
+</p>
+</td></tr></tbody></table>
+<p>This section is different from the others. Most other sections of this document talks about a particular SQL command. This section does not talk about a standalone command but about "expressions" which are subcomponents of most other commands.
+</p><p>SQLite understands the following binary operators, in order from highest to lowest precedence:
+</p>
+<blockquote>
+<p><br /> 
+ <font color="#2c2cf0"><big>||
+ *    /   &#160;%
+      -
+ &lt;&lt;   &gt;&gt;   &amp;    |
+ &lt;    &lt;=   &gt;    &gt;=
+ =    ==  &#160;!=   &lt;&gt;   </big>IN
+ AND
+ OR</font>
+</p>
+</blockquote>
+<p>Supported unary operators are these:
+</p>
+<blockquote>
+<p><br /> 
+ <font color="#2c2cf0"><big>-        &#160;!    ~</big></font>
+</p>
+</blockquote>
+<p>Note that there are two variations of the equals and not equals operators. Equals can be either <font color="#2c2cf0"><big>=</big></font> or <font color="#2c2cf0"><big>==</big></font>. The non-equals operator can be either <font color="#2c2cf0"><big>!=</big></font> or <font color="#2c2cf0"><big>&lt;&gt;</big></font>. The <font color="#2c2cf0"><big>||</big></font> operator is "concatenate" - it joins together the two strings of its operands. The operator <font color="#2c2cf0"><big>%</big></font> outputs the remainder of its left operand modulo its right operand.
+</p><p>The result of any binary operator is a numeric value, except for the <font color="#2c2cf0"><big>||</big></font> concatenation operator which gives a string result.
+</p><p>A literal value is an integer number or a floating point number. Scientific notation is supported. The "." character is always used as the decimal point even if the locale setting specifies "," for this role - the use of "," for the decimal point would result in syntactic ambiguity. A string constant is formed by enclosing the string in single quotes ('). A single quote within the string can be encoded by putting two single quotes in a row - as in Pascal. C-style escapes using the backslash character are not supported because they are not standard SQL. BLOB literals are string literals containing hexadecimal data and preceded by a single "x" or "X" character. For example:
+</p>
+<blockquote>
+<p><br /> 
+ X'53514697465'
+</p>
+</blockquote>
+<p>A literal value can also be the token "NULL".
+</p><p>A parameter specifies a placeholder in the expression for a literal value that is filled in at runtime using the <a rel="nofollow" class="external text" href="http://www.sqlite.org/capi3ref.html#sqlite3_bind_int">sqlite3_bind</a> API. Parameters can take several forms:
+</p>
+<table>
+<tbody><tr>
+<td align="right" valign="top"><b>?</b><i>NNN</i>
+</td>
+<td width="20">
+</td>
+<td>A question mark followed by a number <i>NNN</i> holds a spot for the NNN-th parameter. NNN must be between 1 and 999.
+</td></tr>
+<tr>
+<td align="right" valign="top"><b>?</b>
+</td>
+<td width="20">
+</td>
+<td>A question mark that is not followed by a number holds a spot for the next unused parameter.
+</td></tr>
+<tr>
+<td align="right" valign="top"><b>:</b><i>AAAA</i>
+</td>
+<td width="20">
+</td>
+<td>A colon followed by an identifier name holds a spot for a named parameter with the name AAAA. Named parameters are also numbered. The number assigned is the next unused number. To avoid confusion, it is best to avoid mixing named and numbered parameters.
+</td></tr>
+<tr>
+<td align="right" valign="top"><b>$</b><i>AAAA</i>
+</td>
+<td width="20">
+</td>
+<td>A dollar-sign followed by an identifier name also holds a spot for a named parameter with the name AAAA. The identifier name in this case can include one or more occurances of "::" and a suffix enclosed in "(...)" containing any text at all. This syntax is the form of a variable name in the Tcl programming language.
+</td></tr></tbody></table>
+<p>Parameters that are not assigned values using <a rel="nofollow" class="external text" href="http://www.sqlite.org/capi3ref.html#sqlite3_bind_int">sqlite3_bind</a> are treated as NULL.
+</p><p>The LIKE operator does a pattern matching comparison. The operand to the right contains the pattern, the left hand operand contains the string to match against the pattern. A percent symbol <font color="#2c2cf0"><big>%</big></font> in the pattern matches any sequence of zero or more characters in the string. An underscore <font color="#2c2cf0"><big>_</big></font> in the pattern matches any single character in the string. Any other character matches itself or it's lower/upper case equivalent (i.e. case-insensitive matching). (A bug: SQLite only understands upper/lower case for 7-bit Latin characters. Hence the LIKE operator is case sensitive for 8-bit iso8859 characters or UTF-8 characters. For example, the expression '<b>a' &#160;LIKE &#160;'A'</b> is TRUE but '<b> ¦' &#160;LIKE &#160;' †'</b> is FALSE.).
+</p><p>If the optional ESCAPE clause is present, then the expression following the ESCAPE keyword must evaluate to a string consisting of a single character. This character may be used in the LIKE pattern to include literal percent or underscore characters. The escape character followed by a percent symbol, underscore or itself matches a literal percent symbol, underscore or escape character in the string, respectively. The infix LIKE operator is implemented by calling the user function [#likeFunc  like(<i>X</i>,<i>Y</i>)].
+</p><p>The LIKE operator is not case sensitive and will match upper case characters on one side against lower case characters on the other. (A bug: SQLite only understands upper/lower case for 7-bit Latin characters. Hence the LIKE operator is case sensitive for 8-bit iso8859 characters or UTF-8 characters. For example, the expression '<b>a' &#160;LIKE &#160;'A'</b> is TRUE but '<b> ¦' &#160;LIKE &#160;' †'</b> is FALSE.).
+</p><p>The infix LIKE operator is implemented by calling the user function [#likeFunc  like(<i>X</i>,<i>Y</i>)]. If an ESCAPE clause is present, it adds a third parameter to the function call. If the functionality of LIKE can be overridden by defining an alternative implementation of the like() SQL function.
+</p><p>The GLOB operator is similar to LIKE but uses the Unix file globbing syntax for its wildcards. Also, GLOB is case sensitive, unlike LIKE. Both GLOB and LIKE may be preceded by the NOT keyword to invert the sense of the test. The infix GLOB operator is implemented by calling the user function [#globFunc  glob(<i>X</i>,<i>Y</i>)] and can be modified by overriding that function.
+</p><p>The REGEXP operator is a special syntax for the regexp() user function. No regexp() user function is defined by default and so use of the REGEXP operator will normally result in an error message. If a user-defined function named "regexp" is defined at run-time, that function will be called in order to implement the REGEXP operator.
+</p><p>A column name can be any of the names defined in the CREATE TABLE statement or one of the following special identifiers: "<b>ROWID</b>", "<b>OID</b>", or "<b>_ROWID_</b>". These special identifiers all describe the unique random integer key (the "row key") associated with every row of every table. The special identifiers only refer to the row key if the CREATE TABLE statement does not define a real column with the same name. Row keys act like read-only columns. A row key can be used anywhere a regular column can be used, except that you cannot change the value of a row key in an UPDATE or INSERT statement. "SELECT * ..." does not return the row key.
+</p><p>SELECT statements can appear in expressions as either the right-hand operand of the IN operator, as a scalar quantity, or as the operand of an EXISTS operator. As a scalar quantity or the operand of an IN operator, the SELECT should have only a single column in its result. Compound SELECTs (connected with keywords like UNION or EXCEPT) are allowed. With the EXISTS operator, the columns in the result set of the SELECT are ignored and the expression returns TRUE if one or more rows exist and FALSE if the result set is empty. If no terms in the SELECT expression refer to value in the containing query, then the expression is evaluated once prior to any other processing and the result is reused as necessary. If the SELECT expression does contain variables from the outer query, then the SELECT is reevaluated every time it is needed.
+</p><p>When a SELECT is the right operand of the IN operator, the IN operator returns TRUE if the result of the left operand is any of the values generated by the select. The IN operator may be preceded by the NOT keyword to invert the sense of the test.
+</p><p>When a SELECT appears within an expression but is not the right operand of an IN operator, then the first row of the result of the SELECT becomes the value used in the expression. If the SELECT yields more than one result row, all rows after the first are ignored. If the SELECT yields no rows, then the value of the SELECT is NULL.
+</p><p>A CAST expression changes the datatype of the  into the type specified by &lt;type&gt;. &lt;type&gt; can be any non-empty type name that is valid for the type in a column definition of a CREATE TABLE statement.
+</p><p>Both simple and aggregate functions are supported. A simple function can be used in any expression. Simple functions return a result immediately based on their inputs. Aggregate functions may only be used in a SELECT statement. Aggregate functions compute their result across all rows of the result set.
+</p><p>The functions shown below are available by default. Additional functions may be written in C and added to the database engine using the <a rel="nofollow" class="external text" href="http://www.sqlite.org/capi3ref.html#cfunc">sqlite3_create_function()</a> API.
+</p>
+<table cellpadding="10">
+<tbody><tr>
+<td width="120" align="right" valign="top">abs(<i>X</i>)
+</td>
+<td valign="top">Return the absolute value of argument <i>X</i>.
+</td></tr>
+<tr>
+<td align="right" valign="top">coalesce(<i>X</i>,<i>Y</i>,...)
+</td>
+<td valign="top">Return a copy of the first non-NULL argument. If all arguments are NULL then NULL is returned. There must be at least 2 arguments.
+</td></tr>
+<tr>
+<td align="right" valign="top">glob(<i>X</i>,<i>Y</i>)
+</td>
+<td valign="top">
+<p>This function is used to implement the "<b>X GLOB Y</b>" syntax of SQLite. The <a rel="nofollow" class="external text" href="http://www.sqlite.org/capi3ref.html#sqlite3_create_function">sqlite3_create_function()</a> interface can be used to override this function and thereby change the operation of the [#globFunc GLOB] operator.
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top">ifnull(<i>X</i>,<i>Y</i>)
+</td>
+<td valign="top">Return a copy of the first non-NULL argument. If both arguments are NULL then NULL is returned. This behaves the same as <b>coalesce()</b> above.
+</td></tr>
+<tr>
+<td align="right" valign="top">last_insert_rowid()
+</td>
+<td valign="top">Return the ROWID of the last row insert from this connection to the database. This is the same value that would be returned from the <b>sqlite_last_insert_rowid()</b> API function.
+</td></tr>
+<tr>
+<td align="right" valign="top">length(<i>X</i>)
+</td>
+<td valign="top">Return the string length of <i>X</i> in characters. If SQLite is configured to support UTF-8, then the number of UTF-8 characters is returned, not the number of bytes.
+</td></tr>
+<tr>
+<td align="right" valign="top">like(<i>X</i>,<i>Y</i> [,<i>Z</i>])
+</td>
+<td valign="top">
+<p>This function is used to implement the "<b>X LIKE Y [ESCAPE Z]</b>" syntax of SQL. If the optional ESCAPE clause is present, then the user-function is invoked with three arguments. Otherwise, it is invoked with two arguments only. The [capi3ref.html#sqlite3_create_function  sqlite_create_function()] interface can be used to override this function and thereby change the operation of the [#like LIKE] operator. When doing this, it may be important to override both the two and three argument versions of the like() function. Otherwise, different code may be called to implement the LIKE operator depending on whether or not an ESCAPE clause was specified.
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top">lower(<i>X</i>)
+</td>
+<td valign="top">Return a copy of string <i>X</i> will all characters converted to lower case. The C library <b>tolower()</b> routine is used for the conversion, which means that this function might not work correctly on UTF-8 characters.
+</td></tr>
+<tr>
+<td align="right" valign="top">max(<i>X</i>,<i>Y</i>,...)
+</td>
+<td valign="top">Return the argument with the maximum value. Arguments may be strings in addition to numbers. The maximum value is determined by the usual sort order. Note that <b>max()</b> is a simple function when it has 2 or more arguments but converts to an aggregate function if given only a single argument.
+</td></tr>
+<tr>
+<td align="right" valign="top">min(<i>X</i>,<i>Y</i>,...)
+</td>
+<td valign="top">Return the argument with the minimum value. Arguments may be strings in addition to numbers. The minimum value is determined by the usual sort order. Note that <b>min()</b> is a simple function when it has 2 or more arguments but converts to an aggregate function if given only a single argument.
+</td></tr>
+<tr>
+<td align="right" valign="top">nullif(<i>X</i>,<i>Y</i>)
+</td>
+<td valign="top">Return the first argument if the arguments are different, otherwise return NULL.
+</td></tr>
+<tr>
+<td align="right" valign="top">quote(<i>X</i>)
+</td>
+<td valign="top">This routine returns a string which is the value of its argument suitable for inclusion into another SQL statement. Strings are surrounded by single-quotes with escapes on interior quotes as needed. BLOBs are encoded as hexadecimal literals. The current implementation of VACUUM uses this function. The function is also useful when writing triggers to implement undo/redo functionality.
+</td></tr>
+<tr>
+<td align="right" valign="top">random(*)
+</td>
+<td valign="top">Return a random integer between -2147483648 and 2147483647.
+</td></tr>
+<tr>
+<td align="right" valign="top">round(<i>X</i>)<br />round(<i>X</i>,<i>Y</i>)
+</td>
+<td valign="top">Round off the number <i>X</i> to <i>Y</i> digits to the right of the decimal point. If the <i>Y</i> argument is omitted, 0 is assumed.
+</td></tr>
+<tr>
+<td align="right" valign="top">soundex(<i>X</i>)
+</td>
+<td valign="top">Compute the soundex encoding of the string <i>X</i>. The string "?000" is returned if the argument is NULL. This function is omitted from SQLite by default. It is only available the -DSQLITE_SOUNDEX=1 compiler option is used when SQLite is built.
+</td></tr>
+<tr>
+<td align="right" valign="top">sqlite_version(*)
+</td>
+<td valign="top">Return the version string for the SQLite library that is running. Example: "2.8.0"
+</td></tr>
+<tr>
+<td align="right" valign="top">substr(<i>X</i>,<i>Y</i>,<i>Z</i>)
+</td>
+<td valign="top">Return a substring of input string <i>X</i> that begins with the <i>Y</i>-th character and which is <i>Z</i> characters long. The left-most character of <i>X</i> is number 1. If <i>Y</i> is negative the the first character of the substring is found by counting from the right rather than the left. If SQLite is configured to support UTF-8, then characters indices refer to actual UTF-8 characters, not bytes.
+</td></tr>
+<tr>
+<td align="right" valign="top">typeof(<i>X</i>)
+</td>
+<td valign="top">
+<p>Return the type of the expression <i>X</i>. The only return values are "null", "integer", "real", "text", and "blob". SQLite's type handling is explained in <a rel="nofollow" class="external text" href="http://www.sqlite.org/datatype3.html">Datatypes in SQLite Version 3</a>.
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top">upper(<i>X</i>)
+</td>
+<td valign="top">Return a copy of input string <i>X</i> converted to all upper-case letters. The implementation of this function uses the C library routine <b>toupper()</b> which means it may not work correctly on UTF-8 strings.
+</td></tr></tbody></table>
+<p>The aggregate functions shown below are available by default. Additional aggregate functions written in C may be added using the <a rel="nofollow" class="external text" href="http://www.sqlite.org/capi3ref.html#sqlite3_create_function">sqlite3_create_function()</a> API.
+</p><p>In any aggregate function that takes a single argument, that argument can be preceeded by the keyword DISTINCT. In such cases, duplicate elements are filtered before being passed into the aggregate function. For example, the function "count(distinct X)" will return the number of distinct values of column X instead of the total number of non-null values in column X.
+</p>
+<table cellpadding="10">
+<tbody><tr>
+<td width="120" align="right" valign="top">avg(<i>X</i>)
+</td>
+<td valign="top">Return the average value of all non-NULL <i>X</i> within a group. String and BLOB values that do not look like numbers are interpreted as 0. The result of avg() is always a floating point value even if all inputs are integers.
+</td></tr>
+<tr>
+<td align="right" valign="top">count(<i>X</i>)<br />count(*)
+</td>
+<td valign="top">The first form return a count of the number of times that <i>X</i> is not NULL in a group. The second form (with no argument) returns the total number of rows in the group.
+</td></tr>
+<tr>
+<td align="right" valign="top">max(<i>X</i>)
+</td>
+<td valign="top">Return the maximum value of all values in the group. The usual sort order is used to determine the maximum.
+</td></tr>
+<tr>
+<td align="right" valign="top">min(<i>X</i>)
+</td>
+<td valign="top">Return the minimum non-NULL value of all values in the group. The usual sort order is used to determine the minimum. NULL is only returned if all values in the group are NULL.
+</td></tr>
+<tr>
+<td align="right" valign="top">sum(<i>X</i>)<br />total(<i>X</i>)
+</td>
+<td valign="top">
+<p>Return the numeric sum of all non-NULL values in the group. If there are no non-NULL input rows then sum() returns NULL but total() returns 0.0. NULL is not normally a helpful result for the sum of no rows but the SQL standard requires it and most other SQL database engines implement sum() that way so SQLite does it in the same way in order to be compatible. The non-standard total() function is provided as a convenient way to work around this design problem in the SQL language.
+</p><p>The result of total() is always a floating point value. The result of sum() is an integer value if all non-NULL inputs are integers and the sum is exact. If any input to sum() is neither an integer or a NULL or if the an integer overflow occurs at any point during the computation, then sum() returns a floating point value which might be an approximation to the true sum.
+</p>
+</td></tr></tbody></table>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="INSERT">INSERT</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">INSERT </font></b>[<b><font color="#2c2cf0">OR </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> INTO </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>(</big></font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"><big>)</big></font></b>]<b><font color="#2c2cf0"> VALUES<big>(</big></font></b><i><font color="#ff3434">value-list</font></i><b><font color="#2c2cf0"><big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> INSERT </font></b>[<b><font color="#2c2cf0">OR </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> INTO </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>(</big></font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"><big>)</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The INSERT statement comes in two basic forms. The first form (with the "VALUES" keyword) creates a single new row in an existing table. If no column-list is specified then the number of values must be the same as the number of columns in the table. If a column-list is specified, then the number of values must match the number of specified columns. Columns of the table that do not appear in the column list are filled with the default value, or with NULL if not default value is specified.
+</p><p>The second form of the INSERT statement takes it data from a SELECT statement. The number of columns in the result of the SELECT must exactly match the number of columns in the table if no column list is specified, or it must match the number of columns name in the column list. A new entry is made in the table for every row of the SELECT result. The SELECT may be simple or compound. If the SELECT statement has an ORDER BY clause, the ORDER BY is ignored.
+</p><p>The optional conflict-clause allows the specification of an alternative constraint conflict resolution algorithm to use during this one command. See the section titled [#lang_conflict ON CONFLICT] for additional information. For compatibility with MySQL, the parser allows the use of the single keyword [#lang_replace REPLACE] as an alias for "INSERT OR REPLACE".
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="keywords">keywords</h3></div>
+<p>The SQL standard specifies a huge number of keywords which may not be used as the names of tables, indices, columns, or databases. The list is so long that few people can remember them all. For most SQL code, your safest bet is to never use any English language word as the name of a user-defined object.
+</p><p>If you want to use a keyword as a name, you need to quote it. There are three ways of quoting keywords in SQLite:
+</p>
+<blockquote>
+<table>
+<tbody><tr>
+<td valign="top">'<b>keyword'</b>
+</td>
+<td width="20">
+</td>
+<td>A keyword in single quotes is interpreted as a literal string if it occurs in a context where a string literal is allowed, otherwise it is understood as an identifier.
+</td></tr>
+<tr>
+<td valign="top"><b>"keyword"</b>
+</td>
+<td>
+</td>
+<td>A keyword in double-quotes is interpreted as an identifier if it matches a known identifier. Otherwise it is interpreted as a string literal.
+</td></tr>
+<tr>
+<td valign="top"><b>[keyword]</b>
+</td>
+<td>
+</td>
+<td>A keyword enclosed in square brackets is always understood as an identifier. This is not standard SQL. This quoting mechanism is used by MS Access and SQL Server and is included in SQLite for compatibility.
+</td></tr></tbody></table>
+</blockquote>
+<p>Quoted keywords are unaesthetic. To help you avoid them, SQLite allows many keywords to be used unquoted as the names of databases, tables, indices, triggers, views, and/or columns. In the list of keywords that follows, those that can be used as identifiers are shown in an italic font. Keywords that must be quoted in order to be used as identifiers are shown in bold.
+</p><p>SQLite adds new keywords from time to time when it take on new features. So to prevent you code from being broken by future enhancements, you should normally quote any indentifier that is an English language word, even if you do not have to.
+</p><p>The following are the keywords currently recognized by SQLite:
+</p>
+<blockquote>
+<table width="100%">
+<tbody><tr>
+<td width="20%" align="left" valign="top"><i>ABORT</i><br /><i>AFTER</i><br /><b>ALL</b><br /><b>ALTER</b><br /><b>AND</b><br /><b>AS</b><br /><i>ASC</i><br /><i>ATTACH</i><br /><b>AUTOINCREMENT</b><br /><i>BEFORE</i><br /><i>BEGIN</i><br /><b>BETWEEN</b><br /><b>BY</b><br /><i>CASCADE</i><br /><b>CASE</b><br /><b>CHECK</b><br /><b>COLLATE</b><br /><b>COMMIT</b><br /><i>CONFLICT</i><br /><b>CONSTRAINT</b><br /><b>CREATE</b><br /><b>CROSS</b><br />
+</td>
+<td width="20%" align="left" valign="top"><i>CURRENT_DATE</i><br /><i>CURRENT_TIME</i><br /><i>CURRENT_TIMESTAMP</i><br /><i>DATABASE</i><br /><b>DEFAULT</b><br /><b>DEFERRABLE</b><br /><i>DEFERRED</i><br /><b>DELETE</b><br /><i>DESC</i><br /><i>DETACH</i><br /><b>DISTINCT</b><br /><b>DROP</b><br /><i>EACH</i><br /><b>ELSE</b><br /><i>END</i><br /><b>ESCAPE</b><br /><b>EXCEPT</b><br /><i>EXCLUSIVE</i><br /><i>EXPLAIN</i><br /><i>FAIL</i><br /><i>FOR</i><br /><b>FOREIGN</b><br />
+</td>
+<td width="20%" align="left" valign="top"><b>FROM</b><br /><b>FULL</b><br /><i>GLOB</i><br /><b>GROUP</b><br /><b>HAVING</b><br /><i>IGNORE</i><br /><i>IMMEDIATE</i><br /><b>IN</b><br /><b>INDEX</b><br /><i>INITIALLY</i><br /><b>INNER</b><br /><b>INSERT</b><br /><i>INSTEAD</i><br /><b>INTERSECT</b><br /><b>INTO</b><br /><b>IS</b><br /><b>ISNULL</b><br /><b>JOIN</b><br /><i>KEY</i><br /><b>LEFT</b><br /><i>LIKE</i><br /><b>LIMIT</b><br />
+</td>
+<td width="20%" align="left" valign="top"><i>MATCH</i><br /><b>NATURAL</b><br /><b>NOT</b><br /><b>NOTNULL</b><br /><b>NULL</b><br /><i>OF</i><br /><i>OFFSET</i><br /><b>ON</b><br /><b>OR</b><br /><b>ORDER</b><br /><b>OUTER</b><br /><i>PRAGMA</i><br /><b>PRIMARY</b><br /><i>RAISE</i><br /><b>REFERENCES</b><br /><i>REINDEX</i><br /><i>RENAME</i><br /><i>REPLACE</i><br /><i>RESTRICT</i><br /><b>RIGHT</b><br /><b>ROLLBACK</b><br /><i>ROW</i><br />
+</td>
+<td width="20%" align="left" valign="top"><b>SELECT</b><br /><b>SET</b><br /><i>STATEMENT</i><br /><b>TABLE</b><br /><i>TEMP</i><br /><i>TEMPORARY</i><br /><b>THEN</b><br /><b>TO</b><br /><b>TRANSACTION</b><br /><i>TRIGGER</i><br /><b>UNION</b><br /><b>UNIQUE</b><br /><b>UPDATE</b><br /><b>USING</b><br /><i>VACUUM</i><br /><b>VALUES</b><br /><i>VIEW</i><br /><b>WHEN</b><br /><b>WHERE</b><br />
+</td></tr></tbody></table>
+</blockquote>
+<div class="mw-heading mw-heading3"><h3 id="Special_names">Special names</h3></div>
+<p>The following are not keywords in SQLite, but are used as names of system objects. They can be used as an identifier for a different type of object.
+</p>
+<blockquote><p><b> _ROWID_<br /> MAIN<br /> OID<br /> ROWID<br /> SQLITE_MASTER<br /> SQLITE_SEQUENCE<br /> SQLITE_TEMP_MASTER<br /> TEMP<br /></b></p></blockquote>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="ON_CONFLICT_clause">ON CONFLICT clause</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">conflict-clause</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">ON CONFLICT </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">conflict-algorithm</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">ROLLBACK </font></b><big>|</big><b><font color="#2c2cf0"> ABORT </font></b><big>|</big><b><font color="#2c2cf0"> FAIL </font></b><big>|</big><b><font color="#2c2cf0"> IGNORE </font></b><big>|</big><b><font color="#2c2cf0"> REPLACE</font></b>
+</p>
+</td></tr></tbody></table>
+<p>The ON CONFLICT clause is not a separate SQL command. It is a non-standard clause that can appear in many other SQL commands. It is given its own section in this document because it is not part of standard SQL and therefore might not be familiar.
+</p><p>The syntax for the ON CONFLICT clause is as shown above for the CREATE TABLE command. For the INSERT and UPDATE commands, the keywords "ON CONFLICT" are replaced by "OR", to make the syntax seem more natural. For example, instead of "INSERT ON CONFLICT IGNORE" we have "INSERT OR IGNORE". The keywords change but the meaning of the clause is the same either way.
+</p><p>The ON CONFLICT clause specifies an algorithm used to resolve constraint conflicts. There are five choices: ROLLBACK, ABORT, FAIL, IGNORE, and REPLACE. The default algorithm is ABORT. This is what they mean:
+</p>
+<dl><dt><b>ROLLBACK</b></dt>
+<dd>When a constraint violation occurs, an immediate ROLLBACK occurs, thus ending the current transaction, and the command aborts with a return code of SQLITE_CONSTRAINT. If no transaction is active (other than the implied transaction that is created on every command) then this algorithm works the same as ABORT.</dd>
+<dt><b>ABORT</b></dt>
+<dd>When a constraint violation occurs, the command backs out any prior changes it might have made and aborts with a return code of SQLITE_CONSTRAINT. But no ROLLBACK is executed so changes from prior commands within the same transaction are preserved. This is the default behavior.</dd>
+<dt><b>FAIL</b></dt>
+<dd>When a constraint violation occurs, the command aborts with a return code SQLITE_CONSTRAINT. But any changes to the database that the command made prior to encountering the constraint violation are preserved and are not backed out. For example, if an UPDATE statement encountered a constraint violation on the 100th row that it attempts to update, then the first 99 row changes are preserved but changes to rows 100 and beyond never occur.</dd>
+<dt><b>IGNORE</b></dt>
+<dd>When a constraint violation occurs, the one row that contains the constraint violation is not inserted or changed. But the command continues executing normally. Other rows before and after the row that contained the constraint violation continue to be inserted or updated normally. No error is returned.</dd>
+<dt><b>REPLACE</b></dt>
+<dd>When a UNIQUE constraint violation occurs, the pre-existing rows that are causing the constraint violation are removed prior to inserting or updating the current row. Thus the insert or update always occurs. The command continues executing normally. No error is returned. If a NOT NULL constraint violation occurs, the NULL value is replaced by the default value for that column. If the column has no default value, then the ABORT algorithm is used.</dd></dl>
+<p>When this conflict resolution strategy deletes rows in order to satisfy a constraint, it does not invoke delete triggers on those rows. But that may change in a future release.
+</p><p>The algorithm specified in the OR clause of a INSERT or UPDATE overrides any algorithm specified in a CREATE TABLE. If no algorithm is specified anywhere, the ABORT algorithm is used.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="PRAGMA">PRAGMA</h3></div>
+<p>The [#syntax PRAGMA command] is a special command used to modify the operation of the SQLite library or to query the library for internal (non-table) data. The PRAGMA command is issued using the same interface as other SQLite commands (e.g. SELECT, INSERT) but is different in the following important respects:
+</p>
+<ul><li>Specific pragma statements may be removed and others added in future releases of SQLite. Use with caution!</li>
+<li>No error messages are generated if an unknown pragma is issued. Unknown pragmas are simply ignored. This means if there is a typo in a pragma statement the library does not inform the user of the fact.</li>
+<li>Some pragmas take effect during the SQL compilation stage, not the execution stage. This means if using the C-language sqlite3_compile(), sqlite3_step(), sqlite3_finalize() API (or similar in a wrapper interface), the pragma may be applied to the library during the sqlite3_compile() call.</li>
+<li>The pragma command is unlikely to be compatible with any other SQL engine.</li></ul>
+<p>The available pragmas fall into four basic categories:
+</p>
+<ul><li>Pragmas used to [#schema query the schema] of the current database.</li>
+<li>Pragmas used to [#modify modify the operation] of the SQLite library in some manner, or to query for the current mode of operation.</li>
+<li>Pragmas used to [#version query or modify the databases two version values], the schema-version and the user-version.</li>
+<li>Pragmas used to [#debug debug the library] and verify that database files are not corrupted.</li></ul>
+<hr />
+<div class="mw-heading mw-heading4"><h4 id="PRAGMA_command_syntax">PRAGMA command syntax</h4></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">PRAGMA </font></b><i><font color="#ff3434">name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">= </font></b><i><font color="#ff3434">value</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /> PRAGMA </font></b><i><font color="#ff3434">function</font></i><b><font color="#2c2cf0"><big>(</big></font></b><i><font color="#ff3434">arg</font></i><b><font color="#2c2cf0"><big>)</big></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The pragmas that take an integer <i><b>value</b></i> also accept symbolic names. The strings "<b>on</b>", "<b>true</b>", and "<b>yes</b>" are equivalent to <b>1</b>. The strings "<b>off</b>", "<b>false</b>", and "<b>no</b>" are equivalent to <b>0</b>. These strings are case- insensitive, and do not require quotes. An unrecognized string will be treated as <b>1</b>, and will not generate an error. When the <i>value</i> is returned it is as an integer.
+</p>
+<hr />
+<div class="mw-heading mw-heading4"><h4 id="Pragmas_to_modify_library_operation">Pragmas to modify library operation</h4></div>
+<ul><li><b>PRAGMA auto_vacuum; <br />PRAGMA auto_vacuum = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or set the auto-vacuum flag in the database.
+Normally, when a transaction that deletes data from a database is committed, the database file remains the same size. Unused database file pages are marked as such and reused later on, when data is inserted into the database. In this mode the [lang_vacuum.html VACUUM] command is used to reclaim unused space.
+When the auto-vacuum flag is set, the database file shrinks when a transaction that deletes data is committed (The VACUUM command is not useful in a database with the auto-vacuum flag set). To support this functionality the database stores extra information internally, resulting in slightly larger database files than would otherwise be possible.
+It is only possible to modify the value of the auto-vacuum flag before any tables have been created in the database. No error message is returned if an attempt to modify the auto-vacuum flag is made after one or more tables have been created.
+</p>
+<ul><li><b>PRAGMA cache_size; <br />PRAGMA cache_size = </b><i>Number-of-pages</i><b>;</b></li></ul>
+<p>Query or change the maximum number of database disk pages that SQLite will hold in memory at once. Each page uses about 1.5K of memory. The default cache size is 2000. If you are doing UPDATEs or DELETEs that change many rows of a database and you do not mind if SQLite uses more memory, you can increase the cache size for a possible speed improvement.
+When you change the cache size using the cache_size pragma, the change only endures for the current session. The cache size reverts to the default value when the database is closed and reopened. Use the [#pragma_default_cache_size <b>default_cache_size</b>] pragma to check the cache size permanently.
+</p>
+<ul><li><b>PRAGMA case_sensitive_like; <br />PRAGMA case_sensitive_like = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>The default behavior of the LIKE operator is to ignore case for latin1 characters. Hence, by default '<b>a' LIKE 'A'</b> is true. The case_sensitive_like pragma can be turned on to change this behavior. When case_sensitive_like is enabled, '<b>a' LIKE 'A'</b> is false but '<b>a' LIKE 'a'</b> is still true.
+</p>
+<ul><li><b>PRAGMA count_changes; <br />PRAGMA count_changes = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or change the count-changes flag. Normally, when the count-changes flag is not set, INSERT, UPDATE and DELETE statements return no data. When count-changes is set, each of these commands returns a single row of data consisting of one integer value - the number of rows inserted, modified or deleted by the command. The returned change count does not include any insertions, modifications or deletions performed by triggers.
+</p>
+<ul><li><b>PRAGMA default_cache_size; <br />PRAGMA default_cache_size = </b><i>Number-of-pages</i><b>;</b></li></ul>
+<p>Query or change the maximum number of database disk pages that SQLite will hold in memory at once. Each page uses 1K on disk and about 1.5K in memory. This pragma works like the [#pragma_cache_size <b>cache_size</b>] pragma with the additional feature that it changes the cache size persistently. With this pragma, you can set the cache size once and that setting is retained and reused every time you reopen the database.
+</p>
+<ul><li><b>PRAGMA default_synchronous;</b></li></ul>
+<p>This pragma was available in version 2.8 but was removed in version 3.0. It is a dangerous pragma whose use is discouraged. To help dissuide users of version 2.8 from employing this pragma, the documentation will not tell you what it does.
+</p>
+<ul><li><b>PRAGMA empty_result_callbacks; <br />PRAGMA empty_result_callbacks = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or change the empty-result-callbacks flag.
+The empty-result-callbacks flag affects the sqlite3_exec API only. Normally, when the empty-result-callbacks flag is cleared, the callback function supplied to the sqlite3_exec() call is not invoked for commands that return zero rows of data. When empty-result-callbacks is set in this situation, the callback function is invoked exactly once, with the third parameter set to 0 (NULL). This is to enable programs that use the sqlite3_exec() API to retrieve column-names even when a query returns no data.
+</p>
+<ul><li><b>PRAGMA encoding; <br />PRAGMA encoding = "UTF-8"; <br />PRAGMA encoding = "UTF-16"; <br />PRAGMA encoding = "UTF-16le"; <br />PRAGMA encoding = "UTF-16be";</b></li></ul>
+<p>In first form, if the main database has already been created, then this pragma returns the text encoding used by the main database, one of "UTF-8", "UTF-16le" (little-endian UTF-16 encoding) or "UTF-16be" (big-endian UTF-16 encoding). If the main database has not already been created, then the value returned is the text encoding that will be used to create the main database, if it is created by this session.
+The second and subsequent forms of this pragma are only useful if the main database has not already been created. In this case the pragma sets the encoding that the main database will be created with if it is created by this session. The string "UTF-16" is interpreted as "UTF-16 encoding using native machine byte-ordering". If the second and subsequent forms are used after the database file has already been created, they have no effect and are silently ignored.
+Once an encoding has been set for a database, it cannot be changed.
+Databases created by the ATTACH command always use the same encoding as the main database.
+</p>
+<ul><li><b>PRAGMA full_column_names; <br />PRAGMA full_column_names = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or change the full-column-names flag. This flag affects the way SQLite names columns of data returned by SELECT statements when the expression for the column is a table-column name or the wildcard "*". Normally, such result columns are named &lt;table-name/alias&gt;&lt;column-name&gt; if the SELECT statement joins two or more tables together, or simply &lt;column-name&gt; if the SELECT statement queries a single table. When the full-column-names flag is set, such columns are always named &lt;table-name/alias&gt; &lt;column-name&gt; regardless of whether or not a join is performed.
+If both the short-column-names and full-column-names are set, then the behaviour associated with the full-column-names flag is exhibited.
+</p>
+<ul><li><b>PRAGMA fullfsync <br />PRAGMA fullfsync = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or change the fullfsync flag. This flag affects determines whether or not the F_FULLFSYNC syncing method is used on systems that support it. The default value is off. As of this writing (2006-02-10) only Mac OS X supports F_FULLFSYNC.
+</p>
+<ul><li><b>PRAGMA page_size; <br />PRAGMA page_size = </b><i>bytes</i><b>;</b></li></ul>
+<p>Query or set the page-size of the database. The page-size may only be set if the database has not yet been created. The page size must be a power of two greater than or equal to 512 and less than or equal to 8192. The upper limit may be modified by setting the value of macro SQLITE_MAX_PAGE_SIZE during compilation. The maximum upper bound is 32768.
+</p>
+<ul><li><b>PRAGMA read_uncommitted; <br />PRAGMA read_uncommitted = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query, set, or clear READ UNCOMMITTED isolation. The default isolation level for SQLite is SERIALIZABLE. Any process or thread can select READ UNCOMMITTED isolation, but SERIALIZABLE will still be used except between connections that share a common page and schema cache. Cache sharing is enabled using the [capi3ref.html#sqlite3_enable_shared_cache  sqlite3_enable_shared_cache()] API and is only available between connections running the same thread. Cache sharing is off by default.
+</p>
+<ul><li><b>PRAGMA short_column_names; <br />PRAGMA short_column_names = </b><i>0 | 1</i><b>;</b></li></ul>
+<p>Query or change the short-column-names flag. This flag affects the way SQLite names columns of data returned by SELECT statements when the expression for the column is a table-column name or the wildcard "*". Normally, such result columns are named &lt;table-name/alias&gt;lt;column-name&gt; if the SELECT statement joins two or more tables together, or simply &lt;column-name&gt; if the SELECT statement queries a single table. When the short-column-names flag is set, such columns are always named &lt;column-name&gt; regardless of whether or not a join is performed.
+If both the short-column-names and full-column-names are set, then the behaviour associated with the full-column-names flag is exhibited.
+</p>
+<ul><li><b>PRAGMA synchronous; <br />PRAGMA synchronous = FULL; </b>(2)<b><br />PRAGMA synchronous = NORMAL; </b>(1)<b><br />PRAGMA synchronous = OFF; </b>(0)</li></ul>
+<p>Query or change the setting of the "synchronous" flag. The first (query) form will return the setting as an integer. When synchronous is FULL (2), the SQLite database engine will pause at critical moments to make sure that data has actually been written to the disk surface before continuing. This ensures that if the operating system crashes or if there is a power failure, the database will be uncorrupted after rebooting. FULL synchronous is very safe, but it is also slow. When synchronous is NORMAL, the SQLite database engine will still pause at the most critical moments, but less often than in FULL mode. There is a very small (though non-zero) chance that a power failure at just the wrong time could corrupt the database in NORMAL mode. But in practice, you are more likely to suffer a catastrophic disk failure or some other unrecoverable hardware fault. With synchronous OFF (0), SQLite continues without pausing as soon as it has handed data off to the operating system. If the application running SQLite crashes, the data will be safe, but the database might become corrupted if the operating system crashes or the computer loses power before that data has been written to the disk surface. On the other hand, some operations are as much as 50 or more times faster with synchronous OFF.
+In SQLite version 2, the default value is NORMAL. For version 3, the default was changed to FULL.
+</p>
+<ul><li><b>PRAGMA temp_store; <br />PRAGMA temp_store = DEFAULT;</b> (0)<b><br />PRAGMA temp_store = FILE;</b> (1)<b><br />PRAGMA temp_store = MEMORY;</b> (2)</li></ul>
+<p>Query or change the setting of the "<b>temp_store</b>" parameter. When temp_store is DEFAULT (0), the compile-time C preprocessor macro TEMP_STORE is used to determine where temporary tables and indices are stored. When temp_store is MEMORY (2) temporary tables and indices are kept in memory. When temp_store is FILE (1) temporary tables and indices are stored in a file. The [#pragma_temp_store_directory  temp_store_directory] pragma can be used to specify the directory containing this file. <b>FILE</b> is specified. When the temp_store setting is changed, all existing temporary tables, indices, triggers, and views are immediately deleted.
+It is possible for the library compile-time C preprocessor symbol TEMP_STORE to override this pragma setting. The following table summarizes the interaction of the TEMP_STORE preprocessor macro and the temp_store pragma:
+</p>
+<blockquote>
+<table border="1" cellpadding="2">
+<tbody><tr>
+<th valign="bottom">TEMP_STORE
+</th>
+<th valign="bottom">PRAGMA<br />temp_store
+</th>
+<th>Storage used for<br />TEMP tables and indices
+</th></tr>
+<tr>
+<td align="center">0
+</td>
+<td align="center"><i>any</i>
+</td>
+<td align="center">file
+</td></tr>
+<tr>
+<td align="center">1
+</td>
+<td align="center">0
+</td>
+<td align="center">file
+</td></tr>
+<tr>
+<td align="center">1
+</td>
+<td align="center">1
+</td>
+<td align="center">file
+</td></tr>
+<tr>
+<td align="center">1
+</td>
+<td align="center">2
+</td>
+<td align="center">memory
+</td></tr>
+<tr>
+<td align="center">2
+</td>
+<td align="center">0
+</td>
+<td align="center">memory
+</td></tr>
+<tr>
+<td align="center">2
+</td>
+<td align="center">1
+</td>
+<td align="center">file
+</td></tr>
+<tr>
+<td align="center">2
+</td>
+<td align="center">2
+</td>
+<td align="center">memory
+</td></tr>
+<tr>
+<td align="center">3
+</td>
+<td align="center"><i>any</i>
+</td>
+<td align="center">memory
+</td></tr></tbody></table>
+</blockquote><p><br />
+</p><ul><li><b>PRAGMA temp_store_directory; <br />PRAGMA temp_store_directory = 'directory-name';</b></li></ul>
+<p>Query or change the setting of the "temp_store_directory" - the directory where files used for storing temporary tables and indices are kept. This setting lasts for the duration of the current connection only and resets to its default value for each new connection opened.
+When the temp_store_directory setting is changed, all existing temporary tables, indices, triggers, and viewers are immediately deleted. In practice, temp_store_directory should be set immediately after the database is opened.
+The value <i>directory-name</i> should be enclosed in single quotes. To revert the directory to the default, set the <i>directory-name</i> to an empty string, e.g., <i>PRAGMA temp_store_directory = ''</i>. An error is raised if <i>directory-name</i> is not found or is not writable.
+The default directory for temporary files depends on the OS. For Unix/Linux/OSX, the default is the is the first writable directory found in the list of: <b>/var/tmp, /usr/tmp, /tmp,</b> and <b> <i>current-directory</i></b>. For Windows NT, the default directory is determined by Windows, generally <b>C:\Documents and Settings\<i>user-name</i>\Local Settings\Temp\</b>. Temporary files created by SQLite are unlinked immediately after opening, so that the operating system can automatically delete the files when the SQLite process exits. Thus, temporary files are not normally visible through <i>ls</i> or <i>dir</i> commands.
+</p>
+<hr />
+<div class="mw-heading mw-heading4"><h4 id="Pragmas_to_query_the_database_schema">Pragmas to query the database schema</h4></div>
+<ul><li><b>PRAGMA database_list;</b></li></ul>
+<p>For each open database, invoke the callback function once with information about that database. Arguments include the index and the name the database was attached with. The first row will be for the main database. The second row will be for the database used to store temporary tables.
+</p>
+<ul><li><b>PRAGMA foreign_key_list(</b><i>table-name</i><b>);</b></li></ul>
+<p>For each foreign key that references a column in the argument table, invoke the callback function with information about that foreign key. The callback function will be invoked once for each column in each foreign key.
+</p>
+<ul><li><b>PRAGMA index_info(</b><i>index-name</i><b>);</b></li></ul>
+<p>For each column that the named index references, invoke the callback function once with information about that column, including the column name, and the column number.
+</p>
+<ul><li><b>PRAGMA index_list(</b><i>table-name</i><b>);</b></li></ul>
+<p>For each index on the named table, invoke the callback function once with information about that index. Arguments include the index name and a flag to indicate whether or not the index must be unique.
+</p>
+<ul><li><b>PRAGMA table_info(</b><i>table-name</i><b>);</b></li></ul>
+<p>For each column in the named table, invoke the callback function once with information about that column, including the column name, data type, whether or not the column can be NULL, and the default value for the column.
+</p>
+<hr />
+<div class="mw-heading mw-heading4"><h4 id="Pragmas_to_query/modify_version_values"><span id="Pragmas_to_query.2Fmodify_version_values"></span>Pragmas to query/modify version values</h4></div>
+<ul><li><b>PRAGMA [database.]schema_version; <br />PRAGMA [database.]schema_version = </b><i>integer </i><b>; <br />PRAGMA [database.]user_version; <br />PRAGMA [database.]user_version = </b><i>integer </i><b>;</b></li></ul>
+<p>The pragmas schema_version and user_version are used to set or get the value of the schema-version and user-version, respectively. Both the schema-version and the user-version are 32-bit signed integers stored in the database header.
+The schema-version is usually only manipulated internally by SQLite. It is incremented by SQLite whenever the database schema is modified (by creating or dropping a table or index). The schema version is used by SQLite each time a query is executed to ensure that the internal cache of the schema used when compiling the SQL query matches the schema of the database against which the compiled query is actually executed. Subverting this mechanism by using "PRAGMA schema_version" to modify the schema-version is potentially dangerous and may lead to program crashes or database corruption. Use with caution!
+The user-version is not used internally by SQLite. It may be used by applications for any purpose.
+</p>
+<hr />
+<div class="mw-heading mw-heading4"><h4 id="Pragmas_to_debug_the_library">Pragmas to debug the library</h4></div>
+<ul><li><b>PRAGMA integrity_check;</b></li></ul>
+<p>The command does an integrity check of the entire database. It looks for out-of-order records, missing pages, malformed records, and corrupt indices. If any problems are found, then a single string is returned which is a description of all problems. If everything is in order, "ok" is returned.
+</p>
+<ul><li><b>PRAGMA parser_trace = ON; </b>(1)<b><br />PRAGMA parser_trace = OFF;</b> (0)</li></ul>
+<p>Turn tracing of the SQL parser inside of the SQLite library on and off. This is used for debugging. This only works if the library is compiled without the NDEBUG macro.
+</p>
+<ul><li><b>PRAGMA vdbe_trace = ON; </b>(1)<b><br />PRAGMA vdbe_trace = OFF;</b> (0)</li></ul>
+<p>Turn tracing of the virtual database engine inside of the SQLite library on and off. This is used for debugging. See the <a rel="nofollow" class="external text" href="http://www.sqlite.org/vdbe.html#trace">VDBE documentation</a> for more information.
+</p>
+<ul><li><b>PRAGMA vdbe_listing = ON; </b>(1)<b><br />PRAGMA vdbe_listing = OFF;</b> (0)</li></ul>
+<p>Turn listings of virtual machine programs on and off. With listing is on, the entire content of a program is printed just prior to beginning execution. This is like automatically executing an EXPLAIN prior to each statement. The statement executes normally after the listing is printed. This is used for debugging. See the <a rel="nofollow" class="external text" href="http://www.sqlite.org/vdbe.html#trace">VDBE documentation</a> for more information.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="REINDEX">REINDEX</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">REINDEX </font></b><i><font color="#ff3434">collation name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">REINDEX </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table/index-name</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The REINDEX command is used to delete and recreate indices from scratch. This is useful when the definition of a collation sequence has changed.
+</p><p>In the first form, all indices in all attached databases that use the named collation sequence are recreated. In the second form, if <i>[database-name.]table/index-name</i> identifies a table, then all indices associated with the table are rebuilt. If an index is identified, then only this specific index is deleted and recreated.
+</p><p>If no <i>database-name</i> is specified and there exists both a table or index and a collation sequence of the specified name, then indices associated with the collation sequence only are reconstructed. This ambiguity may be dispelled by always specifying a <i>database-name</i> when reindexing a specific table or index.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="REPLACE">REPLACE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">REPLACE INTO </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>(</big> </font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>]<b><font color="#2c2cf0"> VALUES <big>(</big> </font></b><i><font color="#ff3434">value-list</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b><big>|</big><b><font color="#2c2cf0"><br /> REPLACE INTO </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>(</big> </font></b><i><font color="#ff3434">column-list</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">select-statement</font></i><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr></tbody></table>
+<p>The REPLACE command is an alias for the "INSERT OR REPLACE" variant of the [#lang_insert INSERT] command. This alias is provided for compatibility with MySQL. See the [#lang_insert INSERT] command documentation for additional information.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="SELECT">SELECT</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">SELECT </font></b>[<b><font color="#2c2cf0">ALL </font></b><big>|</big><b><font color="#2c2cf0"> DISTINCT</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">result</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">FROM </font></b><i><font color="#ff3434">table-list</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">WHERE </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">GROUP BY </font></b><i><font color="#ff3434">expr-list</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">HAVING </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">compound-op</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">select</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">ORDER BY </font></b><i><font color="#ff3434">sort-expr-list</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">LIMIT </font></b><i><font color="#ff3434">integer</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b>(<b><font color="#2c2cf0"> OFFSET </font></b><big>|</big><b><font color="#2c2cf0"> <big>,</big> </font></b>)<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">integer</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">result</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">result-column</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">result-column</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">result-column</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"><big>*</big> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> <big>.</big> <big>*</big> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">AS</font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">string</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">table-list</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">table</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">join-op</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table</font></i><b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">join-args</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">table</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">AS </font></b><i><font color="#ff3434">alias</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b><big>|</big><b><font color="#2c2cf0"><br /><big>(</big> </font></b><i><font color="#ff3434">select</font></i><b><font color="#2c2cf0"> <big>)</big> </font></b>[<b><font color="#2c2cf0">AS </font></b><i><font color="#ff3434">alias</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">join-op</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"><big>,</big> </font></b><big>|</big><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">NATURAL</font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">LEFT </font></b><big>|</big><b><font color="#2c2cf0"> RIGHT </font></b><big>|</big><b><font color="#2c2cf0"> FULL</font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">OUTER </font></b><big>|</big><b><font color="#2c2cf0"> INNER </font></b><big>|</big><b><font color="#2c2cf0"> CROSS</font></b>]<b><font color="#2c2cf0"> JOIN</font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">join-args</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0"></font></b>[<b><font color="#2c2cf0">ON </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0">USING <big>(</big> </font></b><i><font color="#ff3434">id-list</font></i><b><font color="#2c2cf0"> <big>)</big></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">sort-expr-list</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">sort-order</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">sort-order</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">sort-order</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0"></font></b>[<b><font color="#2c2cf0"> COLLATE </font></b><i><font color="#ff3434">collation-name</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"> ASC </font></b><big>|</big><b><font color="#2c2cf0"> DESC </font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">compound_op</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">UNION </font></b><big>|</big><b><font color="#2c2cf0"> UNION ALL </font></b><big>|</big><b><font color="#2c2cf0"> INTERSECT </font></b><big>|</big><b><font color="#2c2cf0"> EXCEPT</font></b>
+</p>
+</td></tr></tbody></table>
+<p>The SELECT statement is used to query the database. The result of a SELECT is zero or more rows of data where each row has a fixed number of columns. The number of columns in the result is specified by the expression list in between the SELECT and FROM keywords. Any arbitrary expression can be used as a result. If a result expression is <font color="#2c2cf0"><big>*</big></font> then all columns of all tables are substituted for that one expression. If the expression is the name of a table followed by <font color="#2c2cf0"><big>.*</big></font> then the result is all columns in that one table.
+</p><p>The DISTINCT keyword causes a subset of result rows to be returned, in which each result row is different. NULL values are not treated as distinct from each other. The default behavior is that all result rows be returned, which can be made explicit with the keyword ALL.
+</p><p>The query is executed against one or more tables specified after the FROM keyword. If multiple tables names are separated by commas, then the query is against the cross join of the various tables. The full SQL-92 join syntax can also be used to specify joins. A sub-query in parentheses may be substituted for any table name in the FROM clause. The entire FROM clause may be omitted, in which case the result is a single row consisting of the values of the expression list.
+</p><p>The WHERE clause can be used to limit the number of rows over which the query operates.
+</p><p>The GROUP BY clauses causes one or more rows of the result to be combined into a single row of output. This is especially useful when the result contains aggregate functions. The expressions in the GROUP BY clause do <i>not</i> have to be expressions that appear in the result. The HAVING clause is similar to WHERE except that HAVING applies after grouping has occurred. The HAVING expression may refer to values, even aggregate functions, that are not in the result.
+</p><p>The ORDER BY clause causes the output rows to be sorted. The argument to ORDER BY is a list of expressions that are used as the key for the sort. The expressions do not have to be part of the result for a simple SELECT, but in a compound SELECT each sort expression must exactly match one of the result columns. Each sort expression may be optionally followed by a COLLATE keyword and the name of a collating function used for ordering text and/or keywords ASC or DESC to specify the sort order.
+</p><p>The LIMIT clause places an upper bound on the number of rows returned in the result. A negative LIMIT indicates no upper bound. The optional OFFSET following LIMIT specifies how many rows to skip at the beginning of the result set. In a compound query, the LIMIT clause may only appear on the final SELECT statement. The limit is applied to the entire query not to the individual SELECT statement to which it is attached. Note that if the OFFSET keyword is used in the LIMIT clause, then the limit is the first number and the offset is the second number. If a comma is used instead of the OFFSET keyword, then the offset is the first number and the limit is the second number. This seeming contradition is intentional - it maximizes compatibility with legacy SQL database systems.
+</p><p>A compound SELECT is formed from two or more simple SELECTs connected by one of the operators UNION, UNION ALL, INTERSECT, or EXCEPT. In a compound SELECT, all the constituent SELECTs must specify the same number of result columns. There may be only a single ORDER BY clause at the end of the compound SELECT. The UNION and UNION ALL operators combine the results of the SELECTs to the right and left into a single big table. The difference is that in UNION all result rows are distinct where in UNION ALL there may be duplicates. The INTERSECT operator takes the intersection of the results of the left and right SELECTs. EXCEPT takes the result of left SELECT after removing the results of the right SELECT. When three or more SELECTs are connected into a compound, they group from left to right.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="UPDATE">UPDATE</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td>
+<p><b><font color="#2c2cf0">UPDATE </font></b>[<b><font color="#2c2cf0"> OR </font></b><i><font color="#ff3434">conflict-algorithm</font></i><b><font color="#2c2cf0"> </font></b>]<b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">database-name</font></i><b><font color="#2c2cf0"> <big>.</big></font></b>]<b><font color="#2c2cf0"> </font></b><i><font color="#ff3434">table-name</font></i><b><font color="#2c2cf0"><br /> SET </font></b><i><font color="#ff3434">assignment</font></i><b><font color="#2c2cf0"> </font></b>[<b><font color="#2c2cf0"><big>,</big> </font></b><i><font color="#ff3434">assignment</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b><big>*</big><b><font color="#2c2cf0"><br /></font></b>[<b><font color="#2c2cf0">WHERE </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</p>
+</td></tr>
+<tr>
+<td align="right" valign="top"><i><font color="#ff3434">assignment</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0"></font></b><i><font color="#ff3434">column-name</font></i><b><font color="#2c2cf0"> <big>=</big> </font></b><i><font color="#ff3434">expr</font></i><b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The UPDATE statement is used to change the value of columns in selected rows of a table. Each assignment in an UPDATE specifies a column name to the left of the equals sign and an arbitrary expression to the right. The expressions may use the values of other columns. All expressions are evaluated before any assignments are made. A WHERE clause can be used to restrict which rows are updated.
+</p><p>The optional conflict-clause allows the specification of an alternative constraint conflict resolution algorithm to use during this one command. See the section titled [#lang_conflict ON CONFLICT] for additional information.
+</p>
+<hr />
+<div class="mw-heading mw-heading3"><h3 id="VACUUM">VACUUM</h3></div>
+<table cellpadding="10">
+<tbody><tr>
+<td align="right" valign="top"><i><font color="#ff3434">sql-statement</font></i> &#160;::=
+</td>
+<td><b><font color="#2c2cf0">VACUUM </font></b>[<b><font color="#2c2cf0"></font></b><i><font color="#ff3434">index-or-table-name</font></i><b><font color="#2c2cf0"></font></b>]<b><font color="#2c2cf0"></font></b>
+</td></tr></tbody></table>
+<p>The VACUUM command is an SQLite extension modeled after a similar command found in PostgreSQL. If VACUUM is invoked with the name of a table or index then it is suppose to clean up the named table or index. In version 1.0 of SQLite, the VACUUM command would invoke <b>gdbm_reorganize()</b> to clean up the backend database file.
+</p><p>VACUUM became a no-op when the GDBM backend was removed from SQLITE in version 2.0.0. VACUUM was reimplemented in version 2.8.1. The index or table name argument is now ignored.
+</p><p>When an object (table, index, or trigger) is dropped from the database, it leaves behind empty space. This makes the database file larger than it needs to be, but can speed up inserts. In time inserts and deletes can leave the database file structure fragmented, which slows down disk access to the database contents. The VACUUM command cleans the main database by copying its contents to a temporary database file and reloading the original database file from the copy. This eliminates free pages, aligns table data to be contiguous, and otherwise cleans up the database file structure. It is not possible to perform the same process on an attached database file.
+</p><p>This command will fail if there is an active transaction. This command has no effect on an in-memory database.
+</p><p>As of SQLite version 3.1, an alternative to using the VACUUM command is auto-vacuum mode, enabled using the [#pragma_auto_vacuum auto_vacuum pragma].
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124140035
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.138 seconds
+Real time usage: 0.157 seconds
+Preprocessor visited node count: 1694/1000000
+Revision size: 117257/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 262/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:510:|#|:idhash:canonical and timestamp 20260124140035 and revision id 10098. Rendering was triggered because: page_view
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;oldid=10098">https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;oldid=10098</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=SQLite+Reference" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=SQLite+Reference" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="SQLite_Reference.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:SQLite_Reference&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="SQLite_Reference.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/SQLite_Reference" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/SQLite_Reference" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;oldid=10098" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=SQLite_Reference&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 17 March 2019, at 21:10.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":702,"wgPageParseReport":{"limitreport":{"cputime":"0.138","walltime":"0.157","ppvisitednodes":{"value":1694,"limit":1000000},"revisionsize":{"value":117257,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":262,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124140035","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124140035 -->
+
+<!-- Mirrored from wiki.appstudio.dev/SQLite_Reference by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

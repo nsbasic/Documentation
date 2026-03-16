@@ -1,0 +1,10 @@
+@media (orientation:portrait) {
+  #Button1 {margin-left:25%; width:51%;}
+  #Button2 {margin-left:25%; width:51%;}
+  #Button3 {margin-left:25%; width:51%;}
+}
+@media (orientation:landscape) {
+  #Button1 {margin-left:10%; width:20%;}
+  #Button2 {margin-left:10%; width:20%;}
+  #Button3 {margin-left:10%; width:20%;}
+}

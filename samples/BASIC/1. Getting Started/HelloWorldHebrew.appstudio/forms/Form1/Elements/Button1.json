@@ -1,0 +1,16 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": "91", 
+  "onclick": "Button1_onclick()", 
+  "onmousedown": "Button1_onmousedown()", 
+  "right": "auto", 
+  "style": "font-family:'Times New Roman'; ", 
+  "top": 213, 
+  "value": "שָׁלוֹם", 
+  "width": 131, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

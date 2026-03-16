@@ -1,0 +1,17 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 130, 
+  "id": "txtResponse", 
+  "left": "51", 
+  "placeholder": "Results will go here.", 
+  "right": "auto", 
+  "top": 251, 
+  "width": 216, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

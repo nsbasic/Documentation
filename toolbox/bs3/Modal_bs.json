@@ -1,0 +1,67 @@
+{ 
+"_type": "Modal_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors", "bsBadge", "bsHeaderValueFooter", "children"], 
+"_palette": 9, 
+"_art": "images/modal.png",
+"_wikipage": "Modal (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Modal</a> Panel which floats above app. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Modal",
+"_longhelp": "longhelp",
+
+"_icon": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"header": "Modal",
+
+"footerAlign": "right", 
+"_footerAlign": { 
+    "acignore": true,
+    "desc": "Alignment of footer contents.", 
+    "type": "enum", 
+    "keys": ["left", "center", "right"], 
+    "values": ["text-align:left;", "text-align:center;", " "]
+}, 
+
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of Modal box.", 
+    "type": "enum", 
+    "keys": ["small", "medium", "large"], 
+    "values": [" modal-sm", "", " modal-lg"]
+}, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "  \"<div id='{id}' class='modal fade' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "    \"<div class='modal-dialog{size}'>\",",
+    "      \"<div class='modal-content'>\",",
+    "        \"<div class='modal-header'>\",",
+    "          \"<button type='button' class='close' data-dismiss='modal'>&times;</button>\",",
+    "{if header<>''}          \"<h4 class='modal-title'>{header!j}{_bsBadge!i}</h4>\",{/if}",
+    "        \"</div>\",",
+    "{if value<>''}      \"<div class='modal-body'>{value!j}\",{/if}",
+    "        \"<div id={id}_addChild>\",",
+    "{if _childhtml<>''}        \"<div class='modal-body'>\",{_childhtml}\"</div>\",{/if}",
+    "        \"</div>\",",
+    "{if value<>''}      \"</div>\",{/if}",
+    "{if footer<>''}        \"<div class='modal-footer' style='{footerAlign}'>{footer!j}</div>\",{/if}",
+    "      \"</div>\",",
+    "    \"</div>\",",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+		
+}

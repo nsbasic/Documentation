@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "btnDecrypt", 
+  "left": 190, 
+  "onclick": "btnDecrypt_onclick()", 
+  "right": "auto", 
+  "top": 204, 
+  "value": "Decrypt", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

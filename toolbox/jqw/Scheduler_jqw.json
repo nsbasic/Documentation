@@ -1,0 +1,142 @@
+{ 
+"_type": "Scheduler_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxscheduler.png", 
+"_wikipage": "jqxScheduler",
+"_shorthelp": "<a href='{_docurl}'>Scheduler</a> displays  a set of Appointments in Day, Week, Month, Timeline Day, Timeline Week and Timeline Month views. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}styles/jqx.base.css",
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}jqxbuttons.js",
+    "{pathTo_jqWidgets}jqxscrollbar.js",
+    "{pathTo_jqWidgets}jqxdata.js",
+    "{pathTo_jqWidgets}jqxdate.js",
+    "{pathTo_jqWidgets}jqxscheduler.js",
+    "{pathTo_jqWidgets}jqxscheduler.api.js",
+    "{pathTo_jqWidgets}jqxdatetimeinput.js",
+    "{pathTo_jqWidgets}jqxmenu.js",
+    "{pathTo_jqWidgets}jqxcalendar.js",
+    "{pathTo_jqWidgets}jqxtooltip.js",
+    "{pathTo_jqWidgets}jqxwindow.js",
+    "{pathTo_jqWidgets}jqxcheckbox.js",
+    "{pathTo_jqWidgets}jqxlistbox.js",
+    "{pathTo_jqWidgets}jqxdropdownlist.js",
+    "{pathTo_jqWidgets}jqxnumberinput.js",
+    "{pathTo_jqWidgets}jqxradiobutton.js",
+    "{pathTo_jqWidgets}jqxinput.js",
+    "{pathTo_jqWidgets}globalization/globalize.js",
+    "{pathTo_jqWidgets}styles/images/bg_blueenergy.png",
+    "{pathTo_jqWidgets}styles/images/bg_darkblue.png",
+    "{pathTo_jqWidgets}styles/images/close.png",
+    "{pathTo_jqWidgets}styles/images/icon-up.png",
+    "{pathTo_jqWidgets}styles/images/icon-up-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-right-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png",
+    "{pathTo_jqWidgets}styles/images/icon-left-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-down.png",
+    "{pathTo_jqWidgets}styles/images/icon-down-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-time.png",
+    "{pathTo_jqWidgets}styles/images/icon-calendar.png",
+    "{pathTo_jqWidgets}styles/images/loader.gif",
+    "{pathTo_jqWidgets}styles/images/check_black.png",
+    "{pathTo_jqWidgets}styles/images/roundbg_check_black.png",
+    "{pathTo_jqWidgets}styles/images/roundbg_classic_normal.png"
+],
+
+"_displayname": "Scheduler",
+"_longhelp": "longhelp",
+
+"top": 0, 
+"left": 0, 
+"height": 500, 
+"width": 500, 
+
+"dayNameFormat":"shortest",
+"_dayNameFormat": { 
+	"group": "JQX",
+    "desc": "columns day formatting", 
+    "type": "enum", 
+    "keys": ["shortest", "firstTwoLetters", "firstLetter", "abbr", "full"], 
+    "values": ["shortest", "firstTwoLetters", "firstLetter", "abbr", "full"]
+    }, 
+
+"editDialogDateTimeFormatString":"dd.MM.yyyy hh:mm",
+"_editDialogDateTimeFormatString": { 
+	"group": "JQX",
+    "desc": "formatString in the Scheduler's Edit Dialog when the appointment is not allDay appointment. use dd/MM/yyyy hh:mm tt for AM/PM", 
+    "type": "str" 
+    }, 
+
+"legendHeight": 34, 
+"_legendHeight": { 
+"group": "JQX",
+"acignore": true,
+"desc": "Scheduler's legend height", 
+"type": "int" 
+}, 
+
+"legendPosition": "bottom",
+"_legendPosition": { 
+"group": "JQX",
+"desc": "Scheduler's legendPosition", 
+"type": "enum", 
+"keys": ["top", "bottom"], 
+"values": ["top","bottom"]
+},
+
+"showLegend": true,
+"_showLegend": { 
+"group": "JQX",
+"desc": "legend bar is displayed", 
+"type": "enum", 
+"keys": ["false", "true"], 
+"values": ["false","true"]
+},
+
+"showToolbar": true,
+    "_showToolbar": { 
+    "group": "JQX",
+    "desc": "navigation toolbar is displayed", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["false","true"]
+},
+
+"theme" : "base",
+    "_theme": { 
+    "group": "JQX",
+    "desc": "Color theme for control.", 
+    "type": "enum", 
+    "keys": ["classic","darkblue","energyblue","shinyblack","summer","black","fresh","highcontrast","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny"], 
+    "values": ["classic","darkblue","energyblue","shinyblack","summer","black","fresh","highcontrast","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny"]
+}, 
+
+"view": "monthView",
+    "_view": { 
+    "group": "JQX",
+    "desc": "What is the default view?", 
+    "type": "enum", 
+    "keys": ["dayView","weekView","monthView","agendaView"], 
+    "values": ["dayView","weekView","monthView","agendaView"]
+},
+
+"views": "['dayView','weekView','monthView','agendaView']",
+    "_views": { 
+    "group": "JQX",
+    "desc": "Array of allowed viewtypes. Examples: [\"monthview\"] or [\"dayview\", \"weekview\", \"monthview\", \"agenda\"]", 
+    "type": "css"
+},
+
+"_csstemplate": 
+"#{id} {{position:absolute;{if _parent.position=='static'} display:{display};{/if} left:{left}px; top:{top}px; height:{height}px; width:{width}px}}",
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}'></div>\",",
+
+"_jstemplate":  "  $('#{id}').jqxScheduler({{theme:'{theme}', width:'{width!p}', height:'{height!p}',view:'{view}', views: {views}, showLegend:{showLegend},legendPosition:'{legendPosition}',legendHeight:{legendHeight},showToolbar:{showToolbar},dayNameFormat:'{dayNameFormat}',editDialogDateTimeFormatString:'{editDialogDateTimeFormatString}'}});"
+
+}

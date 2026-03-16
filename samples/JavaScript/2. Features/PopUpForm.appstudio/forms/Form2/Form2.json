@@ -1,0 +1,70 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "", 
+  "borderStyle": "", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form2", 
+        "Elements", 
+        "Label1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form2", 
+        "Elements", 
+        "Button2.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form2", 
+        "Elements", 
+        "HeaderBar1.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 200, 
+  "designWidth": 200, 
+  "expanded_pmp": null, 
+  "fullScreen": "false", 
+  "height": 200, 
+  "id": "Form2", 
+  "language": "JavaScript", 
+  "left": 100, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true, bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "background:pink;", 
+  "theme": "", 
+  "top": 100, 
+  "width": 200
+}

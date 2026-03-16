@@ -1,0 +1,171 @@
+{ 
+"_type": "DragDrop", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxdragdrop.png", 
+"_wikipage": "jqxDragDrop",
+"_shorthelp": "<a href='{_docurl}'>DragDrop</a> Drag and drop other controls on the form. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}jqxcore.js", 
+	"{pathTo_jqWidgets}styles/jqx.base.css", 
+	"{pathTo_jqWidgets}jqxdragdrop.js"],
+"_displayname": "DragDrop",
+"_longhelp": "longhelp",
+
+"width": 4, 
+"height": 4, 
+"left": 0,
+"top": 0,
+    
+"id": "",
+"_id": { 
+    "desc": "ID of the control to be dragged.", 
+    "type": "str" 
+    },
+    
+"dropTarget": "", 
+"_dropTarget": { 
+    "desc": "ID of the drag target.", 
+    "type": "str" 
+    },
+    
+"dragID": "", 
+"_dragID": { 
+    "desc": "ID of the control to be dragged.", 
+    "type": "str" 
+    },
+    
+"revert": "", 
+"_revert": { 
+    "desc": "Gets whether the control will be reverted to its original position after drop.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",revert:true"]
+    }, 
+
+"opacity": ".6",
+"_opacity": { 
+    "acignore": true,
+    "desc": "Sets draggable control opacity when it is dragging.", 
+    "type": "str" 
+    },
+
+"data": "{}",
+"_data": { 
+    "desc": "This property can be used for setting some kind of information transferred with the draggable, for example {foo: 'foo', bar: 'bar'}", 
+    "type": "css",
+    "language": "JavaScript"
+    },
+
+"revertDuration": 400,
+"_revertDuration": { 
+    "acignore": true,
+    "desc": "Sets the duration for which the draggable object will be reverted.", 
+    "type": "int" 
+    },
+
+"distance": 5,
+"_distance": { 
+    "acignore": true,
+    "desc": "Sets the distance required for the cursor to pass before the drag begins.", 
+    "type": "int" 
+    },
+
+"dragZIndex": 99999,
+"_dragZIndex": { 
+    "acignore": true,
+    "desc": "Sets control z-index when dragging.", 
+    "type": "int" 
+    },
+    
+"tolerance": "", 
+"_tolerance": {
+    "desc": "Sets whether the draggable item is over its drop target when it's intersecting it or when it's fully inside its target.", 
+    "type": "enum", 
+    "keys": ["intersect", "fit"], 
+    "values": ["", ",tolerance:'fit'"]
+    }, 
+
+"feedback": "", 
+"_feedback": {
+    "desc": "Sets the feedback. The feedback is the object which is actually dragged by the user. Possible values are: 'clone', 'original'.", 
+    "type": "enum", 
+    "keys": ["clone", "original"], 
+    "values": ["", ",feedback:'original'"]
+    }, 
+
+"dropAction": "", 
+"_dropAction": {
+    "desc": "Sets whether the draggable will be moved ('default') or not ('none') when its dragging ends.", 
+    "type": "enum", 
+    "keys": ["default", "none"], 
+    "values": ["", ",dropAction:'none'"]
+    }, 
+
+"appendTo": "", 
+"_appendTo": {
+    "desc": "Sets where will be appended the draggable's feedback.", 
+    "type": "enum", 
+    "keys": ["parent", "body"], 
+    "values": ["", ",appendTo:'parent'"]
+    }, 
+
+"onDragEnd": "", 
+"_onDragEnd": { 
+    "acignore": true,
+    "desc": "When drag is ended.", 
+    "type": "js" 
+    }, 
+
+"onDrag": "", 
+"_onDrag": { 
+    "acignore": true,
+    "desc": "Called as drag continues.", 
+    "type": "js" 
+    }, 
+
+"onDragStart": "", 
+"_onDragStart": { 
+    "acignore": true,
+    "desc": "When drag is started.", 
+    "type": "js" 
+    }, 
+
+"onTargetDrop": "", 
+"_onTargetDrop": { 
+    "acignore": true,
+    "desc": "When control being dragged is dropped on the target.", 
+    "type": "js" 
+    }, 
+
+"onTargetEnter": "", 
+"_onTargetEnter": { 
+    "acignore": true,
+    "desc": "When control being dragged is enters the target; see tolerance as well.", 
+    "type": "js" 
+    }, 
+
+"onTargetLeave": "", 
+"_onTargetLeave": { 
+    "acignore": true,
+    "desc": "When control being dragged leaves the target: see tolerance as well.", 
+    "type": "js" 
+    }, 
+
+"_htmltemplate": "  \"<div id={id} style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+    "  $('#{dragID}').jqxDragDrop({{dropTarget:$('#{dropTarget}'), data:{data}, ",
+    "   opacity:{opacity}, revertDuration:{revertDuration}, distance:{distance}, dragZIndex:{dragZIndex} ",
+    "   {if disabled == true}, disabled:{disabled}{/if} {revert}{tolerance}{feedback}{dropAction}{appendTo}",
+    "   ,onDragEnd:function(){{if(typeof({id}.onDragEnd)=='function') {id}.onDragEnd()}}",
+    "   ,onDrag:function(){{if(typeof({id}.onDrag)=='function') {id}.onDrag()}}",
+    "   ,onDragStart:function(){{if(typeof({id}.onDragStart)=='function') {id}.onDragStart()}}",
+    "   ,onTargetDrop:function(){{console.log('{id}.onTargetDrop:'+typeof({id}.onTargetDrop));if(typeof({id}.onTargetDrop)=='function') {id}.onTargetDrop()}}",
+    "   ,onDropTargetEnter:function(){{if(typeof({id}.onDropTargetEnter)=='function') {id}.onDropTargetEnter()}}",
+    "   ,onDropTargetLeave:function(){{if(typeof({id}.onDropTargetLeave)=='function') {id}.onDropTargetLeave()}}",
+    "  }});"
+                ]
+}

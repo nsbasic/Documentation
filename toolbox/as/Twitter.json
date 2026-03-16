@@ -1,0 +1,114 @@
+{ 
+"_type": "Twitter", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/twitter.png", 
+"_shorthelp": "<a href='{_docurl}'>Twitter</a> Follow button - link to a Twitter page.", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [],
+"_resizable": false,
+"_displayname": "Twitter",
+"_longhelp": "longhelp",
+
+"height": 20, 
+"width": 300, 
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"_acprops": {
+    "hide()": {"desc": "Hide the control."},
+    "show()": {"desc": "Show the control."}
+},
+
+"top": 0, 
+"_top": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+
+"bottom": "auto", 
+"_bottom": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+    
+"left": 50, 
+"_left": { 
+    "acignore": true,
+    "desc": "Location of left of element", 
+    "type": "str" 
+    }, 
+    
+"user": "nsbasic", 
+"_user": { 
+    "desc": "Twitter User Name", 
+    "type": "str" 
+    }, 
+    
+"widgetID": "408316144626302976", 
+"_widgetID": { 
+    "desc": "Widget ID from <a href='https://twitter.com/settings/widgets' target='_top'>https://twitter.com/settings/widgets</a>", 
+    "type": "str" 
+    }, 
+    
+ 
+    
+"showCount": "False", 
+"_showCount": { 
+    "desc": "Show number of members.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+    
+"size": "medium", 
+"_size": { 
+    "desc": "Size of button.", 
+    "type": "enum", 
+    "keys": ["medium", "large"], 
+    "values": ["medium", "large"]
+    }, 
+    
+"api": "follow", 
+"_api": { 
+    "desc": "Follow or Widget?", 
+    "type": "enum", 
+    "keys": ["follow", "widget"], 
+    "values": ["follow", "widget"]
+    }, 
+    
+"showName": "True", 
+"_showName": { 
+    "desc": "Show Twitter screen name.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true","false"]
+    }, 
+    
+"language": "en", 
+"_language": { 
+    "desc": "Language to display in.", 
+    "type": "enum", 
+    "keys": ["English","French","German","Italian","Spanish","Korean","Japanese"], 
+    "values": ["en","fr","de","it","es","ko","ja"]
+    }, 
+        
+"_htmltemplate": "  \"<div id={id} style='{hidden}{style!j}' class='{class}'>{if api=='follow'}<a href='https://twitter.com/{user}' class='twitter-follow-button' data-show-count={showCount} data-show-screen-name={showName} data-lang={language} data-size={size}> @{user}</a>{/if}{if api=='widget'}<a class='twitter-timeline' href='https://twitter.com/{user}' data-widget-id='{widgetID}'>Tweets by @{user}</a>{/if}</div>\",",
+
+"_jstemplate": [
+  "  if (navigator.onLine==true)",
+  "    {if api=='follow'}{{!function(d,s,id){{var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){{js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}}}(document,'script','twitter-wjs'){/if}{if api=='widget'}{{!function(d,s,id){{var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){{js=d.createElement(s);js.id=id;js.src=p+'https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs')}}{/if};NSB.addProperties({id});",
+  "}};"
+  ]
+}

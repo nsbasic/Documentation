@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 204, 
+  "hidden": "block", 
+  "id": "txaContents", 
+  "left": 18, 
+  "placeholder": "Enter text to upload here", 
+  "right": "auto", 
+  "top": 177, 
+  "width": 283, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

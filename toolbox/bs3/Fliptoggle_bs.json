@@ -1,0 +1,117 @@
+{ 
+"_type": "Fliptoggle_bs", 
+"_base": ["bsAll", "borders", "margin", "padding", "fonts"], 
+"_palette": 9, 
+"_art": "images/fliptoggle.png",
+"_wikipage": "Fliptoggle (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Fliptoggle</a>. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js",
+  "{_nsbdir}toolbox/bs3/dist/css/titatoggle-dist-min.css"],
+
+"_displayname": "Fliptoggle",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "",
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "Element value changed", 
+    "type": "js" 
+    },
+
+"onblur": "", 
+"_onblur": { 
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }, 
+
+"mode": "default", 
+"_mode": { 
+    "acignore": true,
+    "desc": "What should the Fliptoggle look like?", 
+    "type": "enum", 
+    "keys": ["default", "rounded", "text", "iOS", "iOS flat", "Android", "Android skinny"],
+    "values": ["default", "a-rounded", "a", "b", "b-flat", "c", "c-weight"] 
+    }, 
+
+"appearance": "", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "What should the text appear as?", 
+    "type": "enum", 
+    "keys": ["default", "success", "info", "warning", "danger"],
+    "values": ["", "indicator-success", "indicator-info", "indicator-warning", "indicator-danger"] 
+    }, 
+
+"appearanceSlider": "", 
+"_appearanceSlider": { 
+    "acignore": true,
+    "desc": "What should the slider appear as?", 
+    "type": "enum", 
+    "keys": ["default", "primary", "info", "warning", "danger"],
+    "values": ["", " checkbox-slider-primary", " checkbox-slider-info", " checkbox-slider-warning", " checkbox-slider-danger"] 
+    }, 
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "How big should it be?", 
+    "type": "enum", 
+    "keys": ["default", "small", "medium", "large"],
+    "values": ["", " checkbox-slider-sm", " checkbox-slider-md", " checkbox-slider-lg"] 
+    }, 
+
+"value": "true", 
+"_value": {
+    "desc": "Value of Fliptoggle.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false", "true"] 
+    }, 
+
+"text": "Fliptoggle", 
+"_text": {
+    "desc": "Text of Fliptoggle.", 
+    "type": "str"
+    }, 
+
+
+"_htmltemplate": [
+    "  \"<div id='{id}' data-role=none class='checkbox checkbox-slider--{mode}{size}{appearanceSlider} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "    \"<label id='{id}_label'>\",",
+    "      \"<input  id='{id}_value' type='checkbox' {if value == 'true'} checked='checked'{/if}{disabled}>\",",
+    "      \"<span  id='{id}_text' class='{appearance}'>{text}</span>\",",
+    "    \"</label>\",",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ],
+  
+"_design_jstemplate": [
+    "{id}.getDesignFrameRect = function() {{",
+    "  return {id}_label.getBoundingClientRect();",
+    "}}"
+    ]
+
+		
+}
+
+

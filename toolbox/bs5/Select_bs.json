@@ -1,0 +1,85 @@
+{ 
+"_type": "Select_bs5", 
+"_base": ["bs5All", "margin", "padding", "fonts", "Input", "colors", "bs5Input", "bs5Items", "bs5Icon", "bs5Popover", "bs5Badge"], 
+"_palette": 9, 
+"_art": "images/select.png", 
+"_wikipage": "Select (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Select</a> displays a list of items to select from. Bootstrap.",
+"_category": ["All", "Bootstrap 5"],
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new items to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "value": {"desc": "Gets or sets the value of the choice."},
+    "text": {"desc": "Gets the text of the choice."},
+    "item": {"desc": "Gets the choice."},
+    "length": {"desc": "Return the number of items."}
+},
+
+"_displayname": "Select",
+"_longhelp": "longhelp",
+"_placeholder": {"type": "hidden"},
+"_value": {"type": "hidden"},
+
+"header": "Select", 
+"_header": { 
+    "i18n": true,
+    "desc": "header for input field. Leave blank for none.", 
+    "type": "css" 
+   }, 
+    
+"footer": "", 
+"_footer": { 
+    "i18n": true,
+    "desc": "Optional text under input field. Often used for Help.", 
+    "type": "css" 
+   }, 
+
+"width": "auto",
+"height": "auto",
+ 
+"multiSelect": "",
+"_multiSelect": { 
+    "acignore": true,
+    "desc": "Allow multiple selection. nativeMenu must be false.", 
+    "type": "enum", 
+    "keys": ["false","true"], 
+    "values": ["","true"]
+    }, 
+    
+"size": "",
+"_size": { 
+    "acignore": true,
+    "desc": "Maximum number of rows to display. Default is 1 (4 if multiSelect).", 
+    "type": "str" 
+   },
+   
+"values": "101\n102\n103\n104",
+"_values": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "An optional list of values associated with each item, one per line. Design time only.", 
+    "type": "css",
+    "language": "HTML" 
+    },
+
+"_htmltemplate": [
+    "  \"<div id={id} data-role='none' class='{class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}'>\",",
+    "  \"{_bsInput_wrapperNoPopover!i}{_bsInput_headerColsNoBadge!i}\",",
+    "{if header<>''}    \"<div id={id}_header class='col-sm-{valueCols}'>\",{/if}",
+    "{if header==''}    \"<div class='col-sm-12'>\",{/if}",
+    "      \"<div class='input-group' style='width:100%;'>\",",
+    "        \"{_bsBadgePadBelow!i}\",",
+    "    NSB.bs.select.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{disabled}', '{items!j}', '{values!j}', '{multiSelect}', '{size}', '{name}', '{required}'),",
+    "{if icon<>''}        \"<span class='input-group-addon' {_bsPopover!i}>\",{/if}",
+    "{if icon<>''}          \"<a><span class='bi-{icon}'></span></a></span>\",{/if}",
+    "      \"</div>\",",
+    "      \"{_bsinput_footer!i}\",",
+    "  \"</div></div>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnGetRemoteData", 
+  "left": 168, 
+  "onclick": "btnGetRemoteData_onclick()", 
+  "right": "auto", 
+  "top": 344, 
+  "value": "Get remote data", 
+  "width": 120, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

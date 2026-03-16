@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "left": 8, 
+  "right": "auto", 
+  "top": 31, 
+  "width": "100%", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Emoji", 
+  "position": "absolute", 
+  "children": [] 
+} 

@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "btnAjax", 
+  "left": 8, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 181, 
+  "value": "Reverse String and save as file on server", 
+  "width": 301, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

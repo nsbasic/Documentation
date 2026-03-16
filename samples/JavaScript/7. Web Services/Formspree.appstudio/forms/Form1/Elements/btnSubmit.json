@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnSubmit", 
+  "left": 86, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 324, 
+  "value": "Email above info", 
+  "width": 143, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

@@ -1,0 +1,24 @@
+{
+    "_type": "bsAll",
+    "_base": "Widget",
+    "_description": "Properties shared by all Bootstrap controls.",
+    
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"{_nsbdir}toolbox/bs3/dist/fa/css/font-awesome.min.css",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.ttf",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff2",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js"
+],
+
+"_acprops": {
+    "toggle(options)": {"desc": "Hides or shows control as needed."},
+    "collapse()": {"desc": "Hides or shows control as needed."}
+  },
+  
+  "display": ""
+}

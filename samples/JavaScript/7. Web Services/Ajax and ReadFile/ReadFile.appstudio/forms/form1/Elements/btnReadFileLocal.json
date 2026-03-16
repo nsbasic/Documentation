@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnReadFileLocal", 
+  "left": 26, 
+  "onclick": "btnReadFileLocal_onclick()", 
+  "right": "auto", 
+  "top": 300, 
+  "value": "ReadFile local", 
+  "width": 120, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

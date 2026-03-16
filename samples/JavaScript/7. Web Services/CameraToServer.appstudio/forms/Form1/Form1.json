@@ -1,0 +1,115 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "", 
+  "borderStyle": "", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "Image1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "Label1Copy.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "lblPicMsg.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "PictureBox1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "txtGetPicture.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "htmResponse.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "TitleBar1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "Form1", 
+        "Elements", 
+        "btnSubmitImage.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 500, 
+  "designWidth": 330, 
+  "expanded_pmp": null, 
+  "fullScreen": "false", 
+  "height": 500, 
+  "id": "Form1", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "1", 
+  "theme": "", 
+  "top": 0, 
+  "width": 330
+}

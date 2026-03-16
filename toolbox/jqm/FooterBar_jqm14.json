@@ -1,0 +1,90 @@
+{ 
+"_type": "FooterBar_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/footerbar.png",
+"_shorthelp": "<a href='{_docurl}'>FooterBar</a> - Row of buttons at bottom of form.  jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "FooterBar",
+"_longhelp": "longhelp",
+"_resizable": false,
+
+"_acprops": {
+    "refresh()": {"desc": "Refresh the control"}
+    },
+    
+"width": "100%", 
+"height": "auto", 
+"top": "auto",
+"left": 0,
+"bottom": 0,
+
+"items": "One, Two",
+"_items": { 
+    "desc": "Button names, comma separated. Maximum of 5.", 
+    "type": "css",
+    "language": "HTML" 
+    }, 
+
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when buttons clicked, comma separated. Maximum of 5.",
+    "type": "css"
+},
+    
+"theme": "",
+"_theme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"icons": "", 
+"_icons": { 
+    "acignore": true,
+    "desc": "Icon names, comma separated. Choices are home, action, arrow-d-l, arrow-d-r, arrow-d, arrow-l, arrow-r, arrow-u-l, arrow-u-r, arrow-u, audio, calendar, camera, carat-d, carat-l, carat-r, carat-u, check, clock, cloud, custom, grid, mail, eye, gear, heart, home, info, bullets, bars, navigation, lock, search, location, minus, forbidden, edit, user, phone, plus, power, recycle, forward, refresh, shop, comment, star, tag, back, video, alert, delete.", 
+    "type": "css"
+    }, 
+
+"iconPos": "none",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["none","left","right","top","bottom","notext"], 
+    "values": ["none","left","right","top","bottom","notext"]
+    }, 
+
+"active": 0, 
+"_active": { 
+    "acignore": true,
+    "desc": "Which button is active?", 
+    "type": "int" 
+    }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"_csstemplate": "#{id} {{position:absolute;{if _parent.position=='static'} display:{display};{/if}top:auto; height:auto; width:100%; height:auto; left:0px; bottom:0px;}}",
+
+"_htmltemplate": "  NSB.FooterBar_jqm14('{id}', '{items!j}', '{theme}', '{icons}', '{iconPos}', '{active}', '{disabled} {class}', '{style!j}'),",
+
+"_jstemplate":[
+  "  {id}.refresh=function(){{setTimeout(NSB.FooterBarRefresh,10,{id})}};",
+  "  NSB.FooterBar_jqm_init('{id}','{items}');",
+  "  NSB.addProperties({id});",
+  "  (function(){{var d,i,s='{ChangeForm}'.split(',');for(i=0;i<s.length;i++){{if(s[i].trim()!=''){{d=document.getElementById('{id}_'+i);(function(i){{d.onclick=function(){{ChangeForm(document.getElementById(s[i]))}}}})(i)}}}}}})()"
+  ]
+}

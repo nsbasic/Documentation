@@ -1,0 +1,114 @@
+{ 
+"_type": "Chart", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxchart.png", 
+"_wikipage": "jqxChart",
+"_shorthelp": "<a href='{_docurl}'>Charts</a> jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}jqxcore.js", 
+	"{pathTo_jqWidgets}styles/jqx.base.css", 
+	"{pathTo_jqWidgets}styles/jqx.{theme}.css", 
+	"{pathTo_jqWidgets}jqxchart.js",
+	"{pathTo_jqWidgets}jqxdata.js"
+	],
+"_displayname": "Chart",
+"_longhelp": "longhelp",
+
+"height": 160, 
+"width": 375, 
+    
+"title": "", 
+"_title": { 
+    "desc": "Title of the chart.", 
+    "type": "str" 
+    },
+        
+"background": "white", 
+"_background": {  
+    "desc": "Background color of chart.Can be name, #RRGGBB or rgb(R,G,B)", 
+    "type": "str" 
+    },
+    
+"description": "", 
+"_description": { 
+    "desc": "Description of chart.", 
+    "type": "str" 
+    },
+
+"padding": "{ left: 5, top: 5, right: 5, bottom: 5 }",
+"_padding": { 
+    "desc": "Sets the padding around the chart.", 
+    "type": "css",
+    "language": "CSS"
+    },
+    
+"titlePadding": "{ left: 2, top: 2, right: 2, bottom: 2 }",
+"_titlePadding": { 
+    "desc": "Sets the padding around the title.", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+    
+"colorScheme": "scheme01",
+"_colorScheme": { 
+    "desc": "Set the chart's color pallette", 
+    "type": "enum", 
+    "keys": ["scheme01","scheme02","scheme03","scheme04","scheme05","scheme06","scheme07","scheme08","scheme09","scheme10","scheme11"], 
+    "values": ["scheme01","scheme02","scheme03","scheme04","scheme05","scheme06","scheme07","scheme08","scheme09","scheme10","scheme11"]
+    }, 
+
+"showLegend": "false", 
+"_showLegend": { 
+    "desc": "Show chart series legend?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+"enabled": "true", 
+"_enabled": { 
+    "desc": "Start with chart enabled?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+"showToolTips": "true", 
+"_showToolTips": { 
+    "desc": "Show tool tips?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+"toolTipDelay": 500,
+"_toolTipDelay": { 
+    "desc": "Time of the toolstip show delay in milliseconds.", 
+    "type": "int" 
+    }, 
+    
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:static; left:0px; top:0px; height:100%; width:100%}}"],
+
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='background-color:white;{hidden}{style!j}' class='{class}'><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+    "    title:'{title}',",
+    "    backgroundColor:'{background}',",
+    "    description:'{description}',",
+    "    padding:{padding},",
+    "    titlePadding:{titlePadding},",
+    "    colorScheme:'{colorScheme}',",
+    "    showLegend:{showLegend},",
+    "    enabled:{enabled},",
+    "    showToolTips:{showToolTips},",
+    "    toolTipDelay:'{toolTipDelay}'",
+    "  }}",
+    "  {id}.style.position='static';",
+    "  NSB.addProperties({id},{id}_wrapper);"]
+}

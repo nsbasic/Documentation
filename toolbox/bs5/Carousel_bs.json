@@ -1,0 +1,88 @@
+{ 
+"_type": "Carousel_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding"], 
+"_palette": 9, 
+"_art": "images/carousel.png",
+"_wikipage": "Carousel (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Carousel</a> A slideshow component for cycling through elements—images or text. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Carousel",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+
+"buttons": "true",
+"_buttons": { 
+    "acignore": true,
+    "desc": "Show previous/next buttons", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "true"]
+    }, 
+
+"captions": "",
+"_captions": { 
+    "acignore": true,
+    "desc": "List of image captions, one per line. Optional", 
+    "type": "css" 
+    }, 
+
+"crossfade": "",
+"_crossfade": { 
+    "acignore": true,
+    "desc": "Use a crossfade when going to next slide", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "carousel-fade"]
+    }, 
+
+"descriptions": "",
+"_descriptions": { 
+    "acignore": true,
+    "desc": "List of image descriptions, one per line. Optional", 
+    "type": "css" 
+    }, 
+
+"images": "",
+"_images": { 
+    "acignore": true,
+    "desc": "List of image names, one per line. Optional", 
+    "type": "css" 
+    }, 
+
+"indicators": "",
+"_indicators": { 
+    "acignore": true,
+    "desc": "Show buttons to goto images", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "true"]
+    }, 
+
+"interval": "2000", 
+"_interval": { 
+    "acignore": true,
+    "desc": "Time in milliseconds for autoplay.", 
+    "type": "str" 
+    }, 
+    
+"autoplay": "",
+"_autoplay": { 
+    "acignore": true,
+    "desc": "Set to Carousel to start playing immediately, set to Ride to start after user interaction.", 
+    "type": "enum", 
+    "keys": ["", "carousel", "ride"], 
+    "values": ["", "carousel", "ride"]
+    }, 
+
+"_htmltemplate": [
+    "    NSB.bs.carousel.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{hidden}{style!j}', '{class}', '{autoplay}', '{buttons}', '{captions!j}', '{crossfade}', '{descriptions!j}', '{images!j}', '{indicators}', '{interval}' ),"
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+		
+}

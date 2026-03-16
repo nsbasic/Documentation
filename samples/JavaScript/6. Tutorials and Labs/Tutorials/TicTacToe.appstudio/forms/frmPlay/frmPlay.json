@@ -1,0 +1,157 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "", 
+  "borderStyle": "solid", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn11.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn12.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn13.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn21.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn22.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn23.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn31.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn32.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btn33.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btnNext.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btnReset.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "lblTurn.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmPlay", 
+        "Elements", 
+        "btnMenu.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 667, 
+  "designWidth": 375, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": 667, 
+  "id": "frmPlay", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "frmPlay.onshow()", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": 375
+}

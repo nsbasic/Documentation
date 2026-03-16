@@ -1,0 +1,17 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 65, 
+  "id": "sendText", 
+  "left": 21, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 57, 
+  "width": 263, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

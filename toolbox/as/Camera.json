@@ -1,0 +1,69 @@
+{ 
+"_type": "Camera", 
+"_base": ["Widget", "fonts", "borders", "padding", "colors", "margin", "bsIcon"], 
+"_palette": 4, 
+"_art": "images/camera.png", 
+"_shorthelp": "<a href='{_docurl}'>Camera</a>", 
+"_category": ["All", "Multimedia"],
+"_requiredfiles": [
+    "https://use.fontawesome.com/530b34dcfd.js"
+    ],
+"_resizable": false,
+"_displayname": "Camera",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"width": "auto",
+"fontSize": "20px",
+"fontWeight": "400",
+"borderStyle": "solid",
+"borderWidth": "0",
+"backgroundColor": "transparent",
+"icon": "camera",
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"_acprops": {
+    "hide()": {"desc": "Hide the control."},
+    "show()": {"desc": "Show the control."}
+},
+    
+"value": "", 
+"_value": { 
+    "desc": "Value of input", 
+    "type": "str" 
+    },
+       
+"picturebox": "PictureBox1",
+"_picturebox": {
+    "desc": "The PictureBox to put the image into.",
+    "type": "str"
+	},            
+           
+"_htmltemplate": ["  \"<button id='{id}' class='{class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}' data-role=none data-nsb-type=Camera>\",",
+"  \"{if icon<>''}<span id='{id}_icon' class='fa fa-{icon}'></span>{/if}{value!j}</button>\",",
+"  \"<input id={id}_camera type=file data-role=none style='z-index:2; position:absolute; top:0px; left:0px; width:100%; height:100%; opacity:0; border-width:0px;'>\","
+],
+
+"_jstemplate": [
+  "  NSB.addProperties({id});",
+  "  {id}.appendChild({id}_camera);",
+  "  {id}_reader=new FileReader();",
+  "  {id}.onchange=function(){{{id}_reader.readAsDataURL({id}_camera.files[0])}};",
+  "  {id}_reader.onload=function(e){{",
+  "    {picturebox}.img=new Image;",
+  "    {picturebox}.img.src=e.target.result;",
+  "    var pb={picturebox}.getContext('2d');",
+  "    pb.addImage({picturebox}.img.src,0,0,0,0,0,0, {picturebox}.width,{picturebox}.height);",
+  "  }}"
+  ]
+}

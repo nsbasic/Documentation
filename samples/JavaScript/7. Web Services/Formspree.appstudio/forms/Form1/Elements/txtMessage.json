@@ -1,0 +1,20 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 66, 
+  "hidden": "block", 
+  "id": "txtMessage", 
+  "left": 18, 
+  "name": "message", 
+  "placeholder": "Enter message", 
+  "right": "auto", 
+  "top": 222, 
+  "value": "This is a test message.", 
+  "width": 287, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

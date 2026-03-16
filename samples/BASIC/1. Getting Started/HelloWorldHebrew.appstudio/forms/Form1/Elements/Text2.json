@@ -1,0 +1,17 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Text2", 
+  "left": "107", 
+  "placeholder": " .... أשָׁלוֹם", 
+  "right": "auto", 
+  "top": 309, 
+  "width": 100, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

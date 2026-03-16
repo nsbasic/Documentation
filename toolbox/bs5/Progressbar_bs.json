@@ -1,0 +1,84 @@
+{ 
+"_type": "Progressbar_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors"], 
+"_palette": 9, 
+"_art": "images/progressbar.png",
+"_wikipage": "Progressbar (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Progressbar</a> displays a progress indication with optional caption. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Progressbar",
+"_longhelp": "longhelp",
+
+"_subtext": {"type": "hidden"},
+"_color": {"type": "hidden"},
+
+"width": "160px",
+"height": "20px",
+
+"appearance": "",
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the alert", 
+    "type": "enum", 
+    "keys": ["default", "success", "info", "warning", "danger"], 
+    "values": ["", " bg-success", " bg-info", " bg-warning", " bg-danger"]
+    }, 
+
+"labeled": "true",
+"_labeled": { 
+    "acignore": true,
+    "desc": "Display a % label on the bar?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", ""]
+    }, 
+
+"striped": "",
+"_striped": { 
+    "acignore": true,
+    "desc": "Add a striped pattern to the bar?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", " progress-bar-striped"]
+    }, 
+
+"animated": "",
+"_animated": { 
+    "acignore": true,
+    "desc": "Animate the pattern on the bar?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", " progress-bar-animated"]
+    }, 
+    
+"value": "42", 
+"_value": { 
+    "desc": "Initial value of bar.", 
+    "type": "str" 
+    }, 
+    
+"min": "0", 
+"_min": { 
+    "acignore": true,
+    "desc": "Minimum value of bar.", 
+    "type": "str" 
+    }, 
+    
+"max": "100", 
+"_max": { 
+    "acignore": true,
+    "desc": "Maximum value of bar.", 
+    "type": "str" 
+    }, 
+
+"_htmltemplate": [
+    "  \"<div id='{id}' class='progress {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "    \"<div id='{id}_contents' class='progress-bar{appearance}{striped}{animated}' role='progressbar' valuenow='{value}' valuemin='{min}' valuemax='{max}' style='{if labeled=='true'}min-width:2em; {/if}width:{value}%;'>{if labeled=='true'}{value}%{/if}</div>\",",    
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

@@ -1,0 +1,233 @@
+{ 
+"_type": "GoogleMap", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/googlemap.png", 
+"_shorthelp": "<a href='{_docurl}'>GoogleMap</a> displays Google Maps", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/as/dist/asFunctions.js"
+  ],
+"_resizable": false,
+"_displayname": "GoogleMap",
+"_longhelp": "longhelp",
+
+"height": 240, 
+"width": 300, 
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"_acprops": {
+    "hide()": {"desc": "Hide the control."},
+    "show()": {"desc": "Show the control."}
+},
+        
+"apiKey": "",
+"_apiKey": {
+	"acignore": true,
+	"desc": "API Key issued by Google. More information here: <a href='https://developers.google.com/maps/documentation/javascript/get-api-key' target='_top'>https://developers.google.com/maps/documentation/javascript/get-api-key",
+	"type": "str"
+	},
+
+
+"background": "#F0FFFF", 
+"_background": { 
+    "acignore": true,
+    "desc": "Background color, before map is drawn.", 
+    "type": "str" 
+    }, 
+
+"disableDefaultUI": false,
+"_disableDefaultUI": {
+	"acignore": true,
+	"desc": "Enables/disables all default UI. May be overridden individually.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+ 
+"disableDoubleClickZoom": true,
+"_disableDoubleClickZoom": {
+	"acignore": true,
+	"desc": "Enables/disables zoom and center on double click. Enabled by default.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+
+"draggable": true,
+"_draggable": {
+	"acignore": true,
+	"desc": "If false, prevents the map from being dragged. Dragging is enabled by default.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+
+"draggableCursor": "",
+"_draggableCursor": {
+	"acignore": true,
+	"desc": "The name or url of the cursor to display when mousing over a draggable map. This property uses the css cursor attribute to change the icon. As with the css property, you must specify at least one fallback cursor that is not a URL. For example: draggableCursor: 'url(http://www.example.com/icon.png), auto;'.",
+	"type": "str"
+	},
+
+"draggingCursor": "",
+"_draggingCursor": {
+	"acignore": true,
+	"desc": "The name or url of the cursor to display when the map is being dragged. This property uses the css cursor attribute to change the icon. As with the css property, you must specify at least one fallback cursor that is not a URL. For example: draggingCursor: 'url(http://www.example.com/icon.png), auto;'.",
+	"type": "str"
+	},
+	
+"heading": 0,
+"_heading": {
+	"acignore": true,
+	"desc": "The heading for aerial imagery in degrees measured clockwise from cardinal direction North. Headings are snapped to the nearest available angle for which imagery is available.",
+	"type": "int"
+	},
+
+"keyboardShortcuts": true,
+"_keyboardShortcuts": {
+	"acignore": true,
+	"desc": "If false, prevents the map from being controlled by the keyboard. Keyboard shortcuts are enabled by default.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+	       
+"latitude": 40.948262, 
+"_latitude": { 
+    "acignore": true,
+    "desc": "Location latitude: -90 to 90", 
+    "type": "str" 
+    }, 
+        
+"longitude": -72.898428, 
+"_longitude": { 
+    "acignore": true,
+    "desc": "Location longitude: 0 to 180", 
+    "type": "str" 
+    }, 
+
+"mapMaker": false,
+"_mapMaker": {
+	"acignore": true,
+	"desc": "True if Map Maker tiles should be used instead of regular tiles.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+	
+"maxZoom": 20,
+"_maxZoom": {
+	"acignore": true,
+	"desc": "The maximum zoom level which will be displayed on the map. If omitted, or set to null, the maximum zoom from the current map type is used instead.",
+	"type": "int"
+	},	    
+
+"minZoom": 0,
+"_minZoom": {
+	"acignore": true,
+	"desc": "The minimum zoom level which will be displayed on the map. If omitted, or set to null, the minimum zoom from the current map type is used instead.",
+	"type": "int"
+	},
+        
+"mapTypeId": "roadmap", 
+"_mapTypeId": { 
+    "desc": "Type of map", 
+    "type": "enum", 
+    "keys": ["Roadmap", "Hybrid", "Satellite", "Terrain"], 
+    "values": ["roadmap", "hybrid", "satellite", "terrain"]
+    }, 
+
+"noClear": false,
+"_noClear": {
+	"acignore": true,
+	"desc": "If true, do not clear the contents of the Map div.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+
+"scrollwheel": true,
+"_scrollwheel": {
+	"acignore": true,
+	"desc": "If false, disables scrollwheel zooming on the map. The scrollwheel is enabled by default.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+
+"streetViewControl": true,
+"_streetViewControl": {
+	"acignore": true,
+	"desc": "The initial enabled/disabled state of the Street View Pegman control. This control is part of the default UI, and should be set to false when displaying a map type on which the Street View road overlay should not appear (e.g. a non-Earth map type).",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+	
+"tilt": 0,
+"_tilt": {
+	"acignore": true,
+	"desc": "Controls the automatic switching behavior for the angle of incidence of the map. The only allowed values are 0 and 45. The value 0 causes the map to always use a 0 degree overhead view regardless of the zoom level and viewport. The value 45 causes the tilt angle to automatically switch to 45 whenever 45 degree imagery is available for the current zoom level and viewport, and switch back to 0 whenever 45 degree imagery is not available (this is the default behavior). 45 degree imagery is only available for SATELLITE and HYBRID map types, within some locations, and at some zoom levels. Note: getTilt returns the current tilt angle, not the value specified by this option. Because getTilt and this option refer to different things, do not bind() the tilt property; doing so may yield unpredictable effects.",
+	"type": "int"
+	},
+
+"zoom": 16,
+"_zoom": {
+	"acignore": true,
+	"desc": "The initial Map zoom level. Required.",
+	"type": "int"
+	},
+
+"zoomControl": true,
+"_zoomControl": {
+	"acignore": true,
+	"desc": "The enabled/disabled state of the Zoom control.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": [true, false]
+	},
+
+"_csstemplate": "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and _parent.position<>'static'} left:{left!p};{/if}{if right<>'' and _parent.position<>'static'} right:{right!p};{/if}{if top<>'' and _parent.position<>'static'} top:{top!p};{/if}{if bottom<>'' and _parent.position<>'static'} bottom:{bottom!p};{/if}{if height<>''} height:{height!p};{/if}{if width<>''} width:{width!p};{/if}}}", 
+           
+"_htmltemplate": "  \"<div id={id} style='background:{background};' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.addProperties({id});",
+  "  {id}.mapOptions={{",
+  "    apiKey: '{apiKey}',",
+  "    disableDefaultUI: {disableDefaultUI},",
+  "    disableDoubleClickZoom: {disableDoubleClickZoom},",
+  "    draggable: {draggable},", 
+  "    draggableCursor: '{draggableCursor}',",  
+  "    draggingCursor: '{draggingCursor}',", 
+  "    heading: {heading},",   
+  "    keyboardShortcuts: {keyboardShortcuts},",   
+  "    latitude: '{latitude}',",
+  "    longitude: '{longitude}',",
+  "    mapMaker: {mapMaker},",  
+  "    mapTypeId: '{mapTypeId}',", 
+  "    maxZoom: {maxZoom},",
+  "    noClear: {noClear},",
+  "    scrollwheel: {scrollwheel},",  
+  "    streetViewControl: {streetViewControl},",
+  "    tilt: {tilt},",
+  "    zoom: {zoom},",    
+  "    zoomControl: {zoomControl},",
+  "    }};",
+  "  {id}.setMarker = NSB.GoogleMapSetMarker;",
+  "  {id}.refresh = NSB.GoogleMapRefresh;",
+  "  {id}.setInfoWindow = NSB.GoogleMapSetInfoWindow;",
+  "  {id}.refresh();"
+  ]
+}

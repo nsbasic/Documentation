@@ -1,0 +1,45 @@
+{ 
+"_type": "Thumbnail_bs", 
+"_base": ["bsAll", "bsHeaderValue", "bsImage", "children", "margin", "padding", "fonts", "colors", "Widget"], 
+"_palette": 9, 
+"_art": "images/thumbnail.png", 
+"_wikipage": "Thumbnail (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Thumbnail</a> lets you display images, captions and more. Use with caution - will be replaced in a future release. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"{_nsbdir}toolbox/bs3/dist/fa/css/font-awesome.min.css",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.ttf",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff2",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js",
+  "{src}"
+  ],
+
+"_displayname": "Thumbnail",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"text": "Thumbnail",
+"subtext": "Information about the image.",
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+"_htmltemplate": [
+"  \"<div id='{id}' class='thumbnail {class}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'>\",",
+"{if src<>''}    \"<img src='{src}' class='{responsive}{center}{shape}'>\",{/if}",
+"    \"<div id='{id}_contents' class='caption'><h3>{header}</h3>{value}</div>\",\"<div id={id}_addChild>\",{_childhtml},\"</div>\",", "  \"</div>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+
+}

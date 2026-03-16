@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "fontFamily": "inherit", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": "calc(50% - 75px)", 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": "100", 
+  "value": "Simple Tone", 
+  "width": "150", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

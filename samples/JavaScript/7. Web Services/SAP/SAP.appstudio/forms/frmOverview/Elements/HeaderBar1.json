@@ -1,0 +1,10 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "SAP Data", 
+  "position": "absolute", 
+  "children": [] 
+} 

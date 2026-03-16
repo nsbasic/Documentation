@@ -1,0 +1,32 @@
+{ 
+"_type": "Slider_bs5", 
+"_base": ["bs5All", "borders", "margin", "colors"], 
+"_palette": 9, 
+"_art": "images/slider.png",
+"_wikipage": "Slider (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Slider</a>. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Slider (deprecated)",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"padding-left": "4",
+"padding-right": "4",
+
+"value": "Slider deprecated - use Range", 
+"_value": { 
+    "i18n": true,
+    "desc": "Slider deprecated - use Range.", 
+    "type": "str" 
+   }, 
+        
+"_htmltemplate": [
+"  \"<span id='{id}' class='text-primary'>Slider deprecated - use Range.</span>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ]
+}

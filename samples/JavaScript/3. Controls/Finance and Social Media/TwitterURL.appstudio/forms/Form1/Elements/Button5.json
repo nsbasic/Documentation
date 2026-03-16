@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button5", 
+  "left": 101, 
+  "right": "auto", 
+  "top": 377, 
+  "value": "Send", 
+  "width": 96, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

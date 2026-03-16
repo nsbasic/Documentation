@@ -1,0 +1,56 @@
+{ 
+"_type": "Dropdown_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors", "bsButton", "bsBadge", "bsItems", "bsPopover"], 
+"_palette": 9, 
+"_art": "images/dropdown.png",
+"_wikipage": "Dropdown (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Dropdown</a> drops a list of choices down (or up). Grouping only works on horizontal. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_displayname": "Dropdown",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "enable(index,enable)": {"desc": "Toggle Enable/Disable for item in control. Use 'All' to set all items."},
+    "length": {"desc": "Return the number of items."},
+    "selection": {"desc": "The text of the item selected."},
+    "value": {"desc": "The value last selected."}
+},
+
+"value": "Dropdown",
+"width": "auto",
+"height": "auto",
+"icon": "caret",
+"items": "!Heading\nItem 1\nItem 2\n-\n*Item 3 (disabled)",
+
+"dropdown": "dropdown", 
+"_dropdown": { 
+    "acignore": true,
+    "desc": "Dropdown or Dropup?", 
+    "type": "enum", 
+    "keys": ["dropdown", "dropup"], 
+    "values": ["dropdown", "dropup"] 
+    }, 
+	
+"align": "", 
+"_align": { 
+    "acignore": true,
+    "desc": "How should text in dropdown be aligned?", 
+    "type": "enum", 
+    "keys": ["left", "right"], 
+    "values": ["", " dropdown-menu-right"] 
+    }, 
+
+"_htmltemplate": "  NSB.bs.dropdown.make('{id}', '{value}', '{dropdown}', '{blockLevel} {class}', '{disabled}', '{_fontcss!i}{_bordercss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '', '{appearance}', '{size}', '{icon}', '{align}', '{items!j}', '{grouping}', '{groupStyle}', '{_bsBadge!i}', '{_bsPopover2!i}'),",
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ],
+    
+"_design_jstemplate": [
+    "{id}.getDesignFrameRect = function() {{",
+    "  return {id}_button.getBoundingClientRect();",
+    "}}"
+    ]
+}

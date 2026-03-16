@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "id": "HeaderBar1", 
+  "left": 4, 
+  "right": "auto", 
+  "top": 21, 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "PopUp", 
+  "position": "absolute", 
+  "children": [] 
+} 

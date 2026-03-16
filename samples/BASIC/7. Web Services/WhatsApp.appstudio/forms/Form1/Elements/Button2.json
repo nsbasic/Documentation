@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button2", 
+  "left": 110, 
+  "onclick": "Button2_onclick()", 
+  "right": "auto", 
+  "top": 385, 
+  "value": "Send", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

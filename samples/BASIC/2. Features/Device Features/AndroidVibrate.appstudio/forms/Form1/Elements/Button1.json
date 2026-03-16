@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 65, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 93, 
+  "value": "Vibrate 1 second", 
+  "width": 158, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

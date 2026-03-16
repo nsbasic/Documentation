@@ -1,0 +1,75 @@
+{ 
+"_type": "Input-group_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "children"], 
+"_palette": 4, 
+"_art": "images/input-group.png",
+"_wikipage": "Input (Bootstrap 5)",
+"_shorthelp": "<a href='{_docurl}'>Input_(Bootstrap_5)</a> is used to construct an input, with multiple fields on one line. Add Input-items to it. Bootstrap5.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Input-group",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"borderStyle": "",
+"_backgroundColor": {"type": "hidden"},
+"_fontSize": {"type": "hidden"},
+"_fontStyle": {"type": "hidden"},
+"_fontWeight": {"type": "hidden"},
+
+"_csstemplate": [
+    "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+    "\n{_childcss}"
+],
+
+"label": "", 
+"_label": { 
+    "i18n": true,
+    "desc": "Label. Appears above the input control.", 
+    "type": "str" 
+   }, 
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "The size of the control", 
+    "type": "enum", 
+    "keys": ["small", "", "large"], 
+    "values": ["input-group-sm", "", "input-group-lg"]
+},
+
+"marginBottom": "mb-0", 
+"_marginBottom": { 
+    "acignore": true,
+    "desc": "Sets bottom margin. Useful for spacing controls. mb-0 is no space.", 
+    "type": "enum", 
+    "keys": ["mb-0","mb-1","mb-2","mb-3","mb-4","mb-5"], 
+    "values": ["mb-0","mb-1","mb-2","mb-3","mb-4","mb-5"]
+},
+
+"help": "", 
+"_help": { 
+    "i18n": true,
+    "desc": "Help. Appears beneath the input control.", 
+    "type": "str" 
+   }, 
+
+"_htmltemplate": [
+    "  \"<div id={id}_wrapper style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "{if label<>''}  \"<label id={id}_label for={id}_wrapper style='font-family:inherit;border-radius:0px;' class='form-label' data-i18n='{label}'>{label}</label>\",{/if}",
+    "    \"<div id={id} class='input-group {size} {marginBottom} {class}' style='min-height:20px;{_fontcss!i}{_margincss!i}{style}' >\",",
+    "    {_childhtml}",
+    "    \"</div>\",",
+    "{if help<>''}  \"<div id={id}_help style='font-family:inherit;border-radius:0px;' class='form-text' data-i18n='{label}'>{help}</div>\",{/if}",
+
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  if ({id}.children.length === 0) {id}.innerHTML='<span style=\"color:grey;\">(Drag an Input-item control onto me)</span>';",
+  "{_childjs}"
+]
+		
+}

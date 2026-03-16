@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "btRunWebWorker", 
+  "left": 8, 
+  "onclick": "btRunWebWorker_onclick()", 
+  "right": "auto", 
+  "top": 8, 
+  "value": "run web worker", 
+  "width": 304, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

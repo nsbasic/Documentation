@@ -1,0 +1,17 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "TextBox1", 
+  "left": "107", 
+  "placeholder": " .... أدخل النص هنا ", 
+  "right": "auto", 
+  "top": 288, 
+  "width": 100, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

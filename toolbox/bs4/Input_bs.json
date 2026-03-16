@@ -1,0 +1,128 @@
+{ 
+"_type": "Input_bs4", 
+"_base": ["bs4All", "margin", "padding", "fonts", "Input", "colors", "bs4Input", "bs4Text", "bs4Icon", "bs4Popover", "bs4Badge"], 
+"_palette": 9, 
+"_art": "images/input.png", 
+"_wikipage": "Input (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Input</a> is an input field for text, numbers and other data types. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Input",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"header": "Input",
+
+"attributes": "",
+"_attributes": {
+    "acignore": true,
+    "desc": "HTML attributes. Example: disabled=true",
+    "type": "css"
+   },
+   
+"datalist": "",
+"_datalist": {
+    "acignore": true,
+    "desc": "List of possible predefined values, one per line.",
+    "type": "css"
+   },
+   
+"inputType": "text", 
+"_inputType": { 
+    "acignore": true,
+    "desc": "Input field type", 
+    "type": "enum",
+    "keys":   ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"], 
+    "values": ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"]
+     }, 
+
+"passwordToggle": "", 
+"_passwordToggle": { 
+    "acignore": true,
+    "desc": "Option to toggle plaintext for Password fields.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["", "true"]
+}, 
+     
+"step": "", 
+"_step": { 
+    "acignore": true,
+    "desc": "A value the input has to be a multiple of. Use 1 for integer only", 
+    "type": "str" 
+    },
+    
+"min": "", 
+"_min": { 
+    "acignore": true,
+    "desc": "For inputType Number, the minimum value. For date, the earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "acignore": true,
+    "desc": "For inputType Number, the maximum value. For date, the latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+
+"leftText": "", 
+"_leftText": { 
+    "acignore": true,
+    "desc": "Text to put to the left of the input area. Does not display in containers less than 768 px wide.", 
+    "type": "str" 
+    },  
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of the element", 
+    "type": "enum", 
+    "keys": ["small", "default", "large"], 
+    "values": ["input-group-sm", "", "input-group-lg"]
+}, 
+   
+"size-lg": 4,
+"_size-lg": {
+    "acignore": true,
+    "desc": "Size of column in large layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+                
+"_htmltemplate": [
+    "  \"<div id={id} class='{class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}'>\",",
+    "  \"{_bsInput_wrapperNoPopover!i}{_bsInput_headerColsNoBadge!i}\",",
+    "{if header<>''}    \"<div class='col-sm-{valueCols}'>\",{/if}",
+    "{if header==''}    \"<div class='col-sm-12'>\",{/if}",
+    "      \"{_bsBadgePadBelow!i}\",",
+    "      \"<div class='input-group {size}' style='width:100%;'>\",",
+    "{if leftText<>''}        \"<div class='input-group-prepend'><span class='input-group-text''>{leftText}<span></div>\",{/if}",
+    "        \"<input id='{id}_contents' type='{inputType}'{if attributes<>''} {attributes!j}{/if}{if name<>''} name='{name}' {/if} {_bsTextatr!i}{if min<>''} min='{min}'{/if}{if max<>''} max='{max}' {/if}{if step<>''}step={step} {/if}{if inputmode<>''}inputmode={inputmode} {/if}  style='{_paddingcss!i}{_colorscss!i}{_bsTextcss!i}{_fontcss!i}' class='{if inputType<>'file'}form-control {/if}{class}' {if value<>''}value='{value!b}' {/if}>\",",
+    "{if icon<>'' and passwordToggle<>'true'}        \"<div class='input-group-append'{_bsPopover!i}>\",{/if}",
+    "{if icon<>'' and passwordToggle<>'true'}          \"<span class='input-group-text'><i id={id}_icon class='oi oi-{icon}'>&nbsp;</i></span>\",{/if}",
+    "{if icon<>'' and passwordToggle<>'true'}        \"</div>\",{/if}",
+    "{if passwordToggle=='true'}        \"<div class='input-group-append'{_bsPopover!i}>\",{/if}",
+    "{if passwordToggle=='true'}          \"<span class='input-group-text'><i id={id}_icon class='oi oi-eye'>&nbsp;</i></span>\",{/if}",
+    "{if passwordToggle=='true'}        \"</div>\",{/if}",
+    "      \"</div>\",",
+    "    \"{_bsinput_footer!i}\",",
+    "  \"</div></div>\","
+],
+  
+"_jstemplate": [
+  "  {id}.addEventListener('touchmove', function(e) {{e.stopPropagation();}}, false);",
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "{if datalist<>''}  {id}.datalist='{datalist!j}';{/if}",
+  "{if passwordToggle=='true'}  {id}_icon.onclick = function() {{",
+  "{if passwordToggle=='true'}    if ($('#{id}_contents').attr('type') === 'password') {{",
+  "{if passwordToggle=='true'}      $('#{id}_contents').attr('type', 'text');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = 'blue';",
+  "{if passwordToggle=='true'}    }} else {{",
+  "{if passwordToggle=='true'}      $('#{id}_contents').attr('type', 'password');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = '#495057';",
+  "{if passwordToggle=='true'}    }};",
+  "{if passwordToggle=='true'}  }};"
+  ]
+
+}

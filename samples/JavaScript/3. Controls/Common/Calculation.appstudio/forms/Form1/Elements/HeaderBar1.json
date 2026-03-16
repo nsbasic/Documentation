@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "40", 
+  "id": "HeaderBar1", 
+  "left": 16, 
+  "right": "auto", 
+  "top": 21, 
+  "width": "auto", 
+  "!type": "Header", 
+  "text": "Calculation", 
+  "position": "absolute", 
+  "children": [] 
+} 

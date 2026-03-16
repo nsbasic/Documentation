@@ -1,0 +1,118 @@
+{ 
+"_type": "Panel_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/panel.png", 
+"_shorthelp": "<a href='{_docurl}'>Panel</a> Flexible by design, panels can be used for navigation, forms, inspectors and more.", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+	"{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+	"{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+	],
+"_displayname": "Panel",
+"_longhelp": "longhelp",
+
+"height": "auto", 
+"_height": {"type": "hidden"},
+"_left": {"type": "hidden"},
+"_right": {"type": "hidden"},
+"_bottom": {"type": "hidden"},
+"_top": {"type": "hidden"},
+
+"width": 150,
+"top:": 0,
+
+"_acprops": {
+    "close()": {"desc": "Dismiss the Panel."}
+   },
+ 
+"dataTheme": "",
+"_dataTheme": { 
+    "desc": "Theme for Panel: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+   
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"style": "",
+"_style": {
+    "acignore": true,
+     "desc": "style settings for Panel",
+     "type": "css",
+     "language": "CSS"
+     },   
+
+"animate": "false", 
+"_animate": { 
+    "acignore": true,
+    "desc": "Sets whether the panel will animate when opening and closing. If set to false, the panel will just appear and disappear without animation. This is recommended for fastest performance.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["false", "true"] 
+    }, 
+
+"dismissible": "true", 
+"_dismissible": { 
+    "acignore": true,
+    "desc": "Sets whether the panel can be closed by clicking outside onto the page.", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"] 
+    },   
+
+"display": "overlay", 
+"_display": { 
+    "acignore": true,
+    "desc": "The relationship of the panel to the page contents.", 
+    "type": "enum", 
+    "keys": ["reveal", "push","overlay"], 
+    "values": ["reveal", "push","overlay"] 
+    }, 
+ 
+"position": "left", 
+"_position": { 
+    "acignore": true,
+    "desc": "The side of the screen the panel appears on.", 
+    "type": "enum", 
+    "keys": ["left", "right"], 
+    "values": ["left", "right"] 
+    }, 
+ 
+"positionFixed": "false", 
+"_positionFixed": { 
+    "acignore": true,
+    "desc": "Sets whether the panel has fixed positioning so the contents are in view even if the page is scrolled down. This also allows the page to scroll while the panel stays fixed.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["false", "true"] 
+    }, 
+	
+"text": "<h3>Default panel options</h3><p>This panel has all the default options: positioned on the left with the overlay display mode.",
+"_text": {
+	"acignore": true,
+	"desc": "Text content for Panel",
+	"type": "css",
+    "language": "HTML"
+	},
+	
+"_csstemplate": "#{id} {{position:absolute; {if _parent.position=='static'} display:{display};{/if}top:0px; height:100%; width:{width!p};{if position=='left'}left:0px;{/if}{if position=='right'} right:0px;{/if}}}",
+
+"_htmltemplate": "  NSB.Panel_jqm14('{id}','{display}', '{dataTheme}','{theme}' ,'{animate}', '{dismissible}', '{position}', '{positionFixed}', '{text!j}', '{style!j}', '{class}'),", 
+
+"_jstemplate": [
+		"  $('#{id}').panel()",
+		"  NSB.Panel_jqm_init14('{id}');",
+		"  NSB.addProperties({id})"],
+		
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "var rect={id}.getBoundingClientRect();return {{height:rect.height,width:rect.width,top:rect.top,{if position=='left'}left:0{/if}{if position=='right'}left:{id}.parentNode.offsetWidth-rect.width{/if}}}",
+  "}}"
+  ]	
+}

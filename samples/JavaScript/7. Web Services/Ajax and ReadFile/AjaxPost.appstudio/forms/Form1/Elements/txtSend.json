@@ -1,0 +1,19 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 117, 
+  "id": "txtSend", 
+  "left": 45, 
+  "name": "myText", 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 54, 
+  "value": "NSB/AppStudio makes Ajax easy!", 
+  "width": 216, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

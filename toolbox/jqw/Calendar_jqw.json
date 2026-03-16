@@ -1,0 +1,249 @@
+{ 
+"_type": "Calendar_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxcalendar.png", 
+"_wikipage": "jqxCalendar",
+"_shorthelp": "<a href='{_docurl}'>Calendar</a> control. jqWidgets (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}styles/jqx.base.css",
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",
+    "{pathTo_jqWidgets}jqxcore.js",
+    "{pathTo_jqWidgets}jqxdatetimeinput.js",
+    "{pathTo_jqWidgets}jqxcalendar.js",
+    "{pathTo_jqWidgets}globalization/globalize.js",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png"
+    ],
+"_displayname": "Calendar",
+"_longhelp": "longhelp",
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"height": 180, 
+"width": 180, 
+
+"showWeekNumbers": "false",
+"_showWeekNumbers":{
+	"desc": "Sets a value whether the week's numbers are displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showDayNames": "true",
+"_showDayNames":{
+	"desc": "Sets a value whether the day names are displayed. By default, the day names are displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableWeekend": "false",
+"_enableWeekend":{
+	"desc": "Sets a value indicating whether weekend persists its view state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableOtherMonthDays": "true",
+"_enableOtherMonthDays":{
+	"desc": "Sets a value indicating whether the other month days are enabled.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showOtherMonthDays": "true",
+"_showOtherMonthDays":{
+	"desc": "Sets a value whether the other month days are displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"readOnly": "false",
+"_readOnly":{
+	"desc": "Sets the calendar in read only state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"showFooter": "false",
+"_showFooter":{
+	"desc": "Sets a value indicating whether the calendar's footer is displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"selectionMode": "default",
+"_selectionMode":{
+	"desc": "Sets the selection mode.",
+	"type": "enum",
+	"keys": ["none","default","range"],
+	"values": ["none","default","range"]
+	},
+
+"todayString": "Today",
+"_todayString":{
+	"desc": "Sets the 'Today' string displayed when the 'showFooter' property is true.",
+	"type": "str"
+	},
+
+"clearString": "Clear",
+"_clearString":{
+	"desc": "Sets the 'Clear' string displayed when the 'showFooter' property is true.",
+	"type": "str"
+	},
+
+"enableFastNavigation": "true",
+"_enableFastNavigation":{
+	"desc": "Sets a value indicating whether the fast navigation is enabled.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableHover": "true",
+"_enableHover":{
+	"desc": "Sets a value indicating whether the hover state is enabled. The hover state is activated when the mouse cursor is over a calendar cell. The hover state is automatically disabled when the calendar is displayed in touch devices.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableAutoNavigation": "true",
+"_enableAutoNavigation":{
+	"desc": "Sets a value indicating whether the auto navigation is enabled. When this property is true, click on other month date will automatically navigate to the previous or next month.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableTooltips": "false",
+"_enableTooltips":{
+	"desc": "Sets a value indicating whether the tool tips are enabled.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"stepMonths": 1,
+"_stepMonths":{
+	"desc": "Represents the calendar's navigation step when the left or right navigation button is clicked.",
+	"type": "int"
+	},
+
+"firstDayOfWeek": 0,
+"_firstDayOfWeek":{
+	"desc": "Sets which day to display in the first day column. By default the calendar displays 'Sunday' as first day.",
+	"type": "int"
+	},
+
+"rowHeaderWidth": 25,
+"_rowHeaderWidth":{
+	"desc": "Sets the row header width.",
+	"type": "int"
+	},
+
+"columnHeaderHeight": 20,
+"_columnHeaderHeight":{
+	"desc": "Sets the Calendar colomn header's height. In the column header are displayed the calendar day names.",
+	"type": "int"
+	},
+
+"titleHeight": 25,
+"_titleHeight":{
+	"desc": "Sets the title height where the navigation arrows are displayed.",
+	"type": "int"
+	},
+
+"dayNameFormat": "firstTwoLetters",
+"_dayNameFormat":{
+	"desc": "Sets the name format of days of the week.",
+	"type": "enum",
+	"keys": ["default", "shortest", "firstTwoLetters", "firstLetter", "full"],
+	"values": ["default", "shortest", "firstTwoLetters", "firstLetter", "full"]	
+	},
+
+"titleFormat": "MMMM yyyy",
+"_titleFormat":{
+"desc": "Sets the title format for the title section. Example: MMMM yyyy",
+"type": "enum",
+"keys": ["MMMM yyyy","d","dd","ddd","dddd","h","hh","H","HH","m","mm","M","MM","MMM","MMMMM","s","ss","t","tt","y","yy","yyy","yyyy","yyyyy"],
+"values": ["MMMM yyyy","d","dd","ddd","dddd","h","hh","H","HH","m","mm","M","MM","MMM","MMMMM","s","ss","t","tt","y","yy","yyy","yyyy","yyyyy"]
+},
+
+"culture": "default",
+"_culture":{
+	"desc": "Sets the jqxCalendar's culture. The culture settings are contained within a file with the language code appended to the name, e.g. jquery.glob.de-DE.js for German. To set the culture, you need to include the jquery.glob.de-DE.js and set the culture property to the culture's name, e.g. 'de-DE'.",
+	"type": "str"
+	},
+
+"backText": "Back",
+"_backText":{
+	"desc": "Sets the tooltip text displayed when the mouse cursor is over the back navigation button.",
+	"type": "str"
+	},
+
+"forwardText": "Forward",
+"_forwardText":{
+	"desc": "Sets the tooltip text displayed when the mouse cursor is over the forward navigation button.",
+	"type": "str"
+	},
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+    "    disabled:{disabled},",
+    "    showWeekNumbers:{showWeekNumbers},",
+    "    showDayNames:{showDayNames},",
+    "    enableWeekend:{enableWeekend},",
+    "    enableOtherMonthDays:{enableOtherMonthDays},",
+    "    showOtherMonthDays:{showOtherMonthDays},",
+    "    readOnly:{readOnly},",
+    "    showFooter:{showFooter},",
+    "    selectionMode:'{selectionMode}',",
+    "    todayString:'{todayString}',",
+    "    clearString:'{clearString}',",
+    "    enableFastNavigation:{enableFastNavigation},",
+    "    enableHover:{enableHover},",
+    "    enableAutoNavigation:{enableAutoNavigation},",
+    "    enableTooltips:{enableTooltips},",
+    "    stepMonths:{stepMonths},",
+    "    firstDayOfWeek:{firstDayOfWeek},",
+    "    rowHeaderWidth:{rowHeaderWidth},",
+    "    columnHeaderHeight:{columnHeaderHeight},",
+    "    titleHeight:{titleHeight},",
+    "    width:'{width}',",
+    "    height:'{height}',",
+    "    theme:'{theme}',",
+    "    dayNameFormat:'{dayNameFormat}',",
+    "    titleFormat:'{titleFormat}',",
+    "    culture:'{culture}',",
+    "    backText:'{backText}',",
+    "    forwardText:'{forwardText}',",
+    "  }};",
+    "  $('#{id}').jqxCalendar (NSB.jqxSettings['{id}']);",
+    "  $('#{id} *').addClass('needsclick');",
+    "  $('#{id}').on('change viewChange click',function(){{$('#{id} *').addClass('needsclick')}});", 
+    "  NSB.addProperties({id});"]
+}

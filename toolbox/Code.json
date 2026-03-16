@@ -1,0 +1,78 @@
+{ 
+"_type": "Code", 
+"_base": "NSBCode", 
+"_container": "Page", 
+"_palette": 6, 
+"_shorthelp":"Empty Code", 
+"_art": "images/code.png",
+"_art_selected": "images/code-selected.png",
+"_requiredfiles": [],
+"_displayname": "Code",
+"_longhelp": "longhelp",
+
+"id": "",
+"_id": { 
+    "desc": "Unique identifier for code module.", 
+    "type": "str"
+    }, 
+
+"language": "BASIC",
+"_language": {
+    "desc": "Module code language.",
+    "type": "enum",
+    "keys": ["BASIC", "JavaScript", "PHP", "Other"],
+    "values": ["BASIC", "JavaScript", "PHP", "Other"]
+    },
+
+"loadType": "",
+"_loadType": {
+    "desc": "How will this JavaScript module be loaded?<br>default: simple load.<br>async: execute right away<br>defer: execute when page finishes<br>webworker: loaded as a webworker<br>noload: module is not loaded by app",
+    "type": "enum",
+    "keys": ["", "async", "defer", "webworker", "noload"],
+    "values": ["", "async", "defer", "webworker", "noload"]
+    },
+
+"script": "",
+"_script": {
+    "acignore": true,
+    "desc": "The code associated with this module.",
+    "type": "css",
+    "external": ["modules", "{if src=='' and language=='BASIC'}{id}.bas{/if}{if src==''  and language=='JavaScript'}{id}.js{/if}{if src=='' and language=='PHP'}{id}.php{/if}{if src=='' and language=='Other'}{id}{/if}"]
+},
+
+"_cached_js": {
+	"acignore": true,
+	"type": null,
+	"external": ["cache", "{id}.cache"]
+},
+"_cached_js_script_hash": {
+    "acignore": true,
+    "type": null,
+    "external": ["cache", "{id}.hash"]
+},
+
+"_expanded_pmp": {
+    "acignore": true,
+    "type": "json",
+    "external": ["cache", "{id}.pmp"]
+},
+
+"obfuscate": "false",
+"_obfuscate": {
+    "desc": "Obfuscate this module?",
+    "type": "enum",
+    "keys": ["False", "True"],
+    "values": ["false", "true"]
+},
+
+"src": "",
+"_src": {
+    "acignore": true,
+    "desc": "The external file associated with this object. Should not contain spaces.",
+    "type": "file"
+},
+
+"_jstemplate": "{javascript}",
+"_csstemplate": "{css}",
+"_headjstemplate": "{headjs}"
+}

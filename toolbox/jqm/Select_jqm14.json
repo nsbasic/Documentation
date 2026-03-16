@@ -1,0 +1,199 @@
+{ 
+"_type": "Select_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/select.png",
+"_shorthelp": "<a href='{_docurl}'>Select</a> sets up a list of choices. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+    "{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+    "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+    "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+    "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+    ],
+"_displayname": "Select",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(item,val)": {"desc": "Add new item with optional value."},
+    "clear()": {"desc": "Clear the list."},
+    "getItemCount()": {"desc": "Get the number of items."},
+    "getValue(n)": {"desc": "Gets the value (true/false) of item n"},
+    "List(n)": {"desc": "Gets the name of item n"},
+    "ListCount": {"desc": "Number of items. Same as getItemCount()"},
+    "ListIndex": {"desc": "Selected item. Same as Selected Index."},
+    "selectedIndex()": {"desc": "The number of the selected item."},
+    "selectedItem()": {"desc": "The name of the selected item."},
+    "selectedValue()": {"desc": "The value of the selected item."},
+    "setIndex(n)": {"desc": "Set the selected item to n."},
+    "text": {"desc": "The text of the selected item. Same as selectedItem."}
+},
+    
+"width": 160, 
+"height": "auto",
+"title": "Combo Box",
+
+"items": "One,Two",
+"_items": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "ComboBox description items, comma separated.", 
+    "type": "css",
+    "language": "HTML" 
+    },
+
+"corners": "false", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["false", "ui-corner-all"] 
+    }, 
+        
+"values": "1,2",
+"_values": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "ComboBox values, comma separated.", 
+    "type": "css" 
+    },
+    
+"placeholder": 0,
+"_placeholder": { 
+    "acignore": true,
+    "desc": "Item to use as a heading in the picker, or 0 for none.", 
+    "type": "int" 
+    },
+    
+"selectedIndex": 1,
+"_selectedIndex": { 
+    "acignore": true,
+    "desc": "Default value.", 
+    "type": "int" 
+    },
+
+"icon": "arrow-d", 
+"_icon": { 
+    "acignore": true,
+    "desc": "Button Icon", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    }, 
+
+"iconPos": "right",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys": ["left","right","top","bottom","notext"], 
+    "values": ["left","right","top","bottom","notext"]
+    }, 
+    
+"inline": "false",
+"_inline": { 
+    "acignore": true,
+    "desc": "Adjust width to value", 
+    "type": "enum", 
+    "keys": ["true","false"], 
+    "values": ["true","false"]
+    }, 
+    
+"nativeMenu": "true",
+"_nativeMenu": { 
+    "acignore": true,
+    "desc": "Use native menu (not jQuery menu)", 
+    "type": "enum", 
+    "keys": ["true","false"], 
+    "values": ["true","false"]
+    }, 
+    
+"multiSelect": "",
+"_multiSelect": { 
+    "acignore": true,
+    "desc": "Allow multiple selection. nativeMenu must be false.", 
+    "type": "enum", 
+    "keys": ["false","true"], 
+    "values": ["","true"]
+    }, 
+    
+"overlayTheme": "a",
+"_overlayTheme": { 
+    "acignore": true,
+    "desc": "Overlay Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+   
+"theme": "",
+"_theme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"group": "",
+"_group": { 
+    "acignore": true,
+    "desc": "Is this part of a group?", 
+    "type": "enum", 
+    "keys":   ["No","Start Vertical","Start Horizontal","End Group"], 
+    "values": ["","vertical","horizontal","end"]
+    }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+
+"mini": "", 
+"_mini": { 
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"align": "", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["left", "right", ""]
+    }, 
+
+"countryPicker": "", 
+"_countryPicker": { 
+    "acignore": true,
+    "desc": "Select from a list of countries.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+
+    
+"_htmltemplate": "  NSB.Select_jqm('{id}', '{items!j}', '{values}', {placeholder}, {selectedIndex}, '{name}', '{hidden}{style!j}','{disabled}', '{icon}', '{iconPos}', '{inline}', '{nativeMenu}', '{overlayTheme}', '{theme}', '{mini}', '{group}', '{multiSelect}','{align}', '{class}', '{corners}'),",
+
+"_jstemplate":[
+  "  NSB.Select_jqm_init({id},'{style!j}','{group}', '{shadow}', '{icon}');",
+  "{if countryPicker=='true'}  var countryList, val, i;{/if}", 
+  "{if countryPicker=='true'}  countryList = [['Select Country',''],['United States', 'US'],['Canada','CA'],['Germany','DE Bundesrepublik Deutschland'],['United Kingdom','GB Great Britain England UK Wales Scotland Northern Ireland'],['Afghanistan','AF افغانستان'], ['Åland Islands','AX Aaland Aland'], ['Albania','AL'], ['Algeria','DZ الجزائر'], ['American Samoa','AS'], ['Andorra','AD'], ['Angola','AO'], ['Anguilla','AI'], ['Antarctica','AQ'], ['Antigua And Barbuda','AG'], ['Argentina','AR'], ['Armenia','AM Հայաստան'], ['Aruba','AW'], ['Australia','AU'], ['Austria','AT Österreich Osterreich Oesterreich '], ['Azerbaijan','AZ'], ['Bahamas','BS'], ['Bahrain','BH البحرين'], ['Bangladesh','BD বাংলাদেশ'], ['Barbados','BB'], ['Belarus','BY Беларусь'], ['Belgium','BE België Belgie Belgien Belgique'], ['Belize','BZ'], ['Benin','BJ'], ['Bermuda','BM'], ['Bhutan','BT भूटान'], ['Bolivia','BO'], ['Bonaire, Sint Eustatius and Saba','BQ'], ['Bosnia and Herzegovina','BA BiH Bosna i Hercegovina Босна и Херцеговина'], ['Botswana','BW'], ['Bouvet Island','BV'], ['Brazil','BR Brasil'], ['British Indian Ocean Territory','IO'], ['Brunei Darussalam','BN'], ['Bulgaria','BG България'], ['Burkina Faso','BF'], ['Burundi','BI'], ['Cambodia','KH កម្ពុជា'], ['Cameroon','CM'], ['Canada','CA'], ['Cape Verde','CV Cabo'], ['Cayman Islands','KY'], ['Central African Republic','CF'], ['Chad','TD تشاد‎ Tchad'], ['Chile','CL'], ['China','CN Zhongguo Zhonghua Peoples Republic 中国/中华'], ['Christmas Island','CX'], ['Cocos (Keeling) Islands','CC'], ['Colombia','CO'], ['Comoros','KM جزر القمر'], ['Congo','CG'], ['Congo, the Democratic Republic of the','CD Congo-Brazzaville Repubilika ya Kongo'], ['Cook Islands','CK'], ['Costa Rica','CR'], ['Côte dIvoire','CI Cote dIvoire'], ['Croatia','HR Hrvatska'], ['Cuba','CU'], ['Curaçao','CW Curacao'], ['Cyprus','CY Κύπρος Kýpros Kıbrıs'], ['Czech Republic','CZ Česká Ceska'], ['Denmark','DK Danmark'], ['Djibouti','DJ جيبوتي‎ Jabuuti Gabuuti'], ['Dominica','DM Dominique'], ['Dominican Republic','DO'], ['Ecuador','EC'], ['Egypt','EG'], ['El Salvador','SV'], ['Equatorial Guinea','GQ'], ['Eritrea','ER إرتريا ኤርትራ'], ['Estonia','EE Eesti'], ['Ethiopia','ET ኢትዮጵያ'], ['Falkland Islands (Malvinas)','FK'], ['Faroe Islands','FO Føroyar Færøerne'], ['Fiji','FJ Viti फ़िजी'], ['Finland','FI Suomi'], ['France','FR République française'], ['French Guiana','GF'], ['French Polynesia','PF Polynésie française'], ['French Southern Territories','TF'], ['Gabon','GA République Gabonaise'], ['Gambia','GM'], ['Georgia','GE საქართველო'], ['Germany','DE Bundesrepublik Deutschland'], ['Ghana','GH'], ['Gibraltar','GI'], ['Greece','GR Ελλάδα'], ['Greenland','GL grønland'], ['Grenada','GD'], ['Guadeloupe','GP'], ['Guam','GU'], ['Guatemala','GT'], ['Guernsey','GG'], ['Guinea','GN'], ['Guinea-Bissau','GW'], ['Guyana','GY'], ['Haiti','HT'], ['Heard Island and McDonald Islands','HM'], ['Holy See (Vatican City State)','VA'], ['Honduras','HN'], ['Hong Kong','HK 香港'], ['Hungary','HU Magyarország'], ['Iceland','IS Island'], ['India','IN भारत गणराज्य Hindustan'], ['Indonesia','ID'], ['Iran, Islamic Republic of','IR ایران'], ['Iraq','IQ العراق‎'], ['Ireland','IE Éire'], ['Isle of Man','IM'], ['Israel','IL إسرائيل ישראל'], ['Italy','IT Italia'], ['Jamaica','JM'], ['Japan','JP Nippon Nihon 日本'], ['Jersey','JE'], ['Jordan','JO الأردن'], ['Kazakhstan','KZ Қазақстан Казахстан'], ['Kenya','KE'], ['Kiribati','KI'], ['Korea, Democratic Peoples Republic of','KP North Korea'], ['Korea, Republic of','KR South Korea'], ['Kuwait','KW الكويت'], ['Kyrgyzstan','KG Кыргызстан'], ['Lao Peoples Democratic Republic','LA'], ['Latvia','LV Latvija'], ['Lebanon','LB لبنان'], ['Lesotho','LS'], ['Liberia','LR'], ['Libyan Arab Jamahiriya','LY ليبيا'], ['Liechtenstein','LI'], ['Lithuania','LT Lietuva'], ['Luxembourg','LU'], ['Macao','MO'], ['Macedonia, The Former Yugoslav Republic Of','MK Македонија'], ['Madagascar','MG Madagasikara'], ['Malawi','MW'], ['Malaysia','MY'], ['Maldives','MV'], ['Mali','ML'], ['Malta','MT'], ['Marshall Islands','MH'], ['Martinique','MQ'], ['Mauritania','MR الموريتانية'], ['Mauritius','MU'], ['Mayotte','YT'], ['Mexico','MX Mexicanos'], ['Micronesia, Federated States of','FM'], ['Moldova, Republic of','MD'], ['Monaco','MC'], ['Mongolia','MN Mongγol ulus Монгол улс'], ['Montenegro','ME'], ['Montserrat','MS'], ['Morocco','MA المغرب'], ['Mozambique','MZ Moçambique'], ['Myanmar','MM'], ['Namibia','NA Namibië'], ['Nauru','NR Naoero'], ['Nepal','NP नेपाल'], ['Netherlands','NL Holland Nederland'], ['New Caledonia','NC'], ['New Zealand','NZ Aotearoa'], ['Nicaragua','NI'], ['Niger','NE Nijar'], ['Nigeria','NG Nijeriya Naíjíríà'], ['Niue','NU'], ['Norfolk Island','NF'], ['Northern Mariana Islands','MP'], ['Norway','NO Norge Noreg'], ['Oman','OM عمان'], ['Pakistan','PK پاکستان'], ['Palau','PW'], ['Palestinian Territory, Occupied','PS فلسطين'], ['Panama','PA'], ['Papua New Guinea','PG'], ['Paraguay','PY'], ['Peru','PE'], ['Philippines','PH Pilipinas'], ['Pitcairn','PN'], ['Poland','PL Polska'], ['Portugal','PT Portuguesa'], ['Puerto Rico','PR'], ['Qatar','QA قطر'], ['Réunion','RE Reunion'], ['Romania','RO Rumania Roumania România'], ['Russian Federation','RU Rossiya Российская Россия'], ['Rwanda','RW'], ['Saint Barthélemy','BL St. Barthelemy'], ['Saint Helena','SH St.'], ['Saint Kitts and Nevis','KN St.'], ['Saint Lucia','LC St.'], ['Saint Martin (French Part)','MF St.'], ['Saint Pierre and Miquelon','PM St.'], ['Saint Vincent and the Grenadines','VC St.'], ['Samoa','WS'], ['San Marino','SM RSM Repubblica'], ['Sao Tome and Principe','ST'], ['Saudi Arabia','SA السعودية'], ['Senegal','SN Sénégal'], ['Serbia','RS Србија Srbija'], ['Seychelles','SC'], ['Sierra Leone','SL'], ['Singapore','SG Singapura  சிங்கப்பூர் குடியரசு 新加坡共和国'], ['Sint Maarten (Dutch Part)','SX'], ['Slovakia','SK Slovenská Slovensko'], ['Slovenia','SI Slovenija'], ['Solomon Islands','SB'], ['Somalia','SO الصومال'], ['South Africa','ZA RSA Suid-Afrika'], ['South Georgia and the South Sandwich Islands','GS'], ['South Sudan','SS'], ['Spain','ES España'], ['Sri Lanka','LK ශ්‍රී ලංකා இலங்கை Ceylon'], ['Sudan','SD السودان'], ['Suriname','SR शर्नम् Sarnam Sranangron'], ['Svalbard and Jan Mayen','SJ'], ['Swaziland','SZ weSwatini Swatini Ngwane'], ['Sweden','SE Sverige'], ['Switzerland','CH Swiss Confederation Schweiz Suisse Svizzera Svizra'], ['Syrian Arab Republic','SY Syria سورية'], ['Taiwan, Province of China','TW 台灣 臺灣'], ['Tajikistan','TJ Тоҷикистон Toçikiston'], ['Tanzania, United Republic of','TZ'], ['Thailand','TH ประเทศไทย Prathet Thai'], ['Timor-Leste','TL'], ['Togo','TG Togolese'], ['Tokelau','TK'], ['Tonga','TO'], ['Trinidad and Tobago','TT'], ['Tunisia','TN تونس'], ['Turkey','TR Türkiye Turkiye'], ['Turkmenistan','TM Türkmenistan'], ['Turks and Caicos Islands','TC'], ['Tuvalu','TV'], ['Uganda','UG'], ['Ukraine','UA Ukrayina Україна'], ['United Arab Emirates','AE UAE الإمارات'], ['United Kingdom','GB Great Britain England UK Wales Scotland Northern Ireland'], ['United States', 'US'], ['United States Minor Outlying Islands','UM'], ['Uruguay','UY'], ['Uzbekistan','UZ Ўзбекистон Ozbekstan Ozbekiston'], ['Vanuatu','VU'], ['Venezuela','VE'], ['Vietnam','VN Việt Nam'], ['Virgin Islands, British','VG'], ['Virgin Islands, U.S.','VI'], ['Wallis and Futuna','WF'], ['Western Sahara','EH لصحراء الغربية'], ['Yemen','YE اليمن'], ['Zambia','ZM'], ['Zimbabwe','ZW']];{/if}", 
+  "{if countryPicker=='true'}  {id}.style.display='none';{/if}", 
+  "{if countryPicker=='true'}  {id}.clear();{/if}", 
+  "{if countryPicker=='true'}  for (i=0; i<countryList.length; i++) {{ {/if}", 
+  "{if countryPicker=='true'}    if (countryList[i][1].indexOf(' ')>0) {{val = countryList[i][1].substr(0, countryList[i][1].indexOf(' '))}} else {{val=countryList[i][1]}};{/if}", 
+  "{if countryPicker=='true'}    {id}.addItem(countryList[i][0], val)}};{/if}", 
+  "{if countryPicker=='true'}  {id}.style.display='block'{/if};"
+  ]
+}

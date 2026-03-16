@@ -1,0 +1,15 @@
+{ 
+  "borderStyle": "solid", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnGet", 
+  "left": "initial", 
+  "right": "auto", 
+  "style": "float:left;", 
+  "top": "initial", 
+  "value": "Get Spreadsheet", 
+  "width": "140", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

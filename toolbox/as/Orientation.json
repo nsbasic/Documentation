@@ -1,0 +1,84 @@
+{ 
+"_type": "Orientation", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/orientation.png", 
+"_shorthelp": "<a href='{_docurl}'>Orientation</a> If device is rotated, put up a message to rotate back.", 
+"_category": ["All", "Common"],
+"_requiredfiles": [""],
+"_displayname": "Orientation",
+"_longhelp": "longhelp",
+
+"width": 0, 
+"height": 0, 
+
+"screenOrientation": "portrait", 
+"_screenOrientation": { 
+    "desc": "The proper orientation of the device for this app.", 
+    "type": "enum", 
+    "keys": ["portrait", "landscape"], 
+    "values": ["portrait", "landscape"]
+    }, 
+    
+"messagePortrait": "Landscape not supported. Please rotate back.", 
+"_messagePortrait": { 
+    "i18n": true,
+    "desc": "Text displayed when rotated.", 
+    "type": "css",
+    "language": "HTML" 
+    }, 
+
+"messageLandscape": "Portrait not supported. Please rotate back.", 
+"_messageLandscape": { 
+    "i18n": true,
+    "desc": "Text displayed when rotated", 
+    "type": "css",
+    "language": "HTML" 
+    }, 
+
+
+"_htmltemplate": "  \"<div id={id}></div>\",",
+
+"_jstemplate":[ 
+"  window.onorientationchange = function(){{",
+"    NSB.FullScreen();",
+"    if(NSB.screenOrientation=='portrait') {{",
+"      if(window.orientation==-90 || window.orientation==90) {{",
+"        NSB.FullScreen(NSB.messagePortrait);",
+"      }}",
+"    }}",
+"    if(NSB.screenOrientation=='landscape') {{",
+"      if(window.orientation==0 || window.orientation==180) {{",
+"        NSB.FullScreen(NSB.messageLandscape);",
+"      }}",
+"    }}",
+"}}",
+"",
+"NSB.FullScreen=function(s){{",
+"  if (s==false || !s){{",
+"    if (typeof(NSB.FullScreenobj)==='object' && NSB.FullScreenobj != null) {{",
+"      if (NSB.FullScreenobj.parentNode!=undefined){{",
+"        NSB.FullScreenobj.parentNode.removeChild(NSB.FullScreenobj);",
+"        NSB.FullScreenobj=null;}}",
+"      }}",
+"    return",
+"  }}",
+"  NSB.FullScreenobj=document.createElement('div');",
+"  NSB.FullScreenobj.style.position='fixed';",
+"  NSB.FullScreenobj.style.width='100%';",
+"  NSB.FullScreenobj.style.height='100%';",
+"  NSB.FullScreenobj.style.background='black';",
+"  NSB.FullScreenobj.style.color='white';",
+"  NSB.FullScreenobj.style.textShadow='0 0 0';",
+"  NSB.FullScreenobj.style.zIndex=99999;",
+"  NSB.FullScreenobj.id='NSB_FullScreen';",
+"  NSB.FullScreenobj.innerHTML='<div id=NSB_ProgressText style=\"position:absolute; top:50%; width:100%; height:4em; margin-top:-2em; text-align:center\">' + s + '</div>'",
+"  document.body.appendChild(NSB.FullScreenobj);",
+"}}",
+"",
+"  NSB.screenOrientation='{screenOrientation}';",
+"  NSB.messagePortrait=\"{messagePortrait!j}\";",
+"  NSB.messageLandscape=\"{messageLandscape!j}\";",
+"  window.onorientationchange();"
+]
+}

@@ -1,0 +1,122 @@
+{ 
+"_type": "Docking", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxdocking.png", 
+"_wikipage": "jqxDocking",
+"_shorthelp": "<a href='{_docurl}'>jqxDocking</a> lets you to manage and layout multiple windows. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}jqxcore.js", 
+	"{pathTo_jqWidgets}styles/jqx.base.css", 
+	"{pathTo_jqWidgets}jqxwindow.js", 
+	"{pathTo_jqWidgets}jqxdocking.js"],
+"_displayname": "Docking",
+"_longhelp": "longhelp",
+
+"width": 600, 
+"height": 300, 
+"left": 0,
+"top": 0,
+    
+"id": "",
+"_id": { 
+    "desc": "ID of the control to be dragged.", 
+    "type": "str" 
+    },
+    
+"keyboardNavigation": "false", 
+"_keyboardNavigation": { 
+    "desc": "Enable the jqxDocking's keyboard navigation?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"mode": "default", 
+"_mode": { 
+    "desc": "default: the user can  drop every window inside any docking panel or outside the docking panels<p>docked: the user can drop every window just into the docking panels<p>floating: the user can drop any window just outside of the docking panels.",
+    "type": "enum", 
+    "keys": ["default", "docked", "floating"], 
+    "values": ["default", "docked", "floating"]
+    },
+
+"orientation": "horizontal", 
+"_orientation": { 
+    "desc": "Sets whether the panels are going to be side by side or below each other.", 
+    "type": "enum", 
+    "keys": ["horizontal", "vertical"], 
+    "values": ["horizontal","vertical"]
+    },
+
+"floatingWindowOpacity": ".3",
+"_floatingWindowOpacity": { 
+    "acignore": true,
+    "desc": "Sets the opacity of the currently dragged window.", 
+    "type": "str" 
+    },
+
+"cookies": "false", 
+"_cookies": { 
+    "desc": "Should the docking layout be saved and kept every time the page is reloaded?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"cookieOptions": "", 
+"_cookieOptions": { 
+    "desc": "Set the cookieOptions property. Example: { domain: 'jqwidgets.com', expires: 90 }", 
+    "type": "str" 
+    },
+
+"windowsOffset": 5,
+"_windowsOffset": { 
+    "acignore": true,
+    "desc": "Sets the offset between the windows.", 
+    "type": "int" 
+    },
+    
+"columns": 2,
+"_columns": { 
+    "acignore": true,
+    "desc": "The number of columns of docked items. Max 4.", 
+    "type": "int" 
+    },
+    
+"ondragstart": "", 
+"_ondragstart": { 
+    "acignore": true,
+    "desc": "This is triggered when the user starts to drag any window.", 
+    "type": "js" 
+    }, 
+
+"ondragend": "", 
+"_ondragend": { 
+    "acignore": true,
+    "desc": "This is triggered when the user finishes dragging any window.", 
+    "type": "js" 
+    }, 
+
+"_htmltemplate": "  \"<div id={id} style='{hidden}{style!j}' class='{class}'>{if columns==1}<div></div>{/if}{if columns==2}<div></div><div></div>{/if}{if columns==3}<div></div><div></div><div></div>{/if}{if columns==4}<div></div><div></div><div></div><div></div>{/if}</div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+    "    disabled:{disabled},",
+    "    rtl:{rtl},",
+	"    height:'{height}',",
+  	"    width:'{width}',",
+    "    theme:'{theme}',",
+    "    keyboardNavigation:{keyboardNavigation},",
+    "    orientation:'{orientation}',",
+    "    mode:'{mode}',",
+    "    floatingWindowOpacity:{floatingWindowOpacity},",
+    "    cookies:{cookies},",
+    "{if cookieOptions<>''}    cookieOptions:{cookieOptions},{/if}",
+    "    windowsOffset:{windowsOffset}",
+	"  }};",
+    "  $('#{id}').jqxDocking(NSB.jqxSettings['{id}']);"
+    ]
+}
+

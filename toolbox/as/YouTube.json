@@ -1,0 +1,181 @@
+{ 
+"_type": "YouTube", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/youtube.png", 
+"_shorthelp": "<a href='{_docurl}'>YouTube</a> Player", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": ["{_nsbdir}toolbox/as/dist/asFunctions.js"],
+"_resizable": false,
+"_displayname": "YouTube",
+"_longhelp": "longhelp",
+
+"height": 240, 
+"width": 300, 
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"_acprops": {
+    "hide()": {"desc": "Hide the control."},
+    "show()": {"desc": "Show the control."}
+},
+
+"top": 0, 
+"_top": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+
+"bottom": "auto", 
+"_bottom": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+    
+"left": "10", 
+"_left": { 
+    "acignore": true,
+    "desc": "Location of left of element", 
+    "type": "str" 
+    }, 
+
+"background": "#F0FFFF", 
+"_background": { 
+    "acignore": true,
+    "desc": "Background color, before video is shown.", 
+    "type": "str" 
+    }, 
+                
+"videoID": "yuXrCVi2lgE", 
+"_videoID": { 
+    "desc": "YouTube Video ID", 
+    "type": "str" 
+    }, 
+    
+"playlist": "", 
+"_playlist": { 
+    "desc": "Comma separated list of video IDs to play.", 
+    "type": "str" 
+    }, 
+    
+"autoplay": "", 
+"_autoplay": { 
+    "desc": "Start playing right away", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["","&autoplay=1"]
+    }, 
+        
+"autohide": "", 
+"_autohide": { 
+    "desc": "Autohide controls?", 
+    "type": "enum", 
+    "keys": ["Fade", "Fade All", "False"], 
+    "values": ["","&autohide=1","&autohide=0"]
+    }, 
+        
+"controls": "", 
+"_controls": { 
+    "desc": "Show player controls", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["","&controls=0"]
+    }, 
+        
+"modestbranding": "", 
+"_modestbranding": { 
+    "desc": "Show YouTube logo?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["","&modestbranding=1"]
+    }, 
+        
+"playsinline": "&playsinline=1", 
+"_playsinline": { 
+    "desc": "Fullscreen playback on iOS?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["&playsinline=0","&playsinline=1"]
+    }, 
+        
+"rel": "0", 
+"_rel": { 
+    "desc": "Show related videos when done?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["1","0"]
+    }, 
+        
+"ratio": ".5625", 
+"_ratio": { 
+    "desc": "Aspect ratio", 
+    "type": "enum", 
+    "keys": ["16x9", "4x3"], 
+    "values": [".5625",".75"]
+    }, 
+        
+"showinfo": "", 
+"_showinfo": { 
+    "desc": "Show info about the video?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["","&showinfo=0"]
+    }, 
+        
+"start": 0, 
+"_start": { 
+    "desc": "Second to start at", 
+    "type": "int" 
+    }, 
+
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+   
+"theme": "", 
+"_showinfo": { 
+    "desc": "Display theme", 
+    "type": "enum", 
+    "keys": ["Dark", "Light"], 
+    "values": ["","&theme=light"]
+    }, 
+        
+    
+"_htmltemplate": "  \"<div id={id} style='background:{background};{style}' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.addProperties({id});",
+  "  {id}.settings={{",
+  "    width: '{width}',",
+  "    videoID: '{videoID}',",
+  "    playlist: '{playlist}',", 
+  "    autoplay: '{autoplay}',",
+  "    autohide: '{autohide}',",
+  "    controls: '{controls}',", 
+  "    modestbranding: '{modestbranding}',", 
+  "    playsinline: '{playsinline}',",
+  "    rel: '{rel}',", 
+  "    showinfo: '{showinfo}',",
+  "    start: '{start}',",
+  "    ratio: '{ratio}',",
+  "    theme: '{theme}'",
+  "    }};",
+  "  {id}.refresh = NSB.YouTubeRefresh;",
+  "  {id}.refresh();"
+  ]
+}

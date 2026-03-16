@@ -1,0 +1,67 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "attributes": "", 
+  "background": "white", 
+  "backgroundimage": "", 
+  "borderColor": "lightgray", 
+  "borderStyle": "", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSignOn", 
+        "Elements", 
+        "conSignOn.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSignOn", 
+        "Elements", 
+        "labNoAccount.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSignOn", 
+        "Elements", 
+        "labSignIn.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 1000, 
+  "designWidth": 375, 
+  "expanded_pmp": null, 
+  "fullScreen": "false", 
+  "height": "400", 
+  "id": "frmSignOn", 
+  "language": "JavaScript", 
+  "left": "initial", 
+  "locked": false, 
+  "modal": "true", 
+  "onhide": "frmSignOn.onhide()", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "static", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": "intiial", 
+  "width": "320"
+}

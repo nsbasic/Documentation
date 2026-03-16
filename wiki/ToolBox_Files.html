@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/ToolBox_Files by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 19:58:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>ToolBox Files - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXVTu6imerlWaq6GtIEVMgAAABs","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"ToolBox_Files","wgTitle":"ToolBox Files","wgCurRevisionId":11315,"wgRevisionId":11315,"wgArticleId":591,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"ToolBox_Files","wgRelevantArticleId":591,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-ToolBox_Files rootpage-ToolBox_Files skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">ToolBox Files</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p>The Toolbox files describe controls to the IDE. They are used to create entries in the Toolbox window and to describe the operation of the control to the IDE. The files reside in:
+</p>
+<ul><li>Windows: \Program Files\NSB AppStudio\toolbox</li>
+<li>Mac: Applications/AppStudio.app/Contents/MacOS/toolbox</li></ul>
+<p>You are welcome to create your own Toolbox files - but do not make changes in the above directories. Instead, save your new and modified Toolbox files to a directory named "AppStudio Toolbox" in your Documents folder. You can specify a different location in the Advanced tab of <a href="Preferences.html" title="Preferences">Preferences</a>. 
+</p><p>Your Toolbox files will be loaded on starting AppStudio. If your files have the same name as existing ones, yours will take precedence. Restart AppStudio after modifying your Toolbox files for your changes to take effect.
+</p><p>Feel free to share your improvements and new controls with us - we will make them available to other users!
+</p><p>Here is an annotated tour through one of the ToolBox files: Button_jqm.js. We will look at the file for the <a rel="nofollow" class="external text" href="http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxbutton/index.htm">jqWidgets Button</a> control:
+</p><p>The file is formatted as a JSON structure. They are loaded into the IDE at startup. It's important to keep the syntax correct: the control will not load properly if there are any errors. If you make changes to the file, you need to restart the IDE to see the effect. You can edit the file in a standard text editor, or copy it into an <a rel="nofollow" class="external text" href="https://jsoneditoronline.org/">online JSON editor</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Elements_of_a_ToolBox_File"><span class="tocnumber">1</span> <span class="toctext">Elements of a ToolBox File</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Hiding_controls_from_jQuery_Mobile"><span class="tocnumber">2</span> <span class="toctext">Hiding controls from jQuery Mobile</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Advanced_Templating"><span class="tocnumber">3</span> <span class="toctext">Advanced Templating</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Preventing_Translation"><span class="tocnumber">3.1</span> <span class="toctext">Preventing Translation</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Grouping_Properties"><span class="tocnumber">3.2</span> <span class="toctext">Grouping Properties</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Common_Properties"><span class="tocnumber">3.3</span> <span class="toctext">Common Properties</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Hiding_Properties"><span class="tocnumber">3.4</span> <span class="toctext">Hiding Properties</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Conditionals"><span class="tocnumber">3.5</span> <span class="toctext">Conditionals</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Iteration"><span class="tocnumber">3.6</span> <span class="toctext">Iteration</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Conversions"><span class="tocnumber">3.7</span> <span class="toctext">Conversions</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Parent"><span class="tocnumber">3.8</span> <span class="toctext">Parent</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#More_Information"><span class="tocnumber">3.9</span> <span class="toctext">More Information</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading3"><h3 id="Elements_of_a_ToolBox_File">Elements of a ToolBox File</h3></div>
+<p>The name of the control. This isn't shown anywhere. It must be unique. Elements that begin with "_" do not appear in the Properties Windows. These are usually put at the beginning of the file:
+</p>
+<pre>{
+"_type": "Button_jqw", 
+</pre>
+<p>The list of base classes of the control. There is also a Widget.js file in the ToolBox: this control starts with what is in that file and builds on it. Widget is a simple definition that is good for building on. We also add jqxAll, a file which contains properties which are in all jqx controls. It's in the properties subfolder. If you want to set up your own subfolder for bases classes, go ahead: it will be picked up automatically when AppStudio restarts.
+</p>
+<pre>"_base": ["jqxAll","Widget"], 
+</pre>
+<p>Controls are categorized by palette number. For user defined controls, this is usually 4:
+</p>
+<pre>"_palette": 4, 
+</pre>
+<p>The name of the icon to use for the control. Should be a 16x16 .png file, with transparency for surrounding white space.
+</p>
+<pre>"_art": "images/jqxbutton.png", 
+</pre>
+<p>The shorthelp is displayed under the Properties Window when the control is selected. Can be any text. It can be HTML formatted and include external links.
+</p>
+<pre>"_shorthelp": "Buttons.  jqWidgets", 
+</pre>
+<p>Controls in the ToolBox are grouped by Category. This defines which categories the control belongs too. If more than one, use a comma separated list. The categories must be defined in Toolbox.js.
+</p>
+<pre>"_category": ["jqWidgets"],
+</pre>
+<p>Is the control resizable in the Design Screen?
+</p>
+<pre>"_resizable": true,
+</pre>
+<p>List of files that the control requires. In this example, jQuery is in the project folder, in nsb, while the other files come from the jqWidgets server. AppStudio will take care of bundling the files into the app. 
+</p>
+<pre>"_requiredfiles": [
+    "{_nsbdir}nsb/jquery.js",
+    "http://jqwidgets.com/public/jqwidgets/styles/jqx.base.css",
+    "http://jqwidgets.com/public/jqwidgets/styles/jqx.{theme}.css",
+    "http://jqwidgets.com/public/jqwidgets/jqxcore.js",
+    "http://jqwidgets.com/public/jqwidgets/jqxbuttons.js",
+    "http://jqwidgets.com/public/jqwidgets/styles/images/bg_blueenergy.png",
+    "http://jqwidgets.com/public/jqwidgets/styles/images/bg_darkblue.png",
+    "http://jqwidgets.com/public/jqwidgets/styles/images/bg_black.png"
+    ],
+</pre>
+<p>This is the name used to construct the id of the new control. It appears in the Project Explorer.
+</p>
+<pre>"_displayname": "Button",
+</pre>
+<p>This field isn't used yet.
+</p>
+<pre>"_longhelp": "longhelp",
+</pre>
+<p>This next section is optional (and not from Button.js - it's borrowed from Grid.js). It provides the items which pop up in the code window after you type a control name and a period.
+</p>
+<pre>"_acprops": {
+    "addCols(n)": {"desc": "Add n cols to the right of the table. Default is 1."},
+    "addRows()": {"desc": "Add n rows to the end of the table. Default is 1."},
+    "cell(row,col)": {"desc": "Return a reference to cell."},
+    "setValue(row,col,val)": {"desc": "Set value of cell."}
+},
+</pre>
+<p>Some optional settings. These are actually defined in widgets.js, but they can be overridden for a particular control. If _singular is true, there can only be one instance on a form: an example would be a Headerbar. _designTemplate can be used for controls whose bounds do not get drawn properly by default.
+</p>
+<pre>"__size": 10, 
+"__fontweight": "bold", 
+"__fontsize": 12, 
+"__textalign": "center" 
+"_resizable": true,
+"_draggable": true,
+"_singular": false,
+"_design_jstemplate": {
+  "left": 0,
+  "top": 0,
+  "width": 0,
+  "height": 0}
+</pre>
+<p>Now, we start the elements which will appear in Project Properties. "class" is for the names of any styling classifications. It is actually defined in Widgets.js. 
+</p>
+<pre>"class": "",
+</pre>
+<p>The id of a control defaults to _displayname + n, where n is the number of occurrences of the control. Each of the project properties will be defined by a structure like this one. As we see more of these, we will discuss the options. This is the simplest one: the type is "str", which means the field accepts a simple string input. The desc field will appear in the description area under the Properties Window. The id property is followed by a number of other str type properties which are straightforward. The default value of the element, if any, is in the first line of the element definition.
+</p>
+<pre>"id": "", 
+"_id": { 
+    "desc": "Unique button identifier", 
+    "type": "str" 
+    },
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"value": "Button", 
+"_value": { 
+    "desc": "The caption of the button", 
+    "type": "str" 
+    }, 
+ </pre>
+<p>Here we see a couple of additional options. Type 'css' will bring up a textarea to edit the string. Use this for multiline or large string elements. We also see the "actype" option. It stands for autocomplete: this is used by the Code Window to display autocomplete options.
+</p>
+<pre>   
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css" 
+    }, 
+</pre>
+<p>This introduces the 'int' type. It's as simple a 'str', but will only accept integers. The acignore option indicates there is no autocomplete for this.
+</p>
+<pre>"top": 0, 
+"_top": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "int" 
+    }, 
+
+"left": 0, 
+"_left": { 
+    "acignore": true,
+    "desc": "Location of left side of element", 
+    "type": "int" 
+    }, 
+
+"height": 32, 
+"_height": { 
+    "acignore": true,
+    "desc": "Vertical size of element", 
+    "type": "int" 
+    }, 
+
+"width": 100, 
+"_width": { 
+    "acignore": true,
+    "desc": "Horizontal size of element", 
+    "type": "int" 
+    }, 
+</pre>
+<p>The 'enum' type is used when there is a list of possible values for the control. "keys" are the choices which are shown in the Properties Window. "Values" are the corresponding values to be used in the actual app. The first line has the initial value, which must be one of the elements in "values". In this case, the initial value is "", the second element in "values".
+</p>
+<pre>"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", ""], 
+    "values": ["hidden='true';",""]
+}, 
+
+"theme": "classic",
+"_theme": { 
+    "desc": "Color theme for control.", 
+    "type": "enum", 
+    "keys": ["classic","darkblue","energyblue","shinyblack","summer","black","fresh","highcontrast","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny"], 
+    "values": ["classic","darkblue","energyblue","shinyblack","summer","black","fresh","highcontrast","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny"]
+    }, 
+
+"roundedCorners": "jqx-rc-all",
+"_roundedCorners": { 
+    "desc": "Which corners should be rounded?", 
+    "type": "enum", 
+    "keys": ["All","Top","Bottom","Left","Right","Top-Right","Top-Left","Bottom-Right",
+    "Bottom-Left"], 
+    "values": ["jqx-rc-all","jqx-rc-t","jqx-rc-b","jqx-rc-r","jqx-rc-l","jqx-rc-tr","jqx-rc-tl","jqx-rc-br","jqx-rc-bl"]
+    }, 
+
+"buttonType": "Button",
+"_buttonType": { 
+    "desc": "Type of jqWidgets button", 
+    "type": "enum", 
+    "keys": ["Button","RepeatButton","LinkButton","ToggleButton"], 
+    "values": ["Button","RepeatButton","LinkButton","ToggleButton"]
+    }, 
+
+"delay": 50,
+"_delay": { 
+    "acignore": true,
+    "desc": "Time between two click events.", 
+    "type": "int" 
+   }, 
+
+"disabled": "false", 
+"_disabled": { 
+    "desc": "Control disabled?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+</pre>
+<p>The csstemplate lays out a css definition for the control. In most cases, the following is sufficient. Notice things like {id} and {left}? At runtime, they get replaced by the values of the controls id and left properties. What if you need using a { or } bracket, other than for a substitution? In that case, double them up. {{ will become {, and }} will become }. This definition is placed the &lt;head&gt; section of the output.
+</p><p>At runtime the following statement would then be #Button1 {position:absolute; left:109px; top:273px; height:32px; width:100px}.
+</p>
+<pre>"_csstemplate": 
+    "#{id} {{position:absolute; left:{left}px; top:{top}px; height:{height}px; width:{width}px}}", 
+</pre>
+<p>The htmltemplate lays out the html for the control. It's placed at the top of the app, so it is executed when the app is first loaded. It uses the same substitution tricks as csstemplate. If you want to execute a script to generate the HTML, you can call a function which returns the HTML.
+</p>
+<pre>"_htmltemplate": 
+    "\"&lt;input type='button' id='{id}' {hidden}{disabled} style='{style}' name='{name}' value='{value}' data-role='none'&gt;\",",
+</pre>
+<pre>"_htmltemplate": "  NSB.bs.dropdown.make('{id}', '{value}', '{dropdown}', '{blockLevel} {class}', '{disabled}', '{_fontcss!i}{_bordercss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{_fontcss!i}{_bordercss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{appearance}', '{outline}', '{size}', '{icon}', '', '{align}', '{items!j}', '{grouping}', '{groupStyle}', '{_bsBadge!i}', '{_bsPopover2!i}', '{filter}', '{filterPlaceholder}'),",
+</pre>
+<p>jstemplate is some optional JavaScript code that is executed once all the controls are created. It uses the same substitution tricks. Any valid JavaScript can be used here.
+</p>
+<pre>"_jstemplate": 
+    "$('#{id}').jqx{buttonType}({{theme:'{theme}', width:{width}, height:{height}, roundedCorners:'{roundedCorners}', delay:{delay}, disabled:{disabled} }});"
+}
+</pre>
+<p>And that brings us to the end of the file. One more thing: You can use multiple lines in any of the templates by using an array of strings, one string per line. (The requiredfiles element above is an example of this.)
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Hiding_controls_from_jQuery_Mobile">Hiding controls from jQuery Mobile</h3></div>
+<p>jQuery Mobile's CSS will enhance all the controls in your project - not just jQuery Mobile controls. To stop this from happening, add this to the outmost element of the control:
+</p>
+<pre>data-role='none' data-enhance='false'
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="Advanced_Templating">Advanced Templating</h2></div>
+<p>There are several advanced templating techniques available to help make writing templates easier and more concise.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Preventing_Translation">Preventing Translation</h3></div>
+<p>To prevent a field from being picked up for translation (internationalization), add the following property to an item:
+</p>
+<pre>"i18n": false,
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Grouping_Properties">Grouping Properties</h3></div>
+<p>If you add a "group" element to a property, the property will be grouped with other properties of the same group. A heading will display for the group.
+</p>
+<pre>"group": "Borders",
+</pre>
+<p><span class="mw-default-size" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Propertygroup.png" class="mw-file-description"><img src="images/0/0b/Propertygroup.png" decoding="async" width="209" height="75" class="mw-file-element" /></a></span>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Common_Properties">Common Properties</h3></div>
+<p>Some properties are shared by multiple controls. Common Property files let you define these properties in a file which is shared by the controls. To do this, put the properties you want to share into a JSON file in the ToolBox/properties folder. Here's the borders.js file which contains the properties for borders:
+</p>
+<pre>{
+"_type": "borders",
+"_base": "NSBObject",
+
+"borderStyle": "solid", 
+"_borderStyle": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Border Style", 
+    "type": "enum", 
+    "keys": ["","dotted","dashed","solid","double","groove","ridge","inset","outset"],
+    "values": ["","dotted","dashed","solid","double","groove","ridge","inset","outset"] 
+    }, 
+    
+"borderWidth": "", 
+"_borderWidth": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Border width", 
+    "type": "str"
+    }, 
+    
+"borderColor": "gray",
+"_borderColor": { 
+    "group": "Borders",
+    "acignore": true,
+    "desc": "Color of border. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }
+}
+</pre>
+<p>To add these properties to a control, add "borders" to the controls's "_base" property:
+</p>
+<pre>"_base": ["borders","NSBForm"],
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Hiding_Properties">Hiding Properties</h3></div>
+<pre> "_onclick": {"type": "hidden"}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Conditionals">Conditionals</h3></div>
+<pre>    {if exp}
+      conditional text
+    {/if}
+</pre>
+<pre> "{if ready &lt;&gt; ''}  ready:function(){{ {ready} }},{/if}",
+ "{if alignVertical == 'center'}  {id}.style.lineHeight={height}+'px'; {/if}",
+ "  right:{right}{if isinstance(right, int) or right.isdigit()}px{/if}"
+ "{if scrolling == 'true'}  {id}_ref = new iScroll('{id}_scroller',{{ {scroll_options} }});{/if}"
+</pre>
+<p>Conditionals test the exp for Trueness. Use == for equality &lt;&gt; for not equal.
+</p><p>Python functions can be used in the expressions.
+</p>
+<pre>class='btn{eval appearance[0:5] + outline + appearance[5:]}{size}{blockLevel} {class}'
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Iteration">Iteration</h3></div>
+<pre>    {list exp}
+      item {$} is {exp[$]}
+    {/list}
+</pre>
+<p>Nesting is possible, but in the case of nested lists, $ is bound to the list that immediately preceeds it.
+</p><p>Lists expect exp to be indexable - a list or a object.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Conversions">Conversions</h3></div>
+<p>You can include an exclamation point (!) after the replacement field name to trigger a conversion.  For example:
+</p>
+<pre>    &lt;script&gt;exampleFunc('{css!j}');&lt;/script&gt;
+</pre>
+<p>The following modes are available:
+</p>
+<ul><li><code>!j</code> - JavaScript string encoding.  Single quotes, double quotes, backslashes, and unicode characters are escaped.</li>
+<li><code>!h</code> - HTML encoding.  Ampersands, single quotes, double quotes, greater than signs, and less than signs, are escaped.</li>
+<li><code>!b</code> - Both: JavaScript + HTML encoding</li>
+<li><code>!p</code> - For positions. Add 'px' to a position when needed.</li>
+<li><code>!i</code> - Do an immediate substitution and return the result. Lets you put expressions in properties. See how Form.js uses border.js.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Parent">Parent</h3></div>
+<p>You can test a value in the parent of the control. For a control, that would mean the container or form it is in. For a form, that would be the project.
+</p>
+<pre>  {if _parent.firstform} == id}  console.log("first form!");{/if}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="More_Information">More Information</h3></div>
+<p>The formatting language is extension of the standard Python format operator.  For more information on even more advanced techniques, including output formatting, please see: <a rel="nofollow" class="external free" href="http://docs.python.org/2.7/library/string.html#format-string-syntax">http://docs.python.org/2.7/library/string.html#format-string-syntax</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124183636
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.032 seconds
+Real time usage: 0.039 seconds
+Preprocessor visited node count: 206/1000000
+Revision size: 15648/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 6539/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:591:|#|:idhash:canonical and timestamp 20260124183636 and revision id 11315. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;oldid=11315">https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;oldid=11315</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=ToolBox+Files" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=ToolBox+Files" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="ToolBox_Files.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:ToolBox_Files&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="ToolBox_Files.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/ToolBox_Files" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/ToolBox_Files" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;oldid=11315" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=ToolBox_Files&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 12 September 2022, at 16:13.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":258,"wgPageParseReport":{"limitreport":{"cputime":"0.032","walltime":"0.039","ppvisitednodes":{"value":206,"limit":1000000},"revisionsize":{"value":15648,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":6539,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124183636","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124232027 -->
+
+<!-- Mirrored from wiki.appstudio.dev/ToolBox_Files by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 19:58:01 GMT -->
+</html>

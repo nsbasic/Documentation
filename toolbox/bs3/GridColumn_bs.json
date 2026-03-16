@@ -1,0 +1,59 @@
+{ 
+"_type": "GridColumn_bs", 
+"_base": ["bsAll", "flexbox", "children", "margin", "padding", "fonts", "colors", "borders", "Widget"], 
+"_palette": 9, 
+"_art": "images/gridcolumn.png", 
+"_wikipage": "GridColumn (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>GridColumn</a> Adds a column to a GridRow. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "GridColumn",
+"_longhelp": "longhelp",
+
+"width": "",
+"height": "100px",
+"borderColor": "#E0E0E0",
+"borderWidth": "1",
+
+"size-xs": 4,
+"_size-xs": {
+    "acignore": true,
+    "desc": "Size of column in extra small layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+    
+"size-sm": 4,
+"_size-sm": {
+    "acignore": true,
+    "desc": "Size of column in small layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+    
+"size-md": 4,
+"_size-md": {
+    "acignore": true,
+    "desc": "Size of column in medium layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+    
+"size-lg": 4,
+"_size-lg": {
+    "acignore": true,
+    "desc": "Size of column in large layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+    
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+"  \"<div id='{id}' style='{_flexboxcss!i}{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'  class='col-xs-{size-xs} col-sm-{size-sm} col-md-{size-md} col-lg-{size-lg} {class}'>\",\"<div id={id}_addChild>\",{if _childhtml<>''}{_childhtml}{/if}{if _childhtml==''}\"{id}\"{/if},\"</div>\",\"</div>\","
+],
+  
+"_jstemplate": [
+    "  NSB.addProperties({id});",
+    "{_childjs}"
+]
+}

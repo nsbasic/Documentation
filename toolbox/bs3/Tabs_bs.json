@@ -1,0 +1,62 @@
+{ 
+"_type": "Tabs_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors",  "bsItems",  "bsNav", "bsPopover"], 
+"_palette": 9, 
+"_art": "images/tabs.png",
+"_wikipage": "Tabs (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Tabs</a> displays tabs across the screen. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Tabs",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "enable(index,enable)": {"desc": "Toggle Enable/Disable for item in control. Use 'All' to set all items."},
+    "value": {"desc": "Gets or sets the choice."},
+    "text": {"desc": "Gets the text of the choice."},
+    "length": {"desc": "Return the number of items."}
+},
+
+"width": "auto",
+"height": "auto",
+"items": "Item 1\n>Item 2\n*Item 3 (disabled)",
+
+"pills": " nav-tabs",
+"_pills": { 
+    "acignore": true,
+    "desc": "Show tabs highlighted with Pill format?", 
+    "type": "enum",
+    "keys": ["tabs", "pills"], 
+    "values": [" nav-tabs", " nav-pills"]
+    }, 
+
+"vertical": "",
+"_vertical": { 
+    "acignore": true,
+    "desc": "Show Tabs/Pills vertically? (If so, >selected only works for Pills.)", 
+    "type": "enum",
+    "keys": ["", "true"], 
+    "values": ["", " nav-stacked"]
+    }, 
+
+"justified": "",
+"_justified": { 
+    "acignore": true,
+    "desc": "Make tabs or pills equal widths of their parent at screens wider than 768px. On smaller screens, the nav links are stacked.", 
+    "type": "enum",
+    "keys": ["", "true"], 
+    "values": ["", " nav-justified"]
+    }, 
+
+"_htmltemplate": [
+    "  \"<ol id='{id}' class='nav{pills}{vertical}{justified} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{disabled} onclick=''{_bsPopover!i}>\",",
+    "  NSB.bs.tabs.make('{id}', '{disabled}', '{items!j}', '{color}'),",
+    "  \"</ol>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

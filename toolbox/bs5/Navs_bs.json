@@ -1,0 +1,82 @@
+{ 
+"_type": "Navs_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "bs5Items", "bs5Nav", "bs5Popover"], 
+"_palette": 9, 
+"_art": "images/navs.png",
+"_wikipage": "Navs (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Navs</a> displays options across the screen. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Navs",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "enable(index,enable)": {"desc": "Toggle Enable/Disable for item in control. Use 'All' to set all items."},
+    "value": {"desc": "Gets or sets the choice."},
+    "text": {"desc": "Gets the text of the choice."},
+    "length": {"desc": "Return the number of items."}
+},
+
+"width": "auto",
+"height": "auto",
+"items": "Item 1\n>Item 2\n*Item 3 (disabled)",
+
+"links": "#labOne\nhttp://appstudio.dev",
+"_links": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Internal or external links to jump to. Put # in front of internal links. Optional.", 
+    "type": "css",
+    "language": "HTML" 
+    },
+
+"tabStyle": "",
+"_tabStyle": { 
+    "acignore": true,
+    "desc": "Format for items. Tabs has an outline, pills color them in.", 
+    "type": "enum",
+    "keys": ["base", "tabs", "pills"], 
+    "values": ["", " nav-tabs", " nav-pills"]
+    }, 
+
+"vertical": "",
+"_vertical": { 
+    "acignore": true,
+    "desc": "Show items vertically? (If so, >selected only works for Pills.)", 
+    "type": "enum",
+    "keys": ["", "true"], 
+    "values": ["", " flex-column"]
+    }, 
+
+"alignment": "",
+"_alignment": { 
+    "acignore": true,
+    "desc": "Alignment of the control: left, center or right.", 
+    "type": "enum",
+    "keys": ["left", "center", "right"], 
+    "values": ["", " justify-content-center", " justify-content-end"]
+    }, 
+
+"justified": "",
+"_justified": { 
+    "acignore": true,
+    "desc": "Justified fills the entire width equally. Fill does it based on actual text.", 
+    "type": "enum",
+    "keys": ["", "justified", "fill"], 
+    "values": ["", " nav-justified", "nav-fill"]
+    }, 
+
+"_htmltemplate": [
+    "  \"<div id='{id}'>\",",
+    "  \"<ul id='{id}_list' class='nav{tabStyle}{vertical}{alignment}{justified} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{disabled} onclick=''{_bsPopover!i}>\",",
+    "  NSB.bs.navs.make('{id}', '{disabled}', '{items!j}', '{links!j}', '{color}'),",
+    "  \"</ul>\",",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

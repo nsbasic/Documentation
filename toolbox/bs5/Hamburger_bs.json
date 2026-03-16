@@ -1,0 +1,46 @@
+{ 
+"_type": "Hamburger_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "bs5Button", "bs5Badge", "bs5Items", "bs5Popover", "bs5Icon"], 
+"_palette": 9, 
+"_art": "images/hamburger.png",
+"_wikipage": "Hamburger (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Hamburger</a> puts a dropdown menu in the top right of its parent. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+"_displayname": "Hamburger",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "length": {"desc": "Return the number of items."},
+    "selection": {"desc": "The text of the item selected."},
+    "value": {"desc": "The index value last selected."},
+    "enable(index,enable)": {"desc": "Toggle Enable/Disable for item in control. Use 'All' to set all items."}
+},
+
+"value": "",
+"width": "auto",
+"height": "auto",
+"items": "!Heading\nItem 1\nItem 2\n-\n*Item 3 (disabled)",
+"dropdown": "dropdown",
+"style": "float:right;",
+"backgroundColor": "",
+"borderColor": "transparent",
+"icon": "list",
+	
+"align": " dropdown-menu-right", 
+"_align": { 
+    "acignore": true,
+    "desc": "How should text in dropdown be aligned?", 
+    "type": "enum", 
+    "keys": ["left", "right"], 
+    "values": ["", " dropdown-menu-right"] 
+    }, 
+
+"_htmltemplate": "  NSB.bs.dropdown.make('{id}', '{value}', '{dropdown}', '{blockLevel} {class}', '{disabled}', '{_fontcss!i}{_bordercss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{_bordercss!i}{_colorscss!i}', '{appearance}', '{outline}', '{size}', '{icon}', '{iconTitle}', '{align}', '{items!j}', '{grouping}', '{groupStyle}', '{_bsBadge!i}', '{_bsPopover2!i}'),",
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

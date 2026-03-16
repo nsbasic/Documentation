@@ -1,0 +1,52 @@
+{
+    "_type": "padding",
+    "_base": "NSBObject",
+        
+"pAll": "", 
+"_pAll": { 
+    "group": "Padding",
+    "display": "padding-all",
+    "acignore": true,
+    "desc": "Padding on all sides of contents. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"pTop": "", 
+"_pTop": { 
+    "group": "Padding",
+    "display": "padding-top",
+    "acignore": true,
+    "desc": "Padding on top of contents. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"pLeft": "", 
+"_pLeft": { 
+    "group": "Padding",
+    "display": "padding-left",
+    "acignore": true,
+    "desc": "Padding on left of contents. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"pRight": "", 
+"_pRight": { 
+    "group": "Padding",
+    "display": "padding-right",
+    "acignore": true,
+    "desc": "Padding on right of contents. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    }, 
+
+"pBottom": "", 
+"_pBottom": { 
+    "group": "Padding",
+    "display": "padding-bottom",
+    "acignore": true,
+    "desc": "Padding on bottom of contents. Can be integer, percent, auto or initial.", 
+    "type": "str" 
+    },
+    
+"_paddingcss": "{if pAll<>''}padding:{pAll!p}; {/if}{if pTop<>''}padding-top:{pTop!p}; {/if}{if pLeft<>''}padding-left:{pLeft!p}; {/if}{if pBottom<>''}padding-bottom:{pBottom!p}; {/if}{if pRight<>''}padding-right:{pRight!p}; {/if}"
+    
+}

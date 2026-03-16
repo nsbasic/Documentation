@@ -1,0 +1,62 @@
+{ 
+"_type": "Label", 
+"_base": ["borders", "colors", "fonts", "margin", "padding", "Widget"], 
+"_palette": 4, 
+"_art": "images/label.png", 
+"_shorthelp": "<a href='{_docurl}'>Label</a> A simple label.", 
+"_category": ["All", "Common"],
+"_requiredfiles": [],
+"_displayname": "Label",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "text": {"desc": "Text of the label."},
+    "textContent": {"desc": "Text of the label. Same as text."},
+    "Caption": {"desc": "Text of the label. Same as text."}
+},
+
+"height": "auto", 
+"width": "auto",
+"fontSize": 16,
+"fontWeight": "bold", 
+
+"text": "Label", 
+"_text": { 
+    "i18n": true,
+    "desc": "Text displayed in the element. HTML format.", 
+    "type": "css",
+    "display": "textContent"
+    }, 
+
+"align": "left", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["left", "right", "center"]
+    }, 
+      
+"alignVertical": "top", 
+"_alignVertical": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["top", "center", "bottom"], 
+    "values": ["top", "center", "bottom"]
+    }, 
+          
+"_htmltemplate": "  \"<div id='{id}' class='{class}' data-nsb-type=Label style='cursor:default;{if align<>'left'}text-align:{align};{/if} text-shadow:none; {_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{style!j}{hidden}'>{text!j}</div>\",",
+
+"_jstemplate":[
+  "{if alignVertical == 'center'}  {id}.style.lineHeight='{height!p}';{/if}",
+  "{if alignVertical == 'bottom' and height.isdigit()}  {id}.style.lineHeight={height}*2-{fontSize}-2{if isinstance(height, int) or height.isdigit()}+'px'{/if};{/if}",
+  "  NSB.addProperties({id});"
+  ],
+  
+"_design_jstemplate": [
+    "{id}.getDesignFrameRect = function() {{",
+    "  return {id}.getBoundingClientRect();",
+    "}}"
+  ]
+}

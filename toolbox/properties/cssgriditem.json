@@ -1,0 +1,47 @@
+{
+    "_type": "cssgriditem",
+    "_base": "NSBObject",
+
+	"gridArea": "",
+	"_gridArea": { 
+    "group": "CSSGridItem",
+		"acignore": true,
+    "desc": "Name for the area. Use in CSSGrid's gridTemplateAreas property.", 
+    "type": "css" 
+  }, 
+
+	"gridRowStart": "",
+	"_gridRowStart": { 
+    "group": "CSSGridItem",
+		"acignore": true,
+    "desc": "Specifies a grid item's start position within the grid row. Examples: auto, 3, -1, span 2", 
+    "type": "css" 
+  }, 
+
+	"gridRowEnd": "",
+	"_gridRowEnd": { 
+    "group": "CSSGridItem",
+		"acignore": true,
+    "desc": "Specifies a grid item's end position within the grid row. Examples: auto, 3, -1, span 2", 
+    "type": "css" 
+  }, 
+
+	"gridColumnStart": "",
+	"_gridColumnStart": { 
+    "group": "CSSGridItem",
+		"acignore": true,
+    "desc": "Specifies a grid item's start position within the grid row. Examples: auto, 3, -1, span 2",
+    "type": "css" 
+  }, 
+
+	"gridColumnEnd": "",
+	"_gridColumnEnd": { 
+    "group": "CSSGridItem",
+		"acignore": true,
+    "desc": "Specifies a grid item's end position within the grid row. Examples: auto, 3, -1, span 2",
+    "type": "css" 
+  }, 
+       
+"_cssgriditemcss": "{if gridArea <> ''}grid-area:{gridArea}; {/if}{if gridRowStart <> ''}grid-row-start:{gridRowStart}; {/if}{if gridRowEnd <> ''}grid-row-end:{gridRowEnd}; {/if}{if gridColumnStart <> ''}grid-column-start:{gridColumnStart}; {/if}{if gridColumnEnd <> ''}grid-column-end:{gridColumnEnd}; {/if}"
+
+}

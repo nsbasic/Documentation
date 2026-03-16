@@ -1,0 +1,178 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "", 
+  "borderStyle": "", 
+  "borderWidth": "", 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedTemp.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedTempValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedHumidity.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedHumidityValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedPressure.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedPressureValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedWindSpeed.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedWindSpeedValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedWindDir.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedWindDirValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedCloudiness.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblSavedCloudinessValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblDateTime.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "lblDateTimeValue.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "frmSavedData", 
+        "Elements", 
+        "hdrSavedData.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 667, 
+  "designWidth": 375, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": 667, 
+  "id": "frmSavedData", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true, bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": 375
+}

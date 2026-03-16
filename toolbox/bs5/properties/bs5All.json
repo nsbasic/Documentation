@@ -1,0 +1,20 @@
+{
+  "_type": "bs5All",
+  "_base": "Widget",
+  "_description": "Properties shared by all Bootstrap controls.",
+    
+  "_requiredfiles": [
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}icons/bootstrap-icons.css",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}icons/fonts/bootstrap-icons.woff2",
+    "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs5/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+    "{_nsbdir}toolbox/bs5/dist/bsFunctions.min.js"
+  ],
+
+  "_acprops": {
+      "toggle(options)": {"desc": "Hides or shows control as needed."},
+      "collapse()": {"desc": "Hides or shows control as needed."}
+  },
+  
+  "display": ""
+}

@@ -1,0 +1,43 @@
+{
+"_type": "CSSGridItem",
+"_base": ["cssgriditem", "borders", "colors", "fonts", "margin", "padding", "children", "Widget"],
+"_palette": 4,
+"_art": "images/cssgriditem.png",
+"_shorthelp": "<a href='{_docurl}'>CSSGridItem</a> is used as a component in the CSSGrid control.",
+"_category": ["All", "Common"],
+"_displayname": "CSSGridItem",
+"_longhelp": "longhelp",
+
+"height": "auto",
+"width": "auto",
+"borderColor": "#E0E0E0",
+"borderWidth": "1",
+"display": "inline-grid",
+
+"content": "<i style='font-size:10px'>CSSGridItem - drag into CSSGrid.</i>",
+"_content": { 
+   "acignore": true,
+    "desc": "Content of the control. Design time. At runtime, use .innerHTML.", 
+    "type": "css" 
+   }, 
+
+"attributes": "",
+"_attributes": {
+    "acignore": true,
+    "desc": "HTML attributes. Example: disabled=true",
+    "type": "css"
+   },
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": "  \"<div id='{id}' class='{class}' {attributes!j} style='{_cssgriditemcss!i}{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'{if content<>'' and '<' not in content} data-i18n='{content!j}'{/if}>\",{_childhtml},'{content!j}',\"</div>\",",
+
+"_jstemplate": [
+    "  NSB.addProperties.addChild({id});",
+    "  NSB.addProperties({id});",
+    "{_childjs}"
+]
+}

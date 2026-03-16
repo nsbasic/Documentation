@@ -1,0 +1,20 @@
+{
+    "_type": "bsHeaderValue",
+    "_base": "NSBObject",
+    "_description": "Header and value properties.",
+    
+"header": "Here is the header. ", 
+"_header": { 
+    "i18n": true,
+    "desc": "Heading. Appears as large text. Can be HTML.", 
+    "type": "css" 
+   }, 
+
+"value": "Here is the value.", 
+"_value": { 
+    "i18n": true,
+    "desc": "Appears as smaller text, after header. Can be HTML.", 
+    "type": "css" 
+   }
+
+}

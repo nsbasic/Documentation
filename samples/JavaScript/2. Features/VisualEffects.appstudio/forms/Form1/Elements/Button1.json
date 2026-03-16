@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 9, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 314, 
+  "value": "Fade Out", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

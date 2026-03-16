@@ -1,0 +1,87 @@
+{ 
+"_type": "Checkbox_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/checkbox.png", 
+"_shorthelp": "<a href='{_docurl}'>Checkbox</a> Sets up one or more Checkboxes. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css", 
+  "{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "Checkbox",
+"_longhelp": "longhelp",
+"height": "auto", 
+"width": 160, 
+
+"_acprops": {
+    "getValue(n)": {"desc": "Get the value of checkbox n."},
+    "setValue(n, value)": {"desc": "Set the value of checkbox n to True or False."}
+},
+
+"options": "One,Two",
+"_options": { 
+    "acignore": true,
+    "desc": "List of options, comma separated", 
+    "type": "css",
+    "language": "HTML" 
+    }, 
+    
+"orientation": "", 
+"_orientation": { 
+    "acignore": true,
+    "desc": "Display options vertically or horizontally", 
+    "type": "enum", 
+    "keys": ["Vertical", "Horizontal"], 
+    "values": ["", "data-type=horizontal"]
+    }, 
+
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"mini": "", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"corners": "false", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["false", "true"]
+    },
+
+"iconPos": "left",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Checkbox Position", 
+    "type": "enum", 
+    "keys":   ["left","right"], 
+    "values": [" data-iconPos=left"," data-iconPos=right"]
+    }, 
+
+"_htmltemplate": "  NSB.Checkbox_jqm(\"{id}\", '{width}', \"{options!j}\", style=\"{style!j}\", '{orientation} {mini}', '{theme}', '{disabled} {class}', '{corners}', '{iconPos}'),",
+
+"_jstemplate":[
+  "  NSB.Checkbox_jqm_init('{id}','{options!j}');",
+  "  NSB.addProperties({id});"
+  ]
+}

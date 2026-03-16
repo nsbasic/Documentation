@@ -1,0 +1,16 @@
+{ 
+  "borderStyle": "solid", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnFileInfo", 
+  "left": "initial", 
+  "onclick": "btnFileInfo_onclick()", 
+  "right": "auto", 
+  "style": "float:left;", 
+  "top": "initial", 
+  "value": "File Info", 
+  "width": "140", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

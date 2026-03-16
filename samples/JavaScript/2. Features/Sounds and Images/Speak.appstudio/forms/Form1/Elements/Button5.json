@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button5", 
+  "left": 8, 
+  "onclick": "Button5_onclick()", 
+  "right": "auto", 
+  "top": 128, 
+  "value": "Hello World (other voice)", 
+  "width": 176, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

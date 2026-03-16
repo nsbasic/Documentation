@@ -1,0 +1,1 @@
+Get data from a remote SAP Hana database.

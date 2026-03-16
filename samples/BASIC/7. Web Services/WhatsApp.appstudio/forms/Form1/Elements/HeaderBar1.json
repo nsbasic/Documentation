@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "40", 
+  "id": "HeaderBar1", 
+  "left": 5, 
+  "right": "auto", 
+  "top": 19, 
+  "width": "auto", 
+  "!type": "Header", 
+  "text": "WhatsApp", 
+  "position": "absolute", 
+  "children": [] 
+} 

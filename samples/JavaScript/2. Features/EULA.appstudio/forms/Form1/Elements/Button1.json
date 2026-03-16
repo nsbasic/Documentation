@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "Button1", 
+  "left": 67, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 120, 
+  "value": "Reset EULA agreement", 
+  "width": 216, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

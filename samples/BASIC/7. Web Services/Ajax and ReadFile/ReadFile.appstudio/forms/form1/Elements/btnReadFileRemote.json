@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "btnReadFileRemote", 
+  "left": 24, 
+  "onclick": "btnReadFileRemote_onclick()", 
+  "right": "auto", 
+  "top": 344, 
+  "value": "ReadFile Remote", 
+  "width": 120, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "color": "color", 
+  "height": "auto", 
+  "id": "rate", 
+  "left": 95, 
+  "right": "auto", 
+  "top": 372, 
+  "value": "10", 
+  "width": "200", 
+  "!type": "Slider_bs4", 
+  "max": 50, 
+  "min": 0, 
+  "step": 1 
+} 

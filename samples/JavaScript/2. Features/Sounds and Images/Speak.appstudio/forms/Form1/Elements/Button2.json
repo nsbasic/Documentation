@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button2", 
+  "left": 8, 
+  "right": "auto", 
+  "top": 224, 
+  "value": "Hello World (low volume)", 
+  "width": 176, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

@@ -1,0 +1,214 @@
+{
+"_type": "Textarea_jqm14",
+"_base": ["fonts","Input"],
+"_palette": 9,
+"_art": "images/textarea.png",
+"_shorthelp": "<a href='{_docurl}'>TextArea</a> is a multi line text input area. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+   "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+   "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+   "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+   ],
+"_displayname": "TextArea",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "text": {"desc": "text. Save as value."},
+    "select()": {"desc": "Select entire text."},
+    "selectionDirection": {"desc": "The direction of the selection."},
+    "selectionEnd": {"desc": "Last character selected."},
+    "selectionStart": {"desc": "First character selected."},
+    "setSelectionRange(start,end)": {"desc": "Highlight from character start to character end."},
+    "readOnly": {"desc": "True/False"}
+},
+
+"height": 44, 
+"width": 160,
+
+"value": "",
+"_value": { 
+    "desc": "Text displayed in the element", 
+    "type": "css",
+    "language": "HTML" 
+    }, 
+
+"onselect": "", 
+"_onselect": { 
+    "acignore": true,
+    "desc": "text selected", 
+    "type": "js" 
+    }, 
+    
+"readonly": "", 
+"_readonly": {  
+    "display":"readOnly",
+    "acignore": true,
+    "desc": "Prevent changes", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["readonly='readonly'",""]
+    }, 
+
+"required": "", 
+"_required": { 
+    "acignore": true,
+    "desc": "Is input required? (used by some validity checking libraries)",  
+    "type": "enum", 
+    "keys": ["", "True"], 
+    "values": [""," required"]
+    }, 
+
+"align": "left", 
+"_align": { 
+    "acignore": true,
+    "desc": "Text Alignment", 
+    "type": "enum", 
+    "keys": ["left", "right", "center"], 
+    "values": ["left", "right", "center"]
+    }, 
+
+"autocapitalize": "on", 
+"_autocapitalize": { 
+    "desc": "Capitalize first letter as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+    
+"autocorrect": "on", 
+"_autocorrect": { 
+    "desc": "Correct spelling as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+    
+"autocomplete": "on", 
+"_autocomplete": { 
+    "desc": "Complete words as you enter", 
+    "type": "enum", 
+    "keys": ["on", "off"], 
+    "values": ["on", "off"]
+    }, 
+    
+"placeholder": "Enter text here", 
+"_placeholder": { 
+        "i18n": true,
+    "desc": "placeholder text", 
+    "type": "str" 
+   }, 
+
+"onblur": "", 
+"_onblur": { 
+    "desc": "On leaving field", 
+    "type": "js" 
+    }, 
+
+"onkeypress": "", 
+"_onkeypress": { 
+    "desc": "On Keyboard pressed", 
+    "type": "js" 
+    },
+
+"onkeyup": "", 
+"_onkeyup": { 
+    "desc": "On Key released", 
+    "type": "js" 
+    },
+
+"mini": "ui-mini", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-mini"] 
+    }, 
+
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+
+
+"maxlength": "", 
+"_maxlength": { 
+    "acignore": true,
+    "desc": "Maximum number of characters for text input. Not used for inputType number.", 
+    "type": "str" 
+    }, 
+
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"heightMax": "auto",
+"_heightMax": { 
+    "acignore": true,
+    "desc": "Maximum height area can be expanded to.", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"theme": "",
+"_theme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+	
+"autogrow": "data-autogrow=false", 
+"_autogrow": { 
+    "desc": "Should TextArea change in height if text added?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["", "data-autogrow=false"] 
+    }, 
+	
+"hidden": "block", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["none","block"]
+    }, 
+    
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", "ui-corner-all"] 
+    }, 
+    
+"_htmltemplate": "  \"<textarea id='{id}' class='{if theme<>''} ui-body-{theme}{/if} {mini} {disabled} {class}'{if corners==''} data-corners=false{/if} name='{name}'{if maxlength<>''} maxlength={maxlength}{/if} style='display:{hidden!j}; margin-top:0px; text-align:{align}; {if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}overflow-scrolling:touch; max-height:{heightMax!p}; text-shadow:none; {style!j}' {disabled} autocorrect='{autocorrect}'  autocomplete='{autocomplete}' autocapitalize='{autocapitalize}' {autogrow} {readonly!j} placeholder='{placeholder!b}'{required}>{value!j}</textarea>\",", 
+ 
+"_jstemplate": ["  {id}.ontouchmove=function(e){{e.stopPropagation()}};",
+                "  NSB.addProperties({id});",
+                "{if theme<>''} $('#{id}').removeClass('ui-body-inherit');{/if}",
+                "{if shadow<>'true'}  $('#{id}').removeClass('ui-shadow-inset');{/if}"
+                ]
+
+}

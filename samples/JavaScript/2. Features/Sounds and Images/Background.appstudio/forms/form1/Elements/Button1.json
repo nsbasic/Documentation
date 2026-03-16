@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "right": "auto", 
+  "top": 1, 
+  "value": "Change Form Background Image", 
+  "width": "100%", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

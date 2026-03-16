@@ -1,0 +1,53 @@
+{ 
+"_type": "Generic", 
+"_base": ["fonts","borders","Widget"], 
+"_palette": 4, 
+"_art": "images/generic.png", 
+"_shorthelp": "<a href='{_docurl}'>This control has been deprecated. Please use Container instead.", 
+"_category": ["All"],
+"_displayname": "Generic",
+"_longhelp": "longhelp",
+
+"height": 44, 
+"width": 60,
+
+"HTMLTag": "div",
+"_HTMLTag": { 
+   "acignore": true,
+    "desc": "HTML Tag", 
+    "type": "str" 
+   }, 
+    
+"content": "Content",
+"_content": { 
+   "acignore": true,
+    "desc": "Content of the control", 
+    "type": "css" 
+   }, 
+    
+"color": "",
+"_color": { 
+   "acignore": true,
+   "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+   
+"backgroundColor": "transparent",
+"_backgroundColor": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"attributes": "",
+"_attributes": { 
+   "acignore": true,
+   "desc": "HTML attributes. Example: disabled=true", 
+    "type": "str" 
+   }, 
+
+"_htmltemplate": "  \"<{HTMLTag} id='{id}' class='{class}' {attributes!j} style='{if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}{if borderWidth.isdigit()}border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor}; {/if}{hidden}{style!j}' >{content!j}</{HTMLTag}>\",",
+
+"_jstemplate":"  NSB.addProperties({id});"
+}

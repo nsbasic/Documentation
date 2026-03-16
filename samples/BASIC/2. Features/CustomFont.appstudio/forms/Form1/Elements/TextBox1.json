@@ -1,0 +1,19 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "fontFamily": "sansation", 
+  "height": "auto", 
+  "id": "TextBox1", 
+  "left": 39, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 154, 
+  "value": "This is Sansation Font.", 
+  "width": 219, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

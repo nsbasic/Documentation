@@ -1,0 +1,130 @@
+{ 
+"_type": "Editor", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxeditor.png", 
+"_wikipage": "jqxEditor",
+"_shorthelp": "<a href='{_docurl}'>Editor</a> HTML Text Editor. Note that dragging bounds does not work. Set bounds in Property Window. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+	  "{pathTo_jqWidgets}jqxbuttons.js",
+	  "{pathTo_jqWidgets}jqxscrollbar.js",
+	  "{pathTo_jqWidgets}jqxlistbox.js",
+	  "{pathTo_jqWidgets}jqxdropdownlist.js",
+	  "{pathTo_jqWidgets}jqxdropdownbutton.js",
+	  "{pathTo_jqWidgets}jqxcolorpicker.js",
+	  "{pathTo_jqWidgets}jqxwindow.js",
+	  "{pathTo_jqWidgets}jqxeditor.js",
+	  "{pathTo_jqWidgets}jqxtooltip.js",
+	  "{pathTo_jqWidgets}jqxcheckbox.js"
+  ],
+  
+"_displayname": "Editor",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "popupZIndex": {"desc": "Index # in popup box"},
+    "value": {"desc": "The value."}
+	},
+
+"height": 400, 
+"width": 300, 
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+ 
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    },
+	
+"val": "The Editor: This is the original content of the editor.", 
+"_val": { 
+    "desc": "The contents of the Editor.", 
+    "type": "css"
+    },
+	
+"localization": "{ 'bold': 'Bold', 'italic': 'Italic', 'underline': 'Underline', 'format': 'Format Block', 'font': 'Font Name', 'size': 'Font Size', 'color': 'Text Color', 'background': 'Fill Color', 'left': 'Align Left', 'center': 'Align Center', 'right': 'Align Right', 'outdent': 'Indent Less', 'indent': 'Indent More', 'ul': 'Insert unordered list', 'ol': 'Insert ordered list', 'image': 'Insert image', 'link': 'Insert link', 'html': 'View source', 'clean': 'Remove Formatting' }", 
+"_localization": { 
+    "desc": "Sets or gets the jqxEditor's localization.", 
+    "type": "css"
+    },
+	
+"tools": "bold italic underline | format font size | color background | left center right | outdent indent | ul ol | image | link | clean | html", 
+"_tools": { 
+    "desc": "Sets or gets the visibility and layout of the jqxEditor's tools. If you clear this field, you will have a simple TextArea.", 
+    "type": "css"
+    },
+	
+"lineBreak": "default",
+"_lineBreak":{
+	"desc": "Sets or gets the jqxEditor's line break.",
+	"type": "enum",
+	"keys": ["default","BR","P","DIV"],
+	"values": ["default","BR","P","DIV"]
+	},
+  	
+"pasteMode": "html",
+"_pasteMode":{
+	"desc": "Sets or gets whether the clipboard data is pasted as HTML or Plain Text. ",
+	"type": "enum",
+	"keys": ["html","text"],
+	"values": ["html","text"]
+	},
+	
+"editable": "true",
+"_editable":{
+	"desc": "Can the text be edited?",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"toolbarPosition": "top",
+"_toolbarPosition":{
+	"desc": "Position of Toolbar.",
+	"type": "enum",
+	"keys": ["top","bottom"],
+	"values": ["top","bottom"]
+	},
+
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:relative; left:0px; top:0px; height:100%; width:100%}}"],
+	
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='top:{top!p}; height:{height!p}; width:{width!p}; left:{left!p}; {hidden}{style!j}' class='{class}'><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "     disabled:{disabled},",
+  "     rtl:{rtl},",
+  "     localization: {localization},",
+  "     tools: '{tools}',",
+  "     height: '{height!p}',",
+  "     theme:'{theme}',",
+  "     lineBreak: '{lineBreak}',",
+  "     pasteMode: '{pasteMode}',",
+  "     editable: {editable},",
+  "     toolbarPosition: '{toolbarPosition}'",
+  "  }}",
+  "  $('#{id}').jqxEditor(NSB.jqxSettings['{id}']);",
+  "  $('#{id}').val('{val!h}');",
+  "  NSB.addProperties({id},{id}_wrapper);"],
+  
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "var rect={id}_wrapper.getBoundingClientRect();return {{height:rect.height,width:rect.width,top:rect.top,left:rect.left}}",
+  "}}"
+  ]
+
+}

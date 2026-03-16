@@ -1,0 +1,132 @@
+{ 
+"_type": "HeaderBar_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/headerbar.png", 
+"_shorthelp": "<a href='{_docurl}'>HeaderBar</a> sets a header bar with optional buttons at the top of the screen.",
+"_resizable": false,
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "HeaderBar",
+"_longhelp": "longhelp",
+
+"theme": "",
+"_theme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"buttonTheme": "",
+"_buttonTheme": { 
+    "acignore": true,
+    "display": "theme-buttons",
+    "desc": "Theme for buttons: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"leftButtonName": "Left",
+"_leftButtonName": { 
+    "acignore": true,
+    "desc": "Left Button text.", 
+    "type": "str" 
+    }, 
+
+"rightButtonName": "Right",
+"_rightButtonName": { 
+    "acignore": true,
+    "desc": "Right Button text.", 
+    "type": "str" 
+    },
+    
+"leftButtonIcon": "arrow-l", 
+"_leftButtonIcon": { 
+    "acignore": true,
+    "desc": "Select icon. If no icon, set leftButtonIconPos to none.", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "cloud", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    },  
+
+"rightButtonIcon": "arrow-r", 
+"_rightButtonIcon": { 
+    "acignore": true,
+    "desc": "Select icon. If no icon, set rightButtonIconPos to none.", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "cloud", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    },  
+
+"leftButtonIconPos": "left",
+"_leftButtonIconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["none","left","notext"], 
+    "values": ["none","left","notext"]
+    }, 
+
+"rightButtonIconPos": "right",
+"_rightButtonIconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["none","right","notext"], 
+    "values": ["none","right","notext"]
+    }, 
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    },
+
+"leftChangeForm": "",
+"_leftChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when left button clicked.",
+    "type": "str"
+	},
+
+"rightChangeForm": "",
+"_rightChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when right button clicked.",
+    "type": "str"
+	},
+	
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", " ui-corner-all"] 
+    }, 
+
+"title": "Header Bar", 
+"height": "auto", 
+"width": "auto", 
+
+"_csstemplate": "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}width:100%; height:40px; left:0px; top:0px;}}",
+
+"_htmltemplate": "  NSB.HeaderBar_jqm14('{id}', '{title!h}', '{leftButtonName}', '{leftButtonIcon}', '{leftButtonIconPos}', '{rightButtonName}', '{rightButtonIcon}', '{rightButtonIconPos}', '{if theme<>''} data-theme={theme}{/if} style=\"{style!j}\" class=\"{disabled} {class}\"', '{corners}', '{buttonTheme}'),",
+
+"_jstemplate": [
+	"  NSB.addProperties({id});",
+	"  NSB.addDisableProperty({id});",
+	"{if leftChangeForm <> ''}  {id}_left.onclick=function(){{ChangeForm({leftChangeForm})}};{/if}",
+	"{if rightChangeForm <> ''}  {id}_right.onclick=function(){{ChangeForm({rightChangeForm})}};{/if}",
+	"  if(typeof({id}.onclick)=='function'){{",
+    "{if leftChangeForm <> ''}    if(typeof({id}_left)!='undefined') {id}_left.onclick=function(){{ChangeForm({leftChangeForm})}};{/if}",
+	"{if leftChangeForm == ''}    if(typeof({id}_left)!='undefined') {id}_left.onclick=function() {{{id}.onclick({id}_left.getAttribute('nsbvalue'))}};{/if}",
+    "{if rightChangeForm <> ''}    if(typeof({id}_right)!='undefined') {id}_right.onclick=function(){{ChangeForm({rightChangeForm})}}}};{/if}",
+	"{if rightChangeForm == ''}    if(typeof({id}_right)!='undefined') {id}_right.onclick=function() {{{id}.onclick({id}_right.getAttribute('nsbvalue'))}}}};{/if}",
+	"{if leftButtonIconPos=='notext'}  {id}_left.style.backgroundColor={id}_left.style.borderColor='transparent';{/if}",
+	"{if rightButtonIconPos=='notext'}  {id}_right.style.backgroundColor={id}_right.style.borderColor='transparent';{/if}"
+]
+}

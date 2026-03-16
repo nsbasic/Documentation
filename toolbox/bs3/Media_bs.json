@@ -1,0 +1,81 @@
+{ 
+"_type": "Media_bs", 
+"_base": ["bsAll", "bsHeaderValue", "bsImage", "margin", "padding", "fonts", "colors", "Widget", "children", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/media.png", 
+"_wikipage": "Media (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Media</a> displays a left or right aligned image with text. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+"_requiredfiles": [
+	"{if BootstrapTheme<>'bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap.min.css{/if}",
+	"{if BootstrapTheme=='bootstrap-enhanced'}{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/bootstrap-theme.min.css{/if}",
+	"{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs3/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.min.js",
+	"{_nsbdir}toolbox/bs3/dist/fa/css/font-awesome.min.css",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.ttf",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff",
+	"{_nsbdir}toolbox/bs3/dist/fa/fonts/fontawesome-webfont.woff2",
+	"{_nsbdir}toolbox/bs3/dist/bsFunctions.js",
+  "{src}"
+  ],
+
+"_displayname": "Media",
+"_longhelp": "longhelp",
+"image": "nsb/images/192.png", 
+
+"width": "auto",
+"height": "auto",
+"center": {"desc": false},
+"text": "Media",
+"subtext": "Information about the image.",
+"responsive": {"type": "hidden"},
+
+"imageHorizontal": "media-left", 
+"_imageHorizontal": { 
+    "acignore": true,
+    "desc": "Position of the image.", 
+    "type": "enum", 
+    "keys": ["left", "right"], 
+    "values": ["media-left", "media-right"]
+}, 
+   
+"imageAlignment": "", 
+"_imageAlignment": { 
+    "acignore": true,
+    "desc": "Position of the image.", 
+    "type": "enum", 
+    "keys": ["top", "middle", "bottom"], 
+    "values": ["", " media-middle", " media-bottom"]
+}, 
+
+"imageWidth": "64", 
+"_imageWidth": { 
+    "acignore": true,
+    "desc": "Width of the image.", 
+    "type": "str"
+}, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+   
+"_htmltemplate": [
+"  \"<div id='{id}' class='media {class}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'>\",",
+"{if imageHorizontal=='media-left'}    \"<div class='{imageHorizontal}{imageAlignment}'>\",",
+"      \"<a href='#'><img src='{src}' class='media-object{shape}' style='width:{imageWidth!p}; height:auto;'></a>\",",
+"    \"</div>\",{/if}",
+"    \"<div class='media-body{if imageHorizontal==' media-right'}{imageHorizontal}{/if}'>\",",
+"      \"<h4 class='media-heading'>{header}{_bsBadge!i}</h4>{value}<div id={id}_addChild>{if _childhtml<>''}\",{_childhtml}\"{/if}</div></div>\",",
+"{if imageHorizontal=='media-right'}    \"<div class='{imageHorizontal}{imageAlignment}'>\",",
+"      \"<a href='#'><img src='{src}' class='media-object{shape}' style='width:{imageWidth!p}; height:auto;'></a>\",",
+"    \"</div>\",{/if}",
+"  \"</div>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+]
+
+}

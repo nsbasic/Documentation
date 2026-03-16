@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "class": "default", 
+  "id": "HeaderBar1", 
+  "left": "157", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "GetJSON", 
+  "position": "absolute", 
+  "children": [] 
+} 

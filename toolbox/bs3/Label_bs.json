@@ -1,0 +1,39 @@
+{ 
+"_type": "Label_bs", 
+"_base": ["bsAll", "margin", "padding", "fonts", "colors", "Widget", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/label.png", 
+"_wikipage": "Label (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Label</a> lets you display a styled label. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Label",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+
+"appearance": " label-default", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the label", 
+    "type": "enum", 
+    "keys": ["default", "primary", "success", "info", "warning", "danger"], 
+    "values": [" label-default", " label-primary", " label-success", " label-info", " label-warning", " label-danger"]
+}, 
+
+"value": "Label", 
+"_value": { 
+    "i18n": true,
+    "desc": "Label. Appears as text styled by appearance.", 
+    "type": "str" 
+   }, 
+    
+"_htmltemplate": [
+"  \"<span id='{id}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'  class='label{appearance} {class}'>{value}</span>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

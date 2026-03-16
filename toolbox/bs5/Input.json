@@ -1,0 +1,123 @@
+{ 
+"_type": "Input_bs5", 
+"_base": ["bs5All", "bs5Input", "bs5Text", "fonts", "Input", "borders", "margin", "padding", "colors", "children"], 
+"_palette": 9, 
+"_art": "images/input.png",
+"_wikipage": "Input (Bootstrap 5)",
+"_shorthelp": "<a href='{_docurl}'>Input_(Bootstrap_5)</a> is a simple input element. Bootstrap5.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Input",
+"_longhelp": "longhelp",
+
+"width": "300",
+"height": "auto",
+"borderStyle": "",
+"_backgroundColor": {"type": "hidden"},
+"_headerCols": {"type": "hidden"},
+"_valueCols": {"type": "hidden"},
+"_fontSize": {"type": "hidden"},
+"_fontStyle": {"type": "hidden"},
+"_fontWeight": {"type": "hidden"},
+
+"attributes": "",
+"_attributes": {
+    "acignore": true,
+    "desc": "HTML attributes. Example: disabled=true",
+    "type": "css"
+   },
+   
+"datalist": "",
+"_datalist": {
+    "acignore": true,
+    "desc": "List of possible predefined values, one per line.",
+    "type": "css"
+   },
+
+"inputType": "text", 
+"_inputType": { 
+    "acignore": true,
+    "desc": "Input field type", 
+    "type": "enum",
+    "keys":   ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"], 
+    "values": ["date","datetime-local","color","email","file","hidden","number","password","search","submit","tel","text","time","url"]
+     }, 
+     
+"passwordToggle": "", 
+"_passwordToggle": { 
+    "acignore": true,
+    "desc": "Option to toggle plaintext for Password fields.", 
+    "type": "enum", 
+    "keys": ["false", "true"], 
+    "values": ["", "true"]
+}, 
+
+"step": "", 
+"_step": { 
+    "acignore": true,
+    "desc": "A value the input has to be a multiple of. Use 1 for integer only", 
+    "type": "str" 
+    },
+    
+"min": "", 
+"_min": { 
+    "acignore": true,
+    "desc": "For inputType Number, the minimum value. For date, the earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "acignore": true,
+    "desc": "For inputType Number, the maximum value. For date, the latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    },
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "The size of the control", 
+    "type": "enum", 
+    "keys": ["small", "", "large"], 
+    "values": ["input-group-sm", "", "input-group-lg"]
+},
+
+"marginBottom": "mb-0", 
+"_marginBottom": { 
+    "acignore": true,
+    "desc": "Sets bottom margin. Useful for spacing controls. mb-0 is no space.", 
+    "type": "enum", 
+    "keys": ["mb-0","mb-1","mb-2","mb-3","mb-4","mb-5"], 
+    "values": ["mb-0","mb-1","mb-2","mb-3","mb-4","mb-5"]
+},
+
+"_csstemplate": [
+    "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}"
+],
+
+"_htmltemplate": [
+    "  \"<div id={id}_wrapper class='input-group {size} {marginBottom} collapse show' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "      \"<input id={id} class='form-control' type={inputType} {required} placeholder='{placeholder}' {if attributes<>''} {attributes!j}{/if}{if name<>''} name='{name}' {/if}{_bsTextatr!i}{if min<>''} min='{min}'{/if}{if max<>''} max='{max}' {/if}{if step<>''}step={step} {/if}{if inputmode<>''}inputmode={inputmode} {/if}{if value<>''}value='{value!b}' {/if}>\",",
+    "{if passwordToggle=='true'}      \"<span id={id}_icon class='input-group-text bi-eye-slash'></span>\",{/if}",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {id}.addEventListener('focusin', {id}.onfocusin);",
+  "  {id}.addEventListener('focusout', {id}.onfocusout);",
+  "{if datalist<>''}  {id}.datalist='{datalist!j}';{/if}",
+  "{if passwordToggle=='true'}  {id}_icon.onclick = function() {{",
+  "{if passwordToggle=='true'}    if ($('#{id}').attr('type') === 'password') {{",
+  "{if passwordToggle=='true'}      $('#{id}').attr('type', 'text');",
+  "{if passwordToggle=='true'}      {id}_icon.classList.replace('bi-eye-slash', 'bi-eye');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = 'blue';",
+  "{if passwordToggle=='true'}    }} else {{",
+  "{if passwordToggle=='true'}      $('#{id}').attr('type', 'password');",
+  "{if passwordToggle=='true'}      {id}_icon.classList.replace('bi-eye', 'bi-eye-slash');",
+  "{if passwordToggle=='true'}      {id}_icon.style.color = '#495057';",
+  "{if passwordToggle=='true'}    }};",
+  "{if passwordToggle=='true'}  }};"
+]
+		
+}

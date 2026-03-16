@@ -1,0 +1,12 @@
+{ 
+  "!type": "Button_bs4", 
+  "ChangeForm": "frmFiles", 
+  "appearance": " btn-secondary", 
+  "icon": "arrow-r", 
+  "id": "hdrUpload_btnRight", 
+  "left": "auto", 
+  "mAll": "4", 
+  "right": "0", 
+  "size": " btn-sm", 
+  "value": "Files" 
+} 

@@ -1,0 +1,169 @@
+{ 
+"_type": "Tree_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxtree.png", 
+"_wikipage": "jqxTree",
+"_shorthelp": "<a href='{_docurl}'>Display</a> a Tree control.  jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css", 
+    "{pathTo_jqWidgets}jqxbuttons.js",
+    "{pathTo_jqWidgets}jqxscrollbar.js",
+    "{pathTo_jqWidgets}jqxpanel.js",    
+    "{pathTo_jqWidgets}jqxtree.js",
+    "{pathTo_jqWidgets}jqxdragdrop.js",
+    "{pathTo_jqWidgets}jqxcheckbox.js",    
+    "{pathTo_jqWidgets}images/calendaricon.png",
+    "{pathTo_jqWidgets}images/contactsicon.png",
+    "{pathTo_jqWidgets}images/favorites.png",
+    "{pathTo_jqWidgets}images/folder.png",
+    "{pathTo_jqWidgets}images/mailicon.png",
+    "{pathTo_jqWidgets}images/notesicon.png",
+    "{pathTo_jqWidgets}images/recycle.png",
+    "{pathTo_jqWidgets}images/settings.png",
+    "{pathTo_jqWidgets}styles/images/icon-up.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-down.png"
+    ],
+
+"_displayname": "Tree",
+"_longhelp": "longhelp",
+
+"height": 150, 
+"width": 120, 
+    
+"enableHover": "false",
+"_enableHover": {
+	"desc": "Enables or disables the hover state.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"keyboardNavigation": "false",
+"_keyboardNavigation": {
+	"desc": "Enables or disables the key navigation.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"checkboxes": "false",
+"_checkboxes": {
+	"desc": "Gets or sets whether the tree should display a checkbox next to each item. In order to use this feature, you need to include the jqxcheckbox.js.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"hasThreeStates": "false",
+"_hasThreeStates": {
+	"desc": "Gets or sets whether the tree checkboxes have three states - checked, unchecked and indeterminate.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"allowDrag": "false",
+"_allowDrag": {
+	"desc": "Enables the dragging of Tree Items.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"allowDrop": "false",
+"_allowDrop": {
+	"desc": "Enables the dropping of Tree Items.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"dragStart": "null",
+"_dragstart": {
+	"desc": "Callback function which is called when a drag operation starts.",
+	"type": "str"
+	},
+
+"dragEnd": "null",
+"_dragEnd": {
+	"desc": "Callback function which is called when a drag operation ends.",
+	"type": "str"
+	},
+
+"animationShowDuration":350, 
+"_animationShowDuration": {
+	"desc": "Gets or sets the duration of the show animation.",
+	"type": "int"
+	},
+
+"animationHideDuration":100, 
+"_animationHideDuration": {
+	"desc": "Gets or sets the duration of the hide animation.",
+	"type": "int"
+	},
+
+"toggleIndicatorSize":16, 
+"_toggleIndicatorSize": {
+	"desc": "Gets or sets the size of the expand/collapse arrows.",
+	"type": "int"
+	},
+
+"easing":"easeInOutCirc", 
+"_easing": {
+	"desc": "Gets or sets the animation's easing to one of the JQuery's supported easings.",
+	"type": "str"
+	},
+
+"toggleMode":"click", 
+"_toggleMode": {
+	"desc": "Gets or sets user interaction used for expanding or collapsing any item.",
+	"type": "enum",
+	"keys": ["click","dblclick"],
+	"values": ["click","dblclick"]
+	},
+
+"source": "[{label:'Tree'},{label:'two'},{label:'Three'}]", 
+"_source": {
+	"desc": "Sets the initial contents. Easier to do at runtime.",
+	"type": "css",
+    "language": "JavaScript"
+	},
+
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:relative; left:0px; top:0px; height:100%; width:100%}}"],
+
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='background-color:white;{hidden}{style!j} class='{class}''><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+    "NSB.jqxSettings['{id}']={{",
+        "allowDrag:{allowDrag},",
+        "allowDrop:{allowDrop},",
+        "animationHideDuration:{animationHideDuration},",
+        "animationShowDuration:{animationShowDuration},",
+        "checkboxes:{checkboxes},",
+        "disabled:{disabled},",
+        "dragEnd:function(){{ {dragEnd} }},",
+        "dragStart:function(){{ {dragStart} }},",
+        "easing:'{easing}',",
+        "enableHover:{enableHover},",
+        "hasThreeStates:{hasThreeStates},",
+        "keyboardNavigation:{keyboardNavigation},",
+        "theme:'{theme}',",
+        "toggleIndicatorSize:{toggleIndicatorSize},",
+        "toggleMode:'{toggleMode}',",
+        "width:'{width}',",
+        "height:'{height}',",
+        "source:eval({source})",
+    "}}",
+    "{id}.style.position='relative';",
+    "$('#{id}').jqxTree(NSB.jqxSettings['{id}'])",
+    "NSB.addProperties({id},{id}_wrapper);"]
+}

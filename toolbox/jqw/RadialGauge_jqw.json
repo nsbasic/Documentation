@@ -1,0 +1,61 @@
+{ 
+"_type": "RadialGauge_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxgauge.png", 
+"_wikipage": "jqxRadialGauge",
+"_shorthelp": "<a href='{_docurl}'>RadialGauge</a> Control control.jqWidgets (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}styles/jqx.base.css",
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",
+    "{pathTo_jqWidgets}jqxcore.js",
+    "{pathTo_jqWidgets}jqxchart.js",
+    "{pathTo_jqWidgets}jqxgauge.js"
+    ],
+"_displayname": "RadialGauge",
+"_longhelp": "longhelp",
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"height": 300, 
+"width": 300, 
+
+"colorScheme": "scheme01",
+"_colorScheme":{
+	"desc": "Sets the gauge's color palette.",
+	"type": "enum",
+	"keys": ["scheme01","scheme02","scheme03","scheme04","scheme05","scheme06","scheme07","scheme08","scheme09","scheme10","scheme11"],
+	"values": ["scheme01","scheme02","scheme03","scheme04","scheme05","scheme06","scheme07","scheme08","scheme09","scheme10","scheme11"]
+	},
+	
+"_csstemplate": [
+   "#{id}_wrapper {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{_cssbounds!i}}}",
+   "\n#{id} {{position:relative; left:0px; top:0px; height:100%; width:100%}}"],
+
+"_htmltemplate": "  \"<div id='{id}_wrapper' style='background-color:white;{hidden}{style!j}' class='{class}'><div id='{id}'></div></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "    disabled:{disabled},",
+  "    width:'{width}',",
+  "    height:'{height}',",
+  "    theme:'{theme}',",
+  "    colorScheme:'{colorScheme}',",
+  "  }}",
+  "  $('#{id}').jqxGauge(NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id},{id}_wrapper);"]
+}

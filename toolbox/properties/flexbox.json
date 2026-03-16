@@ -1,0 +1,101 @@
+{
+    "_type": "flexbox",
+    "_base": "NSBObject",
+
+		"alignContent": "", 
+		"_alignContent": { 
+    "group": "FlexBox",
+    "acignore": true,
+    "desc": [
+			"The align-content property modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines. display:flex must be set.<br>",
+			"<b>stretch:</b> Default value. Lines stretch to take up the remaining space<br>",
+			"<b>center:</b> Lines are packed toward the center of the flex container<br>",
+			"<b>flex-start:</b> Lines are packed toward the start of the flex container<br>",
+			"<b>flex-end:</b> Lines are packed toward the end of the flex container<br>",
+			"<b>space-between:</b> Lines are evenly distributed in the flex container<br>",
+			"<b>space-around:</b> Lines are evenly distributed in the flex container, with half-size spaces on either end<br>",
+			"<b>initial:</b> Sets this property to its default value.<br>",
+			"<b>inherit:</b> Inherits this property from its parent element."
+    ], 
+    "type": "enum", 
+    "keys": ["stretch", "center", "flex-start", "flex-end", "space-between", "space-around", "initial", "inherit"],
+    "values": ["","center", "flex-start", "flex-end", "space-between", "space-around", "initial", "inherit"]
+    },
+       
+		"alignItems": "", 
+		"_alignItems": { 
+    "group": "FlexBox",
+    "acignore": true,
+    "desc": [
+			"The align-items property specifies the default alignment for items inside the flexible container. display:flex must be set.<br>",
+			"<b>stretch:</b> Default. Items are stretched to fit the container<br>",
+			"<b>center:</b> Items are positioned at the center of the container<br>",
+			"<b>flex-start:</b> Items are positioned at the beginning of the container<br>",
+			"<b>flex-end:</b> Items are positioned at the end of the container<br>",
+			"<b>baseline:</b> Items are positioned at the baseline of the container<br>",
+			"<b>initial:</b> Sets this property to its default value.<br>",
+			"<b>inherit:</b> Inherits this property from its parent element."
+		],
+    "type": "enum", 
+    "keys": ["stretch", "center", "flex-start", "flex-end", "baseline", "initial", "inherit"],
+    "values": ["","center", "flex-start", "flex-end", "baseline", "initial", "inherit"]
+    },
+       
+		"flexDirection": "", 
+		"_flexDirection": { 
+    "group": "FlexBox",
+    "acignore": true,
+    "desc": [
+			"Set the direction of the flexible items inside the control. display:flex must be set.<br>",
+			"<b>row:</b> Default value. The flexible items are displayed horizontally, as a row<br>",
+			"<b>row-reverse:</b> Same as row, but in reverse order<br>",
+			"<b>column:</b> The flexible items are displayed vertically, as a column.<br>",
+			"<b>column-reverse:</b> Same as column, but in reverse order<br>",
+			"<b>initial:</b> Sets this property to its default value.<br>",
+			"<b>inherit:</b> Inherits this property from its parent element."
+		],
+    "type": "enum", 
+    "keys": ["row","row-reverse","column","column-reverse","initial","inherit"],
+    "values": ["","row-reverse","column","column-reverse","initial","inherit"]
+    },
+       
+		"flexWrap": "", 
+		"_flexWrap": { 
+    "group": "FlexBox",
+    "acignore": true,
+    "desc": [
+			"The flex-wrap property specifies whether the flexible items should wrap or not. display:flex must be set.<br>",
+			"<b>nowrap:</b> Default value. Specifies that the flexible items will not wrap<br>",
+			"<b>wrap:</b> Specifies that the flexible items will wrap if necessary<br>",
+			"<b>wrap-reverse:</b> Specifies that the flexible items will wrap, if necessary, in reverse order<br>",
+			"<b>initial:</b> Sets this property to its default value. <br>",
+			"<b>inherit:</b> Inherits this property from its parent element. "
+		],
+    "type": "enum", 
+    "keys": ["nowrap","wrap","wrap-reverse","initial","inherit"],
+    "values": ["","wrap","wrap-reverse","initial","inherit"]
+    }, 
+       
+		"justifyContent": "", 
+		"_justifyContent": { 
+    "group": "FlexBox",
+    "acignore": true,
+    "desc": [
+			"The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally). display:flex must be set.<br>",
+			"<b>flex-start:</b> Default value. Items are positioned at the beginning of the container<br>",
+			"<b>flex-end:</b> Items are positioned at the end of the container<br>",
+			"<b>center:</b> Items are positioned at the center of the container<br>",
+			"<b>space-between:</b> Items are positioned with space between the lines<br>",
+			"<b>space-around:</b> Items are positioned with space before, between, and after the lines<br>",
+			"<b>initial:</b> Sets this property to its default value.<br>",
+			"<b>inherit:</b> Inherits this property from its parent element"
+		], 
+    "type": "enum", 
+    "keys": ["flex-start", "flex-end","center","space-between", "space-around", "initial","inherit"],
+    "values": ["","flex-end","center","space-between", "space-around", "initial","inherit"]
+    }, 
+       
+		"_flexboxcss": "{if alignContent <> ''}align-content:{alignContent}; {/if}{if alignItems <> ''}align-items:{alignItems}; {/if}{if flexDirection <> ''}flex-direction:{flexDirection}; {/if}{if flexWrap <> ''}flex-wrap:{flexWrap}; {/if}{if justifyContent <> ''}justify-content:{justifyContent}; {/if}"
+
+}
+

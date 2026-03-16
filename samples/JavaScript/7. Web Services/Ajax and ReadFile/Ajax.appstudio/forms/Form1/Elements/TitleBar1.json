@@ -1,0 +1,12 @@
+{ 
+  "bottom": "auto", 
+  "class": "default", 
+  "id": "TitleBar1", 
+  "left": "159", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "Ajax", 
+  "position": "absolute", 
+  "children": [] 
+} 

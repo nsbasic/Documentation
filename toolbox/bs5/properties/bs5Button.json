@@ -1,0 +1,71 @@
+{
+    "_type": "bs5Button",
+    "_base": "NSBObject",
+    "_description": "Properties shared by buttons.",
+
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", " disabled"] 
+    }, 
+
+"size": " btn-md", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of the element", 
+    "type": "enum", 
+    "keys": ["large", "medium", "small"], 
+    "values": [" btn-lg", " btn-md", " btn-sm", " btn-xs"]
+}, 
+
+"blockLevel": "", 
+"_blockLevel": { 
+    "acignore": true,
+    "desc": "Block level is entire width of parent.", 
+    "type": "enum", 
+    "keys": ["", "block"], 
+    "values": ["", " btn-block"]
+}, 
+
+"appearance": " btn-secondary", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the button", 
+    "type": "enum", 
+    "keys": ["default", "primary", "success", "info", "warning", "danger", "link", "light", "dark"], 
+    "values": [" btn-secondary", " btn-primary", " btn-success", " btn-info", " btn-warning", " btn-danger", " btn-link", " btn-light", " btn-dark"]
+}, 
+
+"outline": "", 
+"_outline": { 
+    "desc": "Display button with an outline, instead of solid color.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "outline-"] 
+    }, 
+
+"grouping": "",
+"_grouping": { 
+    "acignore": true,
+    "desc": "Is this the start or end of a group?", 
+    "type": "enum", 
+    "keys":   ["No","Start Horizontal","Start Vertical","Middle","End"], 
+    "values": ["","horizontal","vertical","","end"]
+    }, 
+    
+"groupStyle": "",
+"_groupStyle": {
+	"acignore": true,
+    "desc": "Styling to apply to group.",
+    "type": "css"
+	},
+
+"value": "", 
+"_value": { 
+    "desc": "Value of input", 
+    "type": "str" 
+    }
+       
+}

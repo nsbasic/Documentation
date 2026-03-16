@@ -1,0 +1,213 @@
+{ 
+"_type": "Window_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxwindow.png",
+"_wikipage": "jqxWindow",
+"_shorthelp": "<a href='{_docurl}'>Window</a> sets up a window to enter data or view information. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}jqxwindow.js",
+    "{_nsbdir}toolbox/jqw/dist/jqxFunctions.js"
+    ],
+  
+"_displayname": "Window",
+"_longhelp": "longhelp",
+
+"_acprops": {
+	},
+ 
+"height": 100, 
+"width": 300, 
+
+     
+"collapsed": "false", 
+"_collapsed": { 
+    "desc": "Determines whether the window is collapsed.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"collapseAnimationDuration": 150, 
+"_collapseAnimationDuration": { 
+    "desc": "Determines the duration in milliseconds of the expand/collapse animation.", 
+    "type": "int" 
+    },
+
+"minHeight": 50, 
+"_minHeight": { 
+    "desc": "Sets or gets window's minimum height.", 
+    "type": "int" 
+    },
+
+"minWidth": 50, 
+"_minWidth": { 
+    "desc": "Sets or gets window's minimum width.", 
+    "type": "int" 
+    },
+
+"maxHeight": 600, 
+"_maxHeight": { 
+    "desc": "Sets or gets window's maximum height.", 
+    "type": "int" 
+    },
+
+"maxWidth": 600, 
+"_maxWidth": { 
+    "desc": "Sets or gets window's maximum width.", 
+    "type": "int" 
+    },
+
+"showCloseButton": "true", 
+"_showCloseButton": { 
+    "desc": "Show a close button?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"showCollapseButton": "false", 
+"_showCollapseButton": { 
+    "desc": "Show a collapse button?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"autoOpen": "true", 
+"_autoOpen": { 
+    "desc": "Sets whether the window will be shown after its creation.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"keyboardCloseKey": "esc", 
+"_keyboardCloseKey": { 
+    "desc": "Sets the key which could be used for closing the window when it's on focus. Possible value is every keycode and the 'esc' string (for the escape key).", 
+    "type": "str" 
+    },
+
+"keyboardNavigation": "true", 
+"_keyboardNavigation": { 
+    "desc": "Determines whether the keyboard navigation is enabled or disabled.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"title": "<b>Window Title</b>", 
+"_title": { 
+    "desc": "The title of the window. Can be HTML.", 
+    "type": "str" 
+    },
+
+"text": "text", 
+"_text": { 
+    "desc": "The text to display in the window. Can be HTML.", 
+    "type": "str" 
+    },
+
+"draggable": "true", 
+"_draggable": { 
+    "desc": "Sets whether the window is draggable.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"resizable": "true", 
+"_resizable": { 
+    "desc": "Sets whether the window is resizable.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"animationType": "fade", 
+"_animationType": {
+    "desc": "Sets the animation type of window.", 
+    "type": "enum", 
+    "keys": ["slide", "fade", "combined", "none"], 
+    "values": ["slide", "fade", "combined", "none"]
+    }, 
+
+"closeAnimationDuration": 350, 
+"_closeAnimationDuration": { 
+    "desc": "Determines the close animation duration.", 
+    "type": "int" 
+    },
+
+"showAnimationDuration": 350, 
+"_showAnimationDuration": { 
+    "desc": "Determines the show animation duration", 
+    "type": "int" 
+    },
+
+"isModal": "false", 
+"_isModal": { 
+    "desc": "Sets whether the window is displayed as a modal dialog. If the jqxWindow's mode is set to modal, the window blocks user interaction with the underlying user interface.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"position": "center", 
+"_position": { 
+    "desc": "Sets the window's position. The value could be in the following formats: 'center', 'top, left', '{ x: 300, y: 500 }', '[300, 500]'.", 
+    "type": "str" 
+    },
+    
+"closeButtonSize": 16, 
+"_closeButtonSize": { 
+    "desc": "The size of the close button.", 
+    "type": "int" 
+    },
+    
+"closeButtonAction": "hide", 
+"_closeButtonAction": { 
+    "desc": "Sets what happens with the close button.", 
+    "type": "enum", 
+    "keys": ["hide", "close"], 
+    "values": ["hide","close"]
+    },
+  
+"_htmltemplate": "  \"<div id='{id}' data-role='none' style='display:none;{style!j}' class='{class}'><div>{title}</div><div>{text}</div></div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+        "    disabled:{disabled},",
+        "    rtl:{rtl},",
+	    "    height:'{height}',",
+  		"    width:'{width}',",
+        "    theme:'{theme}',",
+        "    collapsed:{collapsed},",
+        "    collapseAnimationDuration:{collapseAnimationDuration},",
+        "    minHeight:{minHeight},",
+        "    minWidth:{minWidth},",
+        "    maxHeight:{maxHeight},",
+        "    maxWidth:{maxWidth},",
+        "    showCloseButton:{showCloseButton},",
+        "    showCollapseButton:{showCollapseButton},",
+        "    autoOpen:{autoOpen},",
+        "    keyboardCloseKey:'{keyboardCloseKey}',",
+        "    keyboardNavigation:{keyboardNavigation},",
+        "    title:'{title}',",
+        "    draggable:{draggable},",
+        "    resizable:{resizable},",
+        "    animationType:'{animationType}',",
+        "    closeAnimationDuration:{closeAnimationDuration},",
+        "    showAnimationDuration:{showAnimationDuration},",
+        "    isModal:{isModal},",
+        "    position:'{position}',",
+        "    closeButtonSize:{closeButtonSize},",
+        "    closeButtonAction:'{closeButtonAction}'",
+	 "  }};",
+	 "  {id}.text = '{text}';",
+	 "  NSB.Window_jqx('{id}');"
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "_type": "obfuscator",
+    "_base": "NSBObject",
+
+    "obfuscation": "",
+    "_obfuscation": {
+        "desc": "Source Obfuscator. Choose one of the following, or select custom to set your own in obfuscatorSettings. See <a href='https://github.com/javascript-obfuscator/javascript-obfuscator'>javascript-obfuscator</a>",
+        "type": "enum",
+        "keys": [
+        	"None", 
+        	"JSMin", 
+        	"js-obfuscator-high",
+        	"js-obfuscator-medium",
+        	"js-obfuscator-low",
+        	"js-obfuscator-custom"
+        	],
+        "values": [
+        	"", 
+        	"jsmin.js", 
+        	"javascript-obfuscator-high",
+        	"javascript-obfuscator-medium",
+        	"javascript-obfuscator-low",
+        	"javascript-obfuscator-custom"
+        	]
+    },
+
+    "obfuscatorSettings": [
+      "{",
+          "\"compact\": true,",
+          "\"controlFlowFlattening\": false,",
+          "\"controlFlowFlatteningThreshold\": 0.75,",
+          "\"debugProtection\": false,",
+          "\"debugProtectionInterval\": false,",
+          "\"disableConsoleOutput\": false,",
+          "\"reservedNames\": [],",
+          "\"rotateStringArray\": true,",
+          "\"seed\": 0,",
+          "\"selfDefending\": false,",
+          "\"sourceMap\": false,",
+          "\"sourceMapBaseUrl\": \"\",",
+          "\"sourceMapFileName\": \"\",",
+          "\"sourceMapMode\": \"separate\",",
+          "\"stringArray\": true,",
+          "\"stringArrayEncoding\": [],",
+          "\"stringArrayThreshold\": 0.8,",
+          "\"unicodeEscapeSequence\": true",
+        "}"    
+      ],
+    "_obfuscatorSettings": {
+        "i18n": true,
+        "desc": "Settings for javascript-obfuscator. <a href='https://github.com/javascript-obfuscator/javascript-obfuscator'>More info</a>",
+        "type": "css"
+    }
+    
+}

@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "false", 
+  "id": "btnWiki", 
+  "left": 73, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 419, 
+  "value": "Wiki Reference", 
+  "width": 168, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

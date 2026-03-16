@@ -1,0 +1,17 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "icon": "arrow-d", 
+  "id": "voice", 
+  "left": 96, 
+  "right": "auto", 
+  "top": 194, 
+  "width": 216, 
+  "!type": "Select_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12, 
+  "items": "One\nTwo", 
+  "values": "1\n2", 
+  "multiSelect": "" 
+} 

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/Making_Desktop_Apps_with_App_Studio by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>Making Desktop Apps with App Studio - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aXUJx5z0wVraSw7MO73xSAAAAAE","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Making_Desktop_Apps_with_App_Studio","wgTitle":"Making Desktop Apps with App Studio","wgCurRevisionId":8903,"wgRevisionId":8903,"wgArticleId":390,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Making_Desktop_Apps_with_App_Studio","wgRelevantArticleId":390,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Making_Desktop_Apps_with_App_Studio rootpage-Making_Desktop_Apps_with_App_Studio skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">Making Desktop Apps with App Studio</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p><i>Important: Chrome will be removing support for Chrome Apps on Windows, Mac, and Linux. Use <i>Make Windows Executables</i> instead. </i>
+</p><p>You can turn your AppStudio apps into distributable Windows and Mac OS desktop apps, by making them into <a rel="nofollow" class="external text" href="http://developer.chrome.com/apps/about_apps.html">Chrome Packaged Apps</a>. Users will need to have Chrome installed on their systems. The apps can be sold or given away for free in the <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/category/home">Chrome Web Store</a>. 
+</p><p>Packaged apps deliver an experience as capable as a native app, but as safe as a web page. Just like web apps, packaged apps are written in HTML5, JavaScript, and CSS. But packaged apps look and behave like native apps, and they have native-like capabilities that are much more powerful than those available to web apps.
+</p><p>Here's a video from Google about Chrome Packaged Apps: <a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=IXDSPlVZRJE">https://www.youtube.com/watch?v=IXDSPlVZRJE</a>
+</p><p>Here are the steps:
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Get_your_app_ready"><span class="tocnumber">1</span> <span class="toctext">Get your app ready</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Check_ChromeAppLaunch_in_Project_Properties"><span class="tocnumber">2</span> <span class="toctext">Check ChromeAppLaunch in Project Properties</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Check_ChromeManifest_in_Project_Properties"><span class="tocnumber">3</span> <span class="toctext">Check ChromeManifest in Project Properties</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Click_on_&quot;Build_Desktop_App&quot;_in_the_Run_menu"><span class="tocnumber">4</span> <span class="toctext">Click on "Build Desktop App" in the Run menu</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Sign_on_to_your_Google_Developer_Account"><span class="tocnumber">5</span> <span class="toctext">Sign on to your Google Developer Account</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Upload_your_zip_file"><span class="tocnumber">6</span> <span class="toctext">Upload your zip file</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Publish_Changes"><span class="tocnumber">7</span> <span class="toctext">Publish Changes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Let_it_bake."><span class="tocnumber">8</span> <span class="toctext">Let it bake.</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Download_the_App"><span class="tocnumber">9</span> <span class="toctext">Download the App</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Start_App_using_Chrome_App_Launcher"><span class="tocnumber">10</span> <span class="toctext">Start App using Chrome App Launcher</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Start_App_using_a_shortcut_(Windows)"><span class="tocnumber">11</span> <span class="toctext">Start App using a shortcut (Windows)</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Run_the_App"><span class="tocnumber">12</span> <span class="toctext">Run the App</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Addendum:_The_Chrome_API"><span class="tocnumber">13</span> <span class="toctext">Addendum: The Chrome API</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Addendum:_Debugging_Chrome_Packaged_Apps"><span class="tocnumber">14</span> <span class="toctext">Addendum: Debugging Chrome Packaged Apps</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Addendum:_Replacing_localStorage"><span class="tocnumber">15</span> <span class="toctext">Addendum: Replacing localStorage</span></a></li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading3"><h3 id="Get_your_app_ready">Get your app ready</h3></div>
+<p>There are certain restrictions on apps which are to be packaged:
+</p>
+<ol><li>Do not use alert, confirm or prompt (JavaScript) or <a href="MsgBox-2.html" title="MsgBox">MsgBox</a> (BASIC). Use NSB.MsgBox instead.</li>
+<li>Do not use <a href="Eval.html" title="Eval">eval</a>().</li>
+<li>Do not use <a href="LocalStorage-2.html" title="LocalStorage">localStorage</a> or <a href="Sql.html" title="Sql">SQLite</a>. Use the <a rel="nofollow" class="external text" href="https://developer.chrome.com/apps/app_storage.html">FileSystem API</a> or <a rel="nofollow" class="external text" href="http://www.html5rocks.com/en/tutorials/indexeddb/todo/">IndexedDB</a>. <a rel="nofollow" class="external text" href="https://code.google.com/p/chromium/issues/detail?id=339579">Complain here.</a> Read about the SQLite controversy <a rel="nofollow" class="external text" href="http://nolanlawson.com/2014/04/26/web-sql-database-in-memoriam/">here</a>.</li>
+<li>Follow the rules in <a rel="nofollow" class="external text" href="http://developer.chrome.com/apps/contentSecurityPolicy.html">Chrome's Content Security Policy</a>.</li>
+<li>Check to see that you are not using any other <a rel="nofollow" class="external text" href="https://developer.chrome.com/apps/app_deprecated.html">disabled web features</a>.</li></ol>
+<div class="mw-heading mw-heading3"><h3 id="Check_ChromeAppLaunch_in_Project_Properties">Check ChromeAppLaunch in Project Properties</h3></div>
+<p>When you're getting started, you probably will not need to modify this. It's a short JavaScript file which opens a window in the browser and loads your app. The default appheight and appwidth values are take from your project's defaultformsize property.
+</p>
+<pre>chrome.app.runtime.onLaunched.addListener(function() {{
+  chrome.app.window.create("index.html", {{
+    "bounds": {{"width": {appwidth}, "height": {appheight} }}
+  }})
+}});
+</pre>
+<p>Here are the options and events you can put in this JavaScript file:
+<a rel="nofollow" class="external free" href="http://developer.chrome.com/apps/app.runtime.html">http://developer.chrome.com/apps/app.runtime.html</a>
+</p><p>Here are the parameters you can control for the browser window you run in. There are many size and appearance options.
+<a rel="nofollow" class="external free" href="http://developer.chrome.com/apps/app_window.html">http://developer.chrome.com/apps/app_window.html</a>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Check_ChromeManifest_in_Project_Properties">Check ChromeManifest in Project Properties</h3></div>
+<p>You probably won't have to make any changes to it to get started. The information in the ChromeManifest property is used to create the manifest.json file which Chrome Packaged Apps require on submission. 
+</p>
+<pre>{{ "manifest_version": 2,
+  "name": "{title}",
+  "version": "{version}",
+  "offline_enabled": true,
+  "description": "{description}",
+  "icons": {{ "16": "nsb/images/16.png",
+             "128": "nsb/images/128.png" }},
+  "author": "{copyright}",
+  "app": {{"background": {{"scripts": ["background.js"]}}}}}}</pre>
+<p>Go ahead and modify the paths to the icons if you have your own icons. They should be 16x16 and 128x128. If you do not supply your own, the standard AppStudio icon will be used. Format can be png, gif or jpg.
+</p><p>Warning: Do not change any of the items which are surrounded by braces, such as {title}. These are taken from your Project Properties.
+</p><p>The size of the window for your running app is taken from defaultformsize in Project Properties. 
+</p><p>For a complete list of manifest options, see <a rel="nofollow" class="external free" href="http://developer.chrome.com/apps/manifest.html">http://developer.chrome.com/apps/manifest.html</a>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Click_on_&quot;Build_Desktop_App&quot;_in_the_Run_menu"><span id="Click_on_.22Build_Desktop_App.22_in_the_Run_menu"></span>Click on "Build Desktop App" in the Run menu</h3></div>
+<p>This will create the zip file for upload to Chrome. It will then open the <a rel="nofollow" class="external text" href="https://chrome.google.com/webstore/developer/dashboard">Chrome Web Store Developer Dashboard</a>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Sign_on_to_your_Google_Developer_Account">Sign on to your Google Developer Account</h3></div>
+<p>If you don't have a Developer Account with Google, you will have to sign up for one. It costs $25.00 and involves clicking on some agreements.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Upload_your_zip_file">Upload your zip file</h3></div>
+<p>Select 'Add new item' and upload your zip file. Once complete, click on 'Publish to test accounts'. It will ask you for some additional information to complete the submission. Don't worry - everything is well explained.
+</p>
+<ul><li>Detailed description</li>
+<li>Icon: 128x128. with a 16 pixel transparent border. (Icon content is 96x96)</li>
+<li>Screenshots: 1280x800 or 640x480</li>
+<li>Promotional Images: 440x280, 920x680, 1400x560</li>
+<li>Website information</li>
+<li>Category (Education, Games, Productivity, etc.)</li>
+<li>Pricing and payments</li>
+<li>Regions</li>
+<li>Language</li>
+<li>a few other settings, all well explained.</li></ul>
+<div class="mw-heading mw-heading3"><h3 id="Publish_Changes">Publish Changes</h3></div>
+<p>Once everything is complete, click on "Publish changes" at the bottom of the screen.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Let_it_bake.">Let it bake.</h3></div>
+<p>Google will then bake your submission into a Chrome Packaged App. This will take from 5 minutes to one hour. You need to keep refreshing the screen to see if it is complete: there is no automatic notification. For testers, send them the URL for the app. Public users can find the app in the Chrome Store. (Note that they have to use the Chrome browser.) It will look like this in either case:
+</p>
+<figure class="mw-halign-center" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TN10.02.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/thumb/c/c3/TN10.02.png/600px-TN10.02.png" decoding="async" width="600" height="428" class="mw-file-element" srcset="/images/thumb/c/c3/TN10.02.png/900px-TN10.02.png 1.5x, /images/c/c3/TN10.02.png 2x" /></a><figcaption></figcaption></figure><p><br />
+</p><div class="mw-heading mw-heading3"><h3 id="Download_the_App">Download the App</h3></div>
+<p>Click on "Free" (or otherwise) to download the app to your system. The app is saved in Chrome's private storage area.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Start_App_using_Chrome_App_Launcher">Start App using Chrome App Launcher</h3></div>
+<p>You can see (and launch) Chrome Packaged Apps using the Chrome App Launcher:
+</p>
+<figure class="mw-default-size mw-halign-center" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TN10.03.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/5/55/TN10.03.png" decoding="async" width="398" height="252" class="mw-file-element" /></a><figcaption></figcaption></figure><p><br />
+</p><div class="mw-heading mw-heading3"><h3 id="Start_App_using_a_shortcut_(Windows)"><span id="Start_App_using_a_shortcut_.28Windows.29"></span>Start App using a shortcut (Windows)</h3></div>
+<p>In Windows, you can create a shortcut. First, you need to get the App ID from the URL bar:
+</p>
+<figure class="mw-halign-center" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TN10.04.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/thumb/a/a0/TN10.04.png/600px-TN10.04.png" decoding="async" width="600" height="270" class="mw-file-element" srcset="/images/thumb/a/a0/TN10.04.png/900px-TN10.04.png 1.5x, /images/a/a0/TN10.04.png 2x" /></a><figcaption></figcaption></figure><p><br />
+</p><p>Now, create a MyProject.bat file with the following contents:
+</p>
+<pre>start chrome --app-id=dmnakfikpnbkojecgpkfpgcminecdcbe
+</pre>
+<p>You can start the app by clicking on your new file or a link to it.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Run_the_App">Run the App</h3></div>
+<p>From Windows, start the app using the Chrome App Launcher or using your shortcut.
+</p><p>From Mac, start like any other app. It is in your own username/Applications folder. You can keep it in the Dock, or start it using Spotlight.
+</p><p><span typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TN10.05.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/thumb/b/be/TN10.05.png/250px-TN10.05.png" decoding="async" width="250" height="375" class="mw-file-element" srcset="/images/b/be/TN10.05.png 1.5x" /></a></span><span typeof="mw:File"><a href="https://wiki.appstudio.dev/File:TN10.06.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/thumb/2/21/TN10.06.png/250px-TN10.06.png" decoding="async" width="250" height="375" class="mw-file-element" srcset="/images/2/21/TN10.06.png 1.5x" /></a></span><br />
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Addendum:_The_Chrome_API">Addendum: The Chrome API</h3></div>
+<p>Chrome Packaged Apps can do more than regular web apps. Google has a long list of additional features they can use, including filesystem, Bluetooth, USB and serial communications. The complete list is here:
+</p><p><a rel="nofollow" class="external free" href="http://developer.chrome.com/apps/api_index.html">http://developer.chrome.com/apps/api_index.html</a>
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Addendum:_Debugging_Chrome_Packaged_Apps">Addendum: Debugging Chrome Packaged Apps</h3></div>
+<p>Chrome Packaged Apps can use the standard Chrome Debugger. First, you need to enabled debugging for packed apps:
+</p>
+<figure class="mw-halign-center" typeof="mw:File"><a href="https://wiki.appstudio.dev/File:Chromepackagedappdebugger.png" class="mw-file-description"><img src="https://wiki.appstudio.dev/images/thumb/d/d3/Chromepackagedappdebugger.png/600px-Chromepackagedappdebugger.png" decoding="async" width="600" height="101" class="mw-file-element" srcset="/images/thumb/d/d3/Chromepackagedappdebugger.png/900px-Chromepackagedappdebugger.png 1.5x, /images/thumb/d/d3/Chromepackagedappdebugger.png/1200px-Chromepackagedappdebugger.png 2x" /></a><figcaption></figcaption></figure>
+<p>Then, you can right click on your app when it is running and choose the Inspect Element option. The standard <a href="Using_the_Chrome_Debugger.html" title="Using the Chrome Debugger">Chrome Debugger</a> will then appear.
+</p><p>The app is stored in [<a rel="nofollow" class="external text" href="http://www.chromium.org/user-experience/user-data-directory">User Data Directory</a>][Profile Dir (likely named 'Default')]/Extensions/[hash key]/version. You can open the files in that directory and edit them for quick and dirty debugging.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Addendum:_Replacing_localStorage">Addendum: Replacing localStorage</h3></div>
+<p>To this, you need to use a JavaScript library which gives you functions which use localStorage or FileStorage, whichever is available in the environment you're using.
+</p><p>Here's one by the well respected Remy Sharp:
+</p><p><a rel="nofollow" class="external free" href="https://gist.github.com/remy/350433">https://gist.github.com/remy/350433</a>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20260124134824
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.037 seconds
+Real time usage: 0.075 seconds
+Preprocessor visited node count: 72/1000000
+Revision size: 7479/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 571/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:390:|#|:idhash:canonical and timestamp 20260124134824 and revision id 8903. Rendering was triggered because: diff-page
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;oldid=8903">https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;oldid=8903</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=Making+Desktop+Apps+with+App+Studio" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=Making+Desktop+Apps+with+App+Studio" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="Making_Desktop_Apps_with_App_Studio.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:Making_Desktop_Apps_with_App_Studio&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="Making_Desktop_Apps_with_App_Studio.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/Making_Desktop_Apps_with_App_Studio" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/Making_Desktop_Apps_with_App_Studio" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;oldid=8903" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Making_Desktop_Apps_with_App_Studio&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 21 December 2016, at 16:20.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":342,"wgPageParseReport":{"limitreport":{"cputime":"0.037","walltime":"0.075","ppvisitednodes":{"value":72,"limit":1000000},"revisionsize":{"value":7479,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":571,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260124134824","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260124180455 -->
+
+<!-- Mirrored from wiki.appstudio.dev/Making_Desktop_Apps_with_App_Studio by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

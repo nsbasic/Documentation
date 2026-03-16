@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "fontFamily": "inherit", 
+  "height": "auto", 
+  "id": "Button3", 
+  "left": "calc(50% - 75px)", 
+  "onclick": "Button3.onclick()", 
+  "right": "auto", 
+  "top": "260", 
+  "value": "Chord", 
+  "width": "150", 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

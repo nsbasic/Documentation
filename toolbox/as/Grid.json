@@ -1,0 +1,122 @@
+{ 
+"_type": "Grid", 
+"_base": "Input", 
+"_palette": 4, 
+"_art": "images/grid.png", 
+"_shorthelp": "Sets up a <a href='{_docurl}'>Grid</a> which can be scrolled.",
+"_resizable": true,
+"_category": ["All", "Common"],
+"_requiredfiles": ["{_nsbdir}nsb/library/iscroll.js","{_nsbdir}toolbox/as/dist/asFunctions.js"],
+"_displayname": "Grid",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "addCols(n)": {"desc": "Add n cols to the right of the table. Default is 1."},
+    "addRows(n)": {"desc": "Add n rows to the end of the table. Default is 1."},
+    "cell(row,col)": {"desc": "Return a reference to cell."},
+    "deleteCols(n)": {"desc": "Delete n columns from the right of the table."},
+    "deleteRows(n)": {"desc": "Delete n rows from the end of the table."},
+    "getColCount()": {"desc": "Get the number of columns."},
+    "getRowCount()": {"desc": "Get the number of rows."},
+    "getValue(row,col)": {"desc": "Get the value of a cell."},
+    "refresh()": {"desc": "Refresh the grid if scrolling."},
+    "setColumnWidth(x,w)": {"desc": "Set col x to width w."},
+    "setRowHeight(y,w)": {"desc": "Set row y to height w."},
+    "setValue(row,col,val)": {"desc": "Set value of cell."}
+},
+    
+"rows": 5, 
+"_rows": {
+    "acignore": true,
+    "desc": "Number of rows in the grid", 
+    "type": "int" 
+    }, 
+    
+"cols": 2, 
+"_cols": {
+    "acignore": true,
+    "desc": "Number of cols in the grid", 
+    "type": "int" 
+    }, 
+   
+"rowHeights": "",
+"_rowHeights": { 
+    "acignore": true,
+    "desc": "Heights of rows, comma separated.", 
+    "type": "css" 
+    }, 
+
+"colWidths": "",
+"_colWidths": { 
+    "acignore": true,
+    "desc": "Widths of columns, comma separated.", 
+    "type": "css" 
+    }, 
+    
+"titles": "one,two",
+"_titles": { 
+    "acignore": true,
+    "i18n": true,
+    "desc": "Column Titles, comma separated.", 
+    "type": "css",
+    "language": "HTML"  
+    }, 
+    
+"alignments": "",
+"_alignments": { 
+   "acignore": true,
+    "desc": "Alignment by column, comma separated. (left, right, center, justify, char)", 
+    "type": "css" 
+    }, 
+    
+"cellstyle": "",
+"_cellstyle": { 
+   "acignore": true,
+    "desc": "style settings for each cell in the grid", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+    
+"scrolling": "true", 
+"_scrolling": { 
+   "acignore": true,
+    "desc": "Allow scrolling?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    }, 
+    
+"scroll_options": "mouseWheel:true,  bounce:true, zoom:false, click:false,preventDefaultException:{tagName:/.*/}", 
+"_scroll_options": { 
+   "acignore": true,
+    "desc": "iScroll Options. See iScroll docs at <a href='http://iscrolljs.com' target='_top'>http://iscrolljs.com</a>.", 
+    "type": "css" 
+    },
+    
+"height": 100, 
+"width": "70", 
+
+"_htmltemplate": "  NSB.Grid(\"{id}\", \"{rows}\", \"{cols}\", \"{rowHeights}\", \"{colWidths}\", \"{titles!j}\", \"{alignments}\", \"{style!j}\", \"{cellstyle}\", \"{class}\"),",
+
+"_csstemplate": [
+"#{id}_scroller {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}overflow:hidden; {_cssbounds!i}}}",
+"\n#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}left:0px; top:0px; width:100%; height:auto }}"
+],
+
+"_jstemplate": ["{if scrolling == 'true'}  {id}_ref = new IScroll({id}_scroller,{{ {scroll_options}}});{/if}",
+                "{if scrolling == 'true'}  {id}.refresh=function(){{setTimeout(NSB.refresh,100,{id}_ref)}};{/if}",
+                "  {id}.cellstyle='{cellstyle}';",
+                "  {id}.colWidths='{colWidths}';",
+                "  {id}.GridRefreshWidth=function(){{setTimeout(NSB.GridRefreshWidth,10,{id})}};",
+                "  NSB.Grid_init('{id}');",
+                "  NSB.addProperties({id},{id}_scroller)"
+              ],
+              
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+"if({scrolling}){{var rect={id}_scroller.getBoundingClientRect();return {{height:rect.height,width:this.getBoundingClientRect().width,top:rect.top,left:rect.left}}}}",
+  "  return this.getBoundingClientRect();",
+  "}}"
+  ]
+  
+}

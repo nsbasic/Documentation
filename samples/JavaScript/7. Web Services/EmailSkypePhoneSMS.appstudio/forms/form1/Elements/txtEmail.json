@@ -1,0 +1,19 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "txtEmail", 
+  "inputType": "text", 
+  "left": 90, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 40, 
+  "value": "support@appstudio.dev", 
+  "width": 200, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

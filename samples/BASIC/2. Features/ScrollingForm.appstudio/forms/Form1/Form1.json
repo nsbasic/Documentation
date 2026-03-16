@@ -1,0 +1,106 @@
+{
+  "!type": "Form",
+  "HTML": null,
+  "action": "",
+  "attributes": "",
+  "background": "",
+  "backgroundimage": "",
+  "borderColor": "",
+  "borderStyle": "solid",
+  "borderWidth": "",
+  "cached_js": null,
+  "cached_js_script_hash": null,
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "HeaderBar1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "Button1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "List1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "TextBox1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "RadioButton1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "Checkbox1.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "Form1",
+        "Elements",
+        "FooterBar1.json"
+      ]
+    }
+  ],
+  "class": "",
+  "designHeight": 800,
+  "designWidth": 375,
+  "expanded_pmp": null,
+  "fullScreen": "true",
+  "height": 800,
+  "id": "Form1",
+  "language": "BASIC",
+  "left": 0,
+  "locked": false,
+  "method": "",
+  "modal": "false",
+  "onhide": "",
+  "onkeypress": "",
+  "onresize": "",
+  "onshow": "",
+  "onsubmit": "",
+  "openMode": "none",
+  "parentForm": "",
+  "position": "absolute",
+  "script": null,
+  "scroll_options": "mouseWheel:true, scrollbars:false, bounce:true, zoom:false",
+  "scrolling": "true",
+  "setFocusID": "",
+  "style": "",
+  "theme": "",
+  "top": 0,
+  "width": 375
+}

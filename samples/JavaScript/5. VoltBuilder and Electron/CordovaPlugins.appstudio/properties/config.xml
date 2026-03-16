@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget 
+xmlns = "http://www.w3.org/ns/widgets"
+id = "com.nsbasic.{id}"
+versionCode = "1"
+version = "{version}">
+
+<name>{title}</name>
+<description>{description}</description>
+
+
+<!-- Icons -->
+<icon src='{icon}' />
+
+
+<!-- Splash Screens -->
+<preference name='SplashScreenDelay' value='2000' />
+<preference name='AutoHideSplashScreen' value='true' />
+<preference name='AndroidWindowSplashScreenAnimatedIcon' value='www/{phoneGapSplash}' />
+<preference name='AndroidWindowSplashScreenBackground' value='{splashBackground}' />
+
+<plugin name='cordova-plugin-splashscreen' source='npm' />
+
+<preference name="permissions" value="none"/>
+<!-- sample preference specifications -->
+<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+<!-- <preference name="orientation" value="default" /> -->
+<!-- <preference name="fullscreen" value="true" /> -->
+
+<plugin name="cordova-plugin-camera" source="npm" />
+<plugin name="cordova-plugin-device" source="npm" />
+<plugin name="cordova-plugin-contacts" source="npm" />
+<plugin name="@cocodintech/phonegap-plugin-barcodescanner" source="npm"/>
+
+  <allow-navigation href="*" />
+  <access origin="*" />
+</widget>

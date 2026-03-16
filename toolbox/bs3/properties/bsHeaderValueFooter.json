@@ -1,0 +1,27 @@
+{
+    "_type": "bsHeaderValueFooter",
+    "_base": "NSBObject",
+    "_description": "For controls with 3 text values.",
+    
+"header": "Header", 
+"_header": { 
+    "i18n": true,
+    "desc": "Heading. Can be HTML.", 
+    "type": "css" 
+   }, 
+
+"value": "Value - content of main section ", 
+"_value": { 
+    "i18n": true,
+    "desc": "Body. Can be HTML.", 
+    "type": "css" 
+   }, 
+
+"footer": "Footer", 
+"_footer": { 
+    "i18n": true,
+    "desc": "Footer. Can be HTML.", 
+    "type": "css" 
+   }
+
+}

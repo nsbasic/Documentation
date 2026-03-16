@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "txtCurrent", 
+  "left": 128, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 292, 
+  "value": "8602", 
+  "width": 100, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

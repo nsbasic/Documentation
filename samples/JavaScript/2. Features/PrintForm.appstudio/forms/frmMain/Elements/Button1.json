@@ -1,0 +1,14 @@
+{ 
+  "ChangeForm": "frmPrint", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button1", 
+  "left": 49, 
+  "right": "auto", 
+  "top": 178, 
+  "value": "Print a Form", 
+  "width": 213, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

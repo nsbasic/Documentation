@@ -1,0 +1,60 @@
+HTTrack3.49-2 launched on Tue, 10 Mar 2026 15:45:10 at https://wiki.nsbasic.com/Handbook -*.php* -*Special:* -*File:*
+(httrack https://wiki.nsbasic.com/Handbook -O ./docs/wiki -N100 -r4 -s0 -*.php* -*Special:* -*File:* )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:58:00	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/images/a/aa/3.2.png (from https://wiki.appstudio.dev/Deploy_Bar)
+15:59:28	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/VoltBuilder (from https://wiki.appstudio.dev/Properties_Window)
+15:59:48	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Array (from https://wiki.appstudio.dev/Language_reference)
+16:00:26	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Eval (from https://wiki.appstudio.dev/Language_reference)
+16:00:26	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Exit (from https://wiki.appstudio.dev/Language_reference)
+16:00:26	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Exp (from https://wiki.appstudio.dev/Language_reference)
+16:03:09	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Multiinput (from https://wiki.appstudio.dev/Language_reference)
+16:03:26	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Textarea (from https://wiki.appstudio.dev/Language_reference)
+16:05:32	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Version_7 (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:05:32	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Version_6 (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:05:32	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Version_5 (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:07:39	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Solutions_to_Common_Problems (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Category:Controls (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Category:Bootstrap (from https://wiki.appstudio.dev/AppStudio_Documentation)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Support_for_SQLite (from https://wiki.appstudio.dev/Using_SQLite_with_Chrome_119)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/images/2/2e/Rwd01.png (from https://wiki.appstudio.dev/Responsive_Design_Made_Simple)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Listgroup_(Bootstrap) (from https://wiki.appstudio.dev/Introduction_to_Bootstrap)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/images/thumb/c/c9/Pwalogo.png/300px-Pwalogo.png (from https://wiki.appstudio.dev/Progressive_Web_Apps)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/SessionStorage (from https://wiki.appstudio.dev/Sessionstorage)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Talk:Sql (from https://wiki.appstudio.dev/Sql)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/SqlExport (from https://wiki.appstudio.dev/Sqlexport)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/StrComp (from https://wiki.appstudio.dev/Strcomp)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/StrReverse (from https://wiki.appstudio.dev/Strreverse)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/SysInfo (from https://wiki.appstudio.dev/Sysinfo)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/TimeSerial (from https://wiki.appstudio.dev/Timeserial)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/TimeValue (from https://wiki.appstudio.dev/Timevalue)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Try...Catch (from https://wiki.appstudio.dev/Try...catch)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/TypeName (from https://wiki.appstudio.dev/Typename)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/UBound (from https://wiki.appstudio.dev/Ubound)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/UCase (from https://wiki.appstudio.dev/Ucase)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/images/a/ae/Audio.jpg (from https://wiki.appstudio.dev/Audio)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/How_to_run_fullscreen_in_an_Android_Chrome_app (from https://wiki.appstudio.dev/Tech_Notes)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/GitHub (from https://wiki.appstudio.dev/Tech_Notes)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Multiple_Forms_-_JS (from https://wiki.appstudio.dev/Tutorials)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Communicating_with_a_Server_-_JS (from https://wiki.appstudio.dev/Tutorials)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Bootstrap_5 (from https://wiki.appstudio.dev/Version_9)
+16:08:57	Warning: 	Moved Permanently for wiki.appstudio.dev/
+16:08:57	Warning: 	Redirected link is identical because of 'URL Hack' option: wiki.appstudio.dev/ and https://wiki.appstudio.dev/
+16:08:57	Warning: 	File has moved from wiki.appstudio.dev/ to https://wiki.appstudio.dev/
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Input_(Bootstrap_5) (from https://wiki.appstudio.dev/Version_9)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Frameworks (from https://wiki.appstudio.dev/Version_8)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/JqxGrid (from https://wiki.appstudio.dev/Version_4)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Google_Maps (from https://wiki.appstudio.dev/Version_4)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Window.print() (from https://wiki.appstudio.dev/Version_4)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/CSSGrid (from https://wiki.appstudio.dev/Category:Language_Reference)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/FileReader (from https://wiki.appstudio.dev/Category:Language_Reference)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/Flexbox (from https://wiki.appstudio.dev/Category:Language_Reference)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/JqxComboBox (from https://wiki.appstudio.dev/Category:Language_Reference)
+16:08:57	Error: 	"Service Unavailable" (503) at link https://wiki.appstudio.dev/JqxDateTimeInput (from https://wiki.appstudio.dev/Category:Language_Reference)
+
+HTTrack Website Copier/3.49-2 mirror complete in 23 minutes 48 seconds : 638 links scanned, 591 files written (13341808 bytes overall) [13630555 bytes received at 9545 bytes/sec], 1.5 requests per connection
+(46 errors, 3 warnings, 0 messages)

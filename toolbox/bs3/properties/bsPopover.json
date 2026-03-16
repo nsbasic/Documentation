@@ -1,0 +1,61 @@
+{
+    "_type": "bsPopover",
+    "_base": "NSBObject",
+    "_description": "Add a pop to the control. Put {_bsPopover!i} into the control element as an attribute.",
+
+"popStyle": "popover",
+"_popStyle": { 
+    "acignore": true,
+    "group": "Extras",
+    "acignore": true,
+    "desc": "Tooltip (small) or Popover (larger)?", 
+    "type": "enum", 
+    "keys":   ["Tooltip","Popover"], 
+    "values": ["tooltip","popover"]
+    }, 
+
+"popPosition": "",
+"_popPosition": { 
+    "acignore": true,
+    "group": "Extras",
+    "acignore": true,
+    "desc": "Position to display the Tooltip when hovering over the control.", 
+    "type": "enum", 
+    "keys":   ["none", "top","left","right","bottom"], 
+    "values": ["","top","left","right","bottom"]
+    }, 
+
+"popClose": "hover",
+"_popClose": { 
+    "acignore": true,
+    "group": "Extras",
+    "acignore": true,
+    "desc": "How should it be opened and closed?", 
+    "type": "enum", 
+    "keys":   ["click control","click outside","hover"], 
+    "values": ["click","focus","hover"]
+    }, 
+    
+"popTitle": "Title",
+"_popTitle": {
+    "group": "Extras",
+	"acignore": true,
+    "desc": "Title of Popover or Tooltip.",
+    "type": "css"
+	},
+
+"popBody": "Body",
+"_popBody": {
+    "group": "Extras",
+	"acignore": true,
+    "desc": "Body of Popover. Not for Tooltip.",
+    "type": "css"
+	},
+
+"_bsPopover": "{if popTitle<>'' and popPosition<>''} data-container=body data-toggle={popStyle}{if popPosition<>''} data-placement={popPosition}{/if}{if popClose <>'focus'} data-trigger={popClose}{/if} title='{popTitle!j}'{if popBody<>''} data-content='{popBody!j}'{/if}{/if}",
+
+"_bsPopover2": "{if popTitle<>'' and popPosition<>''} data-toggle={popStyle}{if popPosition<>''} data-placement={popPosition}{/if} data-trigger={popClose} title=\"{popTitle!j}\"{if popBody<>''} data-content=\"{popBody!j}\"{/if}{/if}"
+
+   
+}
+

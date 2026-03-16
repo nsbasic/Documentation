@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+
+<!-- Mirrored from wiki.appstudio.dev/AppStudio_Project_File_Format by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<title>AppStudio Project File Format - NSB App Studio</title>
+<script>(function(){var className="client-js";var cookie=document.cookie.match(/(?:^|; )nsbasic_mediawiki1348787612mwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"aaYE1ybyCrIXwED1IPpXEwAAABE","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"AppStudio_Project_File_Format","wgTitle":"AppStudio Project File Format","wgCurRevisionId":11744,"wgRevisionId":11744,"wgArticleId":1439,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"AppStudio_Project_File_Format","wgRelevantArticleId":1439,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]};
+RLSTATE={"site.styles":"ready","user.styles":"ready","user":"ready","user.options":"loading","skins.vector.styles.legacy":"ready"};RLPAGEMODULES=["site","mediawiki.page.ready","mediawiki.toc","skins.vector.legacy.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+}];});});</script>
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=skins.vector.styles.legacy&amp;only=styles&amp;skin=vector">
+<script async="" src="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="https://wiki.appstudio.dev/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.45.0">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.appstudio.dev/rest.php/v1/search" title="NSB App Studio (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.appstudio.dev/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="NSB App Studio Atom feed" href="https://wiki.appstudio.dev/index.php?title=Special:RecentChanges&amp;feed=atom">
+</head>
+<body class="skin-vector-legacy mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-AppStudio_Project_File_Format rootpage-AppStudio_Project_File_Format skin-vector action-view"><div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"></div>
+	<div class="mw-indicators">
+	</div>
+	<h1 id="firstHeading" class="firstHeading mw-first-heading"><span class="mw-page-title-main">AppStudio Project File Format</span></h1>
+	<div id="bodyContent" class="vector-body">
+		<div id="siteSub" class="noprint">From NSB App Studio</div>
+		<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+		<div id="contentSub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#searchInput">Jump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#AppStudio_Project_File_Format"><span class="tocnumber">1</span> <span class="toctext">AppStudio Project File Format</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Overview"><span class="tocnumber">1.1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Directory_Layout"><span class="tocnumber">1.2</span> <span class="toctext">Directory Layout</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#The_Project_File_(*.project)"><span class="tocnumber">1.3</span> <span class="toctext">The Project File (*.project)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Top-level_(Project_object)"><span class="tocnumber">1.3.1</span> <span class="toctext">Top-level (Project object)</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Page_object_(inside_children)"><span class="tocnumber">1.3.2</span> <span class="toctext">Page object (inside children)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Form_Files"><span class="tocnumber">1.4</span> <span class="toctext">Form Files</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Form_object_properties"><span class="tocnumber">1.4.1</span> <span class="toctext">Form object properties</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#Element_Files"><span class="tocnumber">1.5</span> <span class="toctext">Element Files</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Common_properties"><span class="tocnumber">1.5.1</span> <span class="toctext">Common properties</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Bootstrap_appearance_properties"><span class="tocnumber">1.5.2</span> <span class="toctext">Bootstrap appearance properties</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Popover_properties"><span class="tocnumber">1.5.3</span> <span class="toctext">Popover properties</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Badge_properties"><span class="tocnumber">1.5.4</span> <span class="toctext">Badge properties</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Common_event_handlers"><span class="tocnumber">1.5.5</span> <span class="toctext">Common event handlers</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Selected_control-specific_properties"><span class="tocnumber">1.5.6</span> <span class="toctext">Selected control-specific properties</span></a>
+<ul>
+<li class="toclevel-4 tocsection-16"><a href="#Button_(Button_bs4)"><span class="tocnumber">1.5.6.1</span> <span class="toctext">Button (Button_bs4)</span></a></li>
+<li class="toclevel-4 tocsection-17"><a href="#Text_Area_(Textarea_bs4)"><span class="tocnumber">1.5.6.2</span> <span class="toctext">Text Area (Textarea_bs4)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-18"><a href="#Code_Files"><span class="tocnumber">1.6</span> <span class="toctext">Code Files</span></a>
+<ul>
+<li class="toclevel-3 tocsection-19"><a href="#BASIC_code_files_(.bas)"><span class="tocnumber">1.6.1</span> <span class="toctext">BASIC code files (.bas)</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#JavaScript_code_files_(.js)"><span class="tocnumber">1.6.2</span> <span class="toctext">JavaScript code files (.js)</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Inline_script"><span class="tocnumber">1.6.3</span> <span class="toctext">Inline script</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-22"><a href="#The_properties/_Directory"><span class="tocnumber">1.7</span> <span class="toctext">The properties/ Directory</span></a>
+<ul>
+<li class="toclevel-3 tocsection-23"><a href="#config.xml"><span class="tocnumber">1.7.1</span> <span class="toctext">config.xml</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#manifest.json"><span class="tocnumber">1.7.2</span> <span class="toctext">manifest.json</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#package.json"><span class="tocnumber">1.7.3</span> <span class="toctext">package.json</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#electronMain.js"><span class="tocnumber">1.7.4</span> <span class="toctext">electronMain.js</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#style.css"><span class="tocnumber">1.7.5</span> <span class="toctext">style.css</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-28"><a href="#External_References"><span class="tocnumber">1.8</span> <span class="toctext">External References</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Complete_Example"><span class="tocnumber">1.9</span> <span class="toctext">Complete Example</span></a>
+<ul>
+<li class="toclevel-3 tocsection-30"><a href="#HelloWorld.project"><span class="tocnumber">1.9.1</span> <span class="toctext">HelloWorld.project</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#forms/Form1/Form1.json"><span class="tocnumber">1.9.2</span> <span class="toctext">forms/Form1/Form1.json</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#forms/Form1/Elements/Button1.json"><span class="tocnumber">1.9.3</span> <span class="toctext">forms/Form1/Elements/Button1.json</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#forms/Form1/Elements/TextArea1.json"><span class="tocnumber">1.9.4</span> <span class="toctext">forms/Form1/Elements/TextArea1.json</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#forms/Form1/Form1.bas"><span class="tocnumber">1.9.5</span> <span class="toctext">forms/Form1/Form1.bas</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-35"><a href="#See_Also"><span class="tocnumber">1.10</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="mw-heading mw-heading1"><h1 id="AppStudio_Project_File_Format">AppStudio Project File Format</h1></div>
+<p>This page describes the on-disk format of an AppStudio project. It is intended for developers who want to understand, inspect, or programmatically manipulate project files.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Overview">Overview</h2></div>
+<p>An AppStudio project is stored as a <b>directory</b> whose name ends with <code>.appstudio</code>. Everything belonging to the project lives inside that directory. The project is made up of plain JSON text files and optional code files, so you can open them in any text editor.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Directory_Layout">Directory Layout</h2></div>
+<pre>MyApp.appstudio/
+├── MyApp.project              ← Main project file (JSON)
+├── forms/                     ← One sub-directory per form
+│   ├── Form1/
+│   │   ├── Form1.json         ← Form definition (JSON)
+│   │   ├── Form1.bas          ← Form BASIC code (optional)
+│   │   ├── Form1.js           ← Form JavaScript code (optional)
+│   │   └── Elements/
+│   │       ├── Button1.json   ← Control definition (JSON)
+│   │       ├── TextArea1.json
+│   │       └── ...
+│   ├── Form2/
+│   │   └── ...
+│   └── ...
+├── properties/                ← Build / deployment configuration
+│   ├── config.xml             ← Apache Cordova / VoltBuilder config
+│   ├── manifest.json          ← Progressive Web App (PWA) manifest
+│   ├── package.json           ← Electron build config
+│   ├── electronMain.js        ← Electron entry-point script
+│   └── style.css              ← Project-wide CSS (optional)
+└── .gitignore
+</pre>
+<p>The only required file is the <code>.project</code> file. All other files are created automatically as you add forms and controls in the IDE.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="The_Project_File_(*.project)"><span id="The_Project_File_.28.2A.project.29"></span>The Project File (<code>*.project</code>)</h2></div>
+<p>The project file is a JSON file at the root of the <code>.appstudio</code> directory. Its name matches the project name (e.g. <code>MyApp.project</code>).
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Top-level_(Project_object)"><span id="Top-level_.28Project_object.29"></span>Top-level (Project object)</h3></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>"!type"</code></td>
+<td>String</td>
+<td>Always <code>"Project"</code>. Identifies this object as the root project.
+</td></tr>
+<tr>
+<td><code>version</code></td>
+<td>Integer</td>
+<td>Project file format version. Current value is <code>8</code>.
+</td></tr>
+<tr>
+<td><code>language_version</code></td>
+<td>Integer</td>
+<td>BASIC language version. Current value is <code>8</code>.
+</td></tr>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>Project identifier. Usually the project name without spaces.
+</td></tr>
+<tr>
+<td><code>filename</code></td>
+<td>String</td>
+<td>Absolute path to the <code>.appstudio</code> directory (set at runtime; empty in the file).
+</td></tr>
+<tr>
+<td><code>libraries</code></td>
+<td>Array of String</td>
+<td>Libraries included in the project, e.g. <code>["BASIC"]</code>.
+</td></tr>
+<tr>
+<td><code>script</code></td>
+<td>String</td>
+<td>Project-level code that runs before any form code.
+</td></tr>
+<tr>
+<td><code>children</code></td>
+<td>Array</td>
+<td>Contains exactly one <a href="#Page_object">Page object</a> (inline, not a file reference).
+</td></tr>
+<tr>
+<td><code>deploy_protocol</code></td>
+<td>String</td>
+<td>Deployment protocol: <code>"ftp"</code>, <code>"sftp"</code>, or <code>"local"</code>.
+</td></tr>
+<tr>
+<td><code>deploy_server</code></td>
+<td>String</td>
+<td>FTP/SFTP server hostname.
+</td></tr>
+<tr>
+<td><code>deploy_port</code></td>
+<td>String</td>
+<td>Server port, default <code>"21"</code>.
+</td></tr>
+<tr>
+<td><code>deploy_userName</code></td>
+<td>String</td>
+<td>Login username for FTP/SFTP.
+</td></tr>
+<tr>
+<td><code>deploy_password</code></td>
+<td>String</td>
+<td>Login password (stored in plain text — keep the file private).
+</td></tr>
+<tr>
+<td><code>deploy_path</code></td>
+<td>String</td>
+<td>Remote path to upload files to.
+</td></tr>
+<tr>
+<td><code>deploy_local</code></td>
+<td>Boolean</td>
+<td>If <code>true</code>, deploy to a local folder instead of a server.
+</td></tr>
+<tr>
+<td><code>deploy_localPath</code></td>
+<td>String</td>
+<td>Local folder path used when <code>deploy_local</code> is <code>true</code>.
+</td></tr>
+<tr>
+<td><code>deploy_global</code></td>
+<td>Boolean</td>
+<td>If <code>true</code>, use global (shared) deployment settings.
+</td></tr>
+<tr>
+<td><code>phonegap_email</code></td>
+<td>String</td>
+<td>Adobe PhoneGap Build account e-mail (legacy; prefer VoltBuilder).
+</td></tr>
+<tr>
+<td><code>phonegap_password</code></td>
+<td>String</td>
+<td>Adobe PhoneGap Build password (legacy).
+</td></tr>
+<tr>
+<td><code>phonegap_auth_token</code></td>
+<td>String</td>
+<td>Adobe PhoneGap Build API token (legacy).
+</td></tr>
+<tr>
+<td><code>cached_js</code></td>
+<td>String</td>
+<td>Cached compiled JavaScript for the project (managed by the IDE).
+</td></tr>
+<tr>
+<td><code>cached_js_script_hash</code></td>
+<td>String</td>
+<td>MD5 hash of the source used to generate <code>cached_js</code>.
+</td></tr>
+<tr>
+<td><code>cache_dirty</code></td>
+<td>Boolean</td>
+<td>When <code>true</code>, the IDE will recompile the project before the next run.
+</td></tr>
+<tr>
+<td><code>expanded_pmp</code></td>
+<td>String or null</td>
+<td>Remembers which nodes are expanded in the Project Manager panel.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Page_object_(inside_children)"><span id="Page_object_.28inside_children.29"></span>Page object (inside <code>children</code>)</h3></div>
+<p>A project contains exactly one Page object. It is stored inline in the <code>.project</code> file (not as a separate file).
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>"!type"</code></td>
+<td>String</td>
+<td>Always <code>"Page"</code>.
+</td></tr>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>Page / app identifier. Typically the same as the project name.
+</td></tr>
+<tr>
+<td><code>title</code></td>
+<td>String</td>
+<td>App title shown in the browser tab and home screen.
+</td></tr>
+<tr>
+<td><code>description</code></td>
+<td>String</td>
+<td>Short description of the app.
+</td></tr>
+<tr>
+<td><code>version</code></td>
+<td>String</td>
+<td>App version string, e.g. <code>"1.0.0"</code>.
+</td></tr>
+<tr>
+<td><code>copyright</code></td>
+<td>String</td>
+<td>Copyright notice included in the built app.
+</td></tr>
+<tr>
+<td><code>appPublisher</code></td>
+<td>String</td>
+<td>Publisher name.
+</td></tr>
+<tr>
+<td><code>language</code></td>
+<td>String</td>
+<td>Default code language: <code>"BASIC"</code> or <code>"JavaScript"</code>.
+</td></tr>
+<tr>
+<td><code>firstform</code></td>
+<td>String</td>
+<td><code>id</code> of the form shown when the app starts.
+</td></tr>
+<tr>
+<td><code>defaultformsize</code></td>
+<td>String</td>
+<td>Design canvas size, e.g. <code>"320x460"</code>.
+</td></tr>
+<tr>
+<td><code>fontFamily</code></td>
+<td>String</td>
+<td>Default font family, e.g. <code>"helvetica"</code>.
+</td></tr>
+<tr>
+<td><code>icon</code></td>
+<td>String</td>
+<td>Path to the app icon (192 × 192 px PNG), e.g. <code>"nsb/images/512.png"</code>.
+</td></tr>
+<tr>
+<td><code>iconAndroid</code></td>
+<td>String</td>
+<td>Path to the Android-specific icon (192 × 192 px PNG).
+</td></tr>
+<tr>
+<td><code>splashscreen</code></td>
+<td>String</td>
+<td>Path to the splash screen image.
+</td></tr>
+<tr>
+<td><code>BootstrapTheme</code></td>
+<td>String</td>
+<td>Bootstrap CSS theme name, e.g. <code>"bootstrap"</code>.
+</td></tr>
+<tr>
+<td><code>theme</code></td>
+<td>String</td>
+<td>jQuery Mobile theme letter, e.g. <code>"a"</code>.
+</td></tr>
+<tr>
+<td><code>style</code></td>
+<td>String</td>
+<td>Additional CSS applied to the whole app.
+</td></tr>
+<tr>
+<td><code>background</code></td>
+<td>String</td>
+<td>CSS background colour or value for the page body.
+</td></tr>
+<tr>
+<td><code>backgroundimage</code></td>
+<td>String</td>
+<td>URL or path to a background image.
+</td></tr>
+<tr>
+<td><code>enableBrowserArrows</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>When <code>"true"</code>, the browser Back / Forward buttons navigate between forms.
+</td></tr>
+<tr>
+<td><code>enableNiceLinks</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>When <code>"true"</code>, the URL bar reflects the current form name.
+</td></tr>
+<tr>
+<td><code>contentSecurityPolicy</code></td>
+<td>String</td>
+<td>Value of the <code>Content-Security-Policy</code> meta tag (leave blank for the default policy).
+</td></tr>
+<tr>
+<td><code>manifest</code></td>
+<td>String or null</td>
+<td>Inline app-cache manifest content (legacy).
+</td></tr>
+<tr>
+<td><code>manifestFile</code></td>
+<td>String</td>
+<td>Name of the manifest file, e.g. <code>"appcache"</code>.
+</td></tr>
+<tr>
+<td><code>manifestName</code></td>
+<td>String</td>
+<td>Name attribute of the manifest, e.g. <code>"OfflineApp"</code>.
+</td></tr>
+<tr>
+<td><code>disablePWA</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to suppress the PWA service-worker and manifest.
+</td></tr>
+<tr>
+<td><code>FastClick</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>Enables the FastClick library to remove the 300 ms tap delay on mobile.
+</td></tr>
+<tr>
+<td><code>stopOnError</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>When <code>"true"</code>, unhandled runtime errors stop the app and display a message.
+</td></tr>
+<tr>
+<td><code>obfuscation</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to obfuscate the compiled JavaScript on build.
+</td></tr>
+<tr>
+<td><code>obfuscatorSettings</code></td>
+<td>String (JSON)</td>
+<td>JSON string containing javascript-obfuscator options.
+</td></tr>
+<tr>
+<td><code>eslintRules</code></td>
+<td>String or null</td>
+<td>Custom ESLint rules as a JSON string (JavaScript projects only).
+</td></tr>
+<tr>
+<td><code>useStrict</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to add <code>"use strict"</code> to the generated JavaScript.
+</td></tr>
+<tr>
+<td><code>extraheaders</code></td>
+<td>String or null</td>
+<td>Raw HTML inserted into the <code>&lt;head&gt;</code> of the generated page.
+</td></tr>
+<tr>
+<td><code>styleheaders</code></td>
+<td>String or null</td>
+<td>Additional CSS inserted into the <code>&lt;head&gt;</code> of the generated page as a <code>&lt;style&gt;</code> block. When non-empty this content is also stored in the external file <code>properties/style.css</code>.
+</td></tr>
+<tr>
+<td><code>script</code></td>
+<td>String or null</td>
+<td>Page-level code shared across all forms.
+</td></tr>
+<tr>
+<td><code>voltAppId</code></td>
+<td>String</td>
+<td>App ID registered on VoltBuilder.
+</td></tr>
+<tr>
+<td><code>voltDomain</code></td>
+<td>String</td>
+<td>Custom domain used for VoltBuilder builds.
+</td></tr>
+<tr>
+<td><code>phoneGapBuildID</code></td>
+<td>String</td>
+<td>Adobe PhoneGap Build app ID (legacy).
+</td></tr>
+<tr>
+<td><code>phoneGapVersion</code></td>
+<td>String</td>
+<td>Target PhoneGap / Cordova version (legacy).
+</td></tr>
+<tr>
+<td><code>phoneGapLanguages</code></td>
+<td>String</td>
+<td>Comma-separated language codes, e.g. <code>"en"</code>.
+</td></tr>
+<tr>
+<td><code>phoneGapStatusBarColor</code></td>
+<td>String</td>
+<td>Status bar background colour, e.g. <code>"#000000"</code>.
+</td></tr>
+<tr>
+<td><code>phoneGapStatusBarStyle</code></td>
+<td>String</td>
+<td>Status bar style: <code>"lightcontent"</code> or <code>"default"</code>.
+</td></tr>
+<tr>
+<td><code>phoneGapStatusBarOverlay</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>Whether the status bar overlays the web view.
+</td></tr>
+<tr>
+<td><code>electronDevTools</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>Open DevTools automatically when running in Electron.
+</td></tr>
+<tr>
+<td><code>electronMain</code></td>
+<td>String or null</td>
+<td>Override content of <code>properties/electronMain.js</code>.
+</td></tr>
+<tr>
+<td><code>electronPackage</code></td>
+<td>String or null</td>
+<td>Override content of <code>properties/package.json</code>.
+</td></tr>
+<tr>
+<td><code>configxml</code></td>
+<td>String or null</td>
+<td>Override content of <code>properties/config.xml</code>.
+</td></tr>
+<tr>
+<td><code>viewportFit</code></td>
+<td>String</td>
+<td>Viewport fit value for notched phones, e.g. <code>"cover"</code>.
+</td></tr>
+<tr>
+<td><code>rtl</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to switch the app to right-to-left layout.
+</td></tr>
+<tr>
+<td><code>homescreenTitle</code></td>
+<td>String</td>
+<td>Short name shown below the icon on the device home screen.
+</td></tr>
+<tr>
+<td><code>browserwarnmsg</code></td>
+<td>String</td>
+<td>Message shown when the app is opened in an unsupported browser.
+</td></tr>
+<tr>
+<td><code>onresize</code></td>
+<td>String</td>
+<td>Code called when the browser window is resized.
+</td></tr>
+<tr>
+<td><code>onorientationchange</code></td>
+<td>String</td>
+<td>Code called when the device orientation changes.
+</td></tr>
+<tr>
+<td><code>onvisibilitychange</code></td>
+<td>String</td>
+<td>Code called when the page visibility changes.
+</td></tr>
+<tr>
+<td><code>children</code></td>
+<td>Array</td>
+<td><a href="#External_references">External references</a> to each <a href="#Form_files">form JSON file</a>.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Form_Files">Form Files</h2></div>
+<p>Each form is stored in its own sub-directory under <code>forms/</code>. The JSON file shares the name of the directory:
+</p>
+<pre>forms/
+└── Form1/
+    ├── Form1.json       ← Form definition
+    ├── Form1.bas        ← BASIC code for this form (optional)
+    ├── Form1.js         ← JavaScript code for this form (optional)
+    └── Elements/
+        ├── Button1.json
+        └── TextArea1.json
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Form_object_properties">Form object properties</h3></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>"!type"</code></td>
+<td>String</td>
+<td>Always <code>"Form"</code>.
+</td></tr>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>Unique identifier of this form. Used in code to refer to the form and its controls.
+</td></tr>
+<tr>
+<td><code>width</code></td>
+<td>Integer</td>
+<td>Form width in pixels at design time.
+</td></tr>
+<tr>
+<td><code>height</code></td>
+<td>Integer</td>
+<td>Form height in pixels at design time.
+</td></tr>
+<tr>
+<td><code>designWidth</code></td>
+<td>Integer</td>
+<td>Width of the design canvas (may differ from <code>width</code> when using responsive layout).
+</td></tr>
+<tr>
+<td><code>designHeight</code></td>
+<td>Integer</td>
+<td>Height of the design canvas.
+</td></tr>
+<tr>
+<td><code>left</code></td>
+<td>Integer</td>
+<td>Left position offset in pixels.
+</td></tr>
+<tr>
+<td><code>top</code></td>
+<td>Integer</td>
+<td>Top position offset in pixels.
+</td></tr>
+<tr>
+<td><code>position</code></td>
+<td>String</td>
+<td>CSS <code>position</code> value, typically <code>"absolute"</code>.
+</td></tr>
+<tr>
+<td><code>language</code></td>
+<td>String</td>
+<td>Code language for this form: <code>"BASIC"</code> or <code>"JavaScript"</code>.
+</td></tr>
+<tr>
+<td><code>fullScreen</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>When <code>"true"</code>, the form fills the entire screen.
+</td></tr>
+<tr>
+<td><code>modal</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>When <code>"true"</code>, the form is displayed as a modal dialog.
+</td></tr>
+<tr>
+<td><code>openMode</code></td>
+<td>String</td>
+<td>Transition used when opening the form (e.g. <code>"none"</code>, <code>"fade"</code>, <code>"slide"</code>).
+</td></tr>
+<tr>
+<td><code>scrolling</code></td>
+<td>String (<code>"true"</code>/<code>"false"</code>)</td>
+<td>Enables iScroll-based scrolling inside the form.
+</td></tr>
+<tr>
+<td><code>scroll_options</code></td>
+<td>String</td>
+<td>iScroll options as a comma-separated key:value string.
+</td></tr>
+<tr>
+<td><code>theme</code></td>
+<td>String</td>
+<td>jQuery Mobile theme letter for this form (overrides the page theme).
+</td></tr>
+<tr>
+<td><code>background</code></td>
+<td>String</td>
+<td>CSS background colour or value.
+</td></tr>
+<tr>
+<td><code>backgroundimage</code></td>
+<td>String</td>
+<td>Path or URL to a background image.
+</td></tr>
+<tr>
+<td><code>style</code></td>
+<td>String</td>
+<td>Additional inline CSS for the form container.
+</td></tr>
+<tr>
+<td><code>class</code></td>
+<td>String</td>
+<td>Additional CSS class names for the form container.
+</td></tr>
+<tr>
+<td><code>borderColor</code></td>
+<td>String</td>
+<td>Border colour (design-time only).
+</td></tr>
+<tr>
+<td><code>borderStyle</code></td>
+<td>String</td>
+<td>Border style (design-time only).
+</td></tr>
+<tr>
+<td><code>borderWidth</code></td>
+<td>String</td>
+<td>Border width (design-time only).
+</td></tr>
+<tr>
+<td><code>action</code></td>
+<td>String</td>
+<td>HTML <code>action</code> attribute when the form is rendered as a <code>&lt;form&gt;</code> element.
+</td></tr>
+<tr>
+<td><code>method</code></td>
+<td>String</td>
+<td>HTML <code>method</code> attribute (<code>"get"</code> or <code>"post"</code>).
+</td></tr>
+<tr>
+<td><code>onsubmit</code></td>
+<td>String</td>
+<td>Code called when the form is submitted.
+</td></tr>
+<tr>
+<td><code>onshow</code></td>
+<td>String</td>
+<td>Code called when the form becomes visible.
+</td></tr>
+<tr>
+<td><code>onhide</code></td>
+<td>String</td>
+<td>Code called when the form is hidden.
+</td></tr>
+<tr>
+<td><code>onresize</code></td>
+<td>String</td>
+<td>Code called when the form is resized.
+</td></tr>
+<tr>
+<td><code>onkeypress</code></td>
+<td>String</td>
+<td>Code called on a key-press event anywhere on the form.
+</td></tr>
+<tr>
+<td><code>setFocusID</code></td>
+<td>String</td>
+<td><code>id</code> of the control that receives focus when the form opens.
+</td></tr>
+<tr>
+<td><code>parentForm</code></td>
+<td>String</td>
+<td><code>id</code> of another form that this form is visually nested inside.
+</td></tr>
+<tr>
+<td><code>HTML</code></td>
+<td>String or null</td>
+<td>Raw HTML injected at the top of the form (advanced use).
+</td></tr>
+<tr>
+<td><code>attributes</code></td>
+<td>String</td>
+<td>Additional HTML attributes added to the form element.
+</td></tr>
+<tr>
+<td><code>locked</code></td>
+<td>Boolean</td>
+<td>When <code>true</code>, controls on this form cannot be moved in the designer.
+</td></tr>
+<tr>
+<td><code>script</code></td>
+<td>String or null</td>
+<td>Form code. <code>null</code> when code is stored in the external <code>.bas</code> or <code>.js</code> file.
+</td></tr>
+<tr>
+<td><code>cached_js</code></td>
+<td>String or null</td>
+<td>Cached compiled JavaScript (managed by the IDE).
+</td></tr>
+<tr>
+<td><code>cached_js_script_hash</code></td>
+<td>String or null</td>
+<td>MD5 hash used to detect when recompilation is needed.
+</td></tr>
+<tr>
+<td><code>cache_dirty</code></td>
+<td>Boolean</td>
+<td><code>true</code> when the cached JavaScript is out of date.
+</td></tr>
+<tr>
+<td><code>children</code></td>
+<td>Array</td>
+<td><a href="#External_references">External references</a> to each <a href="#Element_files">element JSON file</a>.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Element_Files">Element Files</h2></div>
+<p>Each control (button, text box, label, etc.) on a form is stored as a separate JSON file in the <code>Elements/</code> sub-directory of the form.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="Common_properties">Common properties</h3></div>
+<p>All controls may share the following properties. Not all properties are used by all elements - they may only have the ones they actually use. They may also have additional properties, which are defined in the Toolbox Files for that control.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>"!type"</code></td>
+<td>String</td>
+<td>The control type, e.g. <code>"Button_bs4"</code>, <code>"Textarea_bs4"</code>, <code>"Label_bs4"</code>. The suffix <code>_bs4</code> indicates a Bootstrap 4 control.
+</td></tr>
+<tr>
+<td><code>id</code></td>
+<td>String</td>
+<td>Unique identifier of this control within the form. Used in code to access the control at runtime (e.g. <code>Button1.value</code>).
+</td></tr>
+<tr>
+<td><code>left</code></td>
+<td>Integer</td>
+<td>Left position in pixels, relative to the form.
+</td></tr>
+<tr>
+<td><code>top</code></td>
+<td>Integer</td>
+<td>Top position in pixels, relative to the form.
+</td></tr>
+<tr>
+<td><code>width</code></td>
+<td>Integer or String</td>
+<td>Width in pixels, or <code>"auto"</code>.
+</td></tr>
+<tr>
+<td><code>height</code></td>
+<td>Integer or String</td>
+<td>Height in pixels, or <code>"auto"</code>.
+</td></tr>
+<tr>
+<td><code>right</code></td>
+<td>String</td>
+<td>CSS <code>right</code> value, typically <code>"auto"</code>.
+</td></tr>
+<tr>
+<td><code>bottom</code></td>
+<td>String</td>
+<td>CSS <code>bottom</code> value, typically <code>"auto"</code>.
+</td></tr>
+<tr>
+<td><code>position</code></td>
+<td>String</td>
+<td>CSS <code>position</code> mode: <code>"absolute"</code>, <code>"relative"</code>, or <code>"static"</code>.
+</td></tr>
+<tr>
+<td><code>hidden</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to hide the control at runtime.
+</td></tr>
+<tr>
+<td><code>disabled</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to disable user interaction.
+</td></tr>
+<tr>
+<td><code>class</code></td>
+<td>String</td>
+<td>Additional CSS class names.
+</td></tr>
+<tr>
+<td><code>style</code></td>
+<td>String</td>
+<td>Additional inline CSS styles.
+</td></tr>
+<tr>
+<td><code>display</code></td>
+<td>String</td>
+<td>CSS <code>display</code> value (overrides the default).
+</td></tr>
+<tr>
+<td><code>color</code></td>
+<td>String</td>
+<td>Foreground / text colour (CSS value).
+</td></tr>
+<tr>
+<td><code>backgroundColor</code></td>
+<td>String</td>
+<td>Background colour (CSS value).
+</td></tr>
+<tr>
+<td><code>fontFamily</code></td>
+<td>String</td>
+<td>Font family (CSS value).
+</td></tr>
+<tr>
+<td><code>fontSize</code></td>
+<td>String</td>
+<td>Font size (CSS value, e.g. <code>"14px"</code>).
+</td></tr>
+<tr>
+<td><code>fontStyle</code></td>
+<td>String</td>
+<td>Font style: <code>"italic"</code>, <code>"normal"</code>, etc.
+</td></tr>
+<tr>
+<td><code>fontWeight</code></td>
+<td>String</td>
+<td>Font weight: <code>"bold"</code>, <code>"normal"</code>, etc.
+</td></tr>
+<tr>
+<td><code>mAll</code>, <code>mTop</code>, <code>mBottom</code>, <code>mLeft</code>, <code>mRight</code></td>
+<td>String</td>
+<td>CSS margin shorthand and individual sides.
+</td></tr>
+<tr>
+<td><code>pAll</code>, <code>pTop</code>, <code>pBottom</code>, <code>pLeft</code>, <code>pRight</code></td>
+<td>String</td>
+<td>CSS padding shorthand and individual sides.
+</td></tr>
+<tr>
+<td><code>borderColor</code>, <code>borderStyle</code>, <code>borderWidth</code></td>
+<td>String</td>
+<td>CSS border properties.
+</td></tr>
+<tr>
+<td><code>script</code></td>
+<td>String</td>
+<td>Control-level code (usually blank; form-level code is preferred).
+</td></tr>
+<tr>
+<td><code>cached_js</code></td>
+<td>String</td>
+<td>Cached compiled JavaScript for this control (managed by the IDE).
+</td></tr>
+<tr>
+<td><code>cached_js_script_hash</code></td>
+<td>String</td>
+<td>MD5 hash used to detect when recompilation is needed.
+</td></tr>
+<tr>
+<td><code>children</code></td>
+<td>Array</td>
+<td>Nested controls (empty for most control types).
+</td></tr>
+<tr>
+<td><code>expanded_pmp</code></td>
+<td>String or null</td>
+<td>Expansion state in the Project Manager panel (IDE only).
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Bootstrap_appearance_properties">Bootstrap appearance properties</h3></div>
+<p>Controls based on Bootstrap have these additional properties.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>appearance</code></td>
+<td>String</td>
+<td>Bootstrap contextual class, e.g. <code>" btn-secondary"</code>, <code>" btn-primary"</code>, <code>" btn-danger"</code>.
+</td></tr>
+<tr>
+<td><code>size</code></td>
+<td>String</td>
+<td>Bootstrap size modifier, e.g. <code>" btn-sm"</code>, <code>" btn-lg"</code>.
+</td></tr>
+<tr>
+<td><code>outline</code></td>
+<td>String</td>
+<td>Set to <code>"outline-"</code> to use an outlined (hollow) button style.
+</td></tr>
+<tr>
+<td><code>blockLevel</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> for a full-width block button.
+</td></tr>
+<tr>
+<td><code>grouping</code></td>
+<td>String</td>
+<td>Used to group controls into a Bootstrap button group.
+</td></tr>
+<tr>
+<td><code>groupStyle</code></td>
+<td>String</td>
+<td>Style applied to the button group container.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Popover_properties">Popover properties</h3></div>
+<p>Most controls support an optional Bootstrap popover.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>popStyle</code></td>
+<td>String</td>
+<td>Popover style: <code>"popover"</code> or <code>"tooltip"</code>.
+</td></tr>
+<tr>
+<td><code>popTitle</code></td>
+<td>String</td>
+<td>Popover title text.
+</td></tr>
+<tr>
+<td><code>popBody</code></td>
+<td>String</td>
+<td>Popover body text.
+</td></tr>
+<tr>
+<td><code>popPosition</code></td>
+<td>String</td>
+<td>Popover position: <code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code>, or blank for automatic.
+</td></tr>
+<tr>
+<td><code>popClose</code></td>
+<td>String</td>
+<td>How the popover closes: <code>"hover"</code> or <code>"click"</code>.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Badge_properties">Badge properties</h3></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>badge</code></td>
+<td>String</td>
+<td>Badge text. Leave blank to hide the badge.
+</td></tr>
+<tr>
+<td><code>badgeAppearance</code></td>
+<td>String</td>
+<td>Bootstrap contextual class for the badge, e.g. <code>" badge-info"</code>.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Common_event_handlers">Common event handlers</h3></div>
+<p>Event handler properties contain a string that is the name of the function to call (e.g. <code>"Button1_onclick()"</code>). The actual function body is written in the form's code file.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Event
+</th></tr>
+<tr>
+<td><code>onclick</code></td>
+<td>User clicks or taps the control.
+</td></tr>
+<tr>
+<td><code>onmousedown</code></td>
+<td>Mouse button pressed over the control.
+</td></tr>
+<tr>
+<td><code>onmouseup</code></td>
+<td>Mouse button released.
+</td></tr>
+<tr>
+<td><code>onmousemove</code></td>
+<td>Mouse pointer moves over the control.
+</td></tr>
+<tr>
+<td><code>onmouseout</code></td>
+<td>Mouse pointer leaves the control.
+</td></tr>
+<tr>
+<td><code>ontouchstart</code></td>
+<td>Touch begins on the control.
+</td></tr>
+<tr>
+<td><code>ontouchmove</code></td>
+<td>Touch moves while in contact with the control.
+</td></tr>
+<tr>
+<td><code>ontouchend</code></td>
+<td>Touch ends on the control.
+</td></tr>
+<tr>
+<td><code>onresize</code></td>
+<td>Control is resized.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading3"><h3 id="Selected_control-specific_properties">Selected control-specific properties</h3></div>
+<div class="mw-heading mw-heading4"><h4 id="Button_(Button_bs4)"><span id="Button_.28Button_bs4.29"></span>Button (<code>Button_bs4</code>)</h4></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>value</code></td>
+<td>String</td>
+<td>Button label text.
+</td></tr>
+<tr>
+<td><code>icon</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to show an icon inside the button.
+</td></tr>
+<tr>
+<td><code>iconTitle</code></td>
+<td>String</td>
+<td>Icon CSS class (e.g. a Bootstrap Icons or Font Awesome class name).
+</td></tr>
+<tr>
+<td><code>ChangeForm</code></td>
+<td>String</td>
+<td><code>id</code> of a form to navigate to when the button is clicked (shortcut — no code required).
+</td></tr>
+<tr>
+<td><code>toggleControl</code></td>
+<td>String</td>
+<td><code>id</code> of a control to toggle the visibility of when the button is clicked.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading4"><h4 id="Text_Area_(Textarea_bs4)"><span id="Text_Area_.28Textarea_bs4.29"></span>Text Area (<code>Textarea_bs4</code>)</h4></div>
+<table class="wikitable">
+<tbody><tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description
+</th></tr>
+<tr>
+<td><code>value</code></td>
+<td>String</td>
+<td>Initial text content of the text area.
+</td></tr>
+<tr>
+<td><code>placeholder</code></td>
+<td>String</td>
+<td>Grey hint text displayed when the text area is empty.
+</td></tr>
+<tr>
+<td><code>rows</code></td>
+<td>String</td>
+<td>Number of visible text rows.
+</td></tr>
+<tr>
+<td><code>maxlength</code></td>
+<td>String</td>
+<td>Maximum number of characters allowed.
+</td></tr>
+<tr>
+<td><code>readonly</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> to make the text area read-only.
+</td></tr>
+<tr>
+<td><code>required</code></td>
+<td>String</td>
+<td>Set to <code>"true"</code> for HTML5 form validation.
+</td></tr>
+<tr>
+<td><code>autocomplete</code></td>
+<td>String</td>
+<td><code>"on"</code> or <code>"off"</code>.
+</td></tr>
+<tr>
+<td><code>autocorrect</code></td>
+<td>String</td>
+<td><code>"on"</code> or <code>"off"</code> (mobile browsers).
+</td></tr>
+<tr>
+<td><code>autocapitalize</code></td>
+<td>String</td>
+<td><code>"on"</code> or <code>"off"</code> (mobile browsers).
+</td></tr>
+<tr>
+<td><code>spellcheck</code></td>
+<td>String</td>
+<td><code>"true"</code> or <code>"false"</code>.
+</td></tr>
+<tr>
+<td><code>header</code></td>
+<td>String</td>
+<td>Label text shown above the text area.
+</td></tr>
+<tr>
+<td><code>footer</code></td>
+<td>String</td>
+<td>Help text shown below the text area.
+</td></tr>
+<tr>
+<td><code>validation</code></td>
+<td>String</td>
+<td>Validation rule expression.
+</td></tr>
+<tr>
+<td><code>inputmode</code></td>
+<td>String</td>
+<td>HTML5 <code>inputmode</code> attribute, e.g. <code>"numeric"</code>.
+</td></tr>
+<tr>
+<td><code>align</code></td>
+<td>String</td>
+<td>Text alignment: <code>"left"</code>, <code>"center"</code>, <code>"right"</code>.
+</td></tr>
+<tr>
+<td><code>name</code></td>
+<td>String</td>
+<td>HTML <code>name</code> attribute for form submission.
+</td></tr>
+<tr>
+<td><code>headerCols</code></td>
+<td>Integer</td>
+<td>Bootstrap grid column width of the label (0 = full width label above).
+</td></tr>
+<tr>
+<td><code>valueCols</code></td>
+<td>Integer</td>
+<td>Bootstrap grid column width of the input field.
+</td></tr>
+<tr>
+<td><code>onchange</code>, <code>onclick</code>, <code>onfocus</code>, <code>onfocusout</code>, <code>onkeypress</code>, <code>onkeyup</code></td>
+<td>String</td>
+<td>Event handler function names.
+</td></tr>
+<tr>
+<td><code>oncopy</code>, <code>oncut</code>, <code>onpaste</code></td>
+<td>String</td>
+<td>Clipboard event handler function names.
+</td></tr></tbody></table>
+<div class="mw-heading mw-heading2"><h2 id="Code_Files">Code Files</h2></div>
+<div class="mw-heading mw-heading3"><h3 id="BASIC_code_files_(.bas)"><span id="BASIC_code_files_.28.bas.29"></span>BASIC code files (<code>.bas</code>)</h3></div>
+<p>When a project uses the BASIC language, form code is stored in a plain-text file with the same name as the form but with the <code>.bas</code> extension (e.g. <code>Form1.bas</code>). The file sits in the same directory as the form's JSON file.
+</p><p>The file contains standard AppStudio BASIC functions. Event handlers follow the naming convention <code>ControlID_eventname()</code>:
+</p>
+<pre>Function Button1_onclick()
+  MsgBox "Thanks for clicking!"
+End Function
+
+Function Form1_onshow()
+  TextArea1.value = "Form is now visible."
+End Function
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="JavaScript_code_files_(.js)"><span id="JavaScript_code_files_.28.js.29"></span>JavaScript code files (<code>.js</code>)</h3></div>
+<p>JavaScript projects use <code>.js</code> files with the same naming convention. The syntax is standard JavaScript:
+</p>
+<pre>function Button1_onclick() {
+  alert("Thanks for clicking!");
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="Inline_script">Inline script</h3></div>
+<p>Code can alternatively be stored inline in the JSON file itself, in the <code>script</code> property of the Form or control object. The IDE stores code externally by default; the <code>script</code> property in the saved file is <code>null</code> when an external file is used.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="The_properties/_Directory"><span id="The_properties.2F_Directory"></span>The <code>properties/</code> Directory</h2></div>
+<p>The <code>properties/</code> directory holds template files used when building the app for different deployment targets. These files contain <code>{placeholder}</code> tokens that AppStudio replaces with actual project values at build time.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="config.xml"><code>config.xml</code></h3></div>
+<p>Apache Cordova / VoltBuilder configuration file. Used when building native mobile apps.
+</p><p>Common placeholders: <code>{id}</code>, <code>{title}</code>, <code>{version}</code>, <code>{description}</code>, <code>{copyright}</code>, <code>{icon}</code>, <code>{phoneGapSplash}</code>, <code>{phoneGapBuildCounter}</code>, <code>{phoneGapStatusBarColor}</code>, <code>{phoneGapStatusBarStyle}</code>, <code>{phoneGapStatusBarOverlay}</code>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="manifest.json"><code>manifest.json</code></h3></div>
+<p>Progressive Web App (PWA) manifest. Tells the browser how to install the app on a home screen.
+</p><p>Common placeholders: <code>{title}</code>, <code>{description}</code>, <code>{icon}</code>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="package.json"><code>package.json</code></h3></div>
+<p>Electron build configuration used when packaging the app as a desktop executable.
+</p><p>Common placeholders: <code>{title}</code>, <code>{version}</code>, <code>{description}</code>, <code>{id}</code>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="electronMain.js"><code>electronMain.js</code></h3></div>
+<p>The Electron main-process entry point. Launched by <code>package.json</code> when the desktop app starts.
+</p><p>Common placeholders: <code>{appwidth}</code>, <code>{appheight}</code>, <code>{title}</code>.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="style.css"><code>style.css</code></h3></div>
+<p>The project-wide CSS file. Its content is inserted into the <code>&lt;head&gt;</code> of the generated page as a <code>&lt;style&gt;</code> block, after all library stylesheets. Use it to define custom styles, override theme defaults, or declare <code>@font-face</code> rules that apply across the whole app.
+</p><p>This file is the external representation of the <a href="#Page_object_.28inside_.3Ccode.3Echildren.3C.2Fcode.3E.29">Page object's</a> <code>styleheaders</code> property. The IDE creates or updates <code>style.css</code> automatically whenever the Project CSS editor is saved. If the property is empty, the file is omitted.
+</p><p>To edit this file from within AppStudio, open the <b>Project</b> menu and choose <b>Open Project CSS</b>.
+</p><p>Example:
+</p>
+<pre>/* Custom styles for MyApp */
+body {
+  background-color: #f5f5f5;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url('MyFont.ttf');
+}
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="External_References">External References</h2></div>
+<p>To keep individual files small and manageable, forms and controls are stored in separate files. A parent object refers to a child file using an <b>External reference</b> object:
+</p>
+<pre>{
+  "!type": "External",
+  "file": ["forms", "Form1", "Form1.json"]
+}
+</pre>
+<p>The <code>file</code> array represents a path relative to the <code>.appstudio</code> directory: each element is one path segment. The example above refers to the file <code>forms/Form1/Form1.json</code>.
+</p><p>External references appear in:
+</p>
+<ul><li>The Page's <code>children</code> array — pointing to each form's JSON file.</li>
+<li>A Form's <code>children</code> array — pointing to each element's JSON file in the <code>Elements/</code> sub-directory.</li></ul>
+<p>When AppStudio loads a project it resolves all External references recursively, producing a single in-memory object tree. When saving, the tree is split back into individual files.
+</p>
+<div class="mw-heading mw-heading2"><h2 id="Complete_Example">Complete Example</h2></div>
+<p>The following annotated listing shows all the files in a minimal "Hello World" project.
+</p>
+<div class="mw-heading mw-heading3"><h3 id="HelloWorld.project"><code>HelloWorld.project</code></h3></div>
+<pre>{
+  "!type": "Project",
+  "version": 8,
+  "language_version": 8,
+  "id": "HelloWorld",
+  "libraries": ["BASIC"],
+  "script": "",
+  "children": [
+    {
+      "!type": "Page",
+      "id": "HelloWorld",
+      "title": "HelloWorld",
+      "description": "Use a button to put up a Hello World message.",
+      "version": "1.0.0",
+      "copyright": "copyright 2025 ABC Company",
+      "language": "BASIC",
+      "firstform": "Form1",
+      "defaultformsize": "320x460",
+      "fontFamily": "helvetica",
+      "icon": "nsb/images/512.png",
+      "iconAndroid": "nsb/images/192.png",
+      "BootstrapTheme": "bootstrap",
+      "theme": "a",
+      "children": [
+        {
+          "!type": "External",
+          "file": ["forms", "Form1", "Form1.json"]
+        }
+      ]
+    }
+  ]
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="forms/Form1/Form1.json"><span id="forms.2FForm1.2FForm1.json"></span><code>forms/Form1/Form1.json</code></h3></div>
+<pre>{
+  "!type": "Form",
+  "id": "Form1",
+  "language": "BASIC",
+  "width": 375,
+  "height": 667,
+  "designWidth": 375,
+  "designHeight": 667,
+  "fullScreen": "true",
+  "children": [
+    { "!type": "External", "file": ["forms", "Form1", "Elements", "Button1.json"] },
+    { "!type": "External", "file": ["forms", "Form1", "Elements", "TextArea1.json"] }
+  ]
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="forms/Form1/Elements/Button1.json"><span id="forms.2FForm1.2FElements.2FButton1.json"></span><code>forms/Form1/Elements/Button1.json</code></h3></div>
+<pre>{
+  "!type": "Button_bs4",
+  "id": "Button1",
+  "value": "Click me!",
+  "left": 98,
+  "top": 194,
+  "width": 113,
+  "height": "auto",
+  "appearance": " btn-secondary",
+  "size": " btn-sm",
+  "onclick": "Button1_onclick()"
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="forms/Form1/Elements/TextArea1.json"><span id="forms.2FForm1.2FElements.2FTextArea1.json"></span><code>forms/Form1/Elements/TextArea1.json</code></h3></div>
+<pre>{
+  "!type": "Textarea_bs4",
+  "id": "TextArea1",
+  "value": "Here is a simple Hello World app.",
+  "placeholder": "Enter text here",
+  "left": 45,
+  "top": 48,
+  "width": 239,
+  "height": "116"
+}
+</pre>
+<div class="mw-heading mw-heading3"><h3 id="forms/Form1/Form1.bas"><span id="forms.2FForm1.2FForm1.bas"></span><code>forms/Form1/Form1.bas</code></h3></div>
+<pre>Function Button1_onclick()
+  MsgBox "Thanks for clicking!"
+End Function
+</pre>
+<div class="mw-heading mw-heading2"><h2 id="See_Also">See Also</h2></div>
+<ul><li><a href="https://wiki.appstudio.dev/index.php?title=Toolbox_Files&amp;action=edit&amp;redlink=1" class="new" title="Toolbox Files (page does not exist)">Toolbox_Files</a> — describes the toolbox definition files that specify the available control types and their default properties.</li>
+<li><a href="VoltBuilder.html" title="VoltBuilder">VoltBuilder</a> — how to build native iOS and Android apps from an AppStudio project.</li>
+<li><a href="https://wiki.appstudio.dev/index.php?title=Electron&amp;action=edit&amp;redlink=1" class="new" title="Electron (page does not exist)">Electron</a> — how to package an AppStudio project as a Windows or macOS desktop app.</li></ul>
+<!-- 
+NewPP limit report
+Cached time: 20260302151748
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [show‐toc]
+CPU time usage: 0.080 seconds
+Real time usage: 0.204 seconds
+Preprocessor visited node count: 165/1000000
+Revision size: 31107/2097152 bytes
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 3580/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key nsbasic_mediawiki1348787612:pcache:1439:|#|:idhash:canonical and timestamp 20260302151748 and revision id 11744. Rendering was triggered because: page-edit
+ -->
+</div>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;oldid=11744">https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;oldid=11744</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+</div>
+
+<div id="mw-navigation">
+	<h2>Navigation menu</h2>
+	<div id="mw-head">
+		
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu-legacy vector-menu" aria-labelledby="p-personal-label"  >
+	<h3
+		id="p-personal-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Personal tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="pt-createaccount" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:CreateAccount&amp;returnto=AppStudio+Project+File+Format" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Special:UserLogin&amp;returnto=AppStudio+Project+File+Format" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+		<div id="left-navigation">
+			
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-namespaces-label"  >
+	<h3
+		id="p-namespaces-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-nstab-main" class="selected mw-list-item"><a href="AppStudio_Project_File_Format.html" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=Talk:AppStudio_Project_File_Format&amp;action=edit&amp;redlink=1" rel="discussion" class="new" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-variants-label"  >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-variants-label"
+	>
+	<label
+		id="p-variants-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">English</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+		</div>
+		<div id="right-navigation">
+			
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu-tabs vector-menu-tabs-legacy vector-menu" aria-labelledby="p-views-label"  >
+	<h3
+		id="p-views-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Views</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="ca-view" class="selected icon mw-list-item"><a href="AppStudio_Project_File_Format.html"><span>Read</span></a></li><li id="ca-viewsource" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e"><span>View source</span></a></li><li id="ca-history" class="icon mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown vector-menu" aria-labelledby="p-cactions-label"  title="More options" >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox"
+		aria-labelledby="p-cactions-label"
+	>
+	<label
+		id="p-cactions-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">More</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</nav>
+
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<h3 >Search</h3>
+	<form action="https://wiki.appstudio.dev/index.php" id="searchform" class="vector-search-box-form">
+		<div id="simpleSearch"
+			class="vector-search-box-inner"
+			 data-search-loc="header-navigation">
+			<input class="vector-search-box-input"
+				 type="search" name="search" placeholder="Search NSB App Studio" aria-label="Search NSB App Studio" autocapitalize="sentences" spellcheck="false" title="Search NSB App Studio [f]" accesskey="f" id="searchInput"
+			>
+			<input type="hidden" name="title" value="Special:Search">
+			<input id="mw-searchButton"
+				 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search">
+			<input id="searchButton"
+				 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go">
+		</div>
+	</form>
+</div>
+
+		</div>
+	</div>
+	
+<div id="mw-panel" class="vector-legacy-sidebar">
+	<div id="p-logo" role="banner">
+		<a class="mw-wiki-logo" href="AppStudio_Documentation.html"
+			title="Visit the main page"></a>
+	</div>
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu-portal portal vector-menu" aria-labelledby="p-navigation-label"  >
+	<h3
+		id="p-navigation-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Navigation</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="AppStudio_Documentation.html" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu-portal portal vector-menu" aria-labelledby="p-tb-label"  >
+	<h3
+		id="p-tb-label"
+		
+		class="vector-menu-heading "
+	>
+		<span class="vector-menu-heading-label">Tools</span>
+	</h3>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:WhatLinksHere/AppStudio_Project_File_Format" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="https://wiki.appstudio.dev/Special:RecentChangesLinked/AppStudio_Project_File_Format" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;oldid=11744" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://wiki.appstudio.dev/index.php?title=AppStudio_Project_File_Format&amp;action=info" title="More information about this page"><span>Page information</span></a></li>
+		</ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+</div>
+
+<footer id="footer" class="mw-footer" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 2 March 2026, at 15:17.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="AppStudio_Privacy_policy.html">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="AppStudio_About.html">About NSB App Studio</a></li>
+	<li id="footer-places-disclaimers"><a href="AppStudio_General_disclaimer.html">Disclaimers</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+</footer>
+
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet vector-menu-portal portal" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":594,"wgPageParseReport":{"limitreport":{"cputime":"0.080","walltime":"0.204","ppvisitednodes":{"value":165,"limit":1000000},"revisionsize":{"value":31107,"limit":2097152},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":3580,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"timestamp":"20260302151748","ttl":2592000,"transientcontent":false}}});});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20967779-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+<script src="jquery-1.10.2.min.js"></script>
+<script src="lunr.min.js"></script>
+<script src="index.js"></script>
+<script src="search.js"></script>
+</body>
+
+<!-- Cached 20260302214456 -->
+
+<!-- Mirrored from wiki.appstudio.dev/AppStudio_Project_File_Format by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2026 20:08:57 GMT -->
+</html>

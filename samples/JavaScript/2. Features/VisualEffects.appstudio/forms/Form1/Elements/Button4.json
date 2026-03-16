@@ -1,0 +1,13 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "Button4", 
+  "left": 213, 
+  "right": "auto", 
+  "top": 370, 
+  "value": "Slide Down", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

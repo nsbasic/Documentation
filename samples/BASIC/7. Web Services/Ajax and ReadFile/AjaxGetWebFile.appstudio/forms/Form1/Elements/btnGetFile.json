@@ -1,0 +1,15 @@
+{ 
+  "bottom": "auto", 
+  "class": "nsbbutton", 
+  "height": "auto", 
+  "id": "btnGetFile", 
+  "left": 120, 
+  "onclick": "Button1_onclick()", 
+  "right": "auto", 
+  "top": 121, 
+  "value": "Get File", 
+  "width": 70, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

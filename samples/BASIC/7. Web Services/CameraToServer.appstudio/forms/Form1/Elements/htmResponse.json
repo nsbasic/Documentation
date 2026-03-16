@@ -1,0 +1,18 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 113, 
+  "hidden": "block", 
+  "id": "htmResponse", 
+  "left": 10, 
+  "placeholder": "Response back after a request is made of web server (PHP,ASP . . .)", 
+  "right": "auto", 
+  "top": 374, 
+  "width": 298, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

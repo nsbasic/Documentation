@@ -1,0 +1,105 @@
+{ 
+"_type": "Input_bs", 
+"_base": ["bsAll", "margin", "padding", "fonts", "Input", "colors", "bsInput", "bsText", "bsIcon", "bsPopover", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/input.png", 
+"_wikipage": "Input (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Input</a> is an input field for text, numbers and other data types. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Input",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"header": "Input",
+
+"inputType": "text", 
+"_inputType": { 
+    "acignore": true,
+    "desc": "Input field type", 
+    "type": "enum",
+    "keys":   ["date","color","email","file","hidden","number","password","search","submit","tel","text","time","url"], 
+    "values": ["date","color","email","file","hidden","number","password","search","submit","tel","text","time","url"]
+     }, 
+     
+"step": "", 
+"_step": { 
+    "acignore": true,
+    "desc": "A value the input has to be a multiple of. Use 1 for integer only", 
+    "type": "str" 
+    },
+    
+"min": "", 
+"_min": { 
+    "acignore": true,
+    "desc": "For inputType Number, the minimum value. For date, the earliest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+    
+"max": "", 
+"_max": { 
+    "acignore": true,
+    "desc": "For inputType Number, the maximum value. For date, the latest date in the format YYYY-MM-DD.", 
+    "type": "str" 
+    }, 
+
+"leftText": "", 
+"_leftText": { 
+    "acignore": true,
+    "desc": "Text to put to the left of the input area. Does not display in containers less than 768 px wide.", 
+    "type": "str" 
+    },  
+
+"size": "input-sm", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of the element", 
+    "type": "enum", 
+    "keys": ["small", "large"], 
+    "values": ["input-sm", "input-lg"]
+}, 
+
+"headerCols": 2,
+"_headerCols": {
+    "acignore": true,
+    "desc": "Columns for header. headerCols + valueCols should add up to 12.",
+    "type": "int"
+   },
+   
+"valueCols": 10,
+"_valueCols": {
+    "acignore": true,
+    "desc": "Columns for header. headerCols + valueCols should add up to 12.",
+    "type": "int"
+   },
+   
+"size-lg": 4,
+"_size-lg": {
+    "acignore": true,
+    "desc": "Size of column in large layout. Total for all Grid Columns should add up to 12.",
+    "type": "int"
+   },
+                
+"_htmltemplate": [
+    "  \"<div id={id} data-role='none' class='form-horizontal {class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}'>\",",
+    "  \"{_bsInput_wrapperNoPopover!i}{_bsInput_headerColsNoBadge!i}\",",
+    "{if header<>''}    \"<div class='col-sm-{valueCols}'>\",{/if}",
+    "{if header==''}    \"<div class='col-sm-12'>\",{/if}",
+    "      \"<div class='input-group' style='width:100%;'>\",",
+    "{if leftText<>''}        \"<span class='input-group-addon hidden-xs'>{leftText}</span>\",{/if}",
+    "        \"{_bsBadgePadBelow!i}\",",
+    "        \"<input id='{id}_contents' type='{inputType}'{if name<>''} name='{name}' {/if} {_bsTextatr!i}{if min<>''} min='{min}'{/if}{if max<>''} max='{max}' {/if}{if step<>''}step={step} {/if}  style='{_paddingcss!i}{_colorscss!i}{_bsTextcss!i}' class='{if inputType<>'file'}form-control {size} {/if}{class}' {if value<>''}value='{value!b}' {/if}>\",",
+    "{if icon<>''}        \"<span id='{id}_icon' class='input-group-addon' {_bsPopover!i}>\",{/if}",
+    "{if icon<>''}          \"<a><span class='fa fa-{icon}'></span></a></span>\",{/if}",
+    "      \"</div>\",",
+    "      \"{_bsinput_footer!i}\",",
+    "  \"</div></div>\","
+],
+  
+"_jstemplate": [
+  "  {id}.addEventListener('touchmove', function(e) {{e.stopPropagation();}}, false);",
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ]
+
+}

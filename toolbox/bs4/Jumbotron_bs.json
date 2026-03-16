@@ -1,0 +1,61 @@
+{ 
+"_type": "Jumbotron_bs4", 
+"_base": ["bs4All", "fonts", "borders", "margin", "padding", "colors", "bs4Button", "bs4Badge", "bs4HeaderValue", "bs4Icon", "children"], 
+"_palette": 9, 
+"_art": "images/jumbotron.png",
+"_wikipage": "Jumbotron (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Jumbotron</a> Use to showcase key content. Bootstrap.", 
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Jumbotron",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"header": "Jumbotron",
+"value": "This is the value",
+
+"_grouping": {"type": "hidden"},
+"_groupStyle": {"type": "hidden"},
+
+"fullWidth": "", 
+"_fullWidth": { 
+    "acignore": true,
+    "desc": "Should control be full width of screen?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "true"]
+}, 
+   
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when clicked.",
+    "type": "str"
+	},
+
+"buttonValue": "Learn More",
+"_buttonValue": {
+	"acignore": true,
+    "desc": "Value on button. Leave blank for no button.",
+    "type": "str"
+	},
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}}}",
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "  \"{if fullWidth<>'true'}<div id='{id}' class='container'>{/if}<div {if fullWidth=='true'}id='{id}' {/if}class='jumbotron {if fullWidth=='true'}jumbotron-fluid {/if}{class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}' data-role='none'><div class=''><h1 data-i18n='{header!j}'>{header!j}</h1><p  data-i18n='{value!j}'>{value!j}<p>\",",
+    "{if buttonValue<>''}    \"<button id='{id}_button' class='btn{eval appearance[0:5] + outline + appearance[5:]}{size}{blockLevel} {class}' {disabled}'>{_bsIcon!i}<span data-i18n='{buttonValue!j}'>{buttonValue!j}</span>{_bsBadge!i}</button>\"{/if},\"<div id={id}_addChild>\",{_childhtml},\"</div>\",",
+    "  \"</div></div>{if fullWidth<>'true'}</div>{/if}\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "{if ChangeForm<>''}  {id}.onclick=function(){{ChangeForm({ChangeForm})}};{/if}",
+  "  {_childjs}"
+  ]
+		
+}

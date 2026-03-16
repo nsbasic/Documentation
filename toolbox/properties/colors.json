@@ -1,0 +1,21 @@
+{
+    "_type": "colors",
+    "_base": "NSBObject",
+
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+    "acignore": true,
+    "desc": "Color of background. Can be name, #RRGGBB or rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+   
+"_colorscss": "{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if}"
+
+}

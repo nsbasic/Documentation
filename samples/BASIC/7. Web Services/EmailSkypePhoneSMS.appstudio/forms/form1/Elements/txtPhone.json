@@ -1,0 +1,19 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "txtPhone", 
+  "inputType": "text", 
+  "left": 90, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 80, 
+  "value": "8005551212", 
+  "width": 200, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

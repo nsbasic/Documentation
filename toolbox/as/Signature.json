@@ -1,0 +1,92 @@
+{ 
+"_type": "Signature", 
+"_base": ["borders","Widget"], 
+"_palette": 4, 
+"_art": "images/signature.png", 
+"_shorthelp": "<a href='{_docurl}'>Signature</a> and Drawing capture", 
+"_category": ["All", "Common", "Multimedia"],
+"_requiredfiles": ["{_nsbdir}nsb/library/signature_pad.js"],
+"_displayname": "Signature",
+"_longhelp": "longhelp",
+
+"height": 150, 
+"width": 300,
+"borderWidth": "2",
+"borderStyle": "dotted",
+"borderColor": "gray",
+    
+"dotSize": "", 
+"_dotSize": { 
+    "acignore": true,
+    "desc": "Radius of a single dot. Defaults to 1.5", 
+    "type": "str" 
+    }, 
+    
+"minWidth": "", 
+"_minWidth": { 
+    "acignore": true,
+    "desc": "Minimum width of a line. Defaults to 0.5.", 
+    "type": "str" 
+    }, 
+    
+"maxWidth": "", 
+"_maxWidth": { 
+    "acignore": true,
+    "desc": "Maximum width of a line. Defaults to 2.5.", 
+    "type": "str" 
+    }, 
+    
+"throttle": "", 
+"_throttle": { 
+    "acignore": true,
+    "desc": "Draw the next point at most once per every x milliseconds. Set it to 0 to turn off throttling. Defaults to 16.", 
+    "type": "str" 
+    }, 
+    
+"minDistance": "", 
+"_minDistance": { 
+    "acignore": true,
+    "desc": "Add the next point only if the previous one is farther than x pixels. Defaults to 5.", 
+    "type": "str" 
+    }, 
+    
+"backgroundColor": "", 
+"_backgroundColor": { 
+    "acignore": true,
+    "desc": "Color used to clear the background. Can be any color format accepted by context.fillStyle. Defaults to rgba(0,0,0,0) (transparent black). Use a non-transparent color e.g. rgb(255,255,255) (opaque white) if you'd like to save signatures as JPEG images.", 
+    "type": "str" 
+    }, 
+    
+"penColor": "", 
+"_penColor": { 
+    "acignore": true,
+    "desc": "Color used to draw the lines. Can be any color format accepted by context.fillStyle. Defaults to black.", 
+    "type": "str" 
+    }, 
+    
+"velocityFilterWeight": "", 
+"_velocityFilterWeight": { 
+    "acignore": true,
+    "desc": "Weight used to modify new velocity based on the previous velocity. Defaults to 0.7.", 
+    "type": "str" 
+    }, 
+                    
+"_htmltemplate": "  \"<canvas id='{id}' name='{id}_img' style='{_bordercss!i}{hidden}{style!j}' class='{class}'></canvas>\",",
+
+"_jstemplate": ["  NSB.addProperties({id});",
+  "  {id}_signaturePad = new SignaturePad({id}, {{{if dotSize<>''}dotSize:{dotSize}, {/if}{if minWidth<>''}minWidth:{minWidth}, {/if}{if maxWidth<>''}maxWidth:{maxWidth}, {/if}{if throttle<>''}throttle:{throttle}, {/if}{if minDistance<>''}minDistance:{minDistance}, {/if}{if backgroundColor<>''}backgroundColor:'{backgroundColor}', {/if}{if penColor<>''}penColor:'{penColor}', {/if}{if velocityFilterWeight<>''}velocityFilterWeight:{velocityFilterWeight}, {/if}}});",
+  "  var ratio =  Math.max(window.devicePixelRatio || 1, 1);",
+  "  {id}.width = {id}.offsetWidth * ratio;",
+  "  {id}.height = {id}.offsetHeight * ratio;",
+  "  {id}.getContext('2d').scale(ratio, ratio);",
+  "  {id}_signaturePad.clear();",
+  "  {if hidden <> ''}{id}.style.display='none';{/if}"
+],
+                
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "  return this.getBoundingClientRect();",
+  "}}"
+  ]
+
+}

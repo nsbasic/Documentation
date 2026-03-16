@@ -1,0 +1,204 @@
+{ 
+"_type": "Tabs", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxtabs.png", 
+"_wikipage": "jqxTabs",
+"_shorthelp": "<a href='{_docurl}'>Tabs</a> separates text into tabbed sections. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+	"{pathTo_jqWidgets}jqxcore.js", 
+	"{pathTo_jqWidgets}styles/jqx.base.css", 
+	"{pathTo_jqWidgets}styles/jqx.{theme}.css", 
+	"{pathTo_jqWidgets}jqxtabs.js", 
+	"{pathTo_jqWidgets}styles/images/bg_black.png", 
+	"{pathTo_jqWidgets}styles/images/bg_blackpressed.png", 
+	"{pathTo_jqWidgets}styles/images/bg_darkblue.png", 
+	"{pathTo_jqWidgets}styles/images/bg_darkbluepressed.png", 
+	"{pathTo_jqWidgets}styles/images/close.png", 
+	"{pathTo_jqWidgets}styles/images/close_white.png"
+	],
+"_displayname": "Tabs",
+"_longhelp": "longhelp",
+    
+"width": 375, 
+"height": 150, 
+    
+"tabNames": "<li style='margin-left:20px'>First<li>Second<li>Third",
+"_tabNames": { 
+    "desc": "List of tab names, with <li> in front of each name.", 
+    "type": "css",
+    "language": "HTML"
+    },
+    
+"tabContent": ["<div>This is the content of the first tab.</div>",
+             "<div>This is the content of the second tab.</div>",
+              "<div>This is the content of the third tab.</div>"],
+"_tabContent": { 
+    "desc": "Content for each tab, surrounded by <div>...</div>. HTML OK.", 
+    "type": "css",
+    "language": "HTML"
+    }, 
+    
+"enabledHover": "", 
+"_enabledHover": { 
+    "desc": "Enables or disables the tabs hover effect.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["",",enabledHover:false"]
+    }, 
+    
+"collapsible": "", 
+"_collapsible": { 
+    "desc": "Enables or disables the collapsible feature.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",collapsible:true"]
+    },
+    
+"enableScrollAnimation": "", 
+"_enableScrollAnimation": { 
+    "desc": "Sets whether the scroll animation is enabled.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["",",enableScrollAnimation:false"]
+    }, 
+
+"selectionTracker": "", 
+"_selectionTracker": { 
+    "desc": "Sets whether the selection tracker is enabled.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",selectionTracker:true"]
+    }, 
+
+"scrollable": "", 
+"_scrollable": { 
+    "desc": "Sets whether the scrolling is enabled.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["",",scrollable:false"]
+    }, 
+    
+"autoHeight": "", 
+"_autoHeight": { 
+    "desc": "Sets whether the jqxTabs header's height will be equal to the item with max height.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["",",autoHeight:false"]
+    }, 
+
+"showCloseButtons": "", 
+"_showCloseButtons": { 
+    "desc": "Sets whether a close button is displayed in each tab.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",showCloseButtons:true"]
+    }, 
+
+"keyboardNavigation": "", 
+"_keyboardNavigation": { 
+    "desc": "Enables or disables the keyboard navigation.", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["",",keyboardNavigation:false"]
+    },
+    
+"reorder": "", 
+"_reorder": { 
+    "desc": "Enables or disables the reorder feature. When this feature is enabled, the end-user can drag a tab and drop it over another tab. As a result the tabs will be reordered.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",reorder:true"]
+    }, 
+
+"enableDropAnimation": "", 
+"_enableDropAnimation": { 
+    "desc": "Sets whether the drop animation is enabled.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["",",enableDropAnimation:true"]
+    }, 
+
+"scrollAnimationDuration": 250,
+"_scrollAnimationDuration": { 
+    "acignore": true,
+    "desc": "Sets the duration of the scroll animation.", 
+    "type": "int" 
+    },
+
+"contentTransitionDuration": 450,
+"_contentTransitionDuration": { 
+    "acignore": true,
+    "desc": "Sets the duration of the content's fade animation which occurs when the user selects a tab. This setting has effect when the 'animationType' is set to 'fade'.", 
+    "type": "int" 
+    },
+
+"selectedItem": 0,
+"_selectedItem": { 
+    "acignore": true,
+    "desc": "Sets selected tab.", 
+    "type": "int" 
+    },
+
+"scrollStep": 70,
+"_scrollStep": { 
+    "acignore": true,
+    "desc": "Sets the scrolling step.", 
+    "type": "int" 
+    },
+
+"closeButtonSize": 16,
+"_closeButtonSize": { 
+    "acignore": true,
+    "desc": "Sets the close button size.", 
+    "type": "int" 
+    },
+
+"dropAnimationDuration": 250,
+"_dropAnimationDuration": { 
+    "acignore": true,
+    "desc": "Sets the drop animation duration.", 
+    "type": "int" 
+    },
+    
+"animationType": "", 
+"_animationType": {
+    "desc": "Sets the animation type of switching tabs.", 
+    "type": "enum", 
+    "keys": ["none", "fade"], 
+    "values": ["", ",animationType:'fade'"]
+    }, 
+    
+"toggleMode": "", 
+"_toggleMode": {
+    "desc": "Sets user interaction used for switching the different tabs.", 
+    "type": "enum", 
+    "keys": ["click", "dblclick", "mouseenter", "none"], 
+    "values": ["", ",toggleMode:'click'", ",toggleMode:'mouseenter'", ",toggleMode:'none'"]
+    }, 
+    
+"position": "", 
+"_position": {
+    "desc": "Sets whether the tabs are positioned at 'top' or 'bottom'.", 
+    "type": "enum", 
+    "keys": ["top", "bottom"], 
+    "values": ["", ",position:'click'"]
+    }, 
+    
+"scrollPosition": "", 
+"_scrollPosition": {
+    "desc": "Status Bar style", 
+    "type": "enum", 
+    "keys": ["both", "left", "right"], 
+    "values": ["", ",scrollPosition:'left'", ",scrollPosition:'right'"]
+    }, 
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'><ul>{tabNames!j}</ul>{tabContent!j}</div>\",",
+
+"_jstemplate": [
+    "  $('#{id}').jqxTabs({{theme:'{theme}', width:'{width}', height:'{height}', disabled:{disabled}{enabledHover}{collapsible}{enableScrollAnimation}{selectionTracker}{scrollable}{autoHeight}{showCloseButtons}{keyboardNavigation}{reorder}{enableDropAnimation}, scrollAnimationDuration:{scrollAnimationDuration}, contentTransitionDuration:{contentTransitionDuration}, selectedItem:{selectedItem},scrollStep:{scrollStep}, closeButtonSize:{closeButtonSize}{if 1==0}, dropAnimationDuration:{dropAnimationDuration}{/if} {animationType}{toggleMode}{position}{scrollPosition}}});",
+	"  NSB.addProperties({id})"
+                ]
+}

@@ -1,0 +1,36 @@
+{
+    "_type": "jqxAll",
+    "_base": "Widget",
+
+"rtl": "false", 
+"_rtl": { 
+    "desc": "Aligned Right to Left", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"disabled": "false", 
+"_disabled": { 
+    "desc": "Control disabled?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none; ",""]
+    },
+
+"theme": "classic",
+"_theme": { 
+    "desc": "Color theme for control.", 
+    "type": "enum", 
+    "keys": ["android","arctic","web","black","blackberry","bootstrap","classic","darkblue","energyblue","fresh","highcontrast","metro","metrodark","mobile","office","orange","shinyblack","summer","windowsphone","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny", "windowsphone"], 
+    "values": ["android","arctic","web","black","blackberry","bootstrap","classic","darkblue","energyblue","fresh","highcontrast","metro","metrodark","mobile","office","orange","shinyblack","summer","windowsphone","ui-darkness","ui-lightness","ui-le-frog","ui-overcast","ui-redmond","ui-smoothness","ui-start","ui-sunny", "windowsphone"]
+    } 
+}

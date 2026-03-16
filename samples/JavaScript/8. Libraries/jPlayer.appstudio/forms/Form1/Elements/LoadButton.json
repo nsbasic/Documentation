@@ -1,0 +1,14 @@
+{ 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "LoadButton", 
+  "left": "2", 
+  "onclick": "LoadButton_onclick()", 
+  "right": "auto", 
+  "top": "6", 
+  "value": "Load", 
+  "width": 100, 
+  "!type": "Button_bs4", 
+  "outline": "outline-", 
+  "size": " btn-sm" 
+} 

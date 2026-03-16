@@ -1,0 +1,45 @@
+{ 
+"_type": "Alert_bs4", 
+"_base": ["bs4All", "fonts", "borders", "margin", "padding", "colors", "bs4HeaderValue", "bs4Badge"], 
+"_palette": 9, 
+"_art": "images/alert.png",
+"_wikipage": "Alert (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Alert</a> Provide feedback message to the user. Bootstrap.", 
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Alert",
+"_longhelp": "longhelp",
+"_header": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"text": "Alert",
+
+"appearance": " alert-success",
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the alert", 
+    "type": "enum", 
+    "keys": ["success", "info", "warning", "danger"], 
+    "values": [" alert-success", " alert-info", " alert-warning", " alert-danger"]
+    }, 
+
+"dismissable": "",
+"_dismissable": { 
+    "acignore": true,
+    "desc": "Add an x to dismiss the alert?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "true"]
+    }, 
+
+"_htmltemplate": [
+    "  \"<div id='{id}' class='alert{appearance} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}' data-i18n='{value!j}'>{if dismissable=='true'}<button type='button' class='close' <span>&times;</span></button>{/if}{value!j}{_bsBadge!i}</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "{if dismissable=='true'}  {id}.onclick = function() {{{id}.hide();}};{/if}"
+    ]
+		
+}

@@ -1,0 +1,108 @@
+{ 
+"_type": "RadioButton_jqm14", 
+"_base": ["fonts","Input"], 
+"_palette": 9, 
+"_art": "images/radiobutton.png",
+"_shorthelp": "<a href='{_docurl}'>RadioButton</a> with multiple lines. jQuery Mobile",
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+	"{_nsbdir}toolbox/jqm/dist/jqmFunctions.js",
+    "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+    "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+    "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+    ],
+"_displayname": "RadioButton",
+"_longhelp": "longhelp",
+"height": "auto", 
+"width": 160, 
+
+"_acprops": {
+    "getItemCount()": {"desc": "Get the number of items."},
+    "getValue(n)": {"desc": "Get the value of item n."},
+    "setValue(n,val)": {"desc": "Set value of item n to True or False."},
+    "value()": {"desc": "Get the number of the currently selected item."}
+},
+
+"items": "One,Two",
+"_items": { 
+    "acignore": true,
+    "desc": "List of items, comma separated", 
+    "type": "css",
+    "language": "HTML"  
+    }, 
+    
+"value": 1,
+"_value": { 
+    "acignore": true,
+    "desc": "Option number initially selected.", 
+    "type": "int" 
+    }, 
+    
+"orientation": "", 
+"_orientation": { 
+    "acignore": true,
+    "desc": "Display items vertically or horizontally", 
+    "type": "enum", 
+    "keys": ["Vertical", "Horizontal"], 
+    "values": ["", "data-type=horizontal"]
+    }, 
+
+"theme": "",
+"_theme": { 
+    "acignore": true,
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"mini": "", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"corners": "false", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["false", "true"]
+    },
+    
+"iconPos": "left",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Checkbox Position", 
+    "type": "enum", 
+    "keys":   ["left","right"], 
+    "values": [""," data-iconPos=right"]
+    }, 
+
+"_htmltemplate": "  NSB.RadioButton_jqm('{id}', '{width}', '{items!j}', '{value}', '{style!j}', '{orientation} {mini}', '{theme}', '{disabled} {class}', '{corners}', '{iconPos}'),",
+
+"_jstemplate":[
+    "  NSB.RadioButton_jqm_init('{id}','{width}');",
+	"  {if height <> 'auto'}if ({height}>0) {{",
+	"    if ('{orientation}'=='') {{",
+	"      $('#{id} .ui-btn').css('height','{height}'/{id}.getItemCount()) }}",
+	"    else $('#{id} .ui-btn').css('height','{height}') }}{/if}",
+	"{if (fontSize<>'')}  $('#{id} .ui-btn').css('font-size','{fontSize!p}');{/if}",
+	"{if (fontFamily<>'')}  $('#{id} .ui-btn').css('font-family','{fontFamily}');{/if}",
+	"{if (fontStyle>'')}  $('#{id} .ui-btn').css('font-style','{fontStyle}');{/if}",
+	"{if (fontWeight>'')}  $('#{id} .ui-btn').css('font-weight','{fontWeight}');{/if}",
+    "  NSB.defineProperty({id}, 'Height', {{set: function(h){{if ('{orientation}'=='') {{",
+	"      $('#{id} .ui-btn').css('height',h/{id}.getItemCount()) }}",
+	"    else $('#{id} .ui-btn').css('height',h) }}, get: function(){{return parseInt($('#{id}').css('height'))}}}})",
+	"  try{{NSB.addProperties({id},undefined,true);}}catch(e){{console.log('error:' + e.message)}}"
+	]
+}

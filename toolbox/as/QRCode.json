@@ -1,0 +1,44 @@
+{
+"_type": "QRCode",
+"_base": ["borders", "colors", "fonts", "margin", "Widget"],
+"_palette": 4,
+"_art": "images/qrcode.png",
+"_shorthelp": "<a href='{_docurl}'>Display a QRCode by doing QRCode1.setValue(string)",
+"_category": ["All", "Multimedia"],
+"_displayname": "QRCode",
+"_longhelp": "longhelp",
+"_requiredfiles": ["{_nsbdir}nsb/library/qrcode.min.js"],
+
+"height": "115",
+"width": "115",
+"borderColor": "#E0E0E0",
+"borderWidth": "1",
+
+"_acprops": {
+    "setValue()": {"desc": "Set the value to display"}
+},
+
+"value": "AppStudio is great!",
+"_value": { 
+   "acignore": true,
+    "desc": "String to display as a QR code.", 
+    "type": "css" 
+   }, 
+
+"options": "{}",
+"_options": { 
+   "acignore": true,
+    "desc": "JSON code for options. See https://wiki.appstudio.dev/QRCode.", 
+    "type": "css"
+   }, 
+
+"_htmltemplate": "  \"<canvas id='{id}' class='{class}' style='{_margincss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}' ></canvas>\",",
+
+"_jstemplate": [
+    "  NSB.addProperties({id});",
+    "  {id}.setValue = function(s, options) {{",
+    "    QRCode.toCanvas(this, s, options, function (error) {{",
+    "      if (error) console.error(error)}})}};",
+    "{if value<>''}  {id}.setValue('{value}', {options});{/if}"
+]
+}

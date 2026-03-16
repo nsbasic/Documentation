@@ -1,0 +1,294 @@
+{ 
+"_type": "Stripe", 
+"_base": ["margin", "padding", "Widget"], 
+"_palette": 4, 
+"_art": "images/stripe.png", 
+"_shorthelp": "<a href='{_docurl}'>Stripe</a> button - Accept payments. Stripe account required.", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [
+    "{if image<>''}{image}{/if}",
+	"{if image==''}{_nsbdir}nsb/images/cards.png{/if}",
+    "{if icon<>''}{icon}{/if}",
+	"https://checkout.stripe.com/checkout.js"
+	],
+"_displayname": "Stripe",
+"_longhelp": "longhelp",
+
+"height": 28,
+"width": 165,
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+
+"onSetup": "", 
+"_onSetup": { 
+    "acignore": true,
+    "desc": "Called when Stripe clicked. Use to set data for Stripe.", 
+    "type": "js" 
+    }, 
+
+"onSalesTax": "", 
+"_onSalesTax": { 
+    "acignore": true,
+    "desc": "Called after data is collected, but before charge is processed.", 
+    "type": "js" 
+    }, 
+
+"onApprovalReceived": "", 
+"_onApprovalReceived": { 
+    "acignore": true,
+    "desc": "Called when Stripe approves (or does not approve) the transaction.", 
+    "type": "js" 
+    }, 
+
+"alipay": "false",
+"_alipay": { 
+    "acignore": true,
+    "desc": "Accept Alipay?", 
+    "type": "enum", 
+    "keys": ["auto", "True", "False"], 
+    "values": ["auto", "true", "false"]
+    }, 
+
+"alipayReusable": "false",
+"_alipayReusable": { 
+    "acignore": true,
+    "desc": "Reusable access to customer's Alipay account needed?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"allowRememberMe": "true",
+"_allowRememberMe": { 
+    "acignore": true,
+    "desc": "Reusable access to customer's Alipay account needed?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"amount": "9995",
+"_amount": { 
+    "acignore": true,
+    "desc": "Amount to charge. No decimal point, so enter 9995 for 99.95. Must be a number.", 
+    "type": "str" 
+    }, 
+
+"billingAddress": "false",
+"_billingAddress": { 
+    "acignore": true,
+    "desc": "Should Stripe prompt for the billing address?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"bitcoin": "false",
+"_bitcoin": { 
+    "acignore": true,
+    "desc": "Accept BitCoin?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"chargeScript": "/php/stripe.php",
+"_chargeScript": { 
+     "acignore": true,
+   "desc": "The name of the PHP script on your server which calls Stripe for authorization.", 
+    "type": "str" 
+    }, 
+
+"currency": "USD",
+"_currency": { 
+    "acignore": true,
+    "desc": "Currency of transaction. 3 letter ISO code.", 
+    "type": "str" 
+    }, 
+
+"description": "description",
+"_description": { 
+    "acignore": true,
+    "desc": "Description of what is being sold. Displayed on Stripe popup.", 
+    "type": "str" 
+    }, 
+
+"email": "email@nsbasic.com",
+"_email": { 
+     "acignore": true,
+   "desc": "Customer's email. Displayed on Stripe popup. If empty, Stripe popup will request it.", 
+    "type": "str" 
+    }, 
+
+"sendReceipt": "true",
+"_sendReceipt": { 
+    "acignore": true,
+    "desc": "Send a receipt to customer's email (Customer email required)?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"image": "", 
+"_image": { 
+    "desc": "Location of image, if other than default. Do not add files to /nsb.", 
+    "type": "image" 
+    }, 
+
+"icon": "nsb/images/128.png",
+"_icon": { 
+     "acignore": true,
+   "desc": "128x128 icon to display on Stripe popup. gif, jpg or png. Do not add files to /nsb.", 
+    "type": "image" 
+    }, 
+
+"key": "pk_DjNpaV7prFyEtAhKmAAQ3woPl80u2",
+"_key": { 
+    "acignore": true,
+    "desc": "Your public key. Issued by Stripe.", 
+    "type": "str" 
+    }, 
+
+"locale": "auto",
+"_locale": { 
+    "acignore": true,
+    "desc": "Specify auto to display Checkout in the user's preferred language, if available. English will be used by default.", 
+    "type": "str" 
+    }, 
+
+"metadata": "{tax: 0, country: 'USA'}",
+"_metadata": { 
+    "acignore": true,
+    "desc": "Additional data of your own, in object format. Use {} for no metadata.", 
+    "type": "css" 
+    }, 
+
+"panelLabel": "label",
+"_panelLabel": { 
+    "acignore": true,
+    "desc": "Additional label to show on pay button on Stripe popup.", 
+    "type": "str" 
+    }, 
+
+"name": "name",
+"_name": { 
+    "acignore": true,
+    "desc": "Your company name. Displayed on Stripe popup.", 
+    "type": "str" 
+    }, 
+
+"shippingAddress": "false",
+"_shippingAddress": { 
+    "acignore": true,
+    "desc": "Should Stripe prompt for the shipping address?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"zipCode": "false",
+"_zipCode": { 
+    "acignore": true,
+    "desc": "Should Stripe validate the billing ZIP code?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"data": "", 
+"_data": { 
+    "actype": "stripeData",
+    "desc": "Styling rules for element", 
+    "type": "hidden" 
+    },
+
+"debugging": "false",
+"_debugging": { 
+    "desc": "Show debugging info in Console?", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["true", "false"]
+    }, 
+
+"_htmltemplate": 
+  "  \"<img id='{id}' style='{style!j}{_margincss!i}{_paddingcss!i}{hidden}' class='{class}' src='{if image==''}nsb/images/cards.png{/if}{if image<>''}{image}{/if}'>\",",
+  
+"_jstemplate": [
+"  {id}.data = {{",
+"      alipay: {alipay},",
+"      alipayReusable: {alipayReusable},",
+"      allowRememberMe: {allowRememberMe},",
+"      amount: {amount},",
+"      billingAddress: {billingAddress},",
+"      bitcoin: {bitcoin},",
+"      currency: '{currency}',",
+"      description: '{description}',",
+"      email: '{email}',",
+"      icon: '{icon}',",
+"      locale: '{locale}',",
+"      name: '{name}',",
+"      panelLabel: '{panelLabel}',",
+"      shippingAddress: {shippingAddress},",
+"      zipCode: {zipCode},",
+"      metadata: {metadata}",
+"  }};",
+"  ",
+"  {id}.debugging = {debugging};",
+"  {id}.chargeScript = '{chargeScript}';",
+"  if ({id}.debugging) console.log('Stripe: configure called with key ', '{key}');",
+"  if (typeof(StripeCheckout) != 'undefined') {id}.handler = StripeCheckout.configure({{key: '{key}'}});",
+"  ",
+"  {id}.onclick = function(e) {{",
+"      if ({id}.debugging) console.log('Stripe: clicked. Action set to stripe');",
+"      {id}.data.action = 'stripe';",
+"      {id}.data.token = {id}.onTokenReceived;",
+"      if ({id}.debugging && typeof({id}.onSetup) === 'function') console.log('Stripe: calling {id}.onSetup()')",
+"      var ok = (typeof({id}.onSetup) === 'function') ? {id}.onSetup() : true;",
+"      if ({id}.data.amount <= 0) {{console.log('Stripe: Amount must be greater than 0.');return false;}}",
+"      if (ok != false) {{",
+"          if ({id}.debugging) console.log('Stripe: onSetup is OK.');",
+"          if ({id}.debugging) console.log('Stripe: calling {id}.handler.open()', {id}.data);",
+"          {id}.handler.open({id}.data)",
+"      }} else {{",
+"          console.log('Stripe: onSetup did not return true');",
+"      }}",
+"      e.preventDefault();",
+"  }};",
+"  ",
+"  {id}.onTokenReceived = function(token) {{",
+"      if ({id}.debugging) console.log('Stripe: token received', token);",
+"      {id}.data.action = 'stripe';",
+"      {id}.data.card = token.card;",
+"      {id}.data.client_ip = token.client_ip;",
+"      {id}.data.country = token.card.address_country;",
+"      {id}.data.created = token.created;",
+"      {id}.data.email = token.email;",
+"{if sendReceipt=='true'}      {id}.data.receipt_email = token.email;{/if}",
+"      {id}.data.livemode = token.livemode.toString();",
+"      {id}.data.id = token.id;",
+"      {id}.data.type = token.type;",
+"      {id}.data.used = token.used;",
+"      {id}.data.token = '';",
+"      if ({id}.debugging) console.log('Stripe: data set to', {id}.data);",
+"      var ok = (typeof({id}.onSalesTax) === 'function') ? {id}.onSalesTax() : true;",
+"      if ({debugging}) console.log('Stripe: Result of onSalesTax()', ok);",
+"      if (ok) {{",
+"              if ({id}.debugging) console.log('Stripe: onApprovalReceived called');",
+"              {id}.onApprovalReceived(token);",
+"      }}",
+"  }}",
+"  ",
+"  $(window).on('popstate', function() {{",
+"      {id}.handler.close();",
+"  }});"
+  ]
+  
+}

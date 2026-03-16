@@ -1,0 +1,123 @@
+{ 
+"_type": "DateTimeInput_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxdatetimeinput.png", 
+"_wikipage": "jqxDateTimeInput",
+"_shorthelp": "<a href='{_docurl}'>DateTime</a> input with calendar. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+	  "{pathTo_jqWidgets}jqxdatetimeinput.js",
+	  "{pathTo_jqWidgets}jqxcalendar.js",
+	  "{pathTo_jqWidgets}jqxtooltip.js",
+	  "{pathTo_jqWidgets}globalization/globalize.js",
+    "{pathTo_jqWidgets}styles/images/icon-calendar.png",
+    "{pathTo_jqWidgets}styles/images/icon-calendar-white.png",
+    "{pathTo_jqWidgets}styles/images/icon-time.png",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png"
+    ],
+  
+"_displayname": "DateTimeInput",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "popupZIndex": {"desc": "Index # in popup box"},
+    "value": {"desc": "The value."}
+	},
+
+"height": 30,
+"width": 100, 
+    
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+ 
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    },
+	
+"formatString": "MM/dd/yyyy", 
+"_formatString": { 
+    "desc": "Date or time format. Use t for time. See jqWidgets docs for all the options.", 
+    "type": "str"
+    },
+	
+"selectionMode": "default", 
+"_selectionMode": { 
+    "desc": "Sets or gets the dropdown calendar's selection mode.", 
+    "type": "enum", 
+    "keys": ["none", "default","range"], 
+    "values": ["none", "default","range"]
+    },
+	
+"showCalendarButton": "true",
+"_showCalendarButton":{
+	"desc": "Show the Calendar button.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+  	
+"showFooter": "false",
+"_showFooter":{
+	"desc": "Sets a value indicating whether the calendar's footer is displayed.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+	
+"closeCalendarAfterSelection": "true",
+"_closeCalendarAfterSelection":{
+	"desc": "Close Calendar after selection has been done.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+
+"enableBrowserBoundsDetection": "true",
+"_enableBrowserBoundsDetection":{
+	"desc": "When this property is set to true, the popup calendar may open above the input, if there's not enough space below the DateTimeInput.",
+	"type": "enum",
+	"keys": ["False","True"],
+	"values": ["false","true"]
+	},
+	
+"dropDownHorizontalAlignment": "right",
+"_dropDownHorizontalAlignment":{
+	"desc": "Calendar alignment.",
+	"type": "enum",
+	"keys": ["Right","Left"],
+	"values": ["right","left"]
+	},      
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "     disabled:{disabled},",
+  "     rtl:{rtl},",
+  "     height:'{height}',",
+  "     width:'{width}',",
+  "     formatString: '{formatString}',",
+  "     theme:'{theme}',",
+  "     selectionMode: '{selectionMode}',",
+  "     enableBrowserBoundsDetection: {enableBrowserBoundsDetection},",
+  "     closeCalendarAfterSelection: {closeCalendarAfterSelection},",
+  "     showCalendarButton: {showCalendarButton},",
+  "     dropDownHorizontalAlignment: '{dropDownHorizontalAlignment}',",
+  "     showFooter: {showFooter}",		
+  "  }}",
+  "  $('#{id}').jqxDateTimeInput(NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id});"]
+}

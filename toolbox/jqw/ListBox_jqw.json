@@ -1,0 +1,115 @@
+{ 
+"_type": "ListBox_jqw", 
+"_base": ["jqxAll"], 
+"_palette": 4, 
+"_art": "images/jqxlistbox.png", 
+"_wikipage": "jqxListBox",
+"_shorthelp": "<a href='{_docurl}'>ListBox</a>.  jqxWidgets (Commercial)", 
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}styles/jqx.base.css",
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",
+  	"{pathTo_jqWidgets}jqxcore.js",
+    "{pathTo_jqWidgets}jqxbuttons.js",
+  	"{pathTo_jqWidgets}jqxscrollbar.js",
+  	"{pathTo_jqWidgets}jqxlistbox.js",
+  	"{pathTo_jqWidgets}jqxcheckbox.js",
+    "{pathTo_jqWidgets}styles/images/icon-right.png",
+    "{pathTo_jqWidgets}styles/images/icon-left.png",
+    "{pathTo_jqWidgets}styles/images/icon-up.png",
+    "{pathTo_jqWidgets}styles/images/icon-down.png",
+    "{pathTo_jqWidgets}styles/images/check_black.png",
+    "{pathTo_jqWidgets}styles/images/bg_blueenergy.png",
+    "{pathTo_jqWidgets}styles/images/bg_darkblue.png",
+    "{pathTo_jqWidgets}styles/images/bg_black.png"
+	],
+"_displayname": "ListBox",
+"_longhelp": "longhelp",
+
+"name": "", 
+"_name": { 
+    "desc": "Key in submitted form", 
+    "type": "str" 
+    }, 
+    
+"style": "", 
+"_style": { 
+    "actype": "Style",
+    "desc": "Styling rules for element", 
+    "type": "css",
+    "language": "CSS"
+    }, 
+
+"height": 80, 
+"width": 150, 
+
+"source": "[\"one\",\"two\",\"three\"]",
+"_source": {
+	"desc": "Sets the list of choices. Must be one line.",
+	"type": "css"
+	},
+
+"enableSelection": "true", 
+"_enableSelection": { 
+    "desc": "Enable Selection?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+	
+"filterable": "false", 
+"_filterable": { 
+    "desc": "Enable filter entries to show?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+	
+"filterPlaceHolder": "Looking for", 
+"_filterPlaceHolder": { 
+    "desc": "Text to show in filter", 
+    "type": "str" 
+    },
+	
+"checkboxes": "false", 
+"_checkboxes": { 
+    "desc": "Use checkboxes?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+	
+"multiple": "false", 
+"_multiple": { 
+    "desc": "Enable Multiple Selection?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    }, 
+	
+"selectedIndex": 1,
+"_selectedIndex": { 
+    "acignore": true,
+    "desc": "Default value.", 
+    "type": "int" 
+    },
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "    height:'{height}',",
+  "    source:eval({source}),",
+  "    theme:'{theme}',",
+  "    width:'{width}',",
+  "    multiple: {multiple},",
+  "    enableSelection: {enableSelection},",
+  "    filterable: {filterable},",
+  "    filterPlaceHolder: '{filterPlaceHolder}',",
+  "    checkboxes: {checkboxes},",
+  "    selectedIndex: {selectedIndex},",
+  "  }}",
+  "  $('#{id}').jqxListBox (NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id});"]
+}

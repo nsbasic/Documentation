@@ -1,0 +1,11 @@
+{ 
+  "!type": "Button_bs4", 
+  "ChangeForm": "frmUpload", 
+  "appearance": " btn-secondary", 
+  "icon": "arrow-l", 
+  "id": "hdrFiles_btnLeft", 
+  "left": "0", 
+  "mAll": "4", 
+  "size": " btn-sm", 
+  "value": "Back" 
+} 

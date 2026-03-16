@@ -1,0 +1,53 @@
+{ 
+"_type": "Select_bs", 
+"_base": ["bsAll", "margin", "padding", "fonts", "Input", "colors", "bsInput", "bsItems", "bsIcon", "bsPopover", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/select.png", 
+"_wikipage": "Select (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Select</a> displays a list of items to select from. Bootstrap.",
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "value": {"desc": "Gets or sets the choice."},
+    "text": {"desc": "Gets the choice."},
+    "length": {"desc": "Return the number of items."}
+},
+
+"_displayname": "Select",
+"_longhelp": "longhelp",
+"_placeholder": {"type": "hidden"},
+"header": "Select",
+"items": "Item 1\nItem 2\n*Item 3 (disabled)\n>Item 4",
+
+"width": "auto",
+"height": "auto",
+ 
+"multiSelect": "",
+"_multiSelect": { 
+    "acignore": true,
+    "desc": "Allow multiple selection. nativeMenu must be false.", 
+    "type": "enum", 
+    "keys": ["false","true"], 
+    "values": ["","true"]
+    }, 
+    
+"size": "",
+"_size": { 
+    "acignore": true,
+    "desc": "Maximum number of rows to display. Default is 1 (4 if multiSelect).", 
+    "type": "str" 
+   },
+              
+"_htmltemplate": [
+    "  \"{_bsInput_wrapper!i}{_bsInput_header!i}\",",
+    "    NSB.bs.select.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{disabled}', '{items!j}', '{multiSelect}', '{size}'),",
+    "    \"{_bsIconFeedback!i}{_bsinput_footer!i}\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+
+}

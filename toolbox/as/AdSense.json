@@ -1,0 +1,82 @@
+{ 
+"_type": "AdSense", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/adsense.png", 
+"_shorthelp": "<a href='{_docurl}'>Adsense</a> pays you to put small ads in your app. Set up an account in <a href='adsense.google.com'>adsense.google.com</a> first. Remember to put string into extraheaders -- see docs!", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [],
+"_resizable": false,
+"_displayname": "AdSense",
+"_longhelp": "longhelp",
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+"_style": {"type": "hidden"},
+
+"top": 0, 
+"_top": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+  
+"bottom": "auto", 
+"_bottom": { 
+    "acignore": true,
+    "desc": "Location of top of element", 
+    "type": "str" 
+    },
+  
+"height": "50", 
+"_height": { 
+    "acignore": true,
+    "desc": "Height of element. Should be same as from AdSense", 
+    "type": "str" 
+    }, 
+
+"client": "ca-pub-7836121006779316", 
+"_client": { 
+  "i18n": false,
+    "desc": "AdSense Client ID. Get this from <a href='adsense.google.com'>adsense.google.com</a>",
+    "_desc": {"i18n": true},
+    "type": "str" 
+    }, 
+  
+"format": "320x50", 
+"_format": { 
+  "i18n": true,
+    "desc": "Size of ad.", 
+    "type": "enum",
+    "keys": ["320x50","320x100","200x200","200x250","300x250"], 
+    "values": ["width:320px;height:50px", "width:320px;height:100px", "width:200px;height:200px", "width:200px;height:250px", "width:32px;height:250px"]
+    }, 
+  
+"slot": "1368830466", 
+"_slot": { 
+  "i18n": true,
+    "desc": "Get this from AdSense.com", 
+    "type": "str" 
+    }, 
+   
+"width": "100%",
+"left": 0,
+
+"_htmltemplate": "  \"<ins id='{id}' class='adsbygoogle {class}' style='display:inline-block;{format}' data-ad-client='{client}' data-ad-slot='{slot}'></ins>\",",
+
+"_jstemplate": "  (adsbygoogle = window.adsbygoogle || []).push({{}});",
+                
+"_design_jstemplate": [
+  "{id}.getDesignFrameRect = function() {{",
+  "  return this.getBoundingClientRect();",
+  "}}"
+]
+
+}

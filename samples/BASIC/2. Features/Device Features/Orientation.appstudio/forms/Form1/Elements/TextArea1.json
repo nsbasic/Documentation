@@ -1,0 +1,16 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 225, 
+  "id": "TextArea1", 
+  "right": "auto", 
+  "top": 65, 
+  "value": "This app only runs in portrait mode.\nRotate this app to see the warning message.\nRotate back to return to this screen.", 
+  "width": 312, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

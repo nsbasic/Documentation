@@ -1,0 +1,43 @@
+{ 
+"_type": "Pageheader_bs", 
+"_base": ["bsAll", "fonts", "borders", "margin", "padding", "colors",  "bsHeaderValue", "bsBadge"], 
+"_palette": 9, 
+"_art": "images/pageheader.png",
+"_wikipage": "Pageheader (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Pageheader</a> display a title and some subtext. Bootstrap.", 
+"_category": ["All", "Bootstrap 3 (obsolete)"],
+
+"_displayname": "Pageheader",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"text": "Pageheader",
+
+"size": "h3",
+"_size": { 
+    "acignore": true,
+    "desc": "Size of text.", 
+    "type": "enum", 
+    "keys": ["h1", "h2", "h3", "h4", "h5"], 
+    "values": ["h1", "h2", "h3", "h4", "h5"]
+    }, 
+
+"well": "",
+"_well": { 
+    "acignore": true,
+    "desc": "A border around the heading. Use with caution - will be replaced in a future release.", 
+    "type": "enum", 
+    "keys": ["none", "small", "medium", "large"], 
+    "values": ["", "well well-sm", "well", "well well-lg"]
+    }, 
+
+"_htmltemplate": [
+    "  \"<div id='{id}' class='page-header {well} {class}' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'><{size}>{header!b}{_bsBadge!i}<small>{value!b}</small></{size}></div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+		
+}

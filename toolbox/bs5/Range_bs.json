@@ -1,0 +1,74 @@
+{ 
+"_type": "Range_bs5", 
+"_base": ["bs5All", "borders", "margin", "colors"], 
+"_palette": 9, 
+"_art": "images/range.png",
+"_wikipage": "Range (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Range</a>. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Range",
+"_longhelp": "longhelp",
+
+"width": "250",
+"height": "",
+
+"onchange": "", 
+"_onchange": { 
+    "acignore": true,
+    "desc": "Element value changed", 
+    "type": "js" 
+    },
+
+"_onclick": {"type": "hidden"},
+
+"disabled": "",
+"_disabled": { 
+    "acignore": true,
+    "desc": "Give it a grayed out appearance?", 
+    "type": "enum", 
+    "keys": ["", "true"], 
+    "values": ["", "true"]
+    }, 
+
+"min": 0, 
+"_min": { 
+    "desc": "Minimum Value", 
+    "type": "int" 
+    }, 
+    
+"value": "50", 
+"_value": { 
+    "desc": "Initial Value", 
+    "type": "str" 
+    }, 
+    
+"max": 100, 
+"_max": { 
+    "desc": "Maximum Value", 
+    "type": "int" 
+    }, 
+    
+"step": 1, 
+"_step": { 
+    "desc": "Increments range is divided into", 
+    "type": "int" 
+    }, 
+
+"_csstemplate": [
+    "#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}{if left<>'' and left<>'auto'} left:{left!p};{/if}{if right<>'' and right<>'auto'} right:{right!p};{/if}{if top<>'' and top<>'auto'} top:{top!p};{/if}{if bottom<>'' and bottom<>'auto'} bottom:{bottom!p};{/if}{if height<>'' and height<>'auto'} height:{height!p};{/if}{if width<>'' and width<>'auto'} width:{width!p};{/if}{if orientation<>''} width:20px;{/if}}}\n"
+],
+
+"_htmltemplate": [
+    "    \"<input id='{id}' class='form-range {class}' style='{style}' data-role=none type=range min={min} max={max} step={step} value={value} {if disabled=='true'} disabled{/if}></input>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {id}.hide = function() {{$('#{id}').hide()}};",
+  "  {id}.show = function() {{$('#{id}').show()}};"
+  ]
+		
+}
+
+

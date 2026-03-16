@@ -1,0 +1,96 @@
+{ 
+"_type": "HTMLview", 
+"_base": ["fonts","borders","Input"], 
+"_palette": 4, 
+"_art": "images/htmlview.png", 
+"_shorthelp": "<a href='{_docurl}'>HTMLView</a> displays HTML, pdf and other data with scrolling.", 
+"_category": ["All", "Multimedia"],
+"_requiredfiles": ["{if scrolling=='true'}{_nsbdir}nsb/library/iscroll.js{/if}"],
+"_displayname": "HTMLview",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "refresh()": {"desc": "Refresh the control"}
+    },
+
+"width": 200, 
+"height": 100, 
+
+"innerHTML": "<b>HTMLview with scrolling</b>", 
+"_innerHTML": { 
+    "i18n": true,
+    "desc": "Contents of the view. Must be valid HTML, or the project will not work properly!", 
+    "type": "css",
+    "language": "HTML"
+    }, 
+
+"scrolling": "false", 
+"_scrolling": { 
+    "acignore": true,
+    "desc": "Allow scrolling?", 
+    "type": "enum", 
+    "keys": ["true", "false"], 
+    "values": ["true", "false"]
+    }, 
+    
+"scroll_options": "mouseWheel:true, bounce: false, zoom:true", 
+"_scroll_options": { 
+    "acignore": true,
+    "desc": "iScroll Options. See iScroll docs at <a href='http://iscrolljs.com' target='_top'>http://iscrolljs.com</a>.", 
+    "type": "css"
+    }, 
+    
+"backgroundColor": "", 
+"_backgroundColor": { 
+    "acignore": true,
+    "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str"
+    }, 
+
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none;",""]
+    }, 
+
+"contenteditable": "", 
+"_contenteditable": { 
+    "desc": "Allow contents to be edited, including bold, italic and underline. (iOS6)", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["contenteditable=true",""]
+    }, 
+
+
+"overflow": "auto", 
+"_overflow": { 
+    "acignore": true,
+    "desc": "What happens if content overflows an element's box.", 
+    "type": "enum", 
+    "keys": ["auto","hidden","visible","scroll"], 
+    "values": ["auto","hidden","visible","scroll"]
+    }, 
+
+"color": "",
+"_color": { 
+    "acignore": true,
+    "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"_htmltemplate": "  \"<div id='{id}_scroller' class='{class}' {disabled!j} {contenteditable} style='{if scrolling=='true'}overflow-y:auto; {/if}{hidden} {if fontSize<>''}font-size:{fontSize!p}; {/if}{if fontFamily<>''}font-family:{fontFamily}; {/if}{if fontStyle<>''}font-style:{fontStyle}; {/if}{if fontWeight<>''}font-weight:{fontWeight}; {/if}{if color<>''}color:{color}; {/if}{if backgroundColor<>''}background-color:{backgroundColor}; {/if} {if borderWidth.isdigit()}border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor}; {/if} {style!j}' name='{name}'><div id='{id}' style='overflow:{overflow}; height:auto;{if width<>''} width:{width!p};{/if};'>{innerHTML!j}</div></div>\"," ,
+
+"_csstemplate": [
+	"#{id}_scroller {{{if _parent.position<>'static'}position:{_parent.position};{/if}{if display<>''} display:{display};{/if}overflow:hidden;{_cssbounds!i}}}",
+	"\n#{id} {{{if _parent.position<>'static'}position:{_parent.position};{/if} left:0px; top:0px;{if height<>''} height:{height!p};{/if} width:100%;}}"],
+    
+"_jstemplate": [
+"{if scrolling == 'true'}  {id}_ref = new IScroll({id}_scroller,{{ {scroll_options}}});{/if}",
+"{if scrolling == 'true'}  {id}.refresh = function(){{setTimeout({id}_ref.refresh(),100)}};{/if}",
+"{if scrolling == 'true'}  {id}.ref = {id}_ref;{/if}",
+"{if scrolling == 'true'}  {id}.scroller = {id}_scroller;{/if}",
+"  NSB.addProperties({id},{id}_scroller);"
+]
+}

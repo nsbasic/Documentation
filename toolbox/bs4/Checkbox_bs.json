@@ -1,0 +1,60 @@
+{ 
+"_type": "Checkbox_bs4", 
+"_base": ["bs4All", "margin", "padding", "fonts", "Input", "colors", "bs4Input", "bs4Items", "bs4Icon", "bs4Popover", "bs4Badge"], 
+"_palette": 9, 
+"_art": "images/checkbox.png", 
+"_wikipage": "Checkbox (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Checkbox</a> lets you define one or more checkboxes. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+
+"_acprops": {
+    "addItem(s)": {"desc": "Add new item s to the end."},
+    "clear()": {"desc": "Remove all items."},
+    "getValue(n)": {"desc": "Get the value of item n."},
+    "footer": {"desc": "Change the footer."},
+    "header": {"desc": "Change the header."},
+    "length": {"desc": "Return the number of items."},
+    "setValue(n, value)": {"desc": "Set the value of item n to True or False."}
+},
+
+"_displayname": "Checkbox",
+"_longhelp": "longhelp",
+"header": "Check Box",
+"_placeholder": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"items": "Item #1\nItem #2\n*Item #3 (disabled)",
+
+"inline": "", 
+"_inline": { 
+    "acignore": true,
+    "desc": "Display options horizontally?", 
+    "type": "enum", 
+    "keys": ["", "inline"], 
+    "values": ["", "-inline"]
+    },
+    
+"value": "", 
+"_value": { 
+    "desc": "Value of input.", 
+    "type": "str" 
+    }, 
+                
+"_htmltemplate": [
+    "  \"<div id={id} class='{class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}'>\",",
+    "  \"{_bsInput_wrapperNoPopover!i}{_bsInput_headerColsNoBadgeNoInput!i}\",",
+    "{if header<>''}    \"<div class='col-sm-{valueCols}'>\",{/if}",
+    "{if header==''}    \"<div class='col-sm-12'>\",{/if}",
+    "      \"{_bsBadgePadBelow!i}\",",
+    "    NSB.bs.checkbox.make('{id}', '{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}', '{disabled}', '{items!j}', '{inline}', '{value}'),",
+    "{if icon<>''}        \"<div class='input-group-append'{_bsPopover!i}>\",{/if}",
+    "{if icon<>''}          \"<a><span class='input-group-text oi oi-{icon}'>&nbsp;</span></a></div>\",{/if}",
+    "    \"{_bsinput_footer!i}\",",
+    "  \"</div></div>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

@@ -1,0 +1,30 @@
+{ 
+"_type": "Image_bs4", 
+"_base": ["bs4All", "bs4Image", "margin", "padding", "fonts", "colors", "Widget", "bs4Popover"], 
+"_palette": 9, 
+"_art": "images/image.png", 
+"_wikipage": "Image (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Image</a> lets you display an image. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+"_requiredfiles": [
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}css/{BootstrapTheme}.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/css/open-iconic-bootstrap.min.css",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}open-iconic/fonts/open-iconic.woff",
+  "{if pathTo_bootstrap==''}{_nsbdir}toolbox/bs4/dist/{/if}{if pathTo_bootstrap<>''}{pathTo_bootstrap}{/if}js/bootstrap.bundle.min.js",
+  "{_nsbdir}toolbox/bs4/dist/bsFunctions.min.js",
+  "{if src<>'' and src[:5]<>'data:'}{src}{/if}"],
+
+"_displayname": "Image",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+    
+"_htmltemplate": [
+"    \"<img id='{id}' src='{src}' class='{responsive}{center}{shape} {class}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}{style!j}'{_bsPopover!i}>\",{/if}"
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+    ]
+}

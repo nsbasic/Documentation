@@ -1,0 +1,42 @@
+{
+    "_type": "bs5Image",
+    "_base": "NSBObject",
+    "_description": "Properties for Images.",
+
+"src": "nsb/images/192.png", 
+"_src": { 
+    "i18n": true,
+    "desc": "Image. Set to empty for none. Can be .png, gif, bmp or jpg.", 
+    "type": "image" 
+   }, 
+
+"responsive": " img-fluid", 
+"_responsive": { 
+    "acignore": true,
+    "desc": "Should image resize to container?", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": [""," img-fluid"]
+    }, 
+
+"center": "", 
+"_center": { 
+    "acignore": true,
+    "desc": "Should image be centered in container?", 
+    "type": "enum", 
+    "keys": ["", "True"], 
+    "values": [""," mx-auto"]
+    }, 
+
+"shape": "", 
+"_shape": { 
+    "acignore": true,
+    "desc": "thumbnail, rounded or circle?",
+    "type": "enum", 
+    "keys": ["", "thumbnail", "rounded", "rounded-top", "rounded-right", "rounded-bottom", "rounded-left", "rounded-circle", "rounded-0"], 
+    "values": ["", " img-thumbnail", " rounded", " rounded-top", " rounded-right", " rounded-bottom", " rounded-left", " rounded-circle", " rounded-0"]
+    },
+    
+"_bsImage": "<img id='{id}' src='{src}' class='{responsive}{center}{shape} {class}>"
+
+}

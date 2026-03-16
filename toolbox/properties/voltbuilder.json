@@ -1,0 +1,347 @@
+{
+    "_type": "voltbuilder",
+    "_base": "NSBObject",
+    "_description": "VoltBuilder specific properties, Used in Page.json",
+        
+    "androidAlias": "key0", 
+    "_androidAlias": { 
+        "display": "androidAlias",
+        "group": "VoltBuilder",
+        "desc": "Name of the alias in the Android keystore file. Must be in certificates folder. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "str" 
+        }, 
+      
+    "androidAliasPassword": "mypassword",
+    "_androidAliasPassword": {
+        "display": "androidAliasPassword",
+        "group": "VoltBuilder",
+        "desc": "Password for alias in the Android keystore file. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>",
+        "type": "str"
+      },
+      
+    "androidKeystore": "certificates/android.p12", 
+    "_androidKeystore": { 
+        "display": "androidKeystore",
+        "group": "VoltBuilder",
+        "desc": "Name of android keystore file. Must be in certificates folder. (.p12 or .keystore) See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "file" 
+        }, 
+      
+    "androidKeystorePassword": "mypassword",
+    "_androidKeystorePassword": {
+        "display": "androidKeystorePassword",
+        "group": "VoltBuilder",
+        "desc": "Password for Android keystore file. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>",
+        "type": "str"
+      },
+      
+    "androidPackageType": "apk",
+    "_androidPackageType": {
+      "group": "VoltBuilder",
+      "acignore": true,
+      "display": "androidPackageType",
+      "desc": "Normally apk. For Google Play Store, set to 'bundle' to get an .aab file. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a><b>Cordova command</b> should be 'run android --release' for bundle builds.", 
+      "type": "enum", 
+      "keys": [
+        "apk",
+        "bundle"
+      ],
+      "values": [
+        "apk",
+        "bundle"
+      ]
+    },
+    
+    "androidSigningVersion": "2",
+    "_androidSigningVersion": {
+      "group": "VoltBuilder",
+      "acignore": true,
+      "display": "androidSigningVersion",
+      "desc": "Normally 2 for Google Play Store. Other platforms may require other values.", 
+      "type": "enum", 
+      "keys": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+            
+    "googlePlayKey": "certificates/google.json",
+    "_googlePlayKey": { 
+        "acignore": true,
+        "display": "googlePlayKey",
+        "desc": "This is the name of the keyfile which will let VoltBuilder submit to Google, without allowing VoltBuilder to see any secure information. Go to <a href='https://volt.build/docs/google_play/'>Upload to Google Play</a> for instructions on getting your key. (.json). See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+    
+    "googlePlayTrack": "production",
+    "_googlePlayTrack": { 
+        "acignore": true,
+        "display": "googlePlayTrack",
+        "desc": "This is Google Play Store track. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+
+    "iosDevP12": "certificates/ios_development.p12", 
+    "_iosDevP12": { 
+        "display": "iosDevP12",
+        "group": "VoltBuilder",
+        "desc": "Name of iOS Development p12 file. Must be in certificates folder. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "file" 
+        }, 
+      
+    "iosDevP12Password": "mypassword",
+    "_iosDevP12Password": {
+        "display": "iosDevP12Password",
+        "group": "VoltBuilder",
+        "desc": "Password for ios Development .p12 keystore file. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>",
+        "type": "str"
+      },
+      
+    "iosDevelopment": "certificates/development.mobileprovision", 
+    "_iosDevelopment": { 
+        "display": "iosDevelopment",
+        "group": "VoltBuilder",
+        "desc": "Name of iOS development mobileprovision file. Must be in certificates folder. (.mobileprovision) See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "file" 
+        }, 
+      
+    "iosDistP12": "certificates/ios_distribution.p12", 
+    "_iosDistP12": { 
+        "display": "iosDistP12",
+        "group": "VoltBuilder",
+        "desc": "Name of iOS Distribution p12 file. Must be in certificates folder. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "file" 
+        }, 
+      
+    "iosDistP12Password": "mypassword",
+    "_iosDistP12Password": {
+        "display": "iosDistP12Password",
+        "group": "VoltBuilder",
+        "desc": "Password for iOS Distribution .p12 keystore file. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>",
+        "type": "str"
+      },
+      
+    "iosDistribution": "certificates/distribution.mobileprovision", 
+    "_iosDistribution": { 
+        "display": "iosDistribution",
+        "group": "VoltBuilder",
+        "desc": "Name of iOS distribution mobileprovision file. Must be in certificates folder. (.mobileprovision) See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "type": "file" 
+        },
+
+  "iosPackageType": "app-store", 
+  "_iosPackageType": { 
+      "group": "VoltBuilder",
+      "acignore": true,
+      "display": "iosPackageType",
+      "desc": "What type of distribution is this? See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+      "type": "enum", 
+      "keys": [
+        "enterprise",
+        "ad-hoc",
+        "app-store"
+      ],
+      "values": [
+        "enterprise",
+        "ad-hoc",
+        "app-store"
+      ]
+    },
+
+    "itunesAccount": "",
+    "_itunesAccount": { 
+        "acignore": true,
+        "display": "appStoreConnectAccount",
+        "desc": "(iOS) Your Apple ID. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+
+    "itunesAppPassword": "",
+    "_itunesAppPassword": { 
+        "acignore": true,
+        "display": "appStoreConnectAppPassword",
+        "desc": "(iOS) This is an app specific password will let VoltBuilder submit to Apple, without allowing VoltBuilder to see any secure information. Go to the <a href='https://appleid.apple.com/'>Apple ID</a> page and sign in. In the Security section, click on 'Generate Password...' Use VoltBuilder as your password label. You'll get back a string like wxyz-ymul-hbqn-xxxx which you paste here. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+    
+  "platform": "android", 
+  "_platform": { 
+      "group": "VoltBuilder",
+      "acignore": true,
+      "desc": "What platform do you want to build for?", 
+      "type": "enum", 
+      "keys": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "values": [
+        "android",
+        "ios",
+        "windows"
+      ]
+    },
+
+  "release": "debug", 
+  "_release": { 
+      "group": "VoltBuilder",
+      "acignore": true,
+      "display": "release",
+      "desc": "What type of build is this? See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+      "type": "enum", 
+      "keys": [
+        "debug",
+        "release"
+      ],
+      "values": [
+        "debug",
+        "release"
+      ]
+    },
+
+  "verbose": "false", 
+  "_verbose": { 
+      "group": "VoltBuilder",
+      "acignore": true,
+      "display": "verbose",
+      "desc": "Controls the amount of debugging output in the log. See <a href='https://volt.build/docs/set_up/#voltbuilderjson'>voltbuilder.json</a>", 
+      "type": "enum", 
+      "keys": [
+        "false",
+        "true"
+      ],
+      "values": [
+        "false",
+        "true"
+      ]
+    },
+
+    "phoneGapBuildCounter": "0",
+    "_phoneGapBuildCounter": {
+        "display": "BuildCounter",
+        "group": "VoltBuilder",
+        "desc": "Counts the number of builds so each build has a unique versionCode",
+        "type": "str"
+    },
+
+    "phoneGapStatusBarOverlay": "false",
+    "_phoneGapStatusBarOverlay": {
+        "desc": "Should the statusbar overlay the app? <a href='https://www.npmjs.com/package/cordova-plugin-statusbar'>More info</a>",
+        "display": "statusbarOverlay",
+        "group": "VoltBuilder",        
+        "type": "enum",
+        "keys": ["False", "True"],
+        "values": ["false", "true"]
+    },
+
+    "phoneGapStatusBarColor": "#000000",
+    "_phoneGapStatusBarColor": { 
+        "acignore": true,
+        "desc": "Background Color of statusbar as #RRGGBB. Can not be blank. <a href='https://www.npmjs.com/package/cordova-plugin-statusbar'>More info</a>", 
+        "display": "statusbarColor",
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+       
+    "phoneGapStatusBarStyle": "lightcontent",
+    "_phoneGapStatusBarStyle": {
+        "desc": "What color should the status bar be?",
+        "display": "statusbarStyle",
+        "group": "VoltBuilder",
+        "type": "enum",
+        "keys": ["default", "lightcontent", "blacktranslucent", "blackopaque"],
+        "values": ["default", "lightcontent", "blacktranslucent", "blackopaque"]
+    },
+    
+    "phoneGapIcon": "",
+    "_phoneGapIcon": {
+        "group": "VoltBuilder",
+        "display": "icon (1024)",
+        "desc": "Icon template. Must be 1024x1024 png, jpg or jpeg. If not supplied, AppStudio icon will be used.",
+        "type": "image"
+    },
+
+    "phoneGapSplash": "",
+    "_phoneGapSplash": {
+        "group": "VoltBuilder",
+        "display": "splash (2732)",
+        "desc": "Splash screen template. Must be 2732x2732 png, jpg or jpeg. If not supplied, AppStudio splash screen will be used. File should be dragged into the top level of the Project Explorer",
+        "type": "image"
+    },
+
+    "splashBackground": "#000000",
+    "_splashBackground": { 
+        "acignore": true,
+        "desc": "Background Color of splash background (Android) as #RRGGBB.", 
+        "display": "splash background",
+        "group": "VoltBuilder",        
+        "type": "str" 
+       }, 
+
+   "configxml": ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "<widget ",
+        "xmlns = \"https://www.w3.org/ns/widgets\"",
+        "id = \"com.nsbasic.{id}\"",
+        "android-versionCode = \"{phoneGapBuildCounter}\"",
+        "ios-CFBundleVersion = \"{phoneGapBuildCounter}\"",
+        "version = \"{version}\">",
+        "",
+        "<name>{title}</name>",
+        "<description>{description}</description>",
+        "",
+  		  "<icon src='resources/iconTemplate.png' />",
+				"<preference name='SplashScreenDelay' value='2000' />",
+				"<preference name='AutoHideSplashScreen' value='true' />",
+				"<preference name='AndroidWindowSplashScreenAnimatedIcon' value='resources/splashTemplate.png' />",
+				"<preference name='AndroidWindowSplashScreenBackground' value='{splashBackground}' />",
+				"<plugin name='cordova-plugin-splashscreen' source='npm' />",
+        "",
+        "<preference name=\"permissions\" value=\"none\"/>",
+        "<!-- sample preference specifications -->",
+        "<!-- <preference name=\"autorotate\" value=\"false\" readonly=\"true\"/> -->",
+        "<!-- <preference name=\"orientation\" value=\"default\" /> -->",
+        "<!-- <preference name=\"fullscreen\" value=\"true\" /> -->",
+        "",
+        "<plugin name=\"cordova-plugin-statusbar\" source=\"npm\" />",
+        "  <preference name=\"StatusBarOverlaysWebView\" value=\"{phoneGapStatusBarOverlay}\" />",
+        "  <preference name=\"StatusBarBackgroundColor\" value=\"{phoneGapStatusBarColor}\" />",
+        "  <preference name=\"StatusBarStyle\" value=\"{phoneGapStatusBarStyle}\" />",
+        "",
+        "  <allow-navigation href=\"*\" />",
+        "  <access origin=\"*\" />",
+        "  <allow-intent href=\"*\" />",
+        "",
+        "<plugin name=\"cordova-plugin-wkwebview-engine\" source=\"npm\" />",
+        "<platform name=\"ios\">",
+        "  <preference name=\"WKWebViewOnly\" value=\"true\" />",
+        "  <feature name=\"CDVWKWebViewEngine\">",
+        "    <param name=\"ios-package\" value=\"CDVWKWebViewEngine\" />",
+        "  </feature>",
+        "  <preference name=\"CordovaWebViewEngine\" value=\"CDVWKWebViewEngine\" />",
+        "</platform>",
+        "",
+        "</widget>"
+    ],
+    "_configxml": {
+        "display": "config.xml",
+        "desc": "Configuration data. For more information, see <a href='https://cordova.apache.org/docs/en/9.x/config_ref/index.html' target='_top'>config.xml docs.</a>",
+        "group": "VoltBuilder",
+        "type": "css",
+        "language": "XML",
+        "templated": true,
+        "external": ["properties", "config.xml"]
+    }
+
+}

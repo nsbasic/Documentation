@@ -1,0 +1,19 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": "auto", 
+  "id": "TextBox1", 
+  "inputType": "text", 
+  "left": 128, 
+  "placeholder": "Enter text here", 
+  "right": "auto", 
+  "top": 88, 
+  "value": "AppStudio Single Developer", 
+  "width": 176, 
+  "!type": "Input_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

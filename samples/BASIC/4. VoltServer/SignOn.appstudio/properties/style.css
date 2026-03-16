@@ -1,0 +1,8 @@
+.container {clear:left; float:left; margin-left:10%; margin-top:10px; padding:10px; border-radius:3px;}
+.containerLabel {clear:left; float:left; margin-left:5px; margin-top:10px; 
+  width:130px;text-align:right;font-weight:bold;}
+.containerValue {float:left; margin-left:10px; margin-top:10px; 
+  width:calc(100% - 150px); min-width:200px;}
+.containerTitle {clear:left; float:left; margin-left:10%; margin-top:20px;}
+.containerSignOn {clear:both; float:left; margin-left:calc(50% - 150px); margin-top:10px; border-radius:3px;}
+

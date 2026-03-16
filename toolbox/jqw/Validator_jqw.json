@@ -1,0 +1,103 @@
+{ 
+"_type": "Validator_jqw", 
+"_base": ["jqxAll","NSBWidget"],
+"_palette": 4, 
+"_art": "images/jqxvalidator.png", 
+"_wikipage": "jqxValidator",
+"_shorthelp": "<a href='{_docurl}'>Validator</a> sets up validation on input fields. Invisible control. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}jqxvalidator.js",
+    "{pathTo_jqWidgets}jqxtooltip.js"
+    ],
+  
+"_displayname": "Validator",
+"_longhelp": "longhelp",
+
+"_acprops": {
+	},
+
+"height": 0, 
+"width": 0, 
+
+"_height": {"type": "hidden"},
+"_left": {"type": "hidden"},
+"_right": {"type": "hidden"},
+"_bottom": {"type": "hidden"},
+"_top": {"type": "hidden"},
+"_width": {"type": "hidden"},
+ 
+
+"focus": "true", 
+"_focus": { 
+    "desc": "Sets whether the jqxValidator will focus the first invalid input", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"arrow": "true", 
+"_arrow": { 
+    "desc": "Sets whether the arrow of the hints will be shown.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"closeOnClick": "true", 
+"_closeOnClick": { 
+    "desc": "Sets whether the hints will be closed when the user clicks on them.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["false","true"]
+    },
+
+"position": "right", 
+"_position": {
+    "desc": "Sets the default position of the hints.", 
+    "type": "enum", 
+    "keys": ["top","left","right","bottom", "topcenter", "bottomcenter"], 
+    "values": ["top","left","right","bottom", "topcenter", "bottomcenter"]
+    }, 
+
+"animation": "fade", 
+"_animation": {
+    "desc": "Sets the animation type of hiding hints.", 
+    "type": "enum", 
+    "keys": ["none", "fade"], 
+    "values": ["", "fade"]
+    }, 
+
+"onvalidationError": "", 
+"_onvalidationError": { 
+    "acignore": true,
+    "desc": "This is triggered when the form is validated with some errors.", 
+    "type": "js" 
+    }, 
+  
+"onvalidationSuccess": "", 
+"_onvalidationSuccess": { 
+    "acignore": true,
+    "desc": "This is triggered when the form is validated successfully.", 
+    "type": "js" 
+    }, 
+  
+"_htmltemplate": "  \"<div id='{id}' data-role='none' style='{hidden}'></div>\",",
+
+"_jstemplate": [
+    "  NSB.jqxSettings['{id}']={{",
+        "    rtl:{rtl},",
+        "    focus:{focus},",
+        "    arrow:{arrow},",
+        "    closeOnClick:{closeOnClick},",
+        "    position:'{position}',",
+        "    animation:'{animation}',",
+	 "  }}",
+    "  $('#{id}').jqxValidator(NSB.jqxSettings['{id}']);",
+    "  NSB.jqxValidatorRules = NSB.jqxValidatorRules || [];",
+    "  $('#{id}').jqxValidator('rules', NSB.jqxValidatorRules)"
+    ]
+}

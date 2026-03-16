@@ -1,0 +1,85 @@
+{
+    "_type": "cssgrid",
+    "_base": "NSBObject",
+
+	"alignContent": "", 
+	"_alignContent": { 
+    "group": "CSSGrid",
+    "acignore": true,
+    "desc": [
+			"The align-content property is used to align the whole grid vertically inside the container.<br>",
+			"<b>start:</b> The items are packed flush to each other toward the start edge of the alignment container in the cross axis<br>",
+			"<b>end:</b> Aligns the grid to be flush with the end edge of the grid container.<br>",
+			"<b>center:</b> The items are packed flush to each other toward the center of the alignment container along the cross axis.<br>",
+			"<b>stretch:</b> The items are shown so that the combined size exactly fills the alignment container along the cross axis.<br>",
+			"<b>space-around:</b> The empty space before the first and after the last item equals half of the space between each pair of adjacent items.<br>",
+			"<b>space-between:</b> Place an even amount of space between each grid item, with no space at the far ends.<br>",
+			"<b>space-evenly:</b> Place an even amount of space between each grid item, including the far ends.<br>"
+    ], 
+    "type": "enum", 
+    "keys": ["start", "end", "center", "stretch", "space-around", "space-between", "space-evenly"],
+    "values": ["start", "end", "center", "stretch", "space-around", "space-between", "space-evenly"]
+  },
+
+	"gridTemplateColumns": "auto auto auto",
+	"_gridTemplateColumns": { 
+    "group": "CSSGrid",
+		"acignore": true,
+    "desc": "Defines the line names and track sizing functions of the grid columns.", 
+    "type": "css" 
+  }, 
+
+	"gridTemplateRows": "auto auto auto",
+	"_gridTemplateRows": { 
+    "group": "CSSGrid",
+		"acignore": true,
+    "desc": "Defines the line names and track sizing functions of the grid rows.", 
+    "type": "css" 
+  }, 
+
+	"gridTemplateAreas": "",
+	"_gridTemplateAreas": { 
+    "group": "CSSGrid",
+		"acignore": true,
+    "desc": "Specifies named grid areas.", 
+    "type": "css" 
+  }, 
+
+	"gridColumnGap": "4px",
+	"_gridColumnGap": { 
+    "group": "CSSGrid",
+		"acignore": true,
+    "desc": "Sets the size of the gap between an element's columns. Can be 'normal', px, %, etc.", 
+    "type": "str" 
+  }, 
+
+	"gridRowGap": "4px",
+	"_gridRowGap": { 
+    "group": "CSSGrid",
+		"acignore": true,
+    "desc": "Sets the size of the gap between an element's rows. Can be 'normal', px, %, etc.",  
+    "type": "str" 
+  }, 
+
+	"justifyContent": "", 
+	"_justifyContent": { 
+    "group": "CSSGrid",
+    "acignore": true,
+    "desc": [
+			"The justify-content property is used to align the whole grid horizontally inside the container.<br>",
+			"<b>start:</b> The items are packed flush to each other toward the start edge of the alignment container in the cross axis<br>",
+			"<b>end:</b> The items are packed flush to each other toward the end edge of the alignment container in the cross axis<br>",
+			"<b>center:</b> The items are packed flush to each other toward the center of the alignment container along the cross axis.<br>",
+			"<b>stretch:</b> The items are shown so that the combined size exactly fills the alignment container along the cross axis.<br>",
+			"<b>space-around:</b> The empty space before the first and after the last item equals half of the space between each pair of adjacent items.<br>",
+			"<b>space-between:</b> The first item is flush with the main-start edge, and the last item is flush with the main-end edge.<br>",
+			"<b>space-evenly:</b> The spacing between each pair of adjacent items, the main-start edge and the first item, and the main-end edge and the last item, are all exactly the same.<br>"
+		], 
+    "type": "enum", 
+    "keys": ["start", "end", "center", "stretch", "space-around", "space-between", "space-evenly"],
+    "values": ["start", "end", "center", "stretch", "space-around", "space-between", "space-evenly"]
+  }, 
+         
+"_cssgridcss": "{if alignContent <> ''}align-content:{alignContent}; {/if}{if gridTemplateColumns <> ''}grid-template-columns:{gridTemplateColumns!j}; {/if}{if gridTemplateRows <> ''}grid-template-rows:'{gridTemplateRows!j}'; {/if}{if gridTemplateAreas <> ''}grid-template-areas:{gridTemplateAreas!h}; {/if}{if gridColumnGap <> ''}grid-column-gap:{gridColumnGap}; {/if}{if gridRowGap <> ''}grid-row-gap:{gridRowGap}; {/if}{if justifyContent <> ''}justify-content:{justifyContent}; {/if}"
+
+}

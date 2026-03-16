@@ -1,0 +1,16 @@
+{ 
+  "autocapitalize": "on", 
+  "autocomplete": "on", 
+  "autocorrect": "on", 
+  "bottom": "auto", 
+  "height": 384, 
+  "id": "txwrkmsg", 
+  "left": 8, 
+  "right": "auto", 
+  "top": 56, 
+  "width": 296, 
+  "!type": "Textarea_bs4", 
+  "header": "", 
+  "headerCols": 0, 
+  "valueCols": 12 
+} 

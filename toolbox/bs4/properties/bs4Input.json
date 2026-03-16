@@ -1,0 +1,74 @@
+{
+  "_type": "bs4Input",
+  "_base": "NSBObject",
+  "_description": "Properties shared by all Bootstrap input controls.",
+
+"header": "header", 
+"_header": { 
+    "i18n": true,
+    "desc": "header for input field. Leave blank for none.", 
+    "type": "css" 
+   }, 
+    
+"footer": "", 
+"_footer": { 
+    "i18n": true,
+    "desc": "Optional text under input field. Often used for Help.", 
+    "type": "css" 
+   }, 
+   
+"value": "", 
+"_value": { 
+    "desc": "Value of input.", 
+    "type": "css" 
+    }, 
+
+"validation": "", 
+"_validation": { 
+    "acignore": true,
+    "desc": "Validation style - color highlight", 
+    "type": "enum", 
+    "keys": ["", "error", "success"], 
+    "values": ["", " is-invalid", " is-valid"]
+},
+
+
+"headerCols": 2,
+"_headerCols": {
+    "acignore": true,
+    "desc": "Columns for header. headerCols + valueCols should add up to 12.",
+    "type": "int"
+   },
+   
+"valueCols": 10,
+"_valueCols": {
+    "acignore": true,
+    "desc": "Columns for value. headerCols + valueCols should add up to 12.",
+    "type": "int"
+   },
+   
+"inputmode": "", 
+"_inputmode": { 
+    "acignore": true,
+    "desc": "Keyboard to display. <br><b>(empty)</b> Use the default keyboard.<br><b>none</b> This keyword is useful for content that renders its own keyboard control.<br><b>text</b> Display keyboard capable of text input in the user's locale.<br><b>tel</b> Display keyboard capable of telephone number input. This should including keys for the digits 0 to 9, the '#' character, and the '*' character. In some locales, this can also include alphabetic mnemonic labels (e.g., in the US, the key labeled '2' is historically also labeled with the letters A, B, and C).<br><b>url</b> Display keyboard capable of text input in the user's locale, with keys for aiding in the input of URLs, such as that for the '/' and '.' characters and for quick input of strings commonly found in domain names such as 'www.' or '.com'.<br><b>email</b> Display keyboard capable of text input in the user's locale, with keys for aiding in the input of e-mail addresses, such as that for the '@' character and the '.' character.<br><b>numeric</b> Display keyboard capable of numeric input. This keyboard is useful for PIN entry.<br><b>decimal</b> Display keyboard capable of fractional numeric input. Numeric keys and the format separator for the locale should be shown.<br><b>search</b> Display keyboard optimized for search.", 
+    "type": "enum", 
+    "keys": ["", "none", "text", "tel", "url", "email", "numeric", "decimal", "search"], 
+    "values": ["", "none", "text", "tel", "url", "email", "numeric", "decimal", "search"]
+},
+   
+"_bsInput_wrapper": "<div id={id} data-role='none' class='form-group row{if icon<>''} has-feedback{/if}{validation} {class}' style='{hidden}{_fontcss!i}{_margincss!i}{style}' {_bsPopover!i}>",
+
+"_bsInput_wrapperNoPopover": "<div style='height:100%' class='form-group row{if icon<>''} has-feedback{/if}{validation}'>",
+
+"_bsInput_header": "{if header<>''}<label id={id}_header class='bs4-control-label col-form-label' for={id}_contents data-i18n='{header}'>{header}</label>{_bsBadge!i}{/if}",
+
+"_bsInput_headerCols": "{if header<>''}<label id={id}_header class='bs4-control-label col-sm-{headerCols} col-form-label' for={id}_contents data-i18n='{header}'>{header}</label>{_bsBadge!i}{/if}",
+
+"_bsInput_headerColsNoBadge": "{if header<>''}<label id={id}_header class='bs4-control-label col-sm-{headerCols} col-form-label' for={id}_contents data-i18n='{header}'>{header}</label>{/if}",
+
+"_bsInput_headerColsNoBadgeNoInput": "{if header<>''}<label id={id}_header class='bs4-control-label col-sm-{headerCols}' for={id}_contents data-i18n='{header}'>{header}</label>{/if}",
+
+"_bsInput_icon": "{if icon<>''}<span class='oi oi-{icon} form-control-feedback'></span>{/if}",
+
+"_bsinput_footer": "{if footer<>''}<span class='bs4-help-block' data-i18n='{footer}'>{footer}</span>{/if}</div>"
+}

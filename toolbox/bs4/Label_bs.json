@@ -1,0 +1,57 @@
+{ 
+"_type": "Label_bs4", 
+"_base": ["bs4All", "margin", "padding", "fonts", "colors", "Widget"], 
+"_palette": 9, 
+"_art": "images/label.png", 
+"_wikipage": "Label (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Label</a> lets you display a styled label. Bootstrap.",
+"_category": ["All", "Bootstrap 4"],
+
+"_displayname": "Label",
+"_longhelp": "longhelp",
+
+"width": "auto",
+"height": "auto",
+"padding-left": "4",
+"padding-right": "4",
+
+"appearance": "primary", 
+"_appearance": { 
+    "acignore": true,
+    "desc": "Appearance of the label", 
+    "type": "enum", 
+    "keys": ["", "primary", "secondary", "success", "info", "warning", "danger", "light", "dark", "white"],
+    "values": ["", "primary", "secondary", "success", "info", "warning", "danger", "light", "dark", "white"]
+}, 
+
+"labelStyle": "text", 
+"_labelStyle": { 
+    "acignore": true,
+    "desc": "Should the label be text or a badge?", 
+    "type": "enum", 
+    "keys": ["badge", "text"], 
+    "values": ["badge", "text"]
+}, 
+
+"value": "Label", 
+"_value": { 
+    "i18n": true,
+    "desc": "Label. Appears as text styled by appearance.", 
+    "type": "str" 
+   }, 
+    
+"borderRadius": "0", 
+"_borderRadius": { 
+    "i18n": true,
+    "desc": "How much should corners be rounded? 0 is not at all, 4 is a 4 pixel radius.", 
+    "type": "str" 
+   }, 
+    
+"_htmltemplate": [
+"  \"<span id='{id}' style='{_fontcss!i}{_margincss!i}{_paddingcss!i}{_colorscss!i}{hidden}border-radius:{borderRadius}px;{style!j}'  class=' {labelStyle}-{appearance} {class}' data-i18n='{value}'>{value}</span>\","
+],
+  
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');"
+  ]
+}

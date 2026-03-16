@@ -1,0 +1,214 @@
+{
+  "!type": "Form", 
+  "HTML": null, 
+  "action": "", 
+  "attributes": "", 
+  "background": "", 
+  "backgroundimage": "", 
+  "borderColor": "transparent", 
+  "borderStyle": "", 
+  "borderWidth": 0, 
+  "cached_js": null, 
+  "cached_js_script_hash": null, 
+  "children": [
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Menu1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid1.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid2.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid3.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid4.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid5.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid6.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid7.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid8.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid9.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid10.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid11.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "Grid12.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "GridV.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "btnSizeCols.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "btnUpdate.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "btnHide.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "btnShow.json"
+      ]
+    }, 
+    {
+      "!type": "External", 
+      "file": [
+        "forms", 
+        "form1", 
+        "Elements", 
+        "btnResize.json"
+      ]
+    }
+  ], 
+  "class": "", 
+  "designHeight": 800, 
+  "designWidth": 1280, 
+  "expanded_pmp": null, 
+  "fullScreen": "true", 
+  "height": 800, 
+  "id": "form1", 
+  "language": "JavaScript", 
+  "left": 0, 
+  "locked": false, 
+  "method": "", 
+  "modal": "false", 
+  "onhide": "", 
+  "onkeypress": "", 
+  "onresize": "", 
+  "onshow": "", 
+  "onsubmit": "", 
+  "openMode": "none", 
+  "parentForm": "", 
+  "position": "absolute", 
+  "script": null, 
+  "scroll_options": "mouseWheel:true,  bounce:true, zoom:false", 
+  "scrolling": "false", 
+  "setFocusID": "", 
+  "style": "", 
+  "theme": "", 
+  "top": 0, 
+  "width": 1280
+}

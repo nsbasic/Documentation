@@ -1,0 +1,20 @@
+{ 
+  "bottom": "auto", 
+  "id": "hdrView", 
+  "right": "auto", 
+  "!type": "Header", 
+  "height": "40", 
+  "text": "File Contents", 
+  "position": "absolute", 
+  "children": [ 
+    { 
+      "!type": "External", 
+      "file": [ 
+        "forms", 
+        "frmView", 
+        "Elements", 
+        "hdrView_btnLeft.json" 
+      ] 
+    } 
+  ] 
+} 

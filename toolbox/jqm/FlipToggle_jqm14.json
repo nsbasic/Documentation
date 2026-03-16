@@ -1,0 +1,95 @@
+{ 
+"_type": "FlipToggle_jqm14", 
+"_base": "Input", 
+"_palette": 9, 
+"_art": "images/fliptoggle.png", 
+"_shorthelp": "<a href='{_docurl}'>FlipToggle</a> Slide button to toggle between two values. jQuery Mobile", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [  
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+  ],
+"_displayname": "FlipToggle",
+"_longhelp": "longhelp",
+
+"width": "auto", 
+"height": "auto", 
+
+"_acprops": {
+    "value()": {"desc": "Get the value of the control."},
+    "setting()": {"desc": "Current setting of control. True/False."},
+    "setValue()": {"desc": "Set the value of the control to one of the titles."}
+},
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none;",""]
+    }, 
+
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"shadow": "", 
+"_shadow": { 
+    "acignore": true,
+    "desc": "Adds a shadow.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "true"] 
+    }, 
+
+"titleLeft": "Off",
+"_titleLeft": { 
+    "acignore": true,
+    "desc": "Left hand slider title.", 
+    "type": "str" 
+   }, 
+
+"titleRight": "On",
+"_titleRight": { 
+    "acignore": true,
+    "desc": "Right hand slider title.", 
+    "type": "str" 
+   }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"mini": "", 
+"_mini": { 
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "data-mini=true"] 
+    }, 
+
+"corners": "false", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["false", "true"] 
+    }, 
+    
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}'><select id='{id}_inner'  data-role=flipswitch {mini} data-corners='{corners}'{if theme<>''} data-theme={theme}{/if} style='{style!j}' class='{disabled} {class}'><option>{titleLeft}</option><option>{titleRight}</option></select></div>\",",
+                  
+"_jstemplate": [
+  "  $('#{id} .ui-flipswitch').css('margin','0px');",
+  "  {id}.value=function() {{return {id}_inner.options[{id}_inner.selectedIndex].innerHTML;}}",
+  "  {id}.setting=function() {{return {id}_inner.options[{id}_inner.selectedIndex].innerHTML!='{titleLeft}';}}",
+  "  {id}.setValue=function(n) {{$('#{id}_inner').val(n).flipswitch('refresh'); }}",
+  "{if shadow<>'true'}  $('#{id} .ui-flipswitch').removeClass('ui-shadow-inset');{/if}",
+  "{if shadow<>'true'}  $('#{id} .ui-flipswitch-on').removeClass('ui-shadow');{/if}",
+  "  NSB.addDisableProperty({id});NSB.addProperties({id});"]
+}

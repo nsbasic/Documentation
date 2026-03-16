@@ -1,0 +1,56 @@
+{ 
+"_type": "PayPal", 
+"_base": "Widget", 
+"_palette": 4, 
+"_art": "images/paypal.png", 
+"_shorthelp": "<a href='{_docurl}'>PayPal</a> button - links to PayPal hosted button. Needs to be set up in PayPal first.", 
+"_category": ["All", "Finance & Social Media"],
+"_requiredfiles": [
+    "{if image<>''}{image}{/if}",
+	"{if image==''}{_nsbdir}nsb/images/{TransactionType}{/if}"
+	],
+"_displayname": "PayPal",
+"_longhelp": "longhelp",
+
+"height": 32, 
+"width": 112, 
+
+"_class": {"type": "hidden"},
+"_onclick": {"type": "hidden"},
+"_onmousedown": {"type": "hidden"},
+"_onmousemove": {"type": "hidden"},
+"_onmouseout": {"type": "hidden"},
+"_onmouseup": {"type": "hidden"},
+"_ontouchend": {"type": "hidden"},
+"_ontouchmove": {"type": "hidden"},
+"_ontouchstart": {"type": "hidden"},
+
+"hostedButtonID": "N3Y2BU9CG9AM4", 
+"_hostedButtonID": { 
+    "desc": "PayPal's ID for this charge. Needs to be set up in PayPal.", 
+    "type": "str" 
+    }, 
+      
+"TransactionType": "paypal.png", 
+"_TransactionType": { 
+    "desc": "Buy, Donate, Subscribe or Unsubscribe?", 
+    "type": "enum", 
+    "keys": ["Buy", "Donate", "Subscribe", "Unsubscribe"], 
+    "values": ["paypal.png", "donate.png", "subscribe.png", "unsubscribe.png"]
+    }, 
+
+"image": "", 
+"_image": { 
+    "desc": "Location of image, if other than default. Do not add files to /nsb.", 
+    "type": "image" 
+    }, 
+
+"_htmltemplate": 
+  "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'><a href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id={hostedButtonID}'><img src='{if image==''}nsb/images/{TransactionType}{/if}{if image<>''}{image}{/if}'></a></div>\",",
+  
+"_jstemplate": [
+  "  {id}.addField = function(field,value){{",
+  "  {id}.children[0].href={id}.children[0].href+encodeURI(\"&\" + field + \"=\" + value)}}",
+  "  NSB.addProperties({id});"
+  ]
+}

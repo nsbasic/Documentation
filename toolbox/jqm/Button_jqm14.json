@@ -1,0 +1,145 @@
+{ 
+"_type": "Button_jqm14", 
+"_base": ["fonts", "borders", "Input"], 
+"_palette": 9, 
+"_art": "images/button.png",
+"_shorthelp": "<a href='{_docurl}'>Button</a> Can be part of a group. jQuery Mobile", 
+"_category": ["All", "jQuery Mobile (obsolete)"],
+"_requiredfiles": [
+  "{image}",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}css",
+  "{_nsbdir}toolbox/jqm/dist/jquery.mobile.{rtl}js",
+  "{_nsbdir}toolbox/jqm/dist/images/ajax-loader.gif"
+],
+"_displayname": "Button",
+"_longhelp": "longhelp",
+
+"width": "auto", 
+"height": "auto", 
+"value": "Button", 
+
+"_acprops": {
+    "text": {"desc": "Text of button. Same as value"}
+},
+
+"hidden": "", 
+"_hidden": { 
+    "desc": "Hide control", 
+    "type": "enum", 
+    "keys": ["True", "False"], 
+    "values": ["display:none;",""]
+}, 
+
+"mini": "ui-mini", 
+"_mini": { 
+    "acignore": true,
+    "desc": "Show smaller version of control.", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-mini"] 
+    }, 
+
+"color": "",
+"_color": { 
+   "acignore": true,
+   "desc": "Color of letters. Can be name, #RRGGBB or rgb(R,G,B).", 
+    "type": "str" 
+   }, 
+
+"backgroundColor": "",
+"_backgroundColor": { 
+   "acignore": true,
+   "desc": "Color of background. Can be name, #RRGGBB, rgb(R,G,B) or transparent.", 
+    "type": "str" 
+   }, 
+
+"theme": "",
+"_theme": { 
+    "desc": "Theme: a-z. a is normal, b is black and others custom.", 
+    "type": "str" 
+   }, 
+
+"icon": "", 
+"_icon": { 
+    "acignore": true,
+    "desc": "Icon", 
+    "type": "icon", 
+    "icon_map": ["action", "arrow-d-l", "arrow-d-r", "arrow-d", "arrow-l", "arrow-r", "arrow-u-l", "arrow-u-r", "arrow-u", "audio", "calendar", "camera", "carat-d", "carat-l", "carat-r", "carat-u", "check", "clock", "custom", "grid", "mail", "eye", "gear", "heart", "home", "info", "bullets", "bars", "navigation", "lock", "search", "location", "minus", "forbidden", "edit", "user", "phone", "plus", "power", "recycle", "forward", "refresh", "shop", "comment", "star", "tag", "back", "video", "alert", "delete"]
+    }, 
+
+"iconPos": "none",
+"_iconPos": { 
+    "acignore": true,
+    "desc": "Icon Position", 
+    "type": "enum", 
+    "keys":   ["none","left","right","top","bottom","notext"], 
+    "values": ["none","left","right","top","bottom","notext"]
+    }, 
+
+"groupBegin": "",
+"_groupBegin": { 
+    "acignore": true,
+    "desc": "Is this the start of a group?", 
+    "type": "enum", 
+    "keys":   ["No","Start Vertical","Start Horizontal","Start Vertical Mini","Start Horizontal Mini"], 
+    "values": ["",
+              "<div data-role=controlgroup>",
+              "<div data-role=controlgroup data-type=horizontal>",
+              "<div data-role=controlgroup data-mini=true>",
+              "<div data-role=controlgroup data-mini=true data-type=horizontal>"
+               ]
+    }, 
+    
+"groupEnd": "",
+"_groupEnd": { 
+    "acignore": true,
+    "desc": "Is this the end of the group?", 
+    "type": "enum", 
+    "keys":   ["No","Yes"], 
+    "values": ["","</div>"]
+    }, 
+    
+"disabled": "", 
+"_disabled": { 
+    "desc": "Disable element", 
+    "type": "enum", 
+    "keys": ["False", "True"], 
+    "values": ["", "ui-state-disabled"] 
+    }, 
+
+"corners": "", 
+"_corners": { 
+    "desc": "Corner style", 
+    "type": "enum", 
+    "keys": ["Square", "Round"], 
+    "values": ["", "ui-corner-all"] 
+    }, 
+    
+"image": "", 
+"_image": { 
+    "desc": "Image to display on button. Do not add files to /nsb.", 
+    "type": "image" 
+    }, 
+
+"ChangeForm": "",
+"_ChangeForm": {
+	"acignore": true,
+    "desc": "id of the form to change to when clicked.",
+    "type": "str"
+	},
+
+"padding": "",
+"_padding": {
+	"acignore": true,
+    "desc": "Number of pixels to the left and right of the text. Default is blank.",
+    "type": "str"
+	},
+
+"_htmltemplate": "  \"{groupBegin!j}<button id='{id}' class='ui-btn {mini} {corners} ui-btn-inline{if theme<>''} ui-btn-{theme}{/if} ui-icon-{icon} ui-btn-icon-{iconPos} {if icon=='custom'} ui-nodisc-icon{/if}{disabled} {class}' style='{if _parent.position == 'absolute'}margin:0px; {/if}text-shadow:none;{if padding<>''} padding-left:{padding}px; padding-right:{padding}px;{/if} overflow:visible;{if fontSize<>''} font-size:{fontSize!p};{/if}{if fontFamily<>''} font-family:{fontFamily};{/if}{if fontStyle<>''} font-style:{fontStyle};{/if}{if fontWeight<>''} font-weight:{fontWeight};{/if}{if color<>''} color:{color};{/if}{if backgroundColor<>''} background-color:{backgroundColor};{/if}{if borderWidth.isdigit()} border-width:{borderWidth!p}; border-style:{borderStyle}; border-color:{borderColor};{/if} {hidden}{style!j}' data-nsb-type=Button_jqm>{if image<>''}<image src='{image}'>{/if}{value!j}</button>{groupEnd!j}\",", 
+
+"_jstemplate": ["  NSB.addDisableProperty({id});",
+                "  NSB.addProperties({id});",
+		"{if groupBegin<>''}  {id}.parentElement.id = '{id}_wrapper';{/if}",
+		"{if ChangeForm<>''}  {id}.onclick=function(){{ChangeForm({ChangeForm})}};{/if}"]
+		
+}

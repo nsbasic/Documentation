@@ -1,0 +1,335 @@
+{ 
+"_type": "DropDownList_jqw", 
+"_base": ["jqxAll"],
+"_palette": 4, 
+"_art": "images/jqxdropdownlist.png", 
+"_wikipage": "jqxDropDownList",
+"_shorthelp": "<a href='{_docurl}'>DropDownList</a> list of selectable items displayed in a drop-down. jqWidgets (Commercial)",
+"_category": ["jqWidgets"],
+"_resizable": true,
+"_requiredfiles": [ 
+    "{pathTo_jqWidgets}jqxcore.js", 
+    "{pathTo_jqWidgets}styles/jqx.base.css", 
+    "{pathTo_jqWidgets}styles/jqx.{theme}.css",    
+	  "{pathTo_jqWidgets}jqxbuttons.js",
+	  "{pathTo_jqWidgets}jqxscrollbar.js",
+	  "{pathTo_jqWidgets}jqxlistbox.js",
+	  "{pathTo_jqWidgets}jqxdropdownlist.js",
+	  "{pathTo_jqWidgets}globalization/globalize.js"
+    ],
+  
+"_displayname": "DropDownList",
+"_longhelp": "longhelp",
+
+"_acprops": {
+    "popupZIndex": {"desc": "Index # in popup box"},
+    "value": {"desc": "The value."}
+	},
+
+"height": 24,
+"width": 200, 
+
+"autoOpen": "false",
+"_autoOpen": {
+	"acignore": true,
+	"desc": "Sets or gets whether the DropDown is automatically opened when the mouse cursor is moved over the widget.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"autoItemsHeight": "false",
+"_autoItemsHeight": {
+	"acignore": true,
+	"desc": "Sets or gets whether items will wrap when they reach the width of the dropDown.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"autoDropDownHeight": "false",
+"_autoDropDownHeight": {
+	"acignore": true,
+	"desc": "Sets or gets whether the height of the jqxDropDownList's ListBox displayed in the widget's DropDown is calculated as a sum of the items heights.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"animationType": "slide",
+"_animationType": {
+	"acignore": true,
+	"desc": "Sets or gets the type of the animation.",
+	"type": "enum",
+	"keys": ["fade", "slide", "none"],
+	"values": ["fade", "slide", "none"]
+	},
+
+"checkboxes": "false",
+"_checkboxes": {
+	"acignore": true,
+	"desc": "Determines whether checkboxes will be displayed next to the list items.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"closeDelay":400,
+"_closeDelay": {
+	"acignore": true,
+	"desc": "Sets or gets the delay of the 'close' animation",
+	"type": "int"
+	},
+
+"displayMember": "",
+"_displayMember": {
+	"acignore": true,
+	"desc": "Sets or gets the displayMember of the Items. The displayMember specifies the name of an object property to display. The name is contained in the collection specified by the 'source' property.",
+	"type": "str"
+	},
+
+"dropDownHorizontalAlignment": "left",
+"_dropDownHorizontalAlignment": {
+	"acignore": true,
+	"desc": "Sets or gets the DropDown's alignment.",
+	"type": "enum",
+	"keys": ["left", "right"],
+	"values": ["left", "right"]
+	},
+
+"dropDownVerticalAlignment": "bottom",
+"_dropDownVerticalAlignment": {
+	"acignore": true,
+	"desc": "Sets or gets the DropDown's alignment.",
+	"type": "str",
+	"keys": ["top", "bottom"],
+	"values": ["top", "bottom"]
+	},
+
+"dropDownHeight":200,
+"_dropDownHeight": {
+	"acignore": true,
+	"desc": "Sets or gets the height of the jqxDropDownList's ListBox displayed in the widget's DropDown.",
+	"type": "int"
+	},
+
+"dropDownWidth":200,
+"_dropDownWidth": {
+	"acignore": true,
+	"desc": "Sets or gets the width of the jqxDropDownList's ListBox displayed in the widget's DropDown.",
+	"type": "int"
+	},
+
+"enableSelection": "true",
+"_enableSelection": {
+	"acignore": true,
+	"desc": "Enables/disables the selection.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"enableBrowserBoundsDetection": "false",
+"_enableBrowserBoundsDetection": {
+	"acignore": true,
+	"desc": "Sets or gets whether the dropdown detects the browser window's bounds and automatically adjusts the dropdown's position.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"enableHover": "true",
+"_enableHover": {
+	"acignore": true,
+	"desc": "Enables/disables the hover state.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"filterable": "false",
+"_filterable": {
+	"acignore": true,
+	"desc": "Determines whether the Filtering is enabled.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"filterHeight":27,
+"_filterHeight": {
+	"acignore": true,
+	"desc": "Determines the Filter's height.",
+	"type": "int"
+	},
+
+"filterDelay":100,
+"_filterDelay": {
+	"acignore": true,
+	"desc": "Determines the Filter's delay. After 100 milliseconds, the widget automatically filters its data based on the filter input's value. To perform filter only on 'Enter' key press, set this property to 0.",
+	"type": "int"
+	},
+
+"filterPlaceHolder": "Looking for",
+"_filterPlaceHolder": {
+	"acignore": true,
+	"desc": "Determines the Filter input's place holder.",
+	"type": "str"
+	},
+
+"incrementalSearch": "true",
+"_incrementalSearch": {
+	"acignore": true,
+	"desc": "Sets or gets the incrementalSearch property. An incremental search begins searching as soon as you type the first character of the search string. As you type in the search string, jqxDropDownList automatically selects the found item.",
+	"type": "enum",
+	"keys": ["True", "False"],
+	"values": ["true", "false"]
+	},
+
+"incrementalSearchDelay":700,
+"_incrementalSearchDelay": {
+	"acignore": true,
+	"desc": "Sets or gets the incrementalSearchDelay property. The incrementalSearchDelay specifies the time-interval in milliseconds after which the previous search string is deleted. The timer starts when you stop typing.",
+	"type": "int"
+	},
+
+"itemHeight":-1,
+"_itemHeight": {
+	"acignore": true,
+	"desc": "Sets or gets the height of the jqxDropDownList Items. When the itemHeight == - 1, each item's height is equal to its desired height.",
+	"type": "int"
+	},
+
+"openDelay":350,
+"_openDelay": {
+	"acignore": true,
+	"desc": "Sets or gets the delay of the 'open' animation.",
+	"type": "int"
+	},
+
+"placeHolder": "Please Choose:",
+"_placeHolder": {
+	"acignore": true,
+	"desc": "Text displayed when the selection is empty.",
+	"type": "str"
+	},
+
+"popupZIndex":20000,
+"_popupZIndex": {
+	"acignore": true,
+	"desc": "Sets or gets the popup's z-index.",
+	"type": "int"
+	},
+
+"renderer": "",
+"_renderer": {
+	"acignore": true,
+	"desc": "Callback function which is called when an item is rendered. By using the renderer function, you can customize the look of the list items.",
+	"type": "str"
+	},
+
+"selectionRenderer": "",
+"_selectionRenderer": {
+	"acignore": true,
+	"desc": "Callback function which is called when the selected item is rendered in the jqxDropDownList's content area. By using the selectionRenderer function, you can customize the look of the selected item.",
+	"type": "str"
+	},
+
+"searchMode": "startswith",
+"_searchMode": {
+	"acignore": true,
+	"desc": "Sets or gets the item search mode. When the user types into the edit field, the jqxDropDownList widget tries to find the searched item using the entered text and the selected search mode.",
+	"type": "enum",
+	"keys": ["none", "contains", "containsignorecase", "equals", "equalsignorecase", "startswithignorecase", "startswith", "endswithignorecase", "endswith"],
+	"values": ["none", "contains", "containsignorecase", "equals", "equalsignorecase", "startswithignorecase", "startswith", "endswithignorecase", "endswith"]
+	},
+
+"scrollBarSize":17,
+"_scrollBarSize": {
+	"acignore": true,
+	"desc": "Sets or gets the scrollbars size.",
+	"type": "int"
+	},
+
+"source": "null",
+"_source": {
+	"acignore": true,
+	"desc": "Sets or gets the items source. Should be an list of values in single quotes.",
+	"type": "str"
+	},
+
+"selectedIndex":-1,
+"_selectedIndex": {
+	"acignore": true,
+	"desc": "Sets or gets the selected index.",
+	"type": "int"
+	},
+
+"template": "default",
+"_template": {
+	"acignore": true,
+	"desc": "Determines the template as an alternative of the default styles.",
+	"type": "enum",
+	"keys": ["default", "primary", "success", "warning", "danger", "info"],
+	"values": ["default", "primary", "success", "warning", "danger", "info"]
+	},
+
+"valueMember": "",
+"_valueMember": {
+	"acignore": true,
+	"desc": "Sets or gets the valueMember of the Items. The valueMember specifies the name of an object property to set as a 'value' of the list items. The name is contained in the collection specified by the 'source' property.",
+	"type": "str"
+	},
+
+"onselect": "", 
+"_onselect": { 
+    "acignore": true,
+    "desc": "Element selected event", 
+    "type": "js" 
+    }, 
+
+"_htmltemplate": "  \"<div id='{id}' style='{hidden}{style!j}' class='{class}'></div>\",",
+
+"_jstemplate": [
+  "  NSB.jqxSettings['{id}']={{",
+  "    disabled:{disabled},",
+  "    rtl:{rtl},",
+  "    height:'{height!p}',",
+  "    width:'{width!p}',",
+  "    theme: '{theme}',",
+  "    autoOpen: {autoOpen},",
+  "    autoItemsHeight: {autoItemsHeight},",
+  "    autoDropDownHeight: {autoDropDownHeight},",
+  "    animationType: '{animationType}',",
+  "    checkboxes: {checkboxes},",
+  "    closeDelay: {closeDelay},",
+  "    displayMember: '{displayMember}',",
+  "    dropDownHorizontalAlignment: '{dropDownHorizontalAlignment}',",
+  "    dropDownVerticalAlignment: '{dropDownVerticalAlignment}',",
+  "    dropDownHeight: {dropDownHeight},",
+  "    dropDownWidth: {dropDownWidth},",
+  "    enableSelection: {enableSelection},",
+  "    enableBrowserBoundsDetection: {enableBrowserBoundsDetection},",
+  "    enableHover: {enableHover},",
+  "    filterable: {filterable},",
+  "    filterHeight: {filterHeight},",
+  "    filterDelay: {filterDelay},",
+  "    filterPlaceHolder: '{filterPlaceHolder}',",
+  "    incrementalSearch: {incrementalSearch},",
+  "    incrementalSearchDelay: {incrementalSearchDelay},",
+  "    itemHeight: {itemHeight},",
+  "    openDelay: {openDelay},",
+  "    placeHolder: '{placeHolder}',",
+  "    popupZIndex: {popupZIndex},",
+  "{if renderer <> ''}    renderer:function(){{{renderer}}},{/if}",
+  "{if selectionRenderer <> ''}    selectionRenderer:function(){{{selectionRenderer}}},{/if}",
+  "    searchMode: '{searchMode}',",
+  "    scrollBarSize: {scrollBarSize},",
+  "    source: [{source}],",
+  "    selectedIndex: {selectedIndex},",
+  "    template: '{template}',",
+  "    valueMember: '{valueMember}',",
+  "  }}",
+  "  $('#{id}').jqxDropDownList(NSB.jqxSettings['{id}'])",
+  "  NSB.addProperties({id});"]
+}

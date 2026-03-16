@@ -1,0 +1,65 @@
+{ 
+"_type": "Modal_bs5", 
+"_base": ["bs5All", "fonts", "borders", "margin", "padding", "colors", "bs5Badge", "bs5HeaderValueFooter", "children"], 
+"_palette": 9, 
+"_art": "images/modal.png",
+"_wikipage": "Modal (Bootstrap)",
+"_shorthelp": "<a href='{_docurl}'>Modal</a> Panel which floats above app. Bootstrap.", 
+"_category": ["All", "Bootstrap 5"],
+
+"_displayname": "Modal",
+"_longhelp": "longhelp",
+
+"_icon": {"type": "hidden"},
+
+"width": "auto",
+"height": "auto",
+"header": "Modal",
+
+"size": "", 
+"_size": { 
+    "acignore": true,
+    "desc": "Size of Modal box.", 
+    "type": "enum", 
+    "keys": ["small", "medium", "large"], 
+    "values": [" modal-sm", "", " modal-lg"]
+}, 
+
+"position": "", 
+"_position": { 
+    "acignore": true,
+    "desc": "Where should the modal be positioned vertically?", 
+    "type": "enum", 
+    "keys": ["top", "centered"], 
+    "values": ["", " modal-dialog-centered"]
+}, 
+
+"_csstemplate": [
+    "\n{_childcss}"
+],
+
+"_htmltemplate": [
+    "  \"<div id='{id}' class='modal fade' style='{_margincss!i}{_paddingcss!i}{_fontcss!i}{_colorscss!i}{_bordercss!i}{hidden}{style!j}'>\",",
+    "    \"<div class='modal-dialog modal-dialog{size}{position}'>\",",
+    "      \"<div class='modal-content'>\",",
+    "        \"<div id='{id}_header' class='modal-header'>\",",
+    "{if header<>''}          \"<h4 id='{id}_title' class='modal-title' data-i18n='{header!j}'>{header!j}{_bsBadge!i}</h4>\",{/if}",
+    "          \"<button type='button' class='btn-close' data-bs-dismiss='modal'></button>\",",
+    "        \"</div>\",",
+    "{if value<>''}        \"<div id='{id}_body' class='modal-body' data-i18n='{value!j}'>{value!j}\",{/if}",
+    "          \"<div id={id}_addChild></div>\",",
+    "{if value<>''}        \"</div>\",{/if}",
+    "{if footer<>'' or _childhtml<>''}        \"<div id='{id}_footer' class='modal-footer' data-i18n='{footer!j}'>{footer!j}\",{/if}",
+    "{if _childhtml<>''}        {_childhtml}{/if}",
+    "{if footer<>'' or _childhtml<>''}        \"</div>\",{/if}",
+    "      \"</div>\",",
+    "    \"</div>\",",
+    "  \"</div>\","
+],
+
+"_jstemplate": [
+  "  NSB.bs.addProperties({id}, '{_type}');",
+  "  {_childjs}"
+  ]
+		
+}

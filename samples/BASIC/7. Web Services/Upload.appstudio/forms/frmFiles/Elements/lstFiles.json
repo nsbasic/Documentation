@@ -1,0 +1,16 @@
+{ 
+  "bottom": "auto", 
+  "height": 32, 
+  "icon": "arrow-r", 
+  "id": "lstFiles", 
+  "onclick": "lstFiles_onclick()", 
+  "readonly": "false", 
+  "right": "auto", 
+  "top": 42, 
+  "width": "100%", 
+  "!type": "Listgroup_bs4", 
+  "appearances": "", 
+  "items": "", 
+  "itemBadges": "", 
+  "icons": "arrow-circle-right\n" 
+} 
