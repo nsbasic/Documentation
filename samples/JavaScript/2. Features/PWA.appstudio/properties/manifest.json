@@ -1,23 +1,21 @@
-{
+{{
   "short_name": "{title}",
   "name": "{title}",
-  "description": "{description}",
   "display": "standalone",
   "start_url": "index.html",
   "background_color": "black",
   "theme_color": "black",
   "icons": [
-    {
-      "src": "nsb/images/72.png",
+    {{
+      "src": "images/icons-72.png",
       "sizes": "72x72"
-    },
-    {
-      "src": "{icon}",
+    }},    {{
+      "src": "images/icons-192.png",
       "sizes": "192x192"
-    },
-    {
-      "src": "nsb/images/512.png",
+    }},
+    {{
+      "src": "images/icons-512.png",
       "sizes": "512x512"
-    }
+    }}
   ]
-}
+}}

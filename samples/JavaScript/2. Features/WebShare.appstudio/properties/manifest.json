@@ -1,23 +1,32 @@
-{
+{{
   "short_name": "{title}",
   "name": "{title}",
-  "description": "{description}",
   "display": "standalone",
   "start_url": "index.html",
   "background_color": "black",
   "theme_color": "black",
   "icons": [
-    {
+    {{
       "src": "nsb/images/72.png",
       "sizes": "72x72"
-    },
-    {
+    }},
+    {{
       "src": "{icon}",
       "sizes": "192x192"
-    },
-    {
+    }},
+    {{
       "src": "nsb/images/512.png",
       "sizes": "512x512"
-    }
-  ]
-}
+    }}
+  ],
+  "share_target": {{
+    "action": "../{title}/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {{
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }}
+  }}
+}}
