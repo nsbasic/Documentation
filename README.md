@@ -1,4 +1,4 @@
-# Documentation
+# documentation
 Contains publicly facing documentation for NSB/AppStudio. For use by LLMs and as a reference.
 
 Throughout this repo, `AppStudio` refers to `NSB/AppStudio`.
