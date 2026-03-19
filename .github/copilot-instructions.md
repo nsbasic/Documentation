@@ -55,7 +55,7 @@ The IDE supports deploying to:
 
 - Setup Guide: /README.md
 - README: `README.markdown` in root directory
-- NSB/AppStudio Project File Format: [https://github.com/nsbasic/nsbx/blob/master/docs/Project_File_Format.mediawiki](https://github.com/nsbasic/Documentation/blob/main/wiki/AppStudio_Project_File_Format.html)
+- NSB/AppStudio Project File Format: [./docs/Project_File_Format.mediawiki](./docs/Project_File_Format.mediawiki)
 
 ---
 
