@@ -1,0 +1,730 @@
+= AppStudio Project File Format =
+
+This page describes the on-disk format of an AppStudio project. It is intended for developers who want to understand, inspect, or programmatically manipulate project files.
+
+== Overview ==
+
+An AppStudio project is stored as a '''directory''' whose name ends with <code>.appstudio</code>. Everything belonging to the project lives inside that directory. The project is made up of plain JSON text files and optional code files, so you can open them in any text editor.
+
+== Directory Layout ==
+
+<pre>
+MyApp.appstudio/
+├── MyApp.project              ← Main project file (JSON)
+├── forms/                     ← One sub-directory per form
+│   ├── Form1/
+│   │   ├── Form1.json         ← Form definition (JSON)
+│   │   ├── Form1.bas          ← Form BASIC code (optional)
+│   │   ├── Form1.js           ← Form JavaScript code (optional)
+│   │   └── Elements/
+│   │       ├── Button1.json   ← Control definition (JSON)
+│   │       ├── TextArea1.json
+│   │       └── ...
+│   ├── Form2/
+│   │   └── ...
+│   └── ...
+├── properties/                ← Build / deployment configuration
+│   ├── config.xml             ← Apache Cordova / VoltBuilder config
+│   ├── manifest.json          ← Progressive Web App (PWA) manifest
+│   ├── package.json           ← Electron build config
+│   ├── electronMain.js        ← Electron entry-point script
+│   └── style.css              ← Project-wide CSS (optional)
+└── .gitignore
+</pre>
+
+The only required file is the <code>.project</code> file. All other files are created automatically as you add forms and controls in the IDE.
+
+== The Project File (<code>*.project</code>) ==
+
+The project file is a JSON file at the root of the <code>.appstudio</code> directory. Its name matches the project name (e.g. <code>MyApp.project</code>).
+
+=== Top-level (Project object) ===
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>"!type"</code> || String || Always <code>"Project"</code>. Identifies this object as the root project.
+|-
+| <code>version</code> || Integer || Project file format version. Current value is <code>8</code>.
+|-
+| <code>language_version</code> || Integer || BASIC language version. Current value is <code>8</code>.
+|-
+| <code>id</code> || String || Project identifier. Usually the project name without spaces.
+|-
+| <code>filename</code> || String || Absolute path to the <code>.appstudio</code> directory (set at runtime; empty in the file).
+|-
+| <code>libraries</code> || Array of String || Libraries included in the project, e.g. <code>["BASIC"]</code>.
+|-
+| <code>script</code> || String || Project-level code that runs before any form code.
+|-
+| <code>children</code> || Array || Contains exactly one [[#Page_object|Page object]] (inline, not a file reference).
+|-
+| <code>deploy_protocol</code> || String || Deployment protocol: <code>"ftp"</code>, <code>"sftp"</code>, or <code>"local"</code>.
+|-
+| <code>deploy_server</code> || String || FTP/SFTP server hostname.
+|-
+| <code>deploy_port</code> || String || Server port, default <code>"21"</code>.
+|-
+| <code>deploy_userName</code> || String || Login username for FTP/SFTP.
+|-
+| <code>deploy_password</code> || String || Login password (stored in plain text — keep the file private).
+|-
+| <code>deploy_path</code> || String || Remote path to upload files to.
+|-
+| <code>deploy_local</code> || Boolean || If <code>true</code>, deploy to a local folder instead of a server.
+|-
+| <code>deploy_localPath</code> || String || Local folder path used when <code>deploy_local</code> is <code>true</code>.
+|-
+| <code>deploy_global</code> || Boolean || If <code>true</code>, use global (shared) deployment settings.
+|-
+| <code>phonegap_email</code> || String || Adobe PhoneGap Build account e-mail (legacy; prefer VoltBuilder).
+|-
+| <code>phonegap_password</code> || String || Adobe PhoneGap Build password (legacy).
+|-
+| <code>phonegap_auth_token</code> || String || Adobe PhoneGap Build API token (legacy).
+|-
+| <code>cached_js</code> || String || Cached compiled JavaScript for the project (managed by the IDE).
+|-
+| <code>cached_js_script_hash</code> || String || MD5 hash of the source used to generate <code>cached_js</code>.
+|-
+| <code>cache_dirty</code> || Boolean || When <code>true</code>, the IDE will recompile the project before the next run.
+|-
+| <code>expanded_pmp</code> || String or null || Remembers which nodes are expanded in the Project Manager panel.
+|}
+
+=== Page object (inside <code>children</code>) ===
+
+A project contains exactly one Page object. It is stored inline in the <code>.project</code> file (not as a separate file).
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>"!type"</code> || String || Always <code>"Page"</code>.
+|-
+| <code>id</code> || String || Page / app identifier. Typically the same as the project name.
+|-
+| <code>title</code> || String || App title shown in the browser tab and home screen.
+|-
+| <code>description</code> || String || Short description of the app.
+|-
+| <code>version</code> || String || App version string, e.g. <code>"1.0.0"</code>.
+|-
+| <code>copyright</code> || String || Copyright notice included in the built app.
+|-
+| <code>appPublisher</code> || String || Publisher name.
+|-
+| <code>language</code> || String || Default code language: <code>"BASIC"</code> or <code>"JavaScript"</code>.
+|-
+| <code>firstform</code> || String || <code>id</code> of the form shown when the app starts.
+|-
+| <code>defaultformsize</code> || String || Design canvas size, e.g. <code>"320x460"</code>.
+|-
+| <code>fontFamily</code> || String || Default font family, e.g. <code>"helvetica"</code>.
+|-
+| <code>icon</code> || String || Path to the app icon (192 × 192 px PNG), e.g. <code>"nsb/images/512.png"</code>.
+|-
+| <code>iconAndroid</code> || String || Path to the Android-specific icon (192 × 192 px PNG).
+|-
+| <code>splashscreen</code> || String || Path to the splash screen image.
+|-
+| <code>BootstrapTheme</code> || String || Bootstrap CSS theme name, e.g. <code>"bootstrap"</code>.
+|-
+| <code>theme</code> || String || jQuery Mobile theme letter, e.g. <code>"a"</code>.
+|-
+| <code>style</code> || String || Additional CSS applied to the whole app.
+|-
+| <code>background</code> || String || CSS background colour or value for the page body.
+|-
+| <code>backgroundimage</code> || String || URL or path to a background image.
+|-
+| <code>enableBrowserArrows</code> || String (<code>"true"</code>/<code>"false"</code>) || When <code>"true"</code>, the browser Back / Forward buttons navigate between forms.
+|-
+| <code>enableNiceLinks</code> || String (<code>"true"</code>/<code>"false"</code>) || When <code>"true"</code>, the URL bar reflects the current form name.
+|-
+| <code>contentSecurityPolicy</code> || String || Value of the <code>Content-Security-Policy</code> meta tag (leave blank for the default policy).
+|-
+| <code>manifest</code> || String or null || Inline app-cache manifest content (legacy).
+|-
+| <code>manifestFile</code> || String || Name of the manifest file, e.g. <code>"appcache"</code>.
+|-
+| <code>manifestName</code> || String || Name attribute of the manifest, e.g. <code>"OfflineApp"</code>.
+|-
+| <code>disablePWA</code> || String || Set to <code>"true"</code> to suppress the PWA service-worker and manifest.
+|-
+| <code>FastClick</code> || String (<code>"true"</code>/<code>"false"</code>) || Enables the FastClick library to remove the 300 ms tap delay on mobile.
+|-
+| <code>stopOnError</code> || String (<code>"true"</code>/<code>"false"</code>) || When <code>"true"</code>, unhandled runtime errors stop the app and display a message.
+|-
+| <code>obfuscation</code> || String || Set to <code>"true"</code> to obfuscate the compiled JavaScript on build.
+|-
+| <code>obfuscatorSettings</code> || String (JSON) || JSON string containing javascript-obfuscator options.
+|-
+| <code>eslintRules</code> || String or null || Custom ESLint rules as a JSON string (JavaScript projects only).
+|-
+| <code>useStrict</code> || String || Set to <code>"true"</code> to add <code>"use strict"</code> to the generated JavaScript.
+|-
+| <code>extraheaders</code> || String or null || Raw HTML inserted into the <code>&lt;head&gt;</code> of the generated page.
+|-
+| <code>styleheaders</code> || String or null || Additional CSS inserted into the <code>&lt;head&gt;</code> of the generated page as a <code>&lt;style&gt;</code> block. When non-empty this content is also stored in the external file <code>properties/style.css</code>.
+|-
+| <code>script</code> || String or null || Page-level code shared across all forms.
+|-
+| <code>voltAppId</code> || String || App ID registered on VoltBuilder.
+|-
+| <code>voltDomain</code> || String || Custom domain used for VoltBuilder builds.
+|-
+| <code>phoneGapBuildID</code> || String || Adobe PhoneGap Build app ID (legacy).
+|-
+| <code>phoneGapVersion</code> || String || Target PhoneGap / Cordova version (legacy).
+|-
+| <code>phoneGapLanguages</code> || String || Comma-separated language codes, e.g. <code>"en"</code>.
+|-
+| <code>phoneGapStatusBarColor</code> || String || Status bar background colour, e.g. <code>"#000000"</code>.
+|-
+| <code>phoneGapStatusBarStyle</code> || String || Status bar style: <code>"lightcontent"</code> or <code>"default"</code>.
+|-
+| <code>phoneGapStatusBarOverlay</code> || String (<code>"true"</code>/<code>"false"</code>) || Whether the status bar overlays the web view.
+|-
+| <code>electronDevTools</code> || String (<code>"true"</code>/<code>"false"</code>) || Open DevTools automatically when running in Electron.
+|-
+| <code>electronMain</code> || String or null || Override content of <code>properties/electronMain.js</code>.
+|-
+| <code>electronPackage</code> || String or null || Override content of <code>properties/package.json</code>.
+|-
+| <code>configxml</code> || String or null || Override content of <code>properties/config.xml</code>.
+|-
+| <code>viewportFit</code> || String || Viewport fit value for notched phones, e.g. <code>"cover"</code>.
+|-
+| <code>rtl</code> || String || Set to <code>"true"</code> to switch the app to right-to-left layout.
+|-
+| <code>homescreenTitle</code> || String || Short name shown below the icon on the device home screen.
+|-
+| <code>browserwarnmsg</code> || String || Message shown when the app is opened in an unsupported browser.
+|-
+| <code>onresize</code> || String || Code called when the browser window is resized.
+|-
+| <code>onorientationchange</code> || String || Code called when the device orientation changes.
+|-
+| <code>onvisibilitychange</code> || String || Code called when the page visibility changes.
+|-
+| <code>children</code> || Array || [[#External_references|External references]] to each [[#Form_files|form JSON file]].
+|}
+
+== Form Files ==
+
+Each form is stored in its own sub-directory under <code>forms/</code>. The JSON file shares the name of the directory:
+
+<pre>
+forms/
+└── Form1/
+    ├── Form1.json       ← Form definition
+    ├── Form1.bas        ← BASIC code for this form (optional)
+    ├── Form1.js         ← JavaScript code for this form (optional)
+    └── Elements/
+        ├── Button1.json
+        └── TextArea1.json
+</pre>
+
+=== Form object properties ===
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>"!type"</code> || String || Always <code>"Form"</code>.
+|-
+| <code>id</code> || String || Unique identifier of this form. Used in code to refer to the form and its controls.
+|-
+| <code>width</code> || Integer || Form width in pixels at design time.
+|-
+| <code>height</code> || Integer || Form height in pixels at design time.
+|-
+| <code>designWidth</code> || Integer || Width of the design canvas (may differ from <code>width</code> when using responsive layout).
+|-
+| <code>designHeight</code> || Integer || Height of the design canvas.
+|-
+| <code>left</code> || Integer || Left position offset in pixels.
+|-
+| <code>top</code> || Integer || Top position offset in pixels.
+|-
+| <code>position</code> || String || CSS <code>position</code> value, typically <code>"absolute"</code>.
+|-
+| <code>language</code> || String || Code language for this form: <code>"BASIC"</code> or <code>"JavaScript"</code>.
+|-
+| <code>fullScreen</code> || String (<code>"true"</code>/<code>"false"</code>) || When <code>"true"</code>, the form fills the entire screen.
+|-
+| <code>modal</code> || String (<code>"true"</code>/<code>"false"</code>) || When <code>"true"</code>, the form is displayed as a modal dialog.
+|-
+| <code>openMode</code> || String || Transition used when opening the form (e.g. <code>"none"</code>, <code>"fade"</code>, <code>"slide"</code>).
+|-
+| <code>scrolling</code> || String (<code>"true"</code>/<code>"false"</code>) || Enables iScroll-based scrolling inside the form.
+|-
+| <code>scroll_options</code> || String || iScroll options as a comma-separated key:value string.
+|-
+| <code>theme</code> || String || jQuery Mobile theme letter for this form (overrides the page theme).
+|-
+| <code>background</code> || String || CSS background colour or value.
+|-
+| <code>backgroundimage</code> || String || Path or URL to a background image.
+|-
+| <code>style</code> || String || Additional inline CSS for the form container.
+|-
+| <code>class</code> || String || Additional CSS class names for the form container.
+|-
+| <code>borderColor</code> || String || Border colour (design-time only).
+|-
+| <code>borderStyle</code> || String || Border style (design-time only).
+|-
+| <code>borderWidth</code> || String || Border width (design-time only).
+|-
+| <code>action</code> || String || HTML <code>action</code> attribute when the form is rendered as a <code>&lt;form&gt;</code> element.
+|-
+| <code>method</code> || String || HTML <code>method</code> attribute (<code>"get"</code> or <code>"post"</code>).
+|-
+| <code>onsubmit</code> || String || Code called when the form is submitted.
+|-
+| <code>onshow</code> || String || Code called when the form becomes visible.
+|-
+| <code>onhide</code> || String || Code called when the form is hidden.
+|-
+| <code>onresize</code> || String || Code called when the form is resized.
+|-
+| <code>onkeypress</code> || String || Code called on a key-press event anywhere on the form.
+|-
+| <code>setFocusID</code> || String || <code>id</code> of the control that receives focus when the form opens.
+|-
+| <code>parentForm</code> || String || <code>id</code> of another form that this form is visually nested inside.
+|-
+| <code>HTML</code> || String or null || Raw HTML injected at the top of the form (advanced use).
+|-
+| <code>attributes</code> || String || Additional HTML attributes added to the form element.
+|-
+| <code>locked</code> || Boolean || When <code>true</code>, controls on this form cannot be moved in the designer.
+|-
+| <code>script</code> || String or null || Form code. <code>null</code> when code is stored in the external <code>.bas</code> or <code>.js</code> file.
+|-
+| <code>cached_js</code> || String or null || Cached compiled JavaScript (managed by the IDE).
+|-
+| <code>cached_js_script_hash</code> || String or null || MD5 hash used to detect when recompilation is needed.
+|-
+| <code>cache_dirty</code> || Boolean || <code>true</code> when the cached JavaScript is out of date.
+|-
+| <code>children</code> || Array || [[#External_references|External references]] to each [[#Element_files|element JSON file]].
+|}
+
+== Element Files ==
+
+Each control (button, text box, label, etc.) on a form is stored as a separate JSON file in the <code>Elements/</code> sub-directory of the form.
+
+The name of the element file must be unique to the project.
+The same element name cannot be defined for two different forms. 
+Element names cannot be form names. 
+Names must be valid JavaScript variable names.
+
+=== Common properties ===
+
+All controls may share the following properties. Not all properties are used by all elements - they may only have the ones they actually use. They may also have additional properties, which are defined in the Toolbox Files for that control.
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>"!type"</code> || String || The control type, e.g. <code>"Button_bs4"</code>, <code>"Textarea_bs4"</code>, <code>"Label_bs4"</code>. The suffix <code>_bs4</code> indicates a Bootstrap 4 control.
+|-
+| <code>id</code> || String || Unique identifier of this control within the form. Used in code to access the control at runtime (e.g. <code>Button1.value</code>).
+|-
+| <code>left</code> || Integer || Left position in pixels, relative to the form.
+|-
+| <code>top</code> || Integer || Top position in pixels, relative to the form.
+|-
+| <code>width</code> || Integer or String || Width in pixels, or <code>"auto"</code>.
+|-
+| <code>height</code> || Integer or String || Height in pixels, or <code>"auto"</code>.
+|-
+| <code>right</code> || String || CSS <code>right</code> value, typically <code>"auto"</code>.
+|-
+| <code>bottom</code> || String || CSS <code>bottom</code> value, typically <code>"auto"</code>.
+|-
+| <code>position</code> || String || CSS <code>position</code> mode: <code>"absolute"</code>, <code>"relative"</code>, or <code>"static"</code>.
+|-
+| <code>hidden</code> || String || Set to <code>"true"</code> to hide the control at runtime.
+|-
+| <code>disabled</code> || String || Set to <code>"true"</code> to disable user interaction.
+|-
+| <code>class</code> || String || Additional CSS class names.
+|-
+| <code>style</code> || String || Additional inline CSS styles.
+|-
+| <code>display</code> || String || CSS <code>display</code> value (overrides the default).
+|-
+| <code>color</code> || String || Foreground / text colour (CSS value).
+|-
+| <code>backgroundColor</code> || String || Background colour (CSS value).
+|-
+| <code>fontFamily</code> || String || Font family (CSS value).
+|-
+| <code>fontSize</code> || String || Font size (CSS value, e.g. <code>"14px"</code>).
+|-
+| <code>fontStyle</code> || String || Font style: <code>"italic"</code>, <code>"normal"</code>, etc.
+|-
+| <code>fontWeight</code> || String || Font weight: <code>"bold"</code>, <code>"normal"</code>, etc.
+|-
+| <code>mAll</code>, <code>mTop</code>, <code>mBottom</code>, <code>mLeft</code>, <code>mRight</code> || String || CSS margin shorthand and individual sides.
+|-
+| <code>pAll</code>, <code>pTop</code>, <code>pBottom</code>, <code>pLeft</code>, <code>pRight</code> || String || CSS padding shorthand and individual sides.
+|-
+| <code>borderColor</code>, <code>borderStyle</code>, <code>borderWidth</code> || String || CSS border properties.
+|-
+| <code>script</code> || String || Control-level code (usually blank; form-level code is preferred).
+|-
+| <code>cached_js</code> || String || Cached compiled JavaScript for this control (managed by the IDE).
+|-
+| <code>cached_js_script_hash</code> || String || MD5 hash used to detect when recompilation is needed.
+|-
+| <code>children</code> || Array || Nested controls (empty for most control types).
+|-
+| <code>expanded_pmp</code> || String or null || Expansion state in the Project Manager panel (IDE only).
+|}
+
+=== Bootstrap appearance properties ===
+
+Controls based on Bootstrap have these additional properties.
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>appearance</code> || String || Bootstrap contextual class, e.g. <code>" btn-secondary"</code>, <code>" btn-primary"</code>, <code>" btn-danger"</code>.
+|-
+| <code>size</code> || String || Bootstrap size modifier, e.g. <code>" btn-sm"</code>, <code>" btn-lg"</code>.
+|-
+| <code>outline</code> || String || Set to <code>"outline-"</code> to use an outlined (hollow) button style.
+|-
+| <code>blockLevel</code> || String || Set to <code>"true"</code> for a full-width block button.
+|-
+| <code>grouping</code> || String || Used to group controls into a Bootstrap button group.
+|-
+| <code>groupStyle</code> || String || Style applied to the button group container.
+|}
+
+=== Popover properties ===
+
+Most controls support an optional Bootstrap popover.
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>popStyle</code> || String || Popover style: <code>"popover"</code> or <code>"tooltip"</code>.
+|-
+| <code>popTitle</code> || String || Popover title text.
+|-
+| <code>popBody</code> || String || Popover body text.
+|-
+| <code>popPosition</code> || String || Popover position: <code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code>, or blank for automatic.
+|-
+| <code>popClose</code> || String || How the popover closes: <code>"hover"</code> or <code>"click"</code>.
+|}
+
+=== Badge properties ===
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>badge</code> || String || Badge text. Leave blank to hide the badge.
+|-
+| <code>badgeAppearance</code> || String || Bootstrap contextual class for the badge, e.g. <code>" badge-info"</code>.
+|}
+
+=== Common event handlers ===
+
+Event handler properties contain a string that is the name of the function to call (e.g. <code>"Button1_onclick()"</code>). The actual function body is written in the form's code file.
+
+{| class="wikitable"
+! Property !! Event
+|-
+| <code>onclick</code> || User clicks or taps the control.
+|-
+| <code>onmousedown</code> || Mouse button pressed over the control.
+|-
+| <code>onmouseup</code> || Mouse button released.
+|-
+| <code>onmousemove</code> || Mouse pointer moves over the control.
+|-
+| <code>onmouseout</code> || Mouse pointer leaves the control.
+|-
+| <code>ontouchstart</code> || Touch begins on the control.
+|-
+| <code>ontouchmove</code> || Touch moves while in contact with the control.
+|-
+| <code>ontouchend</code> || Touch ends on the control.
+|-
+| <code>onresize</code> || Control is resized.
+|}
+
+=== Selected control-specific properties ===
+
+==== Button (<code>Button_bs4</code>) ====
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>value</code> || String || Button label text.
+|-
+| <code>icon</code> || String || Set to <code>"true"</code> to show an icon inside the button.
+|-
+| <code>iconTitle</code> || String || Icon CSS class (e.g. a Bootstrap Icons or Font Awesome class name).
+|-
+| <code>ChangeForm</code> || String || <code>id</code> of a form to navigate to when the button is clicked (shortcut — no code required).
+|-
+| <code>toggleControl</code> || String || <code>id</code> of a control to toggle the visibility of when the button is clicked.
+|}
+
+==== Text Area (<code>Textarea_bs4</code>) ====
+
+{| class="wikitable"
+! Property !! Type !! Description
+|-
+| <code>value</code> || String || Initial text content of the text area.
+|-
+| <code>placeholder</code> || String || Grey hint text displayed when the text area is empty.
+|-
+| <code>rows</code> || String || Number of visible text rows.
+|-
+| <code>maxlength</code> || String || Maximum number of characters allowed.
+|-
+| <code>readonly</code> || String || Set to <code>"true"</code> to make the text area read-only.
+|-
+| <code>required</code> || String || Set to <code>"true"</code> for HTML5 form validation.
+|-
+| <code>autocomplete</code> || String || <code>"on"</code> or <code>"off"</code>.
+|-
+| <code>autocorrect</code> || String || <code>"on"</code> or <code>"off"</code> (mobile browsers).
+|-
+| <code>autocapitalize</code> || String || <code>"on"</code> or <code>"off"</code> (mobile browsers).
+|-
+| <code>spellcheck</code> || String || <code>"true"</code> or <code>"false"</code>.
+|-
+| <code>header</code> || String || Label text shown above the text area.
+|-
+| <code>footer</code> || String || Help text shown below the text area.
+|-
+| <code>validation</code> || String || Validation rule expression.
+|-
+| <code>inputmode</code> || String || HTML5 <code>inputmode</code> attribute, e.g. <code>"numeric"</code>.
+|-
+| <code>align</code> || String || Text alignment: <code>"left"</code>, <code>"center"</code>, <code>"right"</code>.
+|-
+| <code>name</code> || String || HTML <code>name</code> attribute for form submission.
+|-
+| <code>headerCols</code> || Integer || Bootstrap grid column width of the label (0 = full width label above).
+|-
+| <code>valueCols</code> || Integer || Bootstrap grid column width of the input field.
+|-
+| <code>onchange</code>, <code>onclick</code>, <code>onfocus</code>, <code>onfocusout</code>, <code>onkeypress</code>, <code>onkeyup</code> || String || Event handler function names.
+|-
+| <code>oncopy</code>, <code>oncut</code>, <code>onpaste</code> || String || Clipboard event handler function names.
+|}
+
+== Code Files ==
+
+=== BASIC code files (<code>.bas</code>) ===
+
+When a project uses the BASIC language, form code is stored in a plain-text file with the same name as the form but with the <code>.bas</code> extension (e.g. <code>Form1.bas</code>). The file sits in the same directory as the form's JSON file.
+
+The file contains standard AppStudio BASIC functions. Event handlers follow the naming convention <code>ControlID_eventname()</code>:
+
+<pre>
+Function Button1_onclick()
+  MsgBox "Thanks for clicking!"
+End Function
+
+Function Form1_onshow()
+  TextArea1.value = "Form is now visible."
+End Function
+</pre>
+
+=== JavaScript code files (<code>.js</code>) ===
+
+JavaScript projects use <code>.js</code> files with the same naming convention. The syntax is standard JavaScript:
+
+<pre>
+function Button1_onclick() {
+  alert("Thanks for clicking!");
+}
+</pre>
+
+=== Inline script ===
+
+Code can alternatively be stored inline in the JSON file itself, in the <code>script</code> property of the Form or control object. The IDE stores code externally by default; the <code>script</code> property in the saved file is <code>null</code> when an external file is used.
+
+== The <code>properties/</code> Directory ==
+
+The <code>properties/</code> directory holds template files used when building the app for different deployment targets. These files contain <code>{placeholder}</code> tokens that AppStudio replaces with actual project values at build time.
+
+=== <code>config.xml</code> ===
+
+Apache Cordova / VoltBuilder configuration file. Used when building native mobile apps.
+
+Common placeholders: <code>{id}</code>, <code>{title}</code>, <code>{version}</code>, <code>{description}</code>, <code>{copyright}</code>, <code>{icon}</code>, <code>{phoneGapSplash}</code>, <code>{phoneGapBuildCounter}</code>, <code>{phoneGapStatusBarColor}</code>, <code>{phoneGapStatusBarStyle}</code>, <code>{phoneGapStatusBarOverlay}</code>.
+
+=== <code>manifest.json</code> ===
+
+Progressive Web App (PWA) manifest. Tells the browser how to install the app on a home screen.
+
+Common placeholders: <code>{title}</code>, <code>{description}</code>, <code>{icon}</code>.
+
+=== <code>package.json</code> ===
+
+Electron build configuration used when packaging the app as a desktop executable.
+
+Common placeholders: <code>{title}</code>, <code>{version}</code>, <code>{description}</code>, <code>{id}</code>.
+
+=== <code>electronMain.js</code> ===
+
+The Electron main-process entry point. Launched by <code>package.json</code> when the desktop app starts.
+
+Common placeholders: <code>{appwidth}</code>, <code>{appheight}</code>, <code>{title}</code>.
+
+=== <code>style.css</code> ===
+
+The project-wide CSS file. Its content is inserted into the <code>&lt;head&gt;</code> of the generated page as a <code>&lt;style&gt;</code> block, after all library stylesheets. Use it to define custom styles, override theme defaults, or declare <code>@font-face</code> rules that apply across the whole app.
+
+This file is the external representation of the [[#Page_object_.28inside_.3Ccode.3Echildren.3C.2Fcode.3E.29|Page object's]] <code>styleheaders</code> property. The IDE creates or updates <code>style.css</code> automatically whenever the Project CSS editor is saved. If the property is empty, the file is omitted.
+
+To edit this file from within AppStudio, open the '''Project''' menu and choose '''Open Project CSS'''.
+
+Example:
+
+<pre>
+/* Custom styles for MyApp */
+body {
+  background-color: #f5f5f5;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url('MyFont.ttf');
+}
+</pre>
+
+== External References ==
+
+To keep individual files small and manageable, forms and controls are stored in separate files. A parent object refers to a child file using an '''External reference''' object:
+
+<pre>
+{
+  "!type": "External",
+  "file": ["forms", "Form1", "Form1.json"]
+}
+</pre>
+
+The <code>file</code> array represents a path relative to the <code>.appstudio</code> directory: each element is one path segment. The example above refers to the file <code>forms/Form1/Form1.json</code>.
+
+External references appear in:
+* The Page's <code>children</code> array — pointing to each form's JSON file.
+* A Form's <code>children</code> array — pointing to each element's JSON file in the <code>Elements/</code> sub-directory.
+
+When AppStudio loads a project it resolves all External references recursively, producing a single in-memory object tree. When saving, the tree is split back into individual files.
+
+== Complete Example ==
+
+The following annotated listing shows all the files in a minimal "Hello World" project.
+
+=== <code>HelloWorld.project</code> ===
+
+<pre>
+{
+  "!type": "Project",
+  "version": 8,
+  "language_version": 8,
+  "id": "HelloWorld",
+  "libraries": ["BASIC"],
+  "script": "",
+  "children": [
+    {
+      "!type": "Page",
+      "id": "HelloWorld",
+      "title": "HelloWorld",
+      "description": "Use a button to put up a Hello World message.",
+      "version": "1.0.0",
+      "copyright": "copyright 2025 ABC Company",
+      "language": "BASIC",
+      "firstform": "Form1",
+      "defaultformsize": "320x460",
+      "fontFamily": "helvetica",
+      "icon": "nsb/images/512.png",
+      "iconAndroid": "nsb/images/192.png",
+      "BootstrapTheme": "bootstrap",
+      "theme": "a",
+      "children": [
+        {
+          "!type": "External",
+          "file": ["forms", "Form1", "Form1.json"]
+        }
+      ]
+    }
+  ]
+}
+</pre>
+
+=== <code>forms/Form1/Form1.json</code> ===
+
+<pre>
+{
+  "!type": "Form",
+  "id": "Form1",
+  "language": "BASIC",
+  "width": 375,
+  "height": 667,
+  "designWidth": 375,
+  "designHeight": 667,
+  "fullScreen": "true",
+  "children": [
+    { "!type": "External", "file": ["forms", "Form1", "Elements", "Button1.json"] },
+    { "!type": "External", "file": ["forms", "Form1", "Elements", "TextArea1.json"] }
+  ]
+}
+</pre>
+
+=== <code>forms/Form1/Elements/Button1.json</code> ===
+
+<pre>
+{
+  "!type": "Button_bs4",
+  "id": "Button1",
+  "value": "Click me!",
+  "left": 98,
+  "top": 194,
+  "width": 113,
+  "height": "auto",
+  "appearance": " btn-secondary",
+  "size": " btn-sm",
+  "onclick": "Button1_onclick()"
+}
+</pre>
+
+=== <code>forms/Form1/Elements/TextArea1.json</code> ===
+
+<pre>
+{
+  "!type": "Textarea_bs4",
+  "id": "TextArea1",
+  "value": "Here is a simple Hello World app.",
+  "placeholder": "Enter text here",
+  "left": 45,
+  "top": 48,
+  "width": 239,
+  "height": "116"
+}
+</pre>
+
+=== <code>forms/Form1/Form1.bas</code> ===
+
+<pre>
+Function Button1_onclick()
+  MsgBox "Thanks for clicking!"
+End Function
+</pre>
+
+== See Also ==
+
+* [[Toolbox_Files]] — describes the toolbox definition files that specify the available control types and their default properties.
+* [[VoltBuilder]] — how to build native iOS and Android apps from an AppStudio project.
+* [[Electron]] — how to package an AppStudio project as a Windows or macOS desktop app.
